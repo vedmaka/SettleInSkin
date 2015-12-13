@@ -1,0 +1,81 @@
+{
+  "name": "SettleIn",
+  "author": [
+    "Jon Anderton"
+  ],
+  "url": "https://www.settlein.org/",
+  "descriptionmsg": "settlein-skin-desc",
+  "namemsg": "skinname-settlein",
+  "license-name": "GPL-2.0+",
+  "type": "skin",
+  "ConfigRegistry": {
+    "settlein": "GlobalVarConfig::newInstance"
+  },
+  "ValidSkinNames": {
+    "settlein": "SettleIn"
+  },
+  "MessagesDirs": {
+    "SettleIn": [
+      "i18n"
+    ]
+  },
+  "AutoloadClasses": {
+    "SkinSettleIn": "SkinSettleIn.php",
+    "SettleInTemplate": "SettleInTemplate.php"
+  },
+  "ResourceModules": {
+    "skins.settlein.styles": {
+      "styles": [
+        "assets/css/bootstrap.min.css",
+        "assets/css/select2.min.css",
+        "assets/css/theme_combined.css",
+        "assets/css/screen.css"
+      ]
+    },
+    "skins.settlein.js": {
+      "scripts": [
+        "assets/js/bootstrap.min.js",
+        "assets/js/jquery.cookies.js",
+        "assets/js/modernizr.custom.js",
+        "assets/js/select2.full.min.js",
+        "assets/js/theme.js",
+        "assets/js/bootstrap-modalmanager.js",
+        "assets/js/bootstrap-modal.js",
+        "assets/js/jquery.fitvids.js",
+        "assets/js/settlein.js"
+      ],
+      "position": "top"
+    },
+    "skins.settlein.page.styles": {
+      "styles": [
+        "assets/css/bootstrap.min.css",
+        "assets/css/select2.min.css",
+        "assets/css/theme_combined.css",
+        "assets/css/double.css"
+      ]
+    },
+    "skins.settlein.page.js": {
+      "scripts": [
+        "assets/js/bootstrap.min.js",
+        "assets/js/jquery.cookies.js",
+        "assets/js/modernizr.custom.js",
+        "assets/js/select2.full.min.js",
+        "assets/js/bootstrap-modalmanager.js",
+        "assets/js/bootstrap-modal.js",
+        "assets/js/jquery.fitvids.js",
+        "assets/js/settlein.js",
+        "assets/js/page.js"
+      ],
+      "position": "top"
+    }
+  },
+  "ResourceFileModulePaths": {
+    "localBasePath": "",
+    "remoteSkinPath": "SettleIn"
+  },
+  "config": {
+    "SettleinTwitterURL": "http://twitter.com",
+    "SettleinFacebookURL": "http://facebook.com",
+    "SettleinGoogleURL": "http://plus.google.com"
+  }
+}

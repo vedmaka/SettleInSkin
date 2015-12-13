@@ -1,0 +1,489 @@
+@import url(http://fonts.googleapis.com/css?family=PT+Sans+Narrow);
+
+html, body {
+
+}
+
+body {
+    /*background-image: url(../img/bgpat.png);*/
+    background-color: white;
+}
+
+#main-wrapper, #main-wrapper > section, #main-wrapper > section > .container {
+    /*height: 100%;*/
+}
+
+#nav {
+    background-color: white;
+    position: relative;
+    z-index: 10;
+}
+
+nav {
+    padding-top: 0;
+    padding-bottom: 10px;
+    margin-bottom: 0;
+}
+
+#nav > .container {
+    padding-top: 10px;
+}
+
+.navbar {
+    margin-bottom: 0;
+}
+
+.navbar-brand {
+    padding: 3px 0 0 0;
+    margin-right: 10px;
+}
+
+.i-logo {
+    width: 150px;
+    margin: 0 auto 30px auto;
+    position: relative;
+    left: 10px;
+}
+
+.i-logo img {
+    max-width: 150px;
+    width: 90%;
+}
+
+.jumbo-search {
+    width: 50%;
+    margin: 0 auto;
+}
+
+nav .navbar-header .navbar-toggle .icon-bar {
+    background-color: #64bb5d;
+}
+
+nav ul.nav > li,
+nav ul.nav > li > a,
+nav ul.nav > li:focus,
+nav ul.nav > li > a:focus {
+    transition: none !important;
+    /*background: none;*/
+}
+
+nav ul.nav > li > a:hover {
+    background-color: white;
+}
+
+.nav .open>a, .nav .open>a:focus, .nav .open>a:hover {
+    background-color: white;
+}
+
+nav ul.nav > li a.btn {
+    margin: 10px 0 0 0;
+    padding: 2px 0;
+    text-align: center;
+    width: 80px;
+}
+
+nav ul.nav > li a.btn:focus {
+    background-color: lightgrey;
+}
+
+.dropdown-menu.primary-back {
+    background-color: white;
+}
+
+nav ul>li>a.btn-primary:hover {
+    color: white;
+    background-color: #64bb5d;
+}
+
+nav ul>li>a.btn-concrete:hover {
+    color: white;
+    background-color: #95a5a6;
+}
+
+.dropdown-menu.primary-back>li>a {
+    color: #64bb5d;
+}
+
+.dropdown-menu.primary-back>li>a:hover {
+    color: white;
+}
+
+.jumbo-country {
+    width: 250px;
+}
+
+.jumbo-country select {
+    width: 250px;
+}
+
+.jumbo-country .select2-selection {
+    height: 37px;
+}
+
+.jumbo-country .select2-selection .select2-selection__rendered {
+    line-height: 37px;
+}
+
+.jumbo-country .dropdown-menu li a:hover {
+    background-color: #64bb5d;
+    color: white;
+}
+
+.jumbo-country .select2-selection__arrow {
+    height: 37px !important;
+}
+
+.select2-results li.select2-results__option[aria-selected="true"] {
+    background-color: #64bb5d;
+    color: white;
+}
+
+.jumbotron {
+
+    background-color: #33BBED;
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#33bbed+0,008cd8+100 */
+    background: rgb(51,187,237); /* Old browsers */
+    background: -moz-linear-gradient(top, rgba(51,187,237,1) 0%, rgba(0,140,216,1) 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(51,187,237,1)), color-stop(100%,rgba(0,140,216,1))); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, rgba(51,187,237,1) 0%,rgba(0,140,216,1) 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, rgba(51,187,237,1) 0%,rgba(0,140,216,1) 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, rgba(51,187,237,1) 0%,rgba(0,140,216,1) 100%); /* IE10+ */
+    background: linear-gradient(to bottom, rgba(51,187,237,1) 0%,rgba(0,140,216,1) 100%); /* W3C */
+
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#33bbed', endColorstr='#008cd8',GradientType=0 ); /* IE6-9 */
+    padding-bottom: 60px;
+    margin-bottom: 0;
+
+    z-index: 2;
+
+}
+
+.play-video-button {
+    width: 41px;
+    margin: 0 auto;
+    position: relative;
+    top: 2px;
+    outline: none;
+    cursor: pointer;
+    left: 5px;
+}
+
+.play-video-button a {
+    outline: none;
+}
+
+.jumbo-addition {
+    padding: 5px 0 0 0;
+    background-color: #95a5a6;
+    position: relative;
+    margin-bottom: 20px;
+    height: 50px;
+    z-index: 1;
+}
+
+.jumbo-addition .container {
+    padding-top: 0;
+}
+
+.jumbo-addition ul, .jumbo-addition li {
+    list-style: none;
+}
+
+.jumbo-addition::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.jumbotron a:not(.btn) {
+    color: #64bb5d;
+}
+
+.jumbotron {
+    position: relative;
+    overflow: hidden;
+}
+
+.jumbotron .jumbo-content {
+    z-index: 2;
+    position: relative;
+}
+
+#jumbo-backlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: url("../../img/samples/1.jpg") 0 -360px no-repeat;
+    background-size: cover;
+    width: 1600px;
+    height: 100%;
+    z-index: 1;
+    opacity: 0.5;
+}
+
+.jumbo-play-block {
+    width: 100px;
+    text-align: center;
+    margin: 10px auto 0 auto;
+    font-size: 65px;
+    font-weight: 100;
+    color: white;
+    cursor: pointer;
+}
+
+.container {
+    padding-top: 20px;
+}
+
+#how-it-works-title {
+    margin-bottom: 10px;
+}
+
+.index-steps .well {
+    position: relative;
+}
+
+.index-steps i {
+    position: absolute;
+    color: #64bb5d;
+    top: 20%;
+    font-size: 30px;
+    right: -16px;
+}
+
+#userpanel .user-avatar {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+}
+
+#userpanel .dropdown-toggle {
+    padding: 0;
+}
+
+#megamenu {
+    width: 100%;
+    background-color: #3498db;
+    /*background-color: #20A957;*/
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.5s;
+    margin-top: 5px;
+    /*position: absolute;*/
+}
+
+#megamenu .container {
+    padding: 20px 0 10px 0;
+    text-align: center;
+    color: white;
+    font-size: 24px;
+}
+
+#megamenu .container .row {
+    margin-bottom: 10px;
+}
+
+#megamenu .fa-stack {
+    float: left;
+    width: 50px;
+}
+
+#megamenu .step-text {
+    position: relative;
+    top: 2px;
+    display: block;
+    margin-left: 60px;
+    /*max-width: 200px;*/
+    text-align: left;
+}
+
+#megamenu .step-text p {
+    font-size: 14px;
+}
+
+#megamenu ul > li {
+    margin-right: 10px;
+    margin-bottom: 5px;
+}
+
+#megamenu a {
+    padding: 5px 10px;
+    color: white;
+    border-radius: 4px;
+}
+
+#megamenu a:hover {
+    color: #3498db;
+}
+
+.megamenu-opened {
+    max-height: 1000px !important;
+    transition: max-height 0.15s;
+}
+
+#promo-blocks-row {
+    margin-bottom: 30px;
+}
+
+.promo-block-item h3 {
+    font-family: "PT Sans Narrow", Helvetica, Arial, sans-serif;
+    line-height: 1.1;
+    font-weight: 300;
+    font-size: 28px;
+}
+
+.promo-block-img {
+    text-align: center;
+}
+
+.promo-block-text {
+    padding: 0;
+    text-align: center;
+}
+
+.promo-block-text .promo-block-text-content {
+    width: 50%;
+    margin: 0 auto;
+}
+
+.promo-block-text-content h3 {
+    font-size: 25px;
+    font-family: 'PT Sans';
+}
+
+.fluid-width-video-wrapper iframe {
+    width: 100%;
+}
+
+/* --------------------------- footer ---------------------------------------------- */
+
+html {
+    position: relative;
+    min-height: 100%;
+}
+body {
+    /* Margin bottom by footer height */
+    margin-bottom: 100px;
+}
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    /* Set the fixed height of the footer here */
+    height: 80px;
+    background-color: white;
+    /*padding: 15px 0;*/
+}
+
+.footer .container {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.jumbotron-middle {
+    /*background: none;
+    background-color: #e3e3e3;*/
+    background-color: #3498db;
+    margin-top: 20px;
+    text-align: center;
+    padding: 20px 0 30px 0;
+    color: white;
+}
+
+.jumbotron-middle p {
+    width: 50%;
+    font-size: 18px;
+    margin: 0 auto 15px auto;
+}
+
+.modal-open .modal {
+    overflow-y: hidden;
+}
+
+#menu-hiw {
+    position: relative;
+    top: 8px;
+    color: white;
+}
+
+#faq-menu{
+    position: relative;
+    top: 8px;
+    color: white;
+}
+
+.login-popup-form {
+    display: none;
+    z-index: 1001;
+    position: fixed;
+    overflow: hidden;
+    width: 600px;
+    padding: 15px;
+    background-color: white;
+    left: 50%;
+    top: 45%;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    border-radius: 4px;
+}
+
+#login-popup-wrapper {
+    z-index: 1000;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.51);
+    display: none;
+}
+
+/* --------------------------- media ----------------------------------------------- */
+
+@media ( max-width: 780px ) {
+    #jumbo-backlay {
+        /*background-size: cover;*/
+    }
+    #megamenu .container {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .jumbo-addition {
+        height: auto;
+        padding: 5px 0 5px 0;
+    }
+
+    .jumbo-addition > .container > ul {
+        padding: 0;
+    }
+
+}
+
+@media ( max-width: 1200px ) {
+    .index-steps i {
+        display: none;
+    }
+}
+
+@media ( min-width: 1600px ) {
+    .jumbotron {
+        width: 1600px;
+        margin: 0 auto;
+    }
+    .jumbo-addition {
+        width: 1600px;
+        margin: 0 auto;
+    }
+}
+
+@media (min-width: 1200px) {
+    .modal.container {
+        width: 870px;
+        margin-left: -435px;
+    }
+}
