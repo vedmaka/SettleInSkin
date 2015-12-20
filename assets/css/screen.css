@@ -1,3 +1,7 @@
 #wpTextbox1 {
     width: 100%;
 }
+
+.mw-editsection {
+    display: none;
+}
