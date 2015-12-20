@@ -355,6 +355,31 @@ nav ul>li>a.btn-concrete:hover {
     width: 100%;
 }
 
+#top-search input {
+    background-color: white;
+}
+
+#country-select-wrapper {
+    margin-top: 7px;
+}
+
+#country-select {
+    width: 200px;
+}
+
+#country-select-wrapper .select2-selection__rendered {
+    line-height: 37px;
+}
+
+#country-select-wrapper .select2-selection {
+    height: 37px;
+    border: 1px solid #64bb5d;
+}
+
+#country-select-wrapper .select2-selection__arrow {
+    top: 6px;
+}
+
 /* --------------------------- footer ---------------------------------------------- */
 
 html {

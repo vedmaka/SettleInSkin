@@ -32,4 +32,10 @@ $(function(){
         e.preventDefault();
     });
 
+    if( $('#country-select').length ) {
+        $('#country-select').select2({
+            placeholder: "Select country"
+        });
+    }
+
 });

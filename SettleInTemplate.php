@@ -381,6 +381,29 @@ class SettleInTemplate extends BaseTemplate {
 
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 
+                <ul class="nav navbar-nav" id="top-search">
+                    <form action="<?php $this->text( 'wgScript' ) ?>" class="navbar-form navbar-left" role="search">
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Search" name="search">
+                            <input type="hidden" name="title" value="<?=$this->get( 'searchtitle' )?>" />
+                        </div>
+                    </form>
+                </ul>
+
+                <ul class="nav navbar-nav" id="country-select-wrapper">
+                    <select id="country-select">
+                        <option value="Russia">Russia</option>
+                        <option value="Russia">United States</option>
+                        <option value="Russia">Country 1</option>
+                        <option value="Russia">Country 2</option>
+                        <option value="Russia">Country 3</option>
+                        <option value="Russia">Country 4</option>
+                        <option value="Russia">Country 5</option>
+                        <option value="Russia">Country 6</option>
+                        <option value="Russia">Country 7</option>
+                    </select>
+                </ul>
+
                 <ul class="nav navbar-nav navbar-right">
 
                     <? if( $this->isLoggedIn ) :?>
@@ -487,9 +510,10 @@ class SettleInTemplate extends BaseTemplate {
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 
                 <ul class="nav navbar-nav" id="top-search">
-                    <form class="navbar-form navbar-left" role="search">
+                    <form action="<?php $this->text( 'wgScript' ) ?>" class="navbar-form navbar-left" role="search">
                         <div class="form-group">
-                            <input type="text" class="form-control" placeholder="Search">
+                            <input type="text" class="form-control" placeholder="Search" name="search">
+                            <input type="hidden" name="title" value="<?=$this->get( 'searchtitle' )?>" />
                         </div>
                     </form>
                 </ul>
