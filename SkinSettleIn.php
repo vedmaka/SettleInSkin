@@ -66,14 +66,31 @@ class SkinSettleIn extends SkinTemplate {
         parent::setupSkinUserCss( $out );
 
         $title = $out->getTitle();
+
+        $isCard = false;
+        if( $title && $title->exists() ) {
+            $categoris = SFUtils::getCategoriesForPage( $title );
+            if( in_array('Card', $categoris) ) {
+                $isCard = true;
+            }
+        }
+
         if( $title && $title->exists() && $title->getNamespace() == NS_MAIN ) {
             if( $title->getArticleID() === Title::newMainPage()->getArticleID() ) {
                 $styles = array( 'skins.settlein.styles' );
             }else{
-                $styles = array( 'skins.settlein.page.styles' );
+                if( $isCard ) {
+                    $styles = array( 'skins.settlein.page.styles' );
+                }else{
+                    $styles = array( 'skins.settlein.styles' );
+                }
             }
         }else{
-            $styles = array( 'skins.settlein.page.styles' );
+            if( $isCard ) {
+                $styles = array( 'skins.settlein.page.styles' );
+            }else{
+                $styles = array( 'skins.settlein.styles' );
+            }
         }
 
         //$out->addModuleStyles( $styles );
