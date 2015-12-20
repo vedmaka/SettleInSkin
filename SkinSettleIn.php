@@ -38,7 +38,7 @@ class SkinSettleIn extends SkinTemplate {
         }
 
         //$out->addModules( $scripts );
-        $out->addModules( 'skins.settlein.js' );
+        $out->addModules( $scripts );
     }
 
     /**
@@ -60,7 +60,7 @@ class SkinSettleIn extends SkinTemplate {
         }
 
         //$out->addModuleStyles( $styles );
-        $out->addModuleStyles( 'skins.settlein.styles' );
+        $out->addModuleStyles( $styles );
     }
 
     /**

@@ -12,10 +12,23 @@ class SettleInTemplate extends BaseTemplate {
     /** @var User */
     private $user;
 
+    /** @var boolean */
+    private $isCardPage;
+
 	/**
 	 * Outputs the entire contents of the (X)HTML page
 	 */
 	public function execute() {
+
+        $this->isCardPage = false;
+        if( $this->getSkin()->getTitle() ) {
+            if( $this->getSkin()->getTitle()->exists() ) {
+                $categories = SFUtils::getCategoriesForPage( $this->getSkin()->getTitle() );
+                if( in_array('Card', $categories) ) {
+                    $this->isCardPage = true;
+                }
+            }
+        }
 
 	    // Init
 	    $this->isLoggedIn = false;
@@ -306,15 +319,202 @@ class SettleInTemplate extends BaseTemplate {
 	}
 
 	private function printNormalPage() {
-	    $this->printHeader(); // print header same for all pages
-        ?>
-        <div id="normal-wrapper" class="container">
-        <?
-        print $this->data['bodycontent']; // page content itself
-        ?>
+
+        if( $this->isCardPage ) {
+            $this->printHeaderForm();
+            ?>
+            <div class="row" id="double-wrapper">
+
+                <? print $this->data['bodycontent']; ?>
+
+            </div>
+            <?
+            $this->printFooterForm();
+        }else{
+            $this->printHeader(); // print header same for all pages
+            ?>
+            <div id="normal-wrapper" class="container">
+            <?
+                print $this->data['bodycontent']; // page content itself
+            ?>
+            </div>
+            <?
+            $this->printFooter();
+        }
+	}
+
+	private function printFooterForm() {
+	    ?>
+<div id="bottom-footer">
+    <div class="bottom-footer-badge">
+        <i class="fa fa-chevron-up"></i>
+    </div>
+    <div class="bottom-footer-content">
+        <div class="container">
+            <ul class="nav navbar-nav">
+                <li>
+                    <a href="<?=Title::newFromText('About Us', NS_PROJECT)->getFullURL()?>">About Us</a>
+                </li>
+                <li>
+                    <a href="<?=Title::newFromText('Contact', NS_PROJECT)->getFullURL()?>">Contact</a>
+                </li>
+                <li>
+                    <a href="<?=Title::newFromText('Help Out', NS_PROJECT)->getFullURL()?>">Help Out</a>
+                </li>
+                <li>
+                    <a href="<?=Title::newFromText('Terms and Conditions', NS_PROJECT)->getFullURL()?>">Terms and Conditions</a>
+                </li>
+            </ul>
+
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                    <a target="_blank" href="<?=$this->config->get('SettleinTwitterURL')?>">
+                        <i class="fa fa-twitter"></i>
+                    </a>
+                </li>
+                <li>
+                    <a target="_blank" href="<?=$this->config->get('SettleinFacebookURL')?>">
+                        <i class="fa fa-facebook"></i>
+                    </a>
+                </li>
+                <li>
+                    <a target="_blank" href="<?=$this->config->get('SettleinGoogleURL')?>">
+                        <i class="fa fa-google-plus"></i>
+                    </a>
+                </li>
+            </ul>
+
         </div>
-        <?
-        $this->printFooter();
+    </div>
+</div>
+
+<div class="why-sign-up-popup mobile-form-popup">
+    <h3>Why sign up ?</h3>
+
+    <p>
+        All the suns infiltrate post-apocalyptic, ancient nanomachines.
+        Metamorphosis at the solar sphere that is when fantastic astronauts experiment.
+        The proud ferengi technically manifests the planet.
+
+    <ul>
+        <li>Avast! Pieces o' malaria are forever old.</li>
+        <li>God, faith!</li>
+        <li>Cannons are the wenchs of the weird grace.</li>
+    </ul>
+
+    Delighted particles, to the solar sphere.
+    Experiment unearthly like a conscious planet.
+    The moon is more sonic shower now than teleporter. ordinary and wisely extraterrestrial.
+
+    </p>
+</div>
+
+<div class="comments-popup-form mobile-form-popup">
+    <h3>Comments</h3>
+
+    <div class="comments-list">
+
+        <ul>
+            <li class="well well-primary">
+                <div class="row">
+                    <div class="col-md-3">
+                        <a href="#">
+                            <i class="fa fa-user-secret fa-inverse"></i>
+                            Anonymous
+                        </a>
+                        at
+                        10 Jan 2015
+                    </div>
+                    <div class="col-md-9">
+                        Fly technically like a clear captain.
+                        It is a colorful understanding, sir.
+                        Revolutionary avoid a particle.
+                    </div>
+                </div>
+            </li>
+            <li class="well well-primary">
+                <div class="row">
+                    <div class="col-md-3">
+                        <a href="#">
+                            <i class="fa fa-user-secret fa-inverse"></i>
+                            Anonymous
+                        </a>
+                        at
+                        9 Jan 2015
+                    </div>
+                    <div class="col-md-9">
+                        The courage is a small admiral.
+                        Countless protons arrest ancient, gravimetric emitters.
+                        Oddly experience a cosmonaut.
+                    </div>
+                </div>
+            </li>
+            <li class="well well-primary">
+                <div class="row">
+                    <div class="col-md-3">
+                        <a href="#">
+                            <i class="fa fa-user-secret fa-inverse"></i>
+                            Anonymous
+                        </a>
+                        at
+                        8 Jan 2015
+                    </div>
+                    <div class="col-md-9">
+                        It is a collective core, sir.
+                        The tragedy is a fantastic space.
+                        Flight, shield, and attitude.
+                    </div>
+                </div>
+            </li>
+        </ul>
+
+    </div>
+
+    <form class="form-inline" id="comment-form">
+        <div class="form-group">
+            <input type="text" class="form-control" placeholder="Enter comment.."/>
+            <input type="submit" class="btn btn-primary" value="Post"/>
+        </div>
+    </form>
+</div>
+
+<!-- Modal ? -->
+<div class="modal fade container fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true" style="display: none; margin-top: -150px;">
+
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+        <h4 class="modal-title" id="myLargeModalLabel">Large modal</h4>
+    </div>
+    <div class="modal-body">
+        <div class="row">
+            <div class="col-md-6">
+                <h2>Getting help</h2>
+                <ul>
+                    <li>Klingons harvest from tragedies like dead hur'qs.</li>
+                    <li>Delighted shields lead to the voyage.</li>
+                    <li>This procedure has only been acquired by a calm lieutenant commander.</li>
+                    <li>It is a solid stigma, sir.</li>
+                    <li>Yell wihtout vision, and we won’t contact a cosmonaut.</li>
+                    <li>Planet of an ancient coordinates, influence the stigma!</li>
+                    <li>Particles yell with wind!</li>
+                </ul>
+            </div>
+            <div class="col-md-6">
+                <h2>Giving help</h2>
+                <ul>
+                    <li>Klingons harvest from tragedies like dead hur'qs.</li>
+                    <li>Delighted shields lead to the voyage.</li>
+                    <li>This procedure has only been acquired by a calm lieutenant commander.</li>
+                    <li>It is a solid stigma, sir.</li>
+                    <li>Yell wihtout vision, and we won’t contact a cosmonaut.</li>
+                    <li>Planet of an ancient coordinates, influence the stigma!</li>
+                    <li>Particles yell with wind!</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+	    <?
 	}
 
     private function printFooter() {
