@@ -325,11 +325,7 @@ class SettleInTemplate extends BaseTemplate {
         if( $this->isCardPage ) {
             $this->printHeaderForm();
             ?>
-            <div class="row" id="double-wrapper">
-
                 <? print $this->data['bodycontent']; ?>
-
-            </div>
             <?
             $this->printFooterForm();
         }else{
