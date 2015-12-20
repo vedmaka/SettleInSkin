@@ -27,14 +27,31 @@ class SkinSettleIn extends SkinTemplate {
         parent::initPage( $out );
 
         $title = $out->getTitle();
+
+        $isCard = false;
+        if( $title && $title->exists() ) {
+            $categoris = SFUtils::getCategoriesForPage( $title );
+            if( in_array('Card', $categoris) ) {
+                $isCard = true;
+            }
+        }
+
         if( $title && $title->exists() && $title->getNamespace() == NS_MAIN ) {
             if( $title->getArticleID() === Title::newMainPage()->getArticleID() ) {
                 $scripts = array( 'skins.settlein.js' );
             }else{
-                $scripts = array( 'skins.settlein.page.js' );
+                if( $isCard ) {
+                    $scripts = array( 'skins.settlein.page.js' );
+                }else{
+                    $scripts = array( 'skins.settlein.js' );
+                }
             }
         }else{
-            $scripts = array( 'skins.settlein.page.js' );
+            if( $isCard ) {
+                $scripts = array( 'skins.settlein.page.js' );
+            }else{
+                $scripts = array( 'skins.settlein.js' );
+            }
         }
 
         //$out->addModules( $scripts );
