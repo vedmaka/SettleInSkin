@@ -25,7 +25,9 @@ class SettleInTemplate extends BaseTemplate {
             if( $this->getSkin()->getTitle()->exists() ) {
                 $categories = SFUtils::getCategoriesForPage( $this->getSkin()->getTitle() );
                 if( in_array('Card', $categories) ) {
-                    $this->isCardPage = true;
+                    if( !$this->getSkin()->getRequest()->getVal('action') || $this->getSkin()->getRequest()->getVal('action') == 'view' ) {
+                        $this->isCardPage = true;
+                    }
                 }
             }
         }

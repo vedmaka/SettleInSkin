@@ -32,7 +32,9 @@ class SkinSettleIn extends SkinTemplate {
         if( $title && $title->exists() ) {
             $categoris = SFUtils::getCategoriesForPage( $title );
             if( in_array('Card', $categoris) ) {
-                $isCard = true;
+                if( !$out->getRequest()->getVal('action') || $out->getRequest()->getVal('action') == 'view' ) {
+                    $isCard = true;
+                }
             }
         }
 
@@ -71,7 +73,9 @@ class SkinSettleIn extends SkinTemplate {
         if( $title && $title->exists() ) {
             $categoris = SFUtils::getCategoriesForPage( $title );
             if( in_array('Card', $categoris) ) {
-                $isCard = true;
+                if( !$out->getRequest()->getVal('action') || $out->getRequest()->getVal('action') == 'view' ) {
+                    $isCard = true;
+                }
             }
         }
 
