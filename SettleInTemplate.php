@@ -110,7 +110,7 @@ class SettleInTemplate extends BaseTemplate {
                         </form>
                     </div>-->
 
-                    <form role="search_smw" action="<?=SpecialPage::getSafeTitleFor('RunQuery')->getFullURL().'/Search'?>" id="searchform_smw">
+                    <form role="search_smw" action="<?=SpecialPage::getSafeTitleFor('RunQuery')->getFullURL().'/Search'?>" id="searchform_smw" method="post">
 
                     <div class="jumbo-search" id="p-search_smw">
                             <div class="form-group">
