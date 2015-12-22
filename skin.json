@@ -51,6 +51,7 @@
         "assets/css/bootstrap.min.css",
         "assets/css/select2.min.css",
         "assets/css/theme_combined.css",
+        "assets/css/screen.css",
         "assets/css/double.css"
       ]
     },
