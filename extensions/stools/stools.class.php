@@ -31,4 +31,20 @@ class stools
         return $parser->insertStripItem( $original );
     }
 
+    /**
+     * @param Parser $parser
+     * @return string
+     */
+    public static function moddate( $parser )
+    {
+        $title = $parser->getTitle();
+        if( !$title || !$title->exists() ) {
+            return '';
+        }
+
+        $lastRev = Revision::newFromId( $title->getLatestRevID() );
+        return date("j M Y", wfTimestamp(TS_UNIX, $lastRev->getTimestamp()));
+
+    }
+
 }

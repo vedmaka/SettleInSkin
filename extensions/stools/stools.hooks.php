@@ -25,6 +25,7 @@ class stoolsHooks
 	public static function onParserFirstCallInit( $parser )
 	{
         $parser->setFunctionHook('stoolsformlink', 'stools::formlink' );
+        $parser->setFunctionHook('stoolsmoddate', 'stools::moddate' );
 	}
 
 }

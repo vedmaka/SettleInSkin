@@ -11,4 +11,5 @@ $magicWords = array();
 /** English (English) */
 $magicWords['en'] = array(
     'stoolsformlink' => array( 0, 'stoolsformlink' ),
+    'stoolsmoddate' => array( 0, 'stoolsmoddate' ),
 );
