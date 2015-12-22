@@ -78,7 +78,7 @@ class stools
             $html .= '<li>'
                 . $parser->insertStripItem(
                     '<a href="' .$editor->getUserPage()->getFullURL()
-                    . '" data-toggle="tooltip" data-placement="top" data-original-title"'.$editor->getName().'">' .
+                    . '" data-toggle="tooltip" data-placement="top" data-original-title="'.$editor->getName().'">' .
                     '<i class="fa fa-user"></i>' . '</a>'
                 ) . '</li>';
         }
