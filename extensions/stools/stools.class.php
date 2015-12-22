@@ -47,4 +47,46 @@ class stools
 
     }
 
+    /**
+     * @param Parser $parser
+     * @return string
+     */
+    public static function editorlist( $parser )
+    {
+
+        $title = $parser->getTitle();
+        if( !$title || !$title->exists() ) {
+            return '';
+        }
+
+        $page = WikiPage::factory( $title );
+        $tEditors = $page->getContributors();
+        $editors = array();
+
+        $html = '<ul class="page-editors-list">';
+
+        foreach( $tEditors as $teditor ) {
+            if( !array_key_exists( $teditor->getId(), $editors ) ) {
+                $editors[] = $teditor;
+            }
+        }
+        if( !array_key_exists( $page->getUser(), $editors ) ) {
+            $editors[] = User::newFromId( $page->getUser() );
+        }
+
+        foreach( $editors as $editor ) {
+            $html .= '<li>'
+                . $parser->insertStripItem(
+                    '<a href="' .$editor->getUserPage()->getFullURL()
+                    . '" data-toggle="tooltip" data-placement="top" data-original-title"'.$editor->getName().'">' .
+                    '<i class="fa fa-user"></i>' . '</a>'
+                ) . '</li>';
+        }
+
+        $html .= '</ul>';
+
+        return $html;
+
+    }
+
 }
