@@ -700,7 +700,7 @@ class SettleInTemplate extends BaseTemplate {
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="#">
+                <a class="navbar-brand" href="<?=Title::newMainPage()->getFullURL()?>">
                     <img src="<?=$this->getSkin()->getSkinStylePath("/img/i.png")?>" width="30"/>
                 </a>
             </div>
