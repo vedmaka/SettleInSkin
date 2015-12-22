@@ -26,6 +26,8 @@ class stools
             $original = str_replace('href=', 'class="btn btn-primary pull-right" href=', $original);
         }
 
+        $original = str_replace('self">', 'self"><i class="fa fa-edit"></i> ', $original);
+
         return $parser->insertStripItem( $original );
     }
 
