@@ -9,3 +9,7 @@
 #double-col-left .action-buttons .btn a {
     color: white !important;
 }
+
+#sfForm a.select2-search-choice-close {
+    top: 10px !important;
+}
