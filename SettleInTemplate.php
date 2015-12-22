@@ -593,28 +593,35 @@ class SettleInTemplate extends BaseTemplate {
 
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 
+                <form action="<?=SpecialPage::getSafeTitleFor('RunQuery')->getFullURL().'/Search'?>" method="post" role="search">
+
                 <ul class="nav navbar-nav" id="top-search">
-                    <form action="<?php $this->text( 'wgScript' ) ?>" class="navbar-form navbar-left" role="search">
-                        <div class="form-group">
-                            <input type="text" class="form-control" placeholder="Search" name="search">
-                            <input type="hidden" name="title" value="<?=$this->get( 'searchtitle' )?>" />
+
+                        <div class="form-group navbar-form navbar-left ">
+                            <input type="text" class="form-control" placeholder="Search" name="Search[Title]">
                         </div>
-                    </form>
+
                 </ul>
 
                 <ul class="nav navbar-nav" id="country-select-wrapper">
-                    <select id="country-select">
-                        <option value="Russia">Russia</option>
-                        <option value="Russia">United States</option>
-                        <option value="Russia">Country 1</option>
-                        <option value="Russia">Country 2</option>
-                        <option value="Russia">Country 3</option>
-                        <option value="Russia">Country 4</option>
-                        <option value="Russia">Country 5</option>
-                        <option value="Russia">Country 6</option>
-                        <option value="Russia">Country 7</option>
+                    <select id="country-select" name="Search[Country]">
+                        <option></option>
+                        <?
+                            $propVals = SFUtils::getAllValuesForProperty('Country');
+                            foreach ($propVals as $val) {
+                                ?>
+                                <option value="<?=$val?>"><?=$val?></option>
+                                <?
+                            }
+                        ?>
                     </select>
                 </ul>
+
+                <input type="hidden" name="query" value="true" />
+                <input type="hidden" value="" name="sf_free_text">
+                <input type="hidden" value="Search" name="wpRunQuery">
+
+                </form>
 
                 <ul class="nav navbar-nav navbar-right">
 
@@ -721,28 +728,35 @@ class SettleInTemplate extends BaseTemplate {
 
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 
+                <form action="<?=SpecialPage::getSafeTitleFor('RunQuery')->getFullURL().'/Search'?>" class="" role="search" method="post">
+
                 <ul class="nav navbar-nav" id="top-search">
-                    <form action="<?php $this->text( 'wgScript' ) ?>" class="navbar-form navbar-left" role="search">
-                        <div class="form-group">
-                            <input type="text" class="form-control" placeholder="Search" name="search">
-                            <input type="hidden" name="title" value="<?=$this->get( 'searchtitle' )?>" />
+
+                        <div class="form-group navbar-form navbar-left">
+                            <input type="text" class="form-control" placeholder="Search" name="Search[Title]">
                         </div>
-                    </form>
+
                 </ul>
 
                 <ul class="nav navbar-nav" id="country-select-wrapper">
-                    <select id="country-select">
-                        <option value="Russia">Russia</option>
-                        <option value="Russia">United States</option>
-                        <option value="Russia">Country 1</option>
-                        <option value="Russia">Country 2</option>
-                        <option value="Russia">Country 3</option>
-                        <option value="Russia">Country 4</option>
-                        <option value="Russia">Country 5</option>
-                        <option value="Russia">Country 6</option>
-                        <option value="Russia">Country 7</option>
+                    <select id="country-select" name="Search[Country]">
+                        <option></option>
+                        <?
+                            $propVals = SFUtils::getAllValuesForProperty('Country');
+                            foreach ($propVals as $val) {
+                                ?>
+                                <option value="<?=$val?>"><?=$val?></option>
+                                <?
+                            }
+                        ?>
                     </select>
                 </ul>
+
+                <input type="hidden" name="query" value="true" />
+                <input type="hidden" value="" name="sf_free_text">
+                <input type="hidden" value="Search" name="wpRunQuery">
+
+                </form>
 
                 <ul class="nav navbar-nav">
                     <li>
