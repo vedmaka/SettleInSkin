@@ -738,14 +738,52 @@ class SettleInTemplate extends BaseTemplate {
 
                 <ul class="nav navbar-nav navbar-right" id="right-side-actions">
 
-                    <!--
-                    <li class="btn-group-nav">
-                        <a href="#" class="btn btn-concrete" style="margin-right: 10px;"><b>Login</b></a>
+                    <? if( $this->isLoggedIn ) :?>
+
+                    <li class="btn-group-nav login-selector" id="user-panel-bell">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                            <i class="fa fa-bell-o"></i>
+                            <!--<span class="fa-add-count">3</span>-->
+                        </a>
+                        <div class="dropdown-menu primary-back">
+                            <!--<b>You have 3 unread notifications:</b>
+                            <ul>
+                                <li>
+                                    <a href="#">
+                                        Sample notification one
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        Sample notification two
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        Sample notification three
+                                    </a>
+                                </li>
+                            </ul>
+                            <a href="#" class="pull-right">
+                                Click to see all..
+                            </a>-->
+                            No notification yet.
+                        </div>
                     </li>
 
-                    <li class="btn-group-nav">
-                        <a href="#" class="btn btn-primary" style="margin-right: 5px;"><b>Sign up</b></a>
-                    </li>-->
+                    <li class="btn-group-nav login-selector" id="user-panel-selector">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                            <i class="fa fa-user"></i>
+                            <?=$this->user->getName()?>
+                            <i class="caret"></i>
+                        </a>
+                        <ul class="dropdown-menu primary-back">
+                            <li><a href="<?=SpecialPage::getSafeTitleFor('Preferences')->getFullURL()?>">Profile settings</a></li>
+                            <li><a href="<?=SpecialPage::getSafeTitleFor('UserLogout')->getFullURL()?>">Logout</a></li>
+                        </ul>
+                    </li>
+
+                    <? else: ?>
 
                     <li class="btn-group-nav login-selector" id="login-selector">
                         <a href="#">
@@ -753,6 +791,8 @@ class SettleInTemplate extends BaseTemplate {
                             Login
                         </a>
                     </li>
+
+                    <? endif; ?>
 
                     <li class="dropdown" id="language-selector">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" style="padding-right: 0;">En <b
@@ -765,11 +805,13 @@ class SettleInTemplate extends BaseTemplate {
 
                 </ul>
 
-                <div id="why_signup">
-                    <a href="#">
-                        Why Signup ?
-                    </a>
-                </div>
+                <? if( !$this->isLoggedIn ) :?>
+                    <div id="why_signup">
+                        <a href="#">
+                            Why Signup ?
+                        </a>
+                    </div>
+                <? endif; ?>
 
             </div>
 
