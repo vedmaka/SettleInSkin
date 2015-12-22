@@ -5,3 +5,7 @@
 .mw-editsection {
     display: none;
 }
+
+#double-col-left .btn a {
+    color: white;
+}
