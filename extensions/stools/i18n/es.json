@@ -1,0 +1,9 @@
+{
+  "@metadata": {
+    "authors": [
+      "Armando-Martin"
+    ]
+  },
+  "stools-desc": "Esta es una extensión de ejemplo",
+  "stools-i18n-welcome": "Bienvenido al archivo de localización de la extensión de stools."
+}

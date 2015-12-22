@@ -1,0 +1,9 @@
+{
+  "@metadata": {
+    "authors": [
+      "Hylle"
+    ]
+  },
+  "stools-desc": "Dette er et eksempel på en udvidelse",
+  "stools-i18n-welcome": "Velkommen til lokaliseringsdelen af stools udvidelsen."
+}

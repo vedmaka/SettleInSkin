@@ -1,0 +1,9 @@
+{
+  "@metadata": {
+    "authors": [
+      "Gomoko"
+    ]
+  },
+  "stools-desc": "Voici un exemple d'extension",
+  "stools-i18n-welcome": "Bienvenue dans le fichier de localisation de l'extension passepartout."
+}

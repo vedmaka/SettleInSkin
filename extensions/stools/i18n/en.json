@@ -1,0 +1,7 @@
+{
+  "@metadata": {
+    "authors": []
+  },
+  "stools-desc": "This is an example extension",
+  "stools-i18n-welcome": "Welcome to the localization file of the stools extension."
+}

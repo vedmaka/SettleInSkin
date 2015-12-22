@@ -1,0 +1,9 @@
+{
+  "@metadata": {
+    "authors": [
+      "DCamer"
+    ]
+  },
+  "stools-desc": "Это пример расширения",
+  "stools-i18n-welcome": "Добро пожаловать в файл локализации расширения stools."
+}

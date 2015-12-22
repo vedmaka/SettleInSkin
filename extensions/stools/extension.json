@@ -1,0 +1,56 @@
+{
+	"name": "stools",
+	"version": "0.0.1",
+	"author": [
+		"Jon Anderton"
+	],
+	"url": "https://www.mediawiki.org/wiki/Extension:stools",
+	"descriptionmsg": "stools-desc",
+	"license-name": "MIT",
+	"type": "other",
+	"AutoloadClasses": {
+        "stools": "stools.class.php",
+		"stoolsHooks": "stools.hooks.php",
+		"Specialstools": "specials/Specialstools.php"
+	},
+	"config": {
+		"stoolsEnableFoo": true
+	},
+	"callback": "stoolsHooks::onExtensionLoad",
+	"ExtensionMessagesFiles": {
+		"stoolsAlias": "stools.i18n.alias.php",
+		"stoolsMagic": "stools.i18n.magic.php"
+	},
+	"Hooks": {
+		"NameOfHook": [
+			"stoolsHooks::onNameOfHook"
+		],
+		"ParserFirstCallInit": [
+			"stoolsHooks::onParserFirstCallInit"
+		]
+	},
+	"MessagesDirs": {
+		"stools": [
+			"i18n"
+		]
+	},
+	"ResourceModules": {
+		"ext.stools.foo": {
+			"scripts": [
+				"modules/ext.stools.js",
+				"modules/ext.stools.foo.js"
+			],
+			"styles": [
+				"modules/ext.stools.foo.css"
+			]
+		}
+	},
+	"ResourceFileModulePaths": {
+		"localBasePath": "",
+		"remoteExtPath": "stools"
+	},
+	"SpecialPages": {
+		"stools": "Specialstools"
+	},
+	"manifest_version": 1
+}

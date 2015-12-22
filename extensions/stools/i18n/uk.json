@@ -1,0 +1,9 @@
+{
+  "@metadata": {
+    "authors": [
+      "Base"
+    ]
+  },
+  "stools-desc": "Це приклад розширення",
+  "stools-i18n-welcome": "Ласкаво просимо до файлу локалізації  розширення stools extension."
+}
