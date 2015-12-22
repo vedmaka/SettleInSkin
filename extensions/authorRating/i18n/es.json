@@ -1,0 +1,9 @@
+{
+  "@metadata": {
+    "authors": [
+      "Armando-Martin"
+    ]
+  },
+  "authorrating-desc": "Esta es una extensión de ejemplo",
+  "authorrating-i18n-welcome": "Bienvenido al archivo de localización de la extensión de authorRating."
+}

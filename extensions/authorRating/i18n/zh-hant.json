@@ -1,0 +1,10 @@
+{
+  "@metadata": {
+    "authors": [
+      "Kevinhksouth",
+      "Simon Shek"
+    ]
+  },
+  "authorrating-desc": "這是一個示例擴展",
+  "authorrating-i18n-welcome": "歡迎使用 authorRating 擴充套件的本地語系檔案。"
+}

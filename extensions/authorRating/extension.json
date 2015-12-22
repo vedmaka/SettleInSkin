@@ -1,0 +1,56 @@
+{
+	"name": "authorRating",
+	"version": "0.0.1",
+	"author": [
+		"Jon Anderton"
+	],
+	"url": "https://www.mediawiki.org/wiki/Extension:authorRating",
+	"descriptionmsg": "authorrating-desc",
+	"license-name": "MIT",
+	"type": "other",
+	"AutoloadClasses": {
+        "authorRating": "authorRating.class.php",
+		"authorRatingHooks": "authorRating.hooks.php",
+		"SpecialauthorRating": "specials/SpecialauthorRating.php"
+	},
+	"config": {
+		"authorRatingEnableFoo": true
+	},
+	"callback": "authorRatingHooks::onExtensionLoad",
+	"ExtensionMessagesFiles": {
+		"authorRatingAlias": "authorRating.i18n.alias.php",
+		"authorRatingMagic": "authorRating.i18n.magic.php"
+	},
+	"Hooks": {
+		"NameOfHook": [
+			"authorRatingHooks::onNameOfHook"
+		],
+        "ParserFirstCallInit": [
+            "authorRatingHooks::onParserFirstCallInit"
+        ]
+	},
+	"MessagesDirs": {
+		"authorRating": [
+			"i18n"
+		]
+	},
+	"ResourceModules": {
+		"ext.authorrating.foo": {
+			"scripts": [
+				"modules/ext.authorRating.js",
+				"modules/ext.authorRating.foo.js"
+			],
+			"styles": [
+				"modules/ext.authorRating.foo.css"
+			]
+		}
+	},
+	"ResourceFileModulePaths": {
+		"localBasePath": "",
+		"remoteExtPath": "authorRating"
+	},
+	"SpecialPages": {
+		"authorRating": "SpecialauthorRating"
+	},
+	"manifest_version": 1
+}

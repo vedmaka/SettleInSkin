@@ -1,0 +1,9 @@
+{
+  "@metadata": {
+    "authors": [
+      "Base"
+    ]
+  },
+  "authorrating-desc": "Це приклад розширення",
+  "authorrating-i18n-welcome": "Ласкаво просимо до файлу локалізації  розширення authorRating extension."
+}

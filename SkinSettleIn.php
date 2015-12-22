@@ -17,6 +17,7 @@ class SkinSettleIn extends SkinTemplate {
 
     public function __construct() {
         $this->settleinConfig = ConfigFactory::getDefaultInstance()->makeConfig( 'settlein' );
+
     }
 
     /**

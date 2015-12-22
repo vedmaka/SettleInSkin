@@ -1,0 +1,7 @@
+{
+  "@metadata": {
+    "authors": []
+  },
+  "authorrating-desc": "This is an example extension",
+  "authorrating-i18n-welcome": "Welcome to the localization file of the authorRating extension."
+}

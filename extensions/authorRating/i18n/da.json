@@ -1,0 +1,9 @@
+{
+  "@metadata": {
+    "authors": [
+      "Hylle"
+    ]
+  },
+  "authorrating-desc": "Dette er et eksempel på en udvidelse",
+  "authorrating-i18n-welcome": "Velkommen til lokaliseringsdelen af authorRating udvidelsen."
+}
