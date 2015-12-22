@@ -58,7 +58,7 @@ class authorRating
         $html = '<span class="author-rating-wrapper">';
 
         // Add user link
-        $html .= $parser->insertStripItem( '<a target="_blank" href="' . $author->getUserPage()->getFullURL() . '">'
+        $html .= $parser->insertStripItem( ' <a target="_blank" href="' . $author->getUserPage()->getFullURL() . '">'
             . $author->getName() . '</a>' );
 
         $html .= ' <i class="fa fa-thumbs-o-up" id="author-thumbs-up" title="Click to rate author"></i>';
