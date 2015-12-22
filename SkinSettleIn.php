@@ -58,6 +58,8 @@ class SkinSettleIn extends SkinTemplate {
 
         //$out->addModules( $scripts );
         $out->addModules( $scripts );
+
+        $out->addMeta('viewport','width=device-width, initial-scale=1');
     }
 
     /**

@@ -20,8 +20,6 @@ class SettleInTemplate extends BaseTemplate {
 	 */
 	public function execute() {
 
-	    $this->getSkin()->getOutput()->addHeadItem('viewport','<meta name="viewport" content="width=device-width, initial-scale=1">');
-
         $this->isCardPage = false;
         if( $this->getSkin()->getTitle() ) {
             if( $this->getSkin()->getTitle()->exists() ) {
