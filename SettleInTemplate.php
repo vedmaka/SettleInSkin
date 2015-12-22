@@ -110,7 +110,7 @@ class SettleInTemplate extends BaseTemplate {
                         </form>
                     </div>-->
 
-                    <form role="search_smw" action="<?=SpecialPage::getSafeTitleFor('RunQuery')->getFullURL().'/Search'?>" id="searchform_smw" method="post">
+                    <form role="search" action="<?=SpecialPage::getSafeTitleFor('RunQuery')->getFullURL().'/Search'?>" id="searchform_smw" method="post">
 
                     <div class="jumbo-search" id="p-search_smw">
                             <div class="form-group">
@@ -136,6 +136,8 @@ class SettleInTemplate extends BaseTemplate {
                     </div>
 
                     <input type="hidden" name="query" value="true" />
+                    <input type="hidden" value="" name="sf_free_text">
+                    <input type="hidden" value="Search" name="wpRunQuery">
 
                     </form>
 
