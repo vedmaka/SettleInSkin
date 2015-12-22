@@ -101,31 +101,43 @@ class SettleInTemplate extends BaseTemplate {
                     </div>
 
 
-                    <div class="jumbo-search" id="p-search">
-                        <form role="search" action="<?php $this->text( 'wgScript' ) ?>" id="searchform">
+                    <!--<div class="jumbo-search" id="p-search">
+                        <form role="search" action="<?php /*$this->text( 'wgScript' ) */?>" id="searchform">
                             <div class="form-group">
                                 <input type="text" class="form-control" placeholder="Search" name="search" id="searchInput">
-                                <input type="hidden" name="title" value="<?=$this->get( 'searchtitle' )?>" />
+                                <input type="hidden" name="title" value="<?/*=$this->get( 'searchtitle' )*/?>" />
                             </div>
                         </form>
+                    </div>-->
+
+                    <form role="search_smw" action="<?=SpecialPage::getSafeTitleFor('RunQuery')->getFullURL().'/Search'?>" id="searchform_smw">
+
+                    <div class="jumbo-search" id="p-search_smw">
+                            <div class="form-group">
+                                <input type="text" class="form-control" placeholder="Search" name="Search[Title]" id="searchInput_smw">
+                            </div>
                     </div>
 
                     <div class="jumbo-country center-block">
                         <!-- Single button -->
                         <div class="btn-group">
-                            <select>
-                                <option value="Russia">Russia</option>
-                                <option value="Russia">United States</option>
-                                <option value="Russia">Country 1</option>
-                                <option value="Russia">Country 2</option>
-                                <option value="Russia">Country 3</option>
-                                <option value="Russia">Country 4</option>
-                                <option value="Russia">Country 5</option>
-                                <option value="Russia">Country 6</option>
-                                <option value="Russia">Country 7</option>
+                            <select name="Search[Country]">
+                                <option></option>
+                                <?
+                                    $propVals = SFUtils::getAllValuesForProperty('Country');
+                                    foreach ($propVals as $val) {
+                                        ?>
+                                        <option value="<?=$val?>"><?=$val?></option>
+                                        <?
+                                    }
+                                ?>
                             </select>
                         </div>
                     </div>
+
+                    <input type="hidden" name="query" value="true" />
+
+                    </form>
 
 
                 </div>
