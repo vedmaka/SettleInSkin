@@ -33,8 +33,7 @@ class authorRatingHooks
 				'styles' => array(
 					"modules/ext.authorRating.foo.css"
 				),
-				'remoteExtPath' => '/skins/SettleIn/extensions/authorRating/',
-				'localBasePath' => __DIR__,
+				'remoteExtPath' => '../skins/SettleIn/extensions/authorRating/',
 			)
 		);
 	}
