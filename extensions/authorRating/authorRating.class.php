@@ -61,15 +61,76 @@ class authorRating
         $html .= $parser->insertStripItem( ' <a target="_blank" href="' . $author->getUserPage()->getFullURL() . '">'
             . $author->getName() . '</a>' );
 
-        $html .= ' <i class="fa fa-thumbs-o-up" id="author-thumbs-up" title="Click to rate author"></i>';
-        $html .= ' <span class="label label-success">0</span>';
+        $html .= ' <i style="display: none;" class="fa fa-thumbs-o-up author-thumbs-up" title="Click to rate author"></i>';
+        $html .= ' <span class="label label-success">?</span>';
         $html .= '</span>';
+
+        $parser->getOutput()->addModules('ext.authorrating.foo');
 
         return array(
             $html,
             'markerType' => 'nowiki'
         );
 
+    }
+
+    public static function isUserVoted( $user_id, $page_id, $author_id = null )
+    {
+        if( $author_id === null ) {
+            $author_id = self::getPageAuthor( Title::newFromID( $page_id ) )->getId();
+        }
+
+        $dbr = wfGetDB(DB_SLAVE);
+        $result = $dbr->select(
+            'author_rating',
+            'user_id',
+            array(
+                'user_id' => $user_id,
+                'author_user_id' => $author_id,
+                'page_id' => $page_id
+            )
+        );
+        if( $result->numRows() ) {
+            return true;
+        }
+        return false;
+
+    }
+
+    public static function getPageAuthorRating( $page_id, $author_id = null )
+    {
+        if( $author_id === null ) {
+            $author_id = self::getPageAuthor( Title::newFromID( $page_id ) )->getId();
+        }
+
+        $dbr = wfGetDB(DB_SLAVE);
+        $result = $dbr->execute( array( 'query' => 'SELECT COUNT(user_id) as count1 FROM author_rating WHERE author_user_id = ? AND page_id = ?' ), array( $author_id, $page_id ) );
+        if( $result->numRows() ) {
+            $count = $result->fetchRow();
+            $count = $count['count1'];
+            return (int) $count;
+        }
+
+        return 0;
+
+    }
+
+    public static function addVote( $page_id, $user_id, $author_id = null )
+    {
+        if( $author_id === null ) {
+            $author_id = self::getPageAuthor( Title::newFromID( $page_id ) )->getId();
+        }
+
+        $dbw = wfGetDB(DB_MASTER);
+        $dbw->insert(
+            'author_rating',
+            array(
+                'user_id' => $user_id,
+                'author_user_id' => $author_id,
+                'page_id' => $page_id,
+                'created_at' => time()
+            )
+        );
     }
 
 }

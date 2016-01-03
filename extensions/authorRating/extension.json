@@ -11,7 +11,8 @@
 	"AutoloadClasses": {
         "authorRating": "authorRating.class.php",
 		"authorRatingHooks": "authorRating.hooks.php",
-		"SpecialauthorRating": "specials/SpecialauthorRating.php"
+		"SpecialauthorRating": "specials/SpecialauthorRating.php",
+		"AuthorRatingApi": "includes/authorRating.api.php"
 	},
 	"config": {
 		"authorRatingEnableFoo": true
@@ -27,7 +28,10 @@
 		],
         "ParserFirstCallInit": [
             "authorRatingHooks::onParserFirstCallInit"
-        ]
+        ],
+		"LoadExtensionSchemaUpdates": [
+			"authorRatingHooks::onLoadExtensionSchemaUpdates"
+		]
 	},
 	"MessagesDirs": {
 		"authorRating": [
@@ -37,8 +41,8 @@
 	"ResourceModules": {
 		"ext.authorrating.foo": {
 			"scripts": [
-				"modules/ext.authorRating.js",
-				"modules/ext.authorRating.foo.js"
+				"modules/ext.authorRating.foo.js",
+				"modules/ext.authorRating.js"
 			],
 			"styles": [
 				"modules/ext.authorRating.foo.css"
@@ -51,6 +55,9 @@
 	},
 	"SpecialPages": {
 		"authorRating": "SpecialauthorRating"
+	},
+	"APIModules": {
+		"authorrating": "AuthorRatingApi"
 	},
 	"manifest_version": 1
 }

@@ -342,14 +342,14 @@ div.left-tabs ul.nav-tabs > li {
     text-align: center;
 }
 
-#author-thumbs-up {
+.author-thumbs-up {
     margin-left: 5px;
     font-size: 16px;
     cursor: pointer;
     color: #64bb5d;
 }
 
-#author-thumbs-up:hover {
+.author-thumbs-up:hover {
     color: black;
 }
 

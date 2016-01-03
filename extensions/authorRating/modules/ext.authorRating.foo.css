@@ -1,3 +1,7 @@
 .mw-authorrating-foo {
     float: left;
 }
+
+i.author-thumbs-up {
+    cursor: pointer !important;
+}

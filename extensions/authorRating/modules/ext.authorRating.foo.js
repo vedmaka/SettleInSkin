@@ -1,37 +1,60 @@
 ( function () {
-    var x;
 
-    function iffify(y) {
-        return y + x;
-    }
+    var apiUrl = mw.config.get('wgServer') + mw.config.get('wgScriptPath') + '/api.php?action=authorrating&format=json';
 
     /**
-     * @class mw.authorrating.Foo
+     * @class mw.Authorrating.Foo
      *
      * @constructor
      */
-    function Foo() {
+    function Authorrating( element ) {
+        this.$element = element;
+        this.$rateBtn = this.$element.find('.author-thumbs-up');
+        this.$rateCount = this.$element.find('span.label');
+        this.pageId = mw.config.get('wgArticleId');
+        this.init();
     }
 
     /**
-     * @static
-     * @param {string} a
-     * @param {number} b
-     * @return {boolean}
+     * Initialization function
      */
-    Foo.create = function (a, b) {
-        return new Foo(iffify(a + b)).connect();
-    };
-
-    Foo.prototype = {
-
-        /**
-         * Establish connection to the server
-         */
-        connect: function () {
+    Authorrating.prototype.init = function()
+    {
+        if( !mw.config.get('wgUserId') || mw.config.get('wgUserId') == null ) {
+            return false;
         }
+
+        // Check if user already voted or not and load votes information
+        $.get( apiUrl + '&do=info&page_id=' + this.pageId, function(data){
+
+            var rating = data.authorrating.rating;
+            var canvote = data.authorrating.canvote;
+
+            this.$rateCount.text( rating );
+
+            if( canvote ) {
+                this.initRateBtn();
+            }
+
+        }.bind(this));
+
     };
 
-    mw.authorrating.Foo = Foo;
+    Authorrating.prototype.initRateBtn = function()
+    {
+        this.$rateBtn.click(function(){
+            this.$rateBtn.hide();
+            var currentRating = parseInt( this.$rateCount.text() ) || 0;
+            currentRating += 1;
+            this.$rateCount.text( currentRating );
+            $.get( apiUrl + '&do=vote&page_id=' + this.pageId, function(){
+               // Vote saved
+            });
+        }.bind(this));
+        // Show rate button
+        this.$rateBtn.show();
+    };
+
+    mw.Authorrating = Authorrating;
 
 }() );

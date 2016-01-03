@@ -27,4 +27,15 @@ class authorRatingHooks
 		$parser->setFunctionHook('authorrating', 'authorRating::render');
 	}
 
+	/**
+	 * @param DatabaseUpdater $updater
+	 */
+	public static function onLoadExtensionSchemaUpdates( $updater )
+	{
+		$updater->addExtensionTable(
+			'author_rating',
+			dirname( __FILE__ ) . '/schema/author_rating.sql'
+		);
+	}
+
 }
