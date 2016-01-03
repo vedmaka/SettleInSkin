@@ -1,9 +1,0 @@
-{
-  "@metadata": {
-    "authors": [
-      "DCamer"
-    ]
-  },
-  "authorrating-desc": "Это пример расширения",
-  "authorrating-i18n-welcome": "Добро пожаловать в файл локализации расширения authorRating."
-}
