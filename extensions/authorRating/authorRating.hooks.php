@@ -11,15 +11,32 @@ class authorRatingHooks
 
 	public static function onExtensionLoad()
 	{
-		global $wgResourceModules;
 
-		$wgResourceModules['ext.authorrating.foo']['localBasePath'] = __DIR__;
-		$wgResourceModules['ext.authorrating.foo']['remoteBasePath'] = '/skins/SettleIn/extensions/authorRating';
 	}
 
 	public static function onNameOfHook()
 	{
 		
+	}
+
+	/**
+	 * @param ResourceLoader $resourceLoader
+	 */
+	public static function onResourceLoaderRegisterModules( &$resourceLoader  )
+	{
+		$resourceLoader->register( 'ext.authorrating.foo',
+			array(
+				'scripts' => array(
+					"modules/ext.authorRating.foo.js",
+					"modules/ext.authorRating.js"
+				),
+				'styles' => array(
+					"modules/ext.authorRating.foo.css"
+				),
+				'remoteExtPath' => '/skins/SettleIn/extensions/authorRating/',
+				'localBasePath' => __DIR__,
+			)
+		);
 	}
 
 	/**

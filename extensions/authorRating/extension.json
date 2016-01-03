@@ -31,27 +31,15 @@
         ],
 		"LoadExtensionSchemaUpdates": [
 			"authorRatingHooks::onLoadExtensionSchemaUpdates"
-		]
+		],
+        "ResourceLoaderRegisterModules": [
+            "authorRatingHooks::onResourceLoaderRegisterModules"
+        ]
 	},
 	"MessagesDirs": {
 		"authorRating": [
 			"i18n"
 		]
-	},
-	"ResourceModules": {
-		"ext.authorrating.foo": {
-			"scripts": [
-				"modules/ext.authorRating.foo.js",
-				"modules/ext.authorRating.js"
-			],
-			"styles": [
-				"modules/ext.authorRating.foo.css"
-			]
-		}
-	},
-	"ResourceFileModulePaths": {
-		"localBasePath": "",
-		"remoteExtPath": "authorRating"
 	},
 	"SpecialPages": {
 		"authorRating": "SpecialauthorRating"
