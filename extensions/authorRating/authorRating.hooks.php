@@ -11,7 +11,10 @@ class authorRatingHooks
 
 	public static function onExtensionLoad()
 	{
-		
+		global $wgResourceModules;
+
+		$wgResourceModules['remoteBasePath']['localBasePath'] = __DIR__;
+		$wgResourceModules['remoteBasePath']['remoteBasePath'] = '/skins/SettleIn/extensions/authorRating';
 	}
 
 	public static function onNameOfHook()
