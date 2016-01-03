@@ -46,7 +46,8 @@
 			],
 			"styles": [
 				"modules/ext.authorRating.foo.css"
-			]
+			],
+            "remoteBasePath": "/skins/SettleIn/extensions/authorRating/"
 		}
 	},
 	"ResourceFileModulePaths": {
