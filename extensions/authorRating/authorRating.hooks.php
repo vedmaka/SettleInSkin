@@ -13,8 +13,8 @@ class authorRatingHooks
 	{
 		global $wgResourceModules;
 
-		$wgResourceModules['remoteBasePath']['localBasePath'] = __DIR__;
-		$wgResourceModules['remoteBasePath']['remoteBasePath'] = '/skins/SettleIn/extensions/authorRating';
+		$wgResourceModules['ext.authorrating.foo']['localBasePath'] = __DIR__;
+		$wgResourceModules['ext.authorrating.foo']['remoteBasePath'] = '/skins/SettleIn/extensions/authorRating';
 	}
 
 	public static function onNameOfHook()
