@@ -453,6 +453,10 @@ ul.page-editors-list li a {
     color: white;
 }
 
+#add-to-watchlist {
+    margin-left: 10px;
+}
+
 /* ----------------------------------- media -------------------------------------------------------- */
 
 @media (max-width: 1024px) {
