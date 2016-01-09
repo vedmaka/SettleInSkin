@@ -27,6 +27,7 @@ class stoolsHooks
         $parser->setFunctionHook('stoolsformlink', 'stools::formlink' );
         $parser->setFunctionHook('stoolsmoddate', 'stools::moddate' );
         $parser->setFunctionHook('stoolseditorlist', 'stools::editorlist' );
+        $parser->setFunctionHook('stoolsprintbtn', 'stools::sprintbtn' );
 	}
 
 }

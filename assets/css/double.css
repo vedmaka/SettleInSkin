@@ -433,10 +433,16 @@ ul.page-editors-list li a {
     width: 510px;
 }
 
+/*.comments-popup-form {
+    overflow: hidden;
+}*/
+
 .comments-popup-form .comments-list {
     height: 200px;
     overflow-y: scroll;
     margin-bottom: 10px;
+/*    margin-right: -30px;
+    padding-right: 18px;*/
 }
 
 .comments-popup-form .comments-list ul {
@@ -456,6 +462,8 @@ ul.page-editors-list li a {
 #add-to-watchlist {
     margin-left: 10px;
 }
+
+
 
 /* ----------------------------------- media -------------------------------------------------------- */
 

@@ -52,7 +52,8 @@
         "assets/css/select2.min.css",
         "assets/css/theme_combined.css",
         "assets/css/screen.css",
-        "assets/css/double.css"
+        "assets/css/double.css",
+        "assets/css/double_print.css"
       ]
     },
     "skins.settlein.page.js": {

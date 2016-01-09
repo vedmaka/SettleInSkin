@@ -89,4 +89,26 @@ class stools
 
     }
 
+    /**
+     * @param Parser $parser
+     * @return string
+     */
+    public static function sprintbtn( $parser )
+    {
+
+        $html = '';
+
+        $title = $parser->getTitle();
+        $link = $title->getFullURL('printable=yes');
+
+        $link = '#';
+
+        $parser->getOutput()->addModules( 'ext.stools.foo' );
+
+        $html .= $parser->insertStripItem('<a id="print-button" href="'.$link.'" type="button" class="btn btn-primary"><i class="fa fa-print"></i> Print</a>');
+
+        return $html;
+
+    }
+
 }
