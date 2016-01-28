@@ -46,4 +46,8 @@ $(function(){
         });
     }
 
+    $('[data-dismiss]').click(function(){
+        $('.login-popup-form').fadeOut();
+    });
+
 });

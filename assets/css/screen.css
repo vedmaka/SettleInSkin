@@ -31,3 +31,27 @@
     transform: translate(-50%, -50%);
     border-radius: 4px;
 }
+
+@media (max-width: 480px) {
+
+    #nav {
+        box-shadow: 0px 6px 13px rgba(0, 0, 0, 0.24);
+    }
+
+    nav.navbar #faq-menu {
+        margin: 0 !important;
+    }
+
+    nav.navbar .fa {
+        display: none;
+    }
+
+    #nav #top-search, #nav #top-search .form-group {
+        margin-bottom: 0 !important;
+    }
+
+    #nav #country-select + .select2 {
+        width: 95% !important;
+    }
+
+}
