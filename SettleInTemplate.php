@@ -593,7 +593,7 @@ class SettleInTemplate extends BaseTemplate {
 
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 
-                <form action="<?=SpecialPage::getSafeTitleFor('RunQuery')->getFullURL().'/Search'?>" method="post" role="search">
+                <!--<form action="<?/*=SpecialPage::getSafeTitleFor('RunQuery')->getFullURL().'/Search'*/?>" method="post" role="search">
 
                 <ul class="nav navbar-nav" id="top-search">
 
@@ -606,14 +606,14 @@ class SettleInTemplate extends BaseTemplate {
                 <ul class="nav navbar-nav" id="country-select-wrapper">
                     <select id="country-select" name="Search[Country]">
                         <option></option>
-                        <?
+                        <?/*
                             $propVals = SFUtils::getAllValuesForProperty('Country');
                             foreach ($propVals as $val) {
-                                ?>
-                                <option value="<?=$val?>"><?=$val?></option>
-                                <?
+                                */?>
+                                <option value="<?/*=$val*/?>"><?/*=$val*/?></option>
+                                <?/*
                             }
-                        ?>
+                        */?>
                     </select>
                 </ul>
 
@@ -621,7 +621,7 @@ class SettleInTemplate extends BaseTemplate {
                 <input type="hidden" value="" name="sf_free_text">
                 <input type="hidden" value="Search" name="wpRunQuery">
 
-                </form>
+                </form>-->
 
                 <ul class="nav navbar-nav navbar-right">
 
