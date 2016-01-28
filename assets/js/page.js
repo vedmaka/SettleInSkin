@@ -30,11 +30,6 @@ $(function () {
         $('.login-popup-form').fadeIn();
     });
 
-    $('#why_signup').click(function() {
-        $('#login-popup-wrapper').fadeIn();
-        $('.why-sign-up-popup').fadeIn();
-    });
-
     $('[data-toggle="tooltip"]').tooltip();
 
     $('#show-comments-link').click(function () {
@@ -45,5 +40,12 @@ $(function () {
     $('#faq-menu').click(function(){
         $('#login-popup-wrapper').fadeIn();
     });
+
+    if( $('#why_signup').length ) {
+        $('#why_signup').click(function () {
+            $('#login-popup-wrapper').fadeIn();
+            $('.why-sign-up-popup').fadeIn();
+        });
+    }
 
 });

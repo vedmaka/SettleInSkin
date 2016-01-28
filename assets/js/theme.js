@@ -24,6 +24,7 @@ $(function(){
         $(this).fadeOut();
         $('.login-popup-form').fadeOut();
         $('[data-dismiss]').click();
+        $('.why-sign-up-popup').fadeOut();
     });
 
     $('#login-selector').click(function (e) {
@@ -35,6 +36,13 @@ $(function(){
     if( $('#country-select').length ) {
         $('#country-select').select2({
             placeholder: "Select country"
+        });
+    }
+
+    if( $('#why_signup').length ) {
+        $('#why_signup').click(function () {
+            $('#login-popup-wrapper').fadeIn();
+            $('.why-sign-up-popup').fadeIn();
         });
     }
 

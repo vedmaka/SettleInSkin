@@ -308,24 +308,6 @@ div.left-thankyou {
     display: none;
 }
 
-.login-popup-form, .comments-popup-form, .why-sign-up-popup {
-    display: none;
-    z-index: 1001;
-    position: fixed;
-    overflow: hidden;
-    width: 600px;
-    padding: 15px;
-    background-color: white;
-    left: 50%;
-    top: 45%;
-    -webkit-transform: translate(-50%, -50%);
-    -moz-transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-    -o-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-    border-radius: 4px;
-}
-
 div.left-tabs ul.nav-tabs {
     display: table;
     table-layout: fixed;

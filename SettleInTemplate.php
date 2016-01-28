@@ -400,27 +400,6 @@ class SettleInTemplate extends BaseTemplate {
     </div>
 </div>
 
-<div class="why-sign-up-popup mobile-form-popup">
-    <h3>Why sign up ?</h3>
-
-    <p>
-        All the suns infiltrate post-apocalyptic, ancient nanomachines.
-        Metamorphosis at the solar sphere that is when fantastic astronauts experiment.
-        The proud ferengi technically manifests the planet.
-
-    <ul>
-        <li>Avast! Pieces o' malaria are forever old.</li>
-        <li>God, faith!</li>
-        <li>Cannons are the wenchs of the weird grace.</li>
-    </ul>
-
-    Delighted particles, to the solar sphere.
-    Experiment unearthly like a conscious planet.
-    The moon is more sonic shower now than teleporter. ordinary and wisely extraterrestrial.
-
-    </p>
-</div>
-
 <div class="comments-popup-form mobile-form-popup">
     <h3>Comments</h3>
 
@@ -679,6 +658,11 @@ class SettleInTemplate extends BaseTemplate {
                             </ul>
                         </li>
                     <? else: ?>
+                        <li id="why_signup">
+                            <a href="#">
+                                Why Signup ?
+                            </a>
+                        </li>
                         <li class="btn-group-nav" id="login-selector">
                             <a href="<?=SpecialPage::getSafeTitleFor('Userlogin')->getFullURL()?>" class="btn btn-concrete" style="margin-right: 10px;"><b>Login</b></a>
                         </li>
@@ -863,6 +847,27 @@ class SettleInTemplate extends BaseTemplate {
 	    }
 
 	?>
+
+<div class="why-sign-up-popup mobile-form-popup">
+    <h3>Why sign up ?</h3>
+
+    <p>
+        All the suns infiltrate post-apocalyptic, ancient nanomachines.
+        Metamorphosis at the solar sphere that is when fantastic astronauts experiment.
+        The proud ferengi technically manifests the planet.
+
+    <ul>
+        <li>Avast! Pieces o' malaria are forever old.</li>
+        <li>God, faith!</li>
+        <li>Cannons are the wenchs of the weird grace.</li>
+    </ul>
+
+    Delighted particles, to the solar sphere.
+    Experiment unearthly like a conscious planet.
+    The moon is more sonic shower now than teleporter. ordinary and wisely extraterrestrial.
+
+    </p>
+</div>
 
 <!-- Login popup form & wrapper -->
 <div id="login-popup-wrapper">
