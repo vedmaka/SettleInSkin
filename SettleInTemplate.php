@@ -806,14 +806,15 @@ class SettleInTemplate extends BaseTemplate {
 
                     <? endif; ?>
 
-                    <li class="dropdown" id="language-selector">
+                    <!-- TODO: Disabled temporary -->
+                    <!--<li class="dropdown" id="language-selector">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" style="padding-right: 0;">En <b
                                 class="caret"></b></a>
                         <ul class="dropdown-menu primary-back">
                             <li><a href="#">English</a></li>
                             <li><a href="#">Russian</a></li>
                         </ul>
-                    </li>
+                    </li>-->
 
                 </ul>
 
