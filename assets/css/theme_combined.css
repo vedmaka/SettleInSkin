@@ -43,11 +43,28 @@ nav {
     margin: 0 auto 30px auto;
     position: relative;
     left: 10px;
+    opacity: 0.2;
+    z-index: 2;
 }
 
 .i-logo img {
     max-width: 150px;
     width: 90%;
+}
+
+.i-jumbotext {
+    position: absolute;
+    color: white;
+    text-align: center;
+    width: 100%;
+    top: 10px;
+    z-index: 3;
+}
+
+.i-jumbotext p {
+    display: block;
+    margin: 0 auto;
+    max-width: 800px;
 }
 
 .jumbo-search {
@@ -493,6 +510,15 @@ body {
 
 /* --------------------------- media ----------------------------------------------- */
 
+@media (max-width: 480px) {
+    .i-jumbotext h1 {
+        font-size: 30px;
+    }
+    .i-jumbotext p {
+        font-size: 14px;
+    }
+}
+
 @media ( max-width: 780px ) {
     #jumbo-backlay {
         /*background-size: cover;*/
@@ -513,6 +539,10 @@ body {
 
     #nav #why_signup {
         float: right;
+    }
+
+    .i-jumbotext p {
+        font-size: 20px;
     }
 
 }
