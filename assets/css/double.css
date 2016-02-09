@@ -607,12 +607,17 @@ ul.page-editors-list li a {
     }
 
     div.action-buttons-bottom > a#add-to-watchlist {
-        margin-right: 55px;
+        clear: both;
+        margin-top: 13px;
+        display: block;
     }
 
     div.action-buttons-bottom > a#show-comments-link {
-        margin-left: 10px;
         margin-right: 0;
+        clear: both;
+        margin-left: 9px;
+        margin-top: -15px;
+        display: block;
     }
 
     #double-col-left dl.bottom-left-subtitle {
