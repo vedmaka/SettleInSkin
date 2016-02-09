@@ -48,4 +48,8 @@ $(function () {
         });
     }
 
+    $('#top-search a.search-submit').click(function(){
+        $('#form-top-search').submit();
+    });
+
 });

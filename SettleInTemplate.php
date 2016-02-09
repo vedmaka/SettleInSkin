@@ -110,29 +110,30 @@ class SettleInTemplate extends BaseTemplate {
                         </form>
                     </div>-->
 
-                    <form role="search" action="<?=SpecialPage::getSafeTitleFor('RunQuery')->getFullURL().'/Search'?>" id="searchform_smw" method="post">
-
-                    <div class="jumbo-search" id="p-search_smw">
-                            <div class="form-group">
-                                <input type="text" class="form-control" placeholder="Search" name="Search[Title]" id="searchInput_smw">
-                            </div>
-                    </div>
-
                     <div class="jumbo-country center-block">
                         <!-- Single button -->
                         <div class="btn-group">
                             <select name="Search[Country]">
                                 <option></option>
                                 <?
-                                    $propVals = SFUtils::getAllValuesForProperty('Country');
-                                    foreach ($propVals as $val) {
-                                        ?>
-                                        <option value="<?=$val?>"><?=$val?></option>
-                                        <?
-                                    }
+                                $propVals = SFUtils::getAllValuesForProperty('Country');
+                                foreach ($propVals as $val) {
+                                    ?>
+                                    <option value="<?=$val?>"><?=$val?></option>
+                                    <?
+                                }
                                 ?>
                             </select>
                         </div>
+                    </div>
+
+                    <form role="search" action="<?=SpecialPage::getSafeTitleFor('RunQuery')->getFullURL().'/Search'?>" id="searchform_smw" method="post">
+
+                    <div class="jumbo-search" id="p-search_smw">
+                            <div class="form-group">
+                                <a href="#" class="search-submit fa fa-search"></a>
+                                <input type="text" class="form-control" placeholder="Search" name="Search[Title]" id="searchInput_smw">
+                            </div>
                     </div>
 
                     <input type="hidden" name="query" value="true" />
@@ -712,15 +713,7 @@ class SettleInTemplate extends BaseTemplate {
 
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 
-                <form action="<?=SpecialPage::getSafeTitleFor('RunQuery')->getFullURL().'/Search'?>" class="" role="search" method="post">
-
-                <ul class="nav navbar-nav" id="top-search">
-
-                        <div class="form-group navbar-form navbar-left">
-                            <input type="text" class="form-control" placeholder="Search" name="Search[Title]">
-                        </div>
-
-                </ul>
+                <form action="<?=SpecialPage::getSafeTitleFor('RunQuery')->getFullURL().'/Search'?>" class="" role="search" method="post" id="form-top-search">
 
                 <ul class="nav navbar-nav" id="country-select-wrapper">
                     <select id="country-select" name="Search[Country]">
@@ -734,6 +727,15 @@ class SettleInTemplate extends BaseTemplate {
                             }
                         ?>
                     </select>
+                </ul>
+
+                <ul class="nav navbar-nav" id="top-search">
+
+                    <div class="form-group navbar-form navbar-left">
+                        <a href="#" class="search-submit fa fa-search"></a>
+                        <input type="text" class="form-control" placeholder="Search" name="Search[Title]">
+                    </div>
+
                 </ul>
 
                 <input type="hidden" name="query" value="true" />

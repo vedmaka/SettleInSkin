@@ -50,4 +50,8 @@ $(function(){
         $('.login-popup-form').fadeOut();
     });
 
+    $('#p-search_smw a.search-submit').click(function(){
+       $('#searchform_smw').submit();
+    });
+
 });

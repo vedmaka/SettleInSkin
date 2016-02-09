@@ -110,6 +110,7 @@ nav ul>li>a.btn-concrete:hover {
 
 .jumbo-country {
     width: 250px;
+    margin-bottom: 20px;
 }
 
 .jumbo-country select {
@@ -467,6 +468,29 @@ body {
     display: none;
 }
 
+#p-search_smw > .form-group,
+#top-search .form-group {
+    position: relative;
+}
+
+#p-search_smw > .form-group .search-submit,
+#top-search .form-group .search-submit {
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    font-size: 15px;
+    right: 10px;
+    top: 10px;
+    border: 0;
+    background: none;
+    text-align: center;
+    padding: 0;
+}
+
+#top-search .form-group .search-submit {
+    right: -5px;
+}
+
 /* --------------------------- media ----------------------------------------------- */
 
 @media ( max-width: 780px ) {
@@ -485,6 +509,10 @@ body {
 
     .jumbo-addition > .container > ul {
         padding: 0;
+    }
+
+    #nav #why_signup {
+        float: right;
     }
 
 }
