@@ -281,11 +281,9 @@ class SettleInTemplate extends BaseTemplate {
             </div>
 
             <div class="jumbotron jumbotron-middle">
-                <h3>Space suits fly from plasmas like real planets.</h3>
+                <h3>Life. Anywhere.</h3>
                 <p>
-                    Shields up, moon!
-                    Resist wihtout faith, and we won’t deceive a hur'q.
-                    When the moon harvests for astral city, all collectives dissolve harmless, chemical mermaids.
+                    Easy to understand information in your own language on how to live or move to anywhere in the world thanks to people like you.
                 </p>
                 <a href="<?=SpecialPage::getSafeTitleFor('Userlogin')->getFullURL('type=signup')?>" class="btn btn-primary">Sign up for free</a>
             </div>
