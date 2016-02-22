@@ -122,7 +122,7 @@ class SettleInTemplate extends BaseTemplate {
                             <select name="Search[Country]">
                                 <option></option>
                                 <?
-                                $propVals = SFUtils::getAllValuesForProperty('Country');
+                                $propVals = stools::getPropertyAllowedValues('Country');
                                 foreach ($propVals as $val) {
                                     ?>
                                     <option value="<?=$val?>"><?=$val?></option>
@@ -725,7 +725,7 @@ class SettleInTemplate extends BaseTemplate {
                     <select id="country-select" name="Search[Country]">
                         <option></option>
                         <?
-                            $propVals = SFUtils::getAllValuesForProperty('Country');
+                            $propVals = stools::getPropertyAllowedValues('Country');
                             foreach ($propVals as $val) {
                                 ?>
                                 <option value="<?=$val?>"><?=$val?></option>

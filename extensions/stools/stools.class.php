@@ -111,4 +111,25 @@ class stools
 
     }
 
+    public static function getPropertyAllowedValues( $propertyName )
+    {
+
+        $arValues = array();
+
+        $store = \SMW\StoreFactory::getStore();
+        $prop = new SMWDIWikiPage( str_replace(' ', '_', $propertyName), SMW_NS_PROPERTY );
+
+        $pValues = $store->getPropertyValues( $prop, new SMWDIProperty('_PVAL') );
+
+        if( $pValues ) {
+            /** @var SMWDIBlob $arValue */
+            foreach ( $pValues as $value ) {
+                $arValues[] = $value->getString();
+            }
+        }
+
+        return $arValues;
+
+    }
+
 }
