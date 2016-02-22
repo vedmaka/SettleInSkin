@@ -102,9 +102,9 @@ class SettleInTemplate extends BaseTemplate {
                         </p>
                     </div>
 
-                    <div class="i-logo">
-                        <img src="<?=$this->getSkin()->getSkinStylePath("/img/i.png")?>" />
-                    </div>
+                    <!--<div class="i-logo">
+                        <img src="<?/*=$this->getSkin()->getSkinStylePath("/img/i.png")*/?>" />
+                    </div>-->
 
 
                     <!--<div class="jumbo-search" id="p-search">
