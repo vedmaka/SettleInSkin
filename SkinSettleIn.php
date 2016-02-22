@@ -100,6 +100,12 @@ class SkinSettleIn extends SkinTemplate {
             }
         }
 
+        if( $out->getRequest()->getVal('color') ) {
+            global $wgServer, $wgScriptPath;
+            $color = htmlspecialchars( $out->getRequest()->getVal('color') );
+            $out->addStyle( $wgServer . $wgScriptPath . '/skins/SettleIn/assets/colors/'.$color.'.css' );
+        }
+
         //$out->addModuleStyles( $styles );
         $out->addModuleStyles( $styles );
     }

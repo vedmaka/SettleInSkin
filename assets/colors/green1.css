@@ -1,0 +1,18 @@
+/* Color-scheme for Card pages in green: #bfebad */
+
+body {
+    background-color: #bfebad !important;
+}
+
+.btn-primary {
+    background-color: #bfebad !important;
+    border-color: #bfebad !important;
+}
+
+.label-success {
+    background-color: #bfebad !important;
+}
+
+.nav-tabs {
+    background-color: #bfebad !important;
+}
