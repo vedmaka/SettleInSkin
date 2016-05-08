@@ -1,0 +1,62 @@
+.about-us-quoted-title {
+    max-width: 510px;
+    text-align: center;
+    margin: 15px auto 0 auto;
+    padding: 5px 0;
+    border-top: 2px solid rgba(128, 128, 128, 0.24);
+    border-bottom: 2px solid rgba(128, 128, 128, 0.24);
+    font-size: 45px;
+    font-weight: 600;
+}
+
+.about-us-quoted-text {
+    margin: 30px auto 0 auto;
+    color: #909090;
+    max-width: 800px;
+    text-align: center;
+    line-height: 24px;
+    font-size: 16px;
+}
+
+#tos-block-start {
+    margin-top: 45px;
+}
+
+.tos-left {
+    background-color: white;
+}
+
+.tos-right {
+    background-color: #a4d27c;
+}
+
+.tos-item {
+    padding: 20px 40px;
+}
+
+.tos-left .tos-item p {
+    font-size: 0.9em;
+}
+
+.tos-right .tos-item p {
+    font-size: 1.2em;
+}
+
+.tos-entry {
+
+}
+
+@media (min-width: 990px) {
+
+    .tos-left, .tos-right {
+        display: table-cell;
+        float: none;
+        vertical-align: top;
+    }
+
+    .row {
+        overflow: hidden;
+        display: table;
+    }
+
+}

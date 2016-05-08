@@ -1,0 +1,69 @@
+#jumbo-about-backlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: url("../../../img/samples/1.jpg") 0 -360px no-repeat;
+    background-size: cover;
+    width: 1600px;
+    height: 100%;
+    z-index: 1;
+    opacity: 0.5;
+}
+
+.about-us-quoted-title {
+    width: 275px;
+    text-align: center;
+    margin: 15px auto 0 auto;
+    padding: 5px 0;
+    border-top: 2px solid rgba(128, 128, 128, 0.24);
+    border-bottom: 2px solid rgba(128, 128, 128, 0.24);
+    font-size: 45px;
+    font-weight: 600;
+}
+
+.about-us-quoted-text {
+    margin: 30px auto 0 auto;
+    color: #909090;
+    max-width: 800px;
+    text-align: center;
+    line-height: 24px;
+    font-size: 16px;
+}
+
+#timeline {
+    margin-top: 50px;
+    background-color: #4dbdeb;
+}
+
+#timeline::before {
+    content: ' ';
+    display: block;
+    height: 6px;
+    background: transparent url("../../../img/sawtooth-white-top.png") repeat-x 0 0 scroll;
+}
+
+#timeline .timeline-panel {
+    background-color: white;
+}
+
+#contributors-about-list {
+    margin-top: 45px;
+}
+
+#contributors-about-list ul {
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
+#contributors-about-list ul li {
+    list-style: none;
+    margin: 0 25px 25px 25px;
+    display: inline-block;
+}
+
+#contributors-about-list .contributor-about-name {
+    display: block;
+    text-align: center;
+    margin-top: 8px;
+}

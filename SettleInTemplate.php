@@ -15,6 +15,9 @@ class SettleInTemplate extends BaseTemplate {
     /** @var boolean */
     private $isCardPage;
 
+    /** @var boolean */
+    private $cleanPage;
+
 	/**
 	 * Outputs the entire contents of the (X)HTML page
 	 */
@@ -28,6 +31,19 @@ class SettleInTemplate extends BaseTemplate {
                     if( !$this->getSkin()->getRequest()->getVal('action') || $this->getSkin()->getRequest()->getVal('action') == 'view' ) {
                         $this->isCardPage = true;
                     }
+                }
+            }
+        }
+
+        $this->cleanPage = false;
+        if( $this->getSkin()->getTitle() ) {
+            if( $this->getSkin()->getTitle()->getNamespace() == NS_SPECIAL ) {
+                if( in_array( $this->getSkin()->getTitle()->getBaseText(), array(
+                    'SettleIn/about',
+                    'SettleIn/contact',
+                    'SettleIn/tos'
+                )) ) {
+                    $this->cleanPage = true;
                 }
             }
         }
@@ -352,11 +368,17 @@ class SettleInTemplate extends BaseTemplate {
         }else{
             $this->printHeader(); // print header same for all pages
             ?>
+            <? if( $this->cleanPage ): ?>
+                <?
+                print $this->data['bodycontent']; // page content itself
+                ?>
+            <? else: ?>
             <div id="normal-wrapper" class="container">
             <?
                 print $this->data['bodycontent']; // page content itself
             ?>
             </div>
+            <? endif; ?>
             <?
             $this->printFooter();
         }

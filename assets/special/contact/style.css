@@ -1,0 +1,26 @@
+#jumbo-about-backlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: url("../../../img/samples/1.jpg") 0 -360px no-repeat;
+    background-size: cover;
+    width: 1600px;
+    height: 100%;
+    z-index: 1;
+    opacity: 0.5;
+}
+
+#contactus-form {
+    margin-top: 40px;
+}
+
+#contactus-items {
+    margin-top: 40px;
+    text-align: center;
+}
+
+#contactus-items p {
+    padding-top: 10px;
+    padding-bottom: 20px;
+    text-align: center;
+}

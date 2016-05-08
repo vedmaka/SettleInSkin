@@ -21,7 +21,11 @@
   },
   "AutoloadClasses": {
     "SkinSettleIn": "SkinSettleIn.php",
-    "SettleInTemplate": "SettleInTemplate.php"
+    "SettleInTemplate": "SettleInTemplate.php",
+    "SettleInSpecial": "includes/SettleInSpecial.php"
+  },
+  "SpecialPages": {
+    "SettleIn": "SettleInSpecial"
   },
   "ResourceModules": {
     "skins.settlein.styles": {
@@ -67,6 +71,39 @@
         "assets/js/jquery.fitvids.js",
         "assets/js/settlein.js",
         "assets/js/page.js"
+      ],
+      "position": "top"
+    },
+    "skins.settlein.special.about": {
+      "scripts": [
+        "assets/special/about/script.js",
+        "assets/special/about/holder.min.js",
+        "assets/special/about/fancybox/jquery.fancybox.pack.js"
+      ],
+      "styles": [
+        "assets/special/about/style.css",
+        "assets/special/about/timeline.css",
+        "assets/special/about/fancybox/jquery.fancybox.css"
+      ],
+      "position": "top"
+    },
+    "skins.settlein.special.contact": {
+      "scripts": [
+        "assets/special/contact/script.js",
+        "assets/special/about/holder.min.js"
+      ],
+      "styles": [
+        "assets/special/contact/style.css"
+      ],
+      "position": "top"
+    },
+    "skins.settlein.special.tos": {
+      "scripts": [
+        "assets/special/tos/script.js",
+        "assets/special/tos/holder.min.js"
+      ],
+      "styles": [
+        "assets/special/tos/style.css"
       ],
       "position": "top"
     }
