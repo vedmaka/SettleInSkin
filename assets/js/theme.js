@@ -17,7 +17,7 @@ $(function(){
     });
 
     $('.jumbo-country select').select2({
-        placeholder: "Select country"
+        placeholder: mw.msg('settlein-skin-mainpage-jumbotron-country-placeholder')
     });
 
     $('#login-popup-wrapper').click(function () {

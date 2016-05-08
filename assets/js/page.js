@@ -4,7 +4,7 @@
 $(function () {
 
     $('#country-select').select2({
-        placeholder: "Select country"
+        placeholder: mw.msg('settlein-skin-header-select-country-placeholder')
     });
 
     $('#bottom-footer .bottom-footer-badge').click(function () {

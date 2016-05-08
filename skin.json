@@ -1,7 +1,7 @@
 {
   "name": "SettleIn",
   "author": [
-    "Jon Anderton"
+    ""
   ],
   "url": "https://www.settlein.org/",
   "descriptionmsg": "settlein-skin-desc",
@@ -48,7 +48,10 @@
         "assets/js/jquery.fitvids.js",
         "assets/js/settlein.js"
       ],
-      "position": "top"
+      "position": "top",
+      "messages": [
+        "settlein-skin-mainpage-jumbotron-country-placeholder"
+      ]
     },
     "skins.settlein.page.styles": {
       "styles": [
@@ -72,7 +75,10 @@
         "assets/js/settlein.js",
         "assets/js/page.js"
       ],
-      "position": "top"
+      "position": "top",
+      "messages": [
+        "settlein-skin-header-select-country-placeholder"
+      ]
     },
     "skins.settlein.special.about": {
       "scripts": [

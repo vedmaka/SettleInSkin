@@ -47,7 +47,7 @@
 	},
 	"ResourceFileModulePaths": {
 		"localBasePath": "",
-		"remoteExtPath": "stools"
+		"remoteExtPath": "../skins/SettleIn/extensions/stools"
 	},
 	"SpecialPages": {
 		"stools": "Specialstools"

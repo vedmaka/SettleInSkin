@@ -112,9 +112,9 @@ class SettleInTemplate extends BaseTemplate {
                 <div class="jumbo-content">
 
                     <div class="i-jumbotext">
-                        <h1>Life. Anywhere.</h1>
+                        <h1><?=wfMessage( 'settlein-skin-mainpage-jumbotron-title' )->plain()?></h1>
                         <p>
-                            Easy to understand information in your own language on how to live or move to anywhere in the world thanks to people like you.
+                            <?=wfMessage( 'settlein-skin-mainpage-jumbotron-text' )->plain()?>
                         </p>
                     </div>
 
@@ -154,7 +154,7 @@ class SettleInTemplate extends BaseTemplate {
                     <div class="jumbo-search" id="p-search_smw">
                             <div class="form-group">
                                 <a href="#" class="search-submit fa fa-search"></a>
-                                <input type="text" class="form-control" placeholder="Search" name="Search[Title]" id="searchInput_smw">
+                                <input type="text" class="form-control" placeholder="<?=wfMessage('settlein-skin-mainpage-jumbotron-search-placeholder')->plain()?>" name="Search[Title]" id="searchInput_smw">
                             </div>
                     </div>
 
@@ -174,11 +174,15 @@ class SettleInTemplate extends BaseTemplate {
 
                     <ul class="pull-left">
                         <li>
-                            <a id="faq-menu" href="#" data-toggle="modal" data-target="#myModal" style="" >FAQ</a>
+                            <a id="faq-menu" href="#" data-toggle="modal" data-target="#myModal" style="" >
+                                <?=wfMessage('settlein-skin-mainpage-faq')->plain()?>
+                            </a>
                         </li>
                     </ul>
                     <ul class="pull-right">
-                        <li><a href="#" id="menu-hiw">How it works <b class="caret"></b></a></li>
+                        <li><a href="#" id="menu-hiw">
+                                <?=wfMessage('settlein-skin-mainpage-howitworks')->plain()?>
+                                <b class="caret"></b></a></li>
                     </ul>
 
                     <div class="play-video-button">
@@ -203,8 +207,8 @@ class SettleInTemplate extends BaseTemplate {
                                     </span>
 
                                     <div class="step-text">
-                                        <span>Step one</span>
-                                        <p>Creatures experiment from minerals like intelligent ships.</p>
+                                        <span><?=wfMessage('settlein-skin-mainpage-howitworks-section-1-title')->plain()?></span>
+                                        <p><?=wfMessage('settlein-skin-mainpage-howitworks-section-1-text')->plain()?></p>
                                     </div>
 
                                 </div>
@@ -217,8 +221,8 @@ class SettleInTemplate extends BaseTemplate {
                                     </span>
 
                                     <div class="step-text">
-                                        <span>Step one</span>
-                                        <p>Creatures experiment from minerals like intelligent ships.</p>
+                                        <span><?=wfMessage('settlein-skin-mainpage-howitworks-section-2-title')->plain()?></span>
+                                        <p><?=wfMessage('settlein-skin-mainpage-howitworks-section-2-text')->plain()?></p>
                                     </div>
 
                                 </div>
@@ -231,8 +235,8 @@ class SettleInTemplate extends BaseTemplate {
                                     </span>
 
                                     <div class="step-text">
-                                        <span>Step one</span>
-                                        <p>Creatures experiment from minerals like intelligent ships.</p>
+                                        <span><?=wfMessage('settlein-skin-mainpage-howitworks-section-3-title')->plain()?></span>
+                                        <p><?=wfMessage('settlein-skin-mainpage-howitworks-section-3-text')->plain()?></p>
                                     </div>
 
                                 </div>
@@ -258,8 +262,8 @@ class SettleInTemplate extends BaseTemplate {
                             </div>
                             <div class="promo-block-text">
                                 <div class="promo-block-text-content">
-                                    <h3>Live Anywhere</h3>
-                                    Pol. Naviss assimilant in burdigala! Magnum ollas ducunt ad torus.
+                                    <h3><?=wfMessage('settlein-skin-mainpage-section-1-title')->plain()?></h3>
+                                    <?=wfMessage('settlein-skin-mainpage-section-1-text')->plain()?>
                                 </div>
                             </div>
                         </div>
@@ -274,8 +278,8 @@ class SettleInTemplate extends BaseTemplate {
                             </div>
                             <div class="promo-block-text">
                                 <div class="promo-block-text-content">
-                                    <h3>Move Anywhere</h3>
-                                    Pol. Naviss assimilant in burdigala! Magnum ollas ducunt ad torus.
+                                    <h3><?=wfMessage('settlein-skin-mainpage-section-2-title')->plain()?></h3>
+                                    <?=wfMessage('settlein-skin-mainpage-section-2-text')->plain()?>
                                 </div>
                             </div>
                         </div>
@@ -290,8 +294,8 @@ class SettleInTemplate extends BaseTemplate {
                             </div>
                             <div class="promo-block-text">
                                 <div class="promo-block-text-content">
-                                    <h3>Help Anywhere</h3>
-                                    Pol. Naviss assimilant in burdigala! Magnum ollas ducunt ad torus.
+                                    <h3><?=wfMessage('settlein-skin-mainpage-section-3-title')->plain()?></h3>
+                                    <?=wfMessage('settlein-skin-mainpage-section-3-text')->plain()?>
                                 </div>
                             </div>
                         </div>
@@ -303,13 +307,13 @@ class SettleInTemplate extends BaseTemplate {
             </div>
 
             <div class="jumbotron jumbotron-middle">
-                <h3>Space suits fly from plasmas like real planets.</h3>
+                <h3><?=wfMessage('settlein-skin-mainpage-bottom-title')->plain()?></h3>
                 <p>
-                    Shields up, moon!
-                    Resist wihtout faith, and we won’t deceive a hur'q.
-                    When the moon harvests for astral city, all collectives dissolve harmless, chemical mermaids.
+                    <?=wfMessage( 'settlein-skin-mainpage-bottom-text' )->plain()?>
                 </p>
-                <a href="<?=SpecialPage::getSafeTitleFor('Userlogin')->getFullURL('type=signup')?>" class="btn btn-primary">Sign up for free</a>
+                <a href="<?=SpecialPage::getSafeTitleFor('Userlogin')->getFullURL('type=signup')?>" class="btn btn-primary">
+                    <?=wfMessage( 'settlein-skin-mainpage-bottom-button-text' )->plain() ?>
+                </a>
             </div>
 
             <!-- content end -->
@@ -324,18 +328,12 @@ class SettleInTemplate extends BaseTemplate {
 
         <div class="modal-header">
             <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-            <h4 class="modal-title" id="myLargeModalLabel">Large modal</h4>
+            <h4 class="modal-title" id="myLargeModalLabel">
+                <?=wfMessage( 'settlein-skin-modal-faq-title' )->plain()?>
+            </h4>
         </div>
         <div class="modal-body">
-            <ul>
-                <li>Klingons harvest from tragedies like dead hur'qs.</li>
-                <li>Delighted shields lead to the voyage.</li>
-                <li>This procedure has only been acquired by a calm lieutenant commander.</li>
-                <li>It is a solid stigma, sir.</li>
-                <li>Yell wihtout vision, and we won’t contact a cosmonaut.</li>
-                <li>Planet of an ancient coordinates, influence the stigma!</li>
-                <li>Particles yell with wind!</li>
-            </ul>
+            <?=wfMessage('settlein-skin-modal-faq-text')->plain()?>
         </div>
     </div>
 
@@ -344,7 +342,9 @@ class SettleInTemplate extends BaseTemplate {
     <div class="modal fade container fade" id="videoModal" tabindex="-1" role="dialog" aria-labelledby="videoLargeModalLabel" aria-hidden="true" style="display: none; margin-top: -73px;">
         <div class="modal-header">
             <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-            <h4 class="modal-title" id="videoLargeModalLabel">Large modal</h4>
+            <h4 class="modal-title" id="videoLargeModalLabel">
+                <?=wfMessage('settlein-skin-modal-video-title')->plain()?>
+            </h4>
         </div>
         <div class="modal-body">
             <div class="fluid-width-video-wrapper">
@@ -394,16 +394,24 @@ class SettleInTemplate extends BaseTemplate {
         <div class="container">
             <ul class="nav navbar-nav">
                 <li>
-                    <a href="<?=Title::newFromText('About Us', NS_PROJECT)->getFullURL()?>">About Us</a>
+                    <a href="<?=Title::newFromText('About Us', NS_PROJECT)->getFullURL()?>">
+                        <?=wfMessage('settlein-skin-footer-about-us')->plain()?>
+                    </a>
                 </li>
                 <li>
-                    <a href="<?=Title::newFromText('Contact', NS_PROJECT)->getFullURL()?>">Contact</a>
+                    <a href="<?=Title::newFromText('Contact', NS_PROJECT)->getFullURL()?>">
+                        <?=wfMessage('settlein-skin-footer-contact')->plain()?>
+                    </a>
                 </li>
                 <li>
-                    <a href="<?=Title::newFromText('Help Out', NS_PROJECT)->getFullURL()?>">Help Out</a>
+                    <a href="<?=Title::newFromText('Help Out', NS_PROJECT)->getFullURL()?>">
+                        <?=wfMessage('settlein-skin-footer-helpout')->plain()?>
+                    </a>
                 </li>
                 <li>
-                    <a href="<?=Title::newFromText('Terms and Conditions', NS_PROJECT)->getFullURL()?>">Terms and Conditions</a>
+                    <a href="<?=Title::newFromText('Terms and Conditions', NS_PROJECT)->getFullURL()?>">
+                        <?=wfMessage('settlein-skin-footer-tos')->plain()?>
+                    </a>
                 </li>
             </ul>
 
@@ -430,7 +438,9 @@ class SettleInTemplate extends BaseTemplate {
 </div>
 
 <div class="comments-popup-form mobile-form-popup">
-    <h3>Comments</h3>
+    <h3>
+        <?=wfMessage('settlein-skin-modal-comments-title')->plain()?>
+    </h3>
 
     <div class="comments-list">
 
@@ -442,7 +452,7 @@ class SettleInTemplate extends BaseTemplate {
                             <i class="fa fa-user-secret fa-inverse"></i>
                             Anonymous
                         </a>
-                        at
+                        Anonymous
                         10 Jan 2015
                     </div>
                     <div class="col-md-9">
@@ -492,8 +502,8 @@ class SettleInTemplate extends BaseTemplate {
 
     <form class="form-inline" id="comment-form">
         <div class="form-group">
-            <input type="text" class="form-control" placeholder="Enter comment.."/>
-            <input type="submit" class="btn btn-primary" value="Post"/>
+            <input type="text" class="form-control" placeholder="<?=wfMessage('settlein-skin-modal-comments-input-placeholder')->plain()?>"/>
+            <input type="submit" class="btn btn-primary" value="<?=wfMessage('settlein-skin-modal-comments-input-submit')->plain()?>"/>
         </div>
     </form>
 </div>
@@ -503,33 +513,25 @@ class SettleInTemplate extends BaseTemplate {
 
     <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-        <h4 class="modal-title" id="myLargeModalLabel">Large modal</h4>
+        <h4 class="modal-title" id="myLargeModalLabel">
+            <?=wfMessage('settlein-skin-modal-help-title')->plain()?>
+        </h4>
     </div>
     <div class="modal-body">
         <div class="row">
             <div class="col-md-6">
-                <h2>Getting help</h2>
-                <ul>
-                    <li>Klingons harvest from tragedies like dead hur'qs.</li>
-                    <li>Delighted shields lead to the voyage.</li>
-                    <li>This procedure has only been acquired by a calm lieutenant commander.</li>
-                    <li>It is a solid stigma, sir.</li>
-                    <li>Yell wihtout vision, and we won’t contact a cosmonaut.</li>
-                    <li>Planet of an ancient coordinates, influence the stigma!</li>
-                    <li>Particles yell with wind!</li>
-                </ul>
+                <h2>
+                    <?=wfMessage('settlein-skin-modal-help-title-col-1')->plain()?>
+                </h2>
+                <?=wfMessage('settlein-skin-modal-help-text-col-1')->plain()?>
+
             </div>
             <div class="col-md-6">
-                <h2>Giving help</h2>
-                <ul>
-                    <li>Klingons harvest from tragedies like dead hur'qs.</li>
-                    <li>Delighted shields lead to the voyage.</li>
-                    <li>This procedure has only been acquired by a calm lieutenant commander.</li>
-                    <li>It is a solid stigma, sir.</li>
-                    <li>Yell wihtout vision, and we won’t contact a cosmonaut.</li>
-                    <li>Planet of an ancient coordinates, influence the stigma!</li>
-                    <li>Particles yell with wind!</li>
-                </ul>
+                <h2>
+                    <?=wfMessage('settlein-skin-modal-help-title-col-2')->plain()?>
+                </h2>
+                <?=wfMessage('settlein-skin-modal-help-text-col-2')->plain()?>
+
             </div>
         </div>
     </div>
@@ -544,16 +546,24 @@ class SettleInTemplate extends BaseTemplate {
         <div class="container">
             <ul class="nav navbar-nav">
                 <li>
-                    <a href="<?=Title::newFromText('About Us', NS_PROJECT)->getFullURL()?>">About Us</a>
+                    <a href="<?=Title::newFromText('About Us', NS_PROJECT)->getFullURL()?>">
+                        <?=wfMessage('settlein-skin-footer-about-us')->plain()?>
+                    </a>
                 </li>
                 <li>
-                    <a href="<?=Title::newFromText('Contact', NS_PROJECT)->getFullURL()?>">Contact</a>
+                    <a href="<?=Title::newFromText('Contact', NS_PROJECT)->getFullURL()?>">
+                        <?=wfMessage('settlein-skin-footer-contact')->plain()?>
+                    </a>
                 </li>
                 <li>
-                    <a href="<?=Title::newFromText('Help Out', NS_PROJECT)->getFullURL()?>">Help Out</a>
+                    <a href="<?=Title::newFromText('Help Out', NS_PROJECT)->getFullURL()?>">
+                        <?=wfMessage('settlein-skin-footer-helpout')->plain()?>
+                    </a>
                 </li>
                 <li>
-                    <a href="<?=Title::newFromText('Terms and Conditions', NS_PROJECT)->getFullURL()?>">Terms and Conditions</a>
+                    <a href="<?=Title::newFromText('Terms and Conditions', NS_PROJECT)->getFullURL()?>">
+                        <?=wfMessage('settlein-skin-footer-tos')->plain()?>
+                    </a>
                 </li>
             </ul>
 
@@ -645,19 +655,25 @@ class SettleInTemplate extends BaseTemplate {
                             <b class="caret"></b>
                             </a>
                             <ul class="dropdown-menu primary-back">
-                                <li><a href="<?=SpecialPage::getSafeTitleFor('Preferences')->getFullURL()?>">Profile settings</a></li>
-                                <li><a href="<?=SpecialPage::getSafeTitleFor('UserLogout')->getFullURL()?>">Logout</a></li>
+                                <li><a href="<?=SpecialPage::getSafeTitleFor('Preferences')->getFullURL()?>">
+                                        <?=wfMessage( 'settlein-skin-header-usermenu-profile' )->plain()?>
+                                    </a></li>
+                                <li><a href="<?=SpecialPage::getSafeTitleFor('UserLogout')->getFullURL()?>">
+                                        <?=wfMessage( 'settlein-skin-header-usermenu-logout' )->plain()?>
+                                    </a></li>
                             </ul>
                         </li>
                         <li id="useractions" class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                             <span>
-                                Page <i class="caret"></i>
+                                <?=wfMessage( 'settlein-skin-header-menu-page' )->plain()?> <i class="caret"></i>
                             </span>
                             </a>
                             <ul class="dropdown-menu primary-back">
                                 <? if( count($this->data['view_urls'])): ?>
-                                <li class="dropdown-header">Primary actions</li>
+                                <li class="dropdown-header">
+                                    <?=wfMessage( 'settlein-skin-header-menu-page-section-primary' )->plain()?>
+                                </li>
                                 <?php
 								foreach ( $this->data['view_urls'] as $link ) {
 									?>
@@ -669,7 +685,9 @@ class SettleInTemplate extends BaseTemplate {
 								?>
 								<? endif; ?>
 								<? if(count($this->data['action_urls'])): ?>
-								<li class="dropdown-header">Secondary actions</li>
+								<li class="dropdown-header">
+                                    <?=wfMessage( 'settlein-skin-header-menu-page-section-secondary' )->plain()?>
+                                </li>
 								<?php
 								foreach ( $this->data['action_urls'] as $link ) {
 									?>
@@ -680,7 +698,9 @@ class SettleInTemplate extends BaseTemplate {
 								}
 								?>
 								<? endif; ?>
-								<li class="dropdown-header">Tools</li>
+								<li class="dropdown-header">
+                                    <?=wfMessage( 'settlein-skin-header-menu-page-section-tools' )->plain()?>
+                                </li>
 								<? foreach( $this->getToolbox() as $key => $item ) {
 								    echo $this->makeListItem( $key, $item );
 								}?>
@@ -689,15 +709,19 @@ class SettleInTemplate extends BaseTemplate {
                     <? else: ?>
                         <li id="why_signup">
                             <a href="#">
-                                Why Signup ?
+                                <?=wfMessage( 'settlein-skin-header-why-signup' )->plain()?>
                             </a>
                         </li>
                         <li class="btn-group-nav" id="login-selector">
-                            <a href="<?=SpecialPage::getSafeTitleFor('Userlogin')->getFullURL()?>" class="btn btn-concrete" style="margin-right: 10px;"><b>Login</b></a>
+                            <a href="<?=SpecialPage::getSafeTitleFor('Userlogin')->getFullURL()?>" class="btn btn-concrete" style="margin-right: 10px;"><b>
+                                    <?=wfMessage( 'settlein-skin-header-login' )->plain()?>
+                                </b></a>
                         </li>
 
                         <li class="btn-group-nav">
-                            <a href="<?=SpecialPage::getSafeTitleFor('Userlogin')->getFullURL('type=signup')?>" class="btn btn-primary" style="margin-right: 5px;"><b>Sign up</b></a>
+                            <a href="<?=SpecialPage::getSafeTitleFor('Userlogin')->getFullURL('type=signup')?>" class="btn btn-primary" style="margin-right: 5px;"><b>
+                                    <?=wfMessage( 'settlein-skin-header-signup' )->plain()?>
+                                </b></a>
                         </li>
                     <? endif; ?>
 
@@ -761,7 +785,7 @@ class SettleInTemplate extends BaseTemplate {
 
                     <div class="form-group navbar-form navbar-left">
                         <a href="#" class="search-submit fa fa-search"></a>
-                        <input type="text" class="form-control" placeholder="Search" name="Search[Title]">
+                        <input type="text" class="form-control" placeholder="<?=wfMessage( 'settlein-skin-header-search-placeholder' )->plain()?>" name="Search[Title]">
                     </div>
 
                 </ul>
@@ -774,7 +798,9 @@ class SettleInTemplate extends BaseTemplate {
 
                 <ul class="nav navbar-nav">
                     <li>
-                        <a id="faq-menu" href="#" data-toggle="modal" data-target="#myModal" style="" >Help</a>
+                        <a id="faq-menu" href="#" data-toggle="modal" data-target="#myModal" style="" >
+                            <?=wfMessage( 'settlein-skin-header-help-link' )->plain()?>
+                        </a>
                     </li>
                 </ul>
 
@@ -809,7 +835,7 @@ class SettleInTemplate extends BaseTemplate {
                             <a href="#" class="pull-right">
                                 Click to see all..
                             </a>-->
-                            No notification yet.
+                            <?=wfMessage( 'settlein-skin-header-notifications-empty' )->plain()?>
                         </div>
                     </li>
 
@@ -820,8 +846,12 @@ class SettleInTemplate extends BaseTemplate {
                             <i class="caret"></i>
                         </a>
                         <ul class="dropdown-menu primary-back">
-                            <li><a href="<?=SpecialPage::getSafeTitleFor('Preferences')->getFullURL()?>">Profile settings</a></li>
-                            <li><a href="<?=SpecialPage::getSafeTitleFor('UserLogout')->getFullURL()?>">Logout</a></li>
+                            <li><a href="<?=SpecialPage::getSafeTitleFor('Preferences')->getFullURL()?>">
+                                    <?=wfMessage( 'settlein-skin-header-usermenu-profile' )->plain()?>
+                                </a></li>
+                            <li><a href="<?=SpecialPage::getSafeTitleFor('UserLogout')->getFullURL()?>">
+                                    <?=wfMessage( 'settlein-skin-header-usermenu-logout' )->plain()?>
+                                </a></li>
                         </ul>
                     </li>
 
@@ -830,7 +860,7 @@ class SettleInTemplate extends BaseTemplate {
                     <li class="btn-group-nav login-selector" id="login-selector">
                         <a href="#">
                             <i class="fa fa-lock"></i>
-                            Login
+                            <?=wfMessage( 'settlein-skin-header-login' )->plain()?>
                         </a>
                     </li>
 
@@ -851,7 +881,7 @@ class SettleInTemplate extends BaseTemplate {
                 <? if( !$this->isLoggedIn ) :?>
                     <div id="why_signup">
                         <a href="#">
-                            Why Signup ?
+                            <?=wfMessage( 'settlein-skin-header-why-signup' )->plain()?>
                         </a>
                     </div>
                 <? endif; ?>
@@ -880,24 +910,12 @@ class SettleInTemplate extends BaseTemplate {
 	?>
 
 <div class="why-sign-up-popup mobile-form-popup">
-    <h3>Why sign up ?</h3>
+    <h3>
+        <?=wfMessage( 'settlein-skin-modal-whysignup-title' )->plain()?>
+    </h3>
 
-    <p>
-        All the suns infiltrate post-apocalyptic, ancient nanomachines.
-        Metamorphosis at the solar sphere that is when fantastic astronauts experiment.
-        The proud ferengi technically manifests the planet.
+    <?=wfMessage( 'settlein-skin-modal-whysignup-text' )->plain()?>
 
-    <ul>
-        <li>Avast! Pieces o' malaria are forever old.</li>
-        <li>God, faith!</li>
-        <li>Cannons are the wenchs of the weird grace.</li>
-    </ul>
-
-    Delighted particles, to the solar sphere.
-    Experiment unearthly like a conscious planet.
-    The moon is more sonic shower now than teleporter. ordinary and wisely extraterrestrial.
-
-    </p>
 </div>
 
 <!-- Login popup form & wrapper -->
@@ -905,23 +923,31 @@ class SettleInTemplate extends BaseTemplate {
 </div>
 
 <div class="login-popup-form mobile-form-popup">
-    <h3>Login or Register</h3>
+    <h3>
+        <?=wfMessage( 'settlein-skin-modal-login-title' )->plain()?>
+    </h3>
 
-    <p>Please fill form below to login or click 'Create account' to register</p>
+    <p>
+        <?=wfMessage( 'settlein-skin-modal-login-subtitle' )->plain()?>
+    </p>
 
     <form class="" method="post" action="<?=SpecialPage::getSafeTitleFor('UserLogin')->getFullURL('action=submitlogin&type=login')?>">
         <div class="form-group">
-            <input type="text" class="form-control" placeholder="Login or email" name="wpName" />
+            <input type="text" class="form-control" placeholder="<?=wfMessage( 'settlein-skin-modal-login-email-placeholder' )->plain()?>" name="wpName" />
         </div>
         <div class="form-group">
-            <input type="password" class="form-control" placeholder="Your password" name="wpPassword" />
+            <input type="password" class="form-control" placeholder="<?=wfMessage( 'settlein-skin-modal-login-password-placeholder' )->plain()?>" name="wpPassword" />
         </div>
         <input type="hidden" name="wpLoginToken" value="<?=$loginToken?>" />
         <input type="hidden" name="wpRemember" value="1" />
         <div class="form-group">
-            <input type="submit" name="wpLoginAttempt" class="btn btn-primary" value="Login"/>
-            <a href="<?=SpecialPage::getSafeTitleFor('Userlogin')->getFullURL('type=signup')?>" class="btn btn-cyanide">Create account</a>
-            <a href="<?=SpecialPage::getSafeTitleFor('PasswordReset')->getFullURL()?>" class="pull-right">Forgot password?</a>
+            <input type="submit" name="wpLoginAttempt" class="btn btn-primary" value="<?=wfMessage( 'settlein-skin-modal-login-login-button' )->plain()?>"/>
+            <a href="<?=SpecialPage::getSafeTitleFor('Userlogin')->getFullURL('type=signup')?>" class="btn btn-cyanide">
+                <?=wfMessage( 'settlein-skin-modal-login-signup-button' )->plain()?>
+            </a>
+            <a href="<?=SpecialPage::getSafeTitleFor('PasswordReset')->getFullURL()?>" class="pull-right">
+                <?=wfMessage( 'settlein-skin-modal-login-reset-password' )->plain()?>
+            </a>
         </div>
     </form>
 </div>
