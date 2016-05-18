@@ -2,6 +2,7 @@
   "@metadata": {
     "authors": []
   },
-  "stools-desc": "This is an example extension",
-  "stools-i18n-welcome": "Welcome to the localization file of the stools extension."
+  "stools-desc": "Support tools for SettleIn skin",
+  "stools-i18n-welcome": "Welcome to the localization file of the stools extension.",
+  "stools-button-print": "Print"
 }
