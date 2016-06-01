@@ -1,0 +1,8 @@
+{
+  "@metadata": {
+    "authors": []
+  },
+  "stools-desc": "Support tools for SettleIn skin",
+  "stools-i18n-welcome": "Welcome to the localization file of the stools extension.",
+  "stools-button-print": "Печать"
+}
