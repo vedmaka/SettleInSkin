@@ -445,6 +445,9 @@ ul.page-editors-list li a {
     margin-left: 10px;
 }
 
+#double-col-left .nav-tabs {
+    margin-left: 0;
+}
 
 /* ----------------------------------- media -------------------------------------------------------- */
 
