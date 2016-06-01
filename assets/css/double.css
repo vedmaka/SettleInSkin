@@ -164,7 +164,7 @@ body {
     display: table;
 }
 
-.action-buttons > .btn:last-child {
+.action-buttons > .btn.btn-primary {
     margin-right: 5px;
 }
 
