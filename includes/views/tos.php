@@ -14,7 +14,7 @@
 
 </div>
 
-<div class="container-fluid" id="tos-block-start">
+<div class="container" id="tos-block-start">
 
     <div class="row tos-entry">
         <div class="col-md-6 tos-left">

@@ -394,12 +394,12 @@ class SettleInTemplate extends BaseTemplate {
         <div class="container">
             <ul class="nav navbar-nav">
                 <li>
-                    <a href="<?=Title::newFromText('About Us', NS_PROJECT)->getFullURL()?>">
+                    <a href="<?=SpecialPage::getTitleFor('SettleIn')->getFullURL()?>/about">
                         <?=wfMessage('settlein-skin-footer-about-us')->plain()?>
                     </a>
                 </li>
                 <li>
-                    <a href="<?=Title::newFromText('Contact', NS_PROJECT)->getFullURL()?>">
+                    <a href="<?=SpecialPage::getTitleFor('SettleIn')->getFullURL()?>/contact">
                         <?=wfMessage('settlein-skin-footer-contact')->plain()?>
                     </a>
                 </li>
@@ -409,7 +409,7 @@ class SettleInTemplate extends BaseTemplate {
                     </a>
                 </li>
                 <li>
-                    <a href="<?=Title::newFromText('Terms and Conditions', NS_PROJECT)->getFullURL()?>">
+                    <a href="<?=SpecialPage::getTitleFor('SettleIn')->getFullURL()?>/tos">
                         <?=wfMessage('settlein-skin-footer-tos')->plain()?>
                     </a>
                 </li>
@@ -546,12 +546,12 @@ class SettleInTemplate extends BaseTemplate {
         <div class="container">
             <ul class="nav navbar-nav">
                 <li>
-                    <a href="<?=Title::newFromText('About Us', NS_PROJECT)->getFullURL()?>">
+                    <a href="<?=SpecialPage::getTitleFor('SettleIn')->getFullURL()?>/about">
                         <?=wfMessage('settlein-skin-footer-about-us')->plain()?>
                     </a>
                 </li>
                 <li>
-                    <a href="<?=Title::newFromText('Contact', NS_PROJECT)->getFullURL()?>">
+                    <a href="<?=SpecialPage::getTitleFor('SettleIn')->getFullURL()?>/contact">
                         <?=wfMessage('settlein-skin-footer-contact')->plain()?>
                     </a>
                 </li>
@@ -561,7 +561,7 @@ class SettleInTemplate extends BaseTemplate {
                     </a>
                 </li>
                 <li>
-                    <a href="<?=Title::newFromText('Terms and Conditions', NS_PROJECT)->getFullURL()?>">
+                    <a href="<?=SpecialPage::getTitleFor('SettleIn')->getFullURL()?>/tos">
                         <?=wfMessage('settlein-skin-footer-tos')->plain()?>
                     </a>
                 </li>

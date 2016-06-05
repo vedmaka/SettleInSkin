@@ -105,8 +105,7 @@
     },
     "skins.settlein.special.tos": {
       "scripts": [
-        "assets/special/tos/script.js",
-        "assets/special/tos/holder.min.js"
+        "assets/special/tos/script.js"
       ],
       "styles": [
         "assets/special/tos/style.css"
