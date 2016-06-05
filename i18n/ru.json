@@ -65,5 +65,83 @@
 	"settlein-skin-header-menu-page": "Страница",
 	"settlein-skin-header-menu-page-section-primary": "Основные действия",
 	"settlein-skin-header-menu-page-section-secondary": "Дополнительное",
-	"settlein-skin-header-menu-page-section-tools": "Инструменты"
+	"settlein-skin-header-menu-page-section-tools": "Инструменты",
+
+
+	"settlein-skin-project-page-about-title": "О Нас",
+	"settlein-skin-project-page-about-title-text": "Ехал грека через реку видит грека в реке рак - сунул руку грека в реку, Ехал грека через реку видит грека в реке рак - сунул руку грека в реку",
+	"settlein-skin-project-page-about-second-title": "Наша История",
+	"settlein-skin-project-page-about-second-title-text": "Ехал грека через реку видит грека в реке рак - сунул руку грека в реку Ехал грека через реку видит грека в реке рак - сунул руку грека в реку",
+	"settlein-skin-project-page-about-contributors-title": "Участники",
+	"settlein-skin-project-page-about-contributors-title-text": "Ехал грека через реку видит грека в реке рак - сунул руку грека в реку Ехал грека через реку видит грека в реке рак - сунул руку грека в реку",
+
+	"settlein-skin-project-page-about-record-1-title": "Заголовок",
+	"settlein-skin-project-page-about-record-1-text": "Ехал грека через реку видит грека в реке рак - сунул руку грека в реку Ехал грека через реку видит грека в реке рак - сунул руку грека в реку",
+	"settlein-skin-project-page-about-record-1-date": "Сентябрь 2015",
+
+	"settlein-skin-project-page-about-record-2-title": "Заголовок",
+	"settlein-skin-project-page-about-record-2-text": "Ехал грека через реку видит грека в реке рак - сунул руку грека в реку Ехал грека через реку видит грека в реке рак - сунул руку грека в реку",
+	"settlein-skin-project-page-about-record-2-date": "Ноябрь 2015",
+
+	"settlein-skin-project-page-about-record-3-title": "Заголовок",
+	"settlein-skin-project-page-about-record-3-text": "Ехал грека через реку видит грека в реке рак - сунул руку грека в реку Ехал грека через реку видит грека в реке рак - сунул руку грека в реку",
+	"settlein-skin-project-page-about-record-3-date": "Октябрь 2015",
+
+	"settlein-skin-project-page-about-record-4-title": "Заголовок",
+	"settlein-skin-project-page-about-record-4-text": "Ехал грека через реку видит грека в реке рак - сунул руку грека в реку Ехал грека через реку видит грека в реке рак - сунул руку грека в реку",
+	"settlein-skin-project-page-about-record-4-date": "Декабрь 2015",
+
+	"settlein-skin-project-page-about-record-5-title": "Заголовок",
+	"settlein-skin-project-page-about-record-5-text": "Ехал грека через реку видит грека в реке рак - сунул руку грека в реку Ехал грека через реку видит грека в реке рак - сунул руку грека в реку",
+	"settlein-skin-project-page-about-record-5-date": "Февраль 2015",
+
+	"settlein-skin-project-page-contact-title": "Контакты",
+	"settlein-skin-project-page-contact-title-text": "Ехал грека через реку видит грека в реке рак - сунул руку грека в реку Ехал грека через реку видит грека в реке рак - сунул руку грека в реку",
+	"settlein-skin-project-page-contact-item-1-text": "Ехал грека через реку видит грека в реке рак",
+	"settlein-skin-project-page-contact-item-2-text": "Ехал грека через реку видит грека в реке рак",
+	"settlein-skin-project-page-contact-item-3-text": "Ехал грека через реку видит грека в реке рак",
+	"settlein-skin-project-page-contact-field-name": "Имя",
+	"settlein-skin-project-page-contact-field-email": "Email",
+	"settlein-skin-project-page-contact-field-message": "Сообщение",
+	"settlein-skin-project-page-contact-field-reason": "Цель сообщения",
+	"settlein-skin-project-page-contact-field-reason-value-1": "Не знаю",
+	"settlein-skin-project-page-contact-field-reason-value-2": "Какая-то причина",
+	"settlein-skin-project-page-contact-field-reason-value-3": "Другая причина",
+	"settlein-skin-project-page-contact-button-submit-title": "Отправить",
+	"settlein-skin-project-page-contact-after-post": "Спасибо! Ехал грека через реку видит грека в реке рак.",
+	"settlein-skin-project-page-contact-after-post-back-link": "Вернуться на главную",
+
+	"settlein-skin-project-page-tos-title": "Условия использования",
+	"settlein-skin-project-page-tos-title-text": "Ехал грека через реку видит грека в реке рак Ехал грека через реку видит грека в реке рак Ехал грека через реку видит грека в реке рак",
+	"settlein-skin-project-page-tos-item-1-left-title": "Ехал грека через реку видит грека в реке рак",
+	"settlein-skin-project-page-tos-item-1-left-text": "Ехал грека через реку видит грека в реке рак Ехал грека через реку видит грека в реке рак Ехал грека через реку видит грека в реке рак",
+	"settlein-skin-project-page-tos-item-1-right-title": "Ехал грека через реку видит грека в реке рак",
+	"settlein-skin-project-page-tos-item-1-right-text": "Ехал грека через реку видит грека в реке рак Ехал грека через реку видит грека в реке рак Ехал грека через реку видит грека в реке рак",
+
+	"settlein-skin-project-page-tos-item-2-left-title": "Ехал грека через реку видит грека в реке рак",
+	"settlein-skin-project-page-tos-item-2-left-text": "Ехал грека через реку видит грека в реке рак Ехал грека через реку видит грека в реке рак Ехал грека через реку видит грека в реке рак",
+	"settlein-skin-project-page-tos-item-2-right-title": "Ехал грека через реку видит грека в реке рак",
+	"settlein-skin-project-page-tos-item-2-right-text": "Ехал грека через реку видит грека в реке рак Ехал грека через реку видит грека в реке рак Ехал грека через реку видит грека в реке рак",
+
+	"settlein-skin-project-page-tos-item-3-left-title": "Ехал грека через реку видит грека в реке рак",
+	"settlein-skin-project-page-tos-item-3-left-text": "Ехал грека через реку видит грека в реке рак Ехал грека через реку видит грека в реке рак Ехал грека через реку видит грека в реке рак",
+	"settlein-skin-project-page-tos-item-3-right-title": "Ехал грека через реку видит грека в реке рак",
+	"settlein-skin-project-page-tos-item-3-right-text": "Ехал грека через реку видит грека в реке рак Ехал грека через реку видит грека в реке рак Ехал грека через реку видит грека в реке рак",
+
+	"settlein-skin-project-page-tos-item-4-left-title": "Ехал грека через реку видит грека в реке рак",
+	"settlein-skin-project-page-tos-item-4-left-text": "Ехал грека через реку видит грека в реке рак Ехал грека через реку видит грека в реке рак Ехал грека через реку видит грека в реке рак",
+	"settlein-skin-project-page-tos-item-4-right-title": "Ехал грека через реку видит грека в реке рак",
+	"settlein-skin-project-page-tos-item-4-right-text": "Ехал грека через реку видит грека в реке рак Ехал грека через реку видит грека в реке рак Ехал грека через реку видит грека в реке рак",
+
+	"settlein-skin-project-page-tos-item-5-left-title": "Ехал грека через реку видит грека в реке рак",
+	"settlein-skin-project-page-tos-item-5-left-text": "Ехал грека через реку видит грека в реке рак Ехал грека через реку видит грека в реке рак Ехал грека через реку видит грека в реке рак",
+	"settlein-skin-project-page-tos-item-5-right-title": "Ехал грека через реку видит грека в реке рак",
+	"settlein-skin-project-page-tos-item-5-right-text": "Ехал грека через реку видит грека в реке рак Ехал грека через реку видит грека в реке рак Ехал грека через реку видит грека в реке рак",
+
+	"settlein-skin-project-page-tos-item-6-left-title": "Ехал грека через реку видит грека в реке рак",
+	"settlein-skin-project-page-tos-item-6-left-text": "Ехал грека через реку видит грека в реке рак Ехал грека через реку видит грека в реке рак Ехал грека через реку видит грека в реке рак",
+	"settlein-skin-project-page-tos-item-6-right-title": "Ехал грека через реку видит грека в реке рак",
+	"settlein-skin-project-page-tos-item-6-right-text": "Ехал грека через реку видит грека в реке рак Ехал грека через реку видит грека в реке рак Ехал грека через реку видит грека в реке рак"
+
+
 }

@@ -4,10 +4,9 @@
         <div class="jumbo-content">
 
             <div class="i-jumbotext">
-                <h1>Contact Us</h1>
+                <h1><?=wfMessage('settlein-skin-project-page-contact-title')->plain()?></h1>
                 <p>
-                    The space is more queen now than crewmate. devastated and always cloudy.
-                    The ferengi is more species now than tribble. biological and accelerative sub-light.
+                    <?=wfMessage('settlein-skin-project-page-contact-title-text')->plain()?>
                 </p>
             </div>
 
@@ -16,8 +15,7 @@
 
 <div class="container">
     <p class="text-center">
-        Thank you! Planets harvest from mankinds like clear hur'qs.
-        Procedure at the homeworld that is when seismic pathways view.
-        <a href="#">Back to main page</a>
+        <?=wfMessage('settlein-skin-project-page-contact-after-post')->plain()?>
+        <a href="#"><?=wfMessage('settlein-skin-project-page-contact-after-post-back-link')->plain()?></a>
     </p>
 </div>

@@ -4,10 +4,9 @@
         <div class="jumbo-content">
 
             <div class="i-jumbotext">
-                <h1>Contact Us</h1>
+                <h1><?=wfMessage('settlein-skin-project-page-contact-title')->plain()?></h1>
                 <p>
-                    The space is more queen now than crewmate. devastated and always cloudy.
-                    The ferengi is more species now than tribble. biological and accelerative sub-light.
+                    <?=wfMessage('settlein-skin-project-page-contact-title-text')->plain()?>
                 </p>
             </div>
 
@@ -19,15 +18,15 @@
     <div class="row">
         <div class="col-md-4">
             <img src="holder.js/150x150" class="img-rounded" />
-            <p>All of those phenomenans feed dead, cold planets.</p>
+            <p><?=wfMessage('settlein-skin-project-page-contact-item-1-text')->plain()?></p>
         </div>
         <div class="col-md-4">
             <img src="holder.js/150x150" class="img-rounded" />
-            <p>All of those phenomenans feed dead, cold planets.</p>
+            <p><?=wfMessage('settlein-skin-project-page-contact-item-2-text')->plain()?></p>
         </div>
         <div class="col-md-4">
             <img src="holder.js/150x150" class="img-rounded" />
-            <p>All of those phenomenans feed dead, cold planets.</p>
+            <p><?=wfMessage('settlein-skin-project-page-contact-item-3-text')->plain()?></p>
         </div>
     </div>
 
@@ -39,36 +38,36 @@
         <div class="col-sm-10 col-lg-offset-1">
             <form method="post" class="form-horizontal">
                 <div class="form-group">
-                    <label for="input-name" class="col-sm-2">Name</label>
+                    <label for="input-name" class="col-sm-2"><?=wfMessage('settlein-skin-project-page-contact-field-name')->plain()?></label>
                     <div class="col-sm-10">
                         <input type="text" class="form-control" placeholder="" name="name" id="input-name">
                     </div>
                 </div>
                 <div class="form-group">
-                    <label for="input-email" class="col-sm-2">Email <span class="text-danger">*</span> </label>
+                    <label for="input-email" class="col-sm-2"><?=wfMessage('settlein-skin-project-page-contact-field-email')->plain()?> <span class="text-danger">*</span> </label>
                     <div class="col-sm-10">
                         <input type="email" class="form-control" placeholder="" id="input-email" required>
                     </div>
                 </div>
                 <div class="form-group">
-                    <label for="input-message" class="col-sm-2">Message <span class="text-danger">*</span></label>
+                    <label for="input-message" class="col-sm-2"><?=wfMessage('settlein-skin-project-page-contact-field-message')->plain()?> <span class="text-danger">*</span></label>
                     <div class="col-sm-10">
                         <textarea class="form-control" rows="4" id="input-message" name="message" required></textarea>
                     </div>
                 </div>
                 <div class="form-group">
-                    <label for="input-why" class="col-sm-2">Reason</label>
+                    <label for="input-why" class="col-sm-2"><?=wfMessage('settlein-skin-project-page-contact-field-reason')->plain()?></label>
                     <div class="col-sm-10">
                         <select name="reason" id="input-why" class="form-control" required>
-                            <option value="0" selected>I don't know</option>
-                            <option value="1">Some reason</option>
-                            <option value="1">Other reason</option>
+                            <option value="0" selected><?=wfMessage('settlein-skin-project-page-contact-field-reason-value-1')->plain()?></option>
+                            <option value="1"><?=wfMessage('settlein-skin-project-page-contact-field-reason-value-2')->plain()?></option>
+                            <option value="1"><?=wfMessage('settlein-skin-project-page-contact-field-reason-value-3')->plain()?></option>
                         </select>
                     </div>
                 </div>
                 <div class="form-group">
                     <div class="col-sm-offset-2 col-sm-10">
-                        <button type="submit" class="btn btn-primary">Submit</button>
+                        <button type="submit" class="btn btn-primary"><?=wfMessage('settlein-skin-project-page-contact-button-submit-title')->plain()?></button>
                     </div>
                 </div>
             </form>
