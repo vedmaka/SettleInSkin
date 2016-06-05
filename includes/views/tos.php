@@ -12,6 +12,22 @@
 
 <div class="container" id="tos-block-start">
 
+	<div class="row tos-entry hidden-md hidden-xs hidden-sm" style="width: 100%;">
+
+		<div class="col-md-6 tos-left" style="color: black;">
+			<div class="tos-item">
+				<h4><?=wfMessage('settlein-skin-project-page-tos-heading-left')->plain()?></h4>
+			</div>
+		</div>
+
+		<div class="col-md-6 tos-right" style="background: white; color: black;">
+			<div class="tos-item" style="padding-left: 0;">
+				<h4><?=wfMessage('settlein-skin-project-page-tos-heading-right')->plain()?></h4>
+			</div>
+		</div>
+
+	</div>
+
     <div class="row tos-entry">
         <div class="col-md-6 tos-left">
 
