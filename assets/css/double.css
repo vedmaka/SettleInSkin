@@ -453,6 +453,10 @@ ul.page-editors-list li a {
     margin-left: 0;
 }
 
+#double-col-right #content .highlight-well {
+    border: 1px solid #64bb5d;
+}
+
 /* ----------------------------------- media -------------------------------------------------------- */
 
 @media (max-width: 1024px) {
