@@ -18,7 +18,7 @@ body {
     text-decoration: underline;
 }
 
-#content .well a, #content .well a:hover, #content a:visited {
+#content .well dd a, #content .well dd a:hover, #content dd a:visited {
     color: #57aae1;
 }
 
