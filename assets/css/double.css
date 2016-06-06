@@ -457,6 +457,10 @@ ul.page-editors-list li a {
     border: 1px solid #64bb5d;
 }
 
+#double-col-right #content h1 .mw-headline {
+    color: white;
+}
+
 /* ----------------------------------- media -------------------------------------------------------- */
 
 @media (max-width: 1024px) {
