@@ -1,0 +1,17 @@
+@import url(https://fonts.googleapis.com/css?family=Josefin+Sans:400,300,600,700,400italic);
+
+body {
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+h1, h2, h3, h4, h5 {
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+.promo-block-item h3 {
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+.promo-block-text-content h3 {
+    font-family: 'Josefin Sans', sans-serif;
+}
