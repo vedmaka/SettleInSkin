@@ -18,6 +18,10 @@ body {
     text-decoration: underline;
 }
 
+#content .well a, #content .well a:hover, #content a:visited {
+    color: #57aae1;
+}
+
 #nav {
     position: fixed;
     width: 100%;
