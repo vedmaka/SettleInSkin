@@ -18,6 +18,10 @@ body {
     text-decoration: underline;
 }
 
+#content .well dd a, #content .well dd a:hover, #content dd a:visited {
+    color: #57aae1;
+}
+
 #nav {
     position: fixed;
     width: 100%;
@@ -164,7 +168,7 @@ body {
     display: table;
 }
 
-.action-buttons > .btn:last-child {
+.action-buttons > .btn.btn-primary {
     margin-right: 5px;
 }
 
@@ -445,6 +449,17 @@ ul.page-editors-list li a {
     margin-left: 10px;
 }
 
+#double-col-left .nav-tabs {
+    margin-left: 0;
+}
+
+#double-col-right #content .highlight-well {
+    border: 1px solid #64bb5d;
+}
+
+#double-col-right #content h1 .mw-headline {
+    color: white;
+}
 
 /* ----------------------------------- media -------------------------------------------------------- */
 

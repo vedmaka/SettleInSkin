@@ -105,7 +105,8 @@ class stools
 
         $parser->getOutput()->addModules( 'ext.stools.foo' );
 
-        $html .= $parser->insertStripItem('<a id="print-button" href="'.$link.'" type="button" class="btn btn-primary"><i class="fa fa-print"></i> Print</a>');
+        $html .= $parser->insertStripItem('<a id="print-button" href="'.$link.'" type="button" class="btn btn-primary"><i class="fa fa-print"></i> '.
+            wfMessage( 'stools-button-print' )->plain().'</a>');
 
         return $html;
 

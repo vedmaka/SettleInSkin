@@ -106,7 +106,12 @@ class SkinSettleIn extends SkinTemplate {
             $out->addStyle( $wgServer . $wgScriptPath . '/skins/SettleIn/assets/colors/'.$color.'.css' );
         }
 
-        //$out->addModuleStyles( $styles );
+        if( $out->getRequest()->getVal('beta_font') ) {
+            global $wgServer, $wgScriptPath;
+            $font = htmlspecialchars( $out->getRequest()->getVal('beta_font') );
+            $out->addStyle( $wgServer . $wgScriptPath . '/skins/SettleIn/assets/fonts/'.$font.'.css' );
+        }
+
         $out->addModuleStyles( $styles );
     }
 

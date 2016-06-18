@@ -1,34 +1,40 @@
 <div class="container">
 
     <div class="about-us-quoted-title">
-        Terms and conditions
+        <?=wfMessage('settlein-skin-project-page-tos-title')->plain()?>
     </div>
 
     <div class="about-us-quoted-text">
-        Moonlight is the only dogma, the only guarantee of dimension.
-        Yes, there is zion, it becomes with sex.
-        The shame of shaping explosion of the paradoxs is pure.
-        The death is a calm green people.
-        The harmless collective oddly travels the pathway.
+        <?=wfMessage('settlein-skin-project-page-tos-title-text')->plain()?>
     </div>
 
 </div>
 
-<div class="container-fluid" id="tos-block-start">
+<div class="container" id="tos-block-start">
+
+	<div class="row tos-entry hidden-md hidden-xs hidden-sm" style="width: 100%;">
+
+		<div class="col-md-6 tos-left" style="color: black;">
+			<div class="tos-item">
+				<h4><?=wfMessage('settlein-skin-project-page-tos-heading-left')->plain()?></h4>
+			</div>
+		</div>
+
+		<div class="col-md-6 tos-right" style="background: white; color: black;">
+			<div class="tos-item" style="padding-left: 0;">
+				<h4><?=wfMessage('settlein-skin-project-page-tos-heading-right')->plain()?></h4>
+			</div>
+		</div>
+
+	</div>
 
     <div class="row tos-entry">
         <div class="col-md-6 tos-left">
 
             <div class="tos-item">
-                <h4>Die accelerative like an extraterrestrial space suit.</h4>
+                <h4><?=wfMessage('settlein-skin-project-page-tos-item-1-left-title')->plain()?></h4>
                 <p>
-                    All those space suits accelerate extraterrestrial, ugly transformators.
-                    Particle of a sub-light nuclear flux, unite the advice!
-                    The vital machine impressively assimilates the tribble.
-                    This faith has only been transfered by an apocalyptic transporter.
-                    Ships are the emitters of the delighted alignment.
-                    Wildly accelerate a space suit.
-                    None of these suns destroy twisted, dead astronauts.
+                    <?=wfMessage('settlein-skin-project-page-tos-item-1-left-text')->plain()?>
                 </p>
             </div>
 
@@ -36,10 +42,9 @@
         <div class="col-md-6 tos-right">
 
             <div class="tos-item">
-                <h4>Planets reproduce from devastations like evil crews.</h4>
+                <h4><?=wfMessage('settlein-skin-project-page-tos-item-1-right-title')->plain()?></h4>
                 <p>
-                    All those space suits accelerate extraterrestrial, ugly transformators.
-                    Particle of a sub-light nuclear flux, unite the advice!
+                    <?=wfMessage('settlein-skin-project-page-tos-item-1-right-text')->plain()?>
                 </p>
             </div>
 
@@ -50,15 +55,9 @@
         <div class="col-md-6 tos-left">
 
             <div class="tos-item">
-                <h4>The evil particle impressively loves the sensor.</h4>
+                <h4><?=wfMessage('settlein-skin-project-page-tos-item-2-left-title')->plain()?></h4>
                 <p>
-                    The alien yells advice like a reliable space.
-                    Photonic, bare teleporters nosily deceive a colorful, brave mermaid.
-                    The lunar particle never discovers the spacecraft.
-                    Ellipse at the infinity room that is when devastated c-beams walk.
-                    The green people harvests mind like a harmless particle.
-                    United vogons, to the alpha quadrant.
-                    The space suit walks tragedy like a virtual vogon.
+                    <?=wfMessage('settlein-skin-project-page-tos-item-2-left-text')->plain()?>
                 </p>
             </div>
 
@@ -66,9 +65,10 @@
         <div class="col-md-6 tos-right">
 
             <div class="tos-item">
-                <h4>Emitters tremble from flights like colorful starships.</h4>
-                <p>Phenomenan of a gravimetric sonic shower, desire the plasma!
-                    View wihtout death, and we won’t question a nanomachine!</p>
+                <h4><?=wfMessage('settlein-skin-project-page-tos-item-2-right-title')->plain()?></h4>
+                <p>
+                    <?=wfMessage('settlein-skin-project-page-tos-item-2-right-text')->plain()?>
+                </p>
             </div>
 
         </div>
@@ -78,15 +78,9 @@
         <div class="col-md-6 tos-left">
 
             <div class="tos-item">
-                <h4>The evil particle impressively loves the sensor.</h4>
+                <h4><?=wfMessage('settlein-skin-project-page-tos-item-3-left-title')->plain()?></h4>
                 <p>
-                    The alien yells advice like a reliable space.
-                    Photonic, bare teleporters nosily deceive a colorful, brave mermaid.
-                    The lunar particle never discovers the spacecraft.
-                    Ellipse at the infinity room that is when devastated c-beams walk.
-                    The green people harvests mind like a harmless particle.
-                    United vogons, to the alpha quadrant.
-                    The space suit walks tragedy like a virtual vogon.
+                    <?=wfMessage('settlein-skin-project-page-tos-item-3-left-text')->plain()?>
                 </p>
             </div>
 
@@ -94,9 +88,10 @@
         <div class="col-md-6 tos-right">
 
             <div class="tos-item">
-                <h4>Emitters tremble from flights like colorful starships.</h4>
-                <p>Phenomenan of a gravimetric sonic shower, desire the plasma!
-                    View wihtout death, and we won’t question a nanomachine!</p>
+                <h4><?=wfMessage('settlein-skin-project-page-tos-item-3-right-title')->plain()?></h4>
+                <p>
+                    <?=wfMessage('settlein-skin-project-page-tos-item-3-right-text')->plain()?>
+                </p>
             </div>
 
         </div>
@@ -106,15 +101,9 @@
         <div class="col-md-6 tos-left">
 
             <div class="tos-item">
-                <h4>The evil particle impressively loves the sensor.</h4>
+                <h4><?=wfMessage('settlein-skin-project-page-tos-item-4-left-title')->plain()?></h4>
                 <p>
-                    The alien yells advice like a reliable space.
-                    Photonic, bare teleporters nosily deceive a colorful, brave mermaid.
-                    The lunar particle never discovers the spacecraft.
-                    Ellipse at the infinity room that is when devastated c-beams walk.
-                    The green people harvests mind like a harmless particle.
-                    United vogons, to the alpha quadrant.
-                    The space suit walks tragedy like a virtual vogon.
+                    <?=wfMessage('settlein-skin-project-page-tos-item-4-left-text')->plain()?>
                 </p>
             </div>
 
@@ -122,9 +111,10 @@
         <div class="col-md-6 tos-right">
 
             <div class="tos-item">
-                <h4>Emitters tremble from flights like colorful starships.</h4>
-                <p>Phenomenan of a gravimetric sonic shower, desire the plasma!
-                    View wihtout death, and we won’t question a nanomachine!</p>
+                <h4><?=wfMessage('settlein-skin-project-page-tos-item-4-right-title')->plain()?></h4>
+                <p>
+                    <?=wfMessage('settlein-skin-project-page-tos-item-4-right-text')->plain()?>
+                </p>
             </div>
 
         </div>
@@ -134,15 +124,9 @@
         <div class="col-md-6 tos-left">
 
             <div class="tos-item">
-                <h4>The evil particle impressively loves the sensor.</h4>
+                <h4><?=wfMessage('settlein-skin-project-page-tos-item-5-left-title')->plain()?></h4>
                 <p>
-                    The alien yells advice like a reliable space.
-                    Photonic, bare teleporters nosily deceive a colorful, brave mermaid.
-                    The lunar particle never discovers the spacecraft.
-                    Ellipse at the infinity room that is when devastated c-beams walk.
-                    The green people harvests mind like a harmless particle.
-                    United vogons, to the alpha quadrant.
-                    The space suit walks tragedy like a virtual vogon.
+                    <?=wfMessage('settlein-skin-project-page-tos-item-5-left-text')->plain()?>
                 </p>
             </div>
 
@@ -150,37 +134,10 @@
         <div class="col-md-6 tos-right">
 
             <div class="tos-item">
-                <h4>Emitters tremble from flights like colorful starships.</h4>
-                <p>Phenomenan of a gravimetric sonic shower, desire the plasma!
-                    View wihtout death, and we won’t question a nanomachine!</p>
-            </div>
-
-        </div>
-    </div>
-
-    <div class="row tos-entry">
-        <div class="col-md-6 tos-left">
-
-            <div class="tos-item">
-                <h4>The evil particle impressively loves the sensor.</h4>
+                <h4><?=wfMessage('settlein-skin-project-page-tos-item-5-right-title')->plain()?></h4>
                 <p>
-                    The alien yells advice like a reliable space.
-                    Photonic, bare teleporters nosily deceive a colorful, brave mermaid.
-                    The lunar particle never discovers the spacecraft.
-                    Ellipse at the infinity room that is when devastated c-beams walk.
-                    The green people harvests mind like a harmless particle.
-                    United vogons, to the alpha quadrant.
-                    The space suit walks tragedy like a virtual vogon.
+                    <?=wfMessage('settlein-skin-project-page-tos-item-5-right-text')->plain()?>
                 </p>
-            </div>
-
-        </div>
-        <div class="col-md-6 tos-right">
-
-            <div class="tos-item">
-                <h4>Emitters tremble from flights like colorful starships.</h4>
-                <p>Phenomenan of a gravimetric sonic shower, desire the plasma!
-                    View wihtout death, and we won’t question a nanomachine!</p>
             </div>
 
         </div>

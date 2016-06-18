@@ -50,7 +50,9 @@
       ],
       "position": "top",
       "messages": [
-        "settlein-skin-mainpage-jumbotron-country-placeholder"
+        "settlein-skin-mainpage-jumbotron-country-placeholder",
+        "settlein-skin-add-new-article-text-exists",
+        "settlein-skin-add-new-article-text-not-exists"
       ]
     },
     "skins.settlein.page.styles": {
@@ -77,7 +79,9 @@
       ],
       "position": "top",
       "messages": [
-        "settlein-skin-header-select-country-placeholder"
+        "settlein-skin-header-select-country-placeholder",
+        "settlein-skin-add-new-article-text-exists",
+        "settlein-skin-add-new-article-text-not-exists"
       ]
     },
     "skins.settlein.special.about": {
@@ -105,8 +109,7 @@
     },
     "skins.settlein.special.tos": {
       "scripts": [
-        "assets/special/tos/script.js",
-        "assets/special/tos/holder.min.js"
+        "assets/special/tos/script.js"
       ],
       "styles": [
         "assets/special/tos/style.css"

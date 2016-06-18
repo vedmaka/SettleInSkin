@@ -4,10 +4,9 @@
         <div class="jumbo-content">
 
             <div class="i-jumbotext">
-                <h1>About Us</h1>
+                <h1><?=wfMessage('settlein-skin-project-page-about-title')->plain()?></h1>
                 <p>
-                    All private seekers hurt each other, only unveiled scholars have a happiness.
-                    When one traps dogma and attraction, one is able to yearn suffering.
+                    <?=wfMessage('settlein-skin-project-page-about-title-text')->plain()?>
                 </p>
             </div>
 
@@ -17,16 +16,11 @@
 <div class="container">
 
     <div class="about-us-quoted-title">
-        Our Story
+        <?=wfMessage('settlein-skin-project-page-about-second-title')->plain()?>
     </div>
 
     <div class="about-us-quoted-text">
-        Moonlight is the only dogma, the only guarantee of dimension.
-        Yes, there is zion, it becomes with sex.
-        The shame of shaping explosion of the paradoxs is pure.
-        Going to the afterworld doesn’t illuminate tantra anymore than praising creates beloved emptiness.
-        Prime conclusions yearns most faiths.
-        One must emerge the self in order to avoid the explosion of the purpose of true courage.
+        <?=wfMessage('settlein-skin-project-page-about-second-title-text')->plain()?>
     </div>
 
 </div>
@@ -43,15 +37,13 @@
                 </div>
                 <div class="timeline-panel">
                     <div class="timeline-heading">
-                        <h4 class="timeline-title">Be inward.</h4>
-                        <p class="timeline-date"><small class="text-muted"><i class="fa fa-clock-o"></i> September 2015</small>
+                        <h4 class="timeline-title"><?=wfMessage('settlein-skin-project-page-about-record-1-title')->plain()?></h4>
+                        <p class="timeline-date"><small class="text-muted"><i class="fa fa-clock-o"></i> <?=wfMessage('settlein-skin-project-page-about-record-1-date')->plain()?></small>
                         </p>
                     </div>
                     <div class="timeline-body">
                         <p>
-                            Confucius says: harmony, booda-hood, milk.
-                            Superior justices shapes most emptinesses.
-                            Extend and om. You have to travel, and visualize living by your growing.
+                            <?=wfMessage('settlein-skin-project-page-about-record-1-text')->plain()?>
                         </p>
                     </div>
                 </div>
@@ -62,8 +54,8 @@
                 </div>
                 <div class="timeline-panel">
                     <div class="timeline-heading">
-                        <h4 class="timeline-title">Be alchemistic.</h4>
-                        <p class="timeline-date"><small class="text-muted"><i class="fa fa-clock-o"></i> November 2015</small>
+                        <h4 class="timeline-title"><?=wfMessage('settlein-skin-project-page-about-record-2-title')->plain()?></h4>
+                        <p class="timeline-date"><small class="text-muted"><i class="fa fa-clock-o"></i> <?=wfMessage('settlein-skin-project-page-about-record-2-date')->plain()?></small>
                         </p>
                     </div>
                     <div class="timeline-body">
@@ -77,8 +69,7 @@
                             </a>
                         </div>
                         <p>
-                            Be unbiased for whoever becomes, because each has been grasped with life.
-                            One must discover the individual in order to reject the power of simple paradox.
+                            <?=wfMessage('settlein-skin-project-page-about-record-2-text')->plain()?>
                         </p>
                     </div>
                 </div>
@@ -89,15 +80,13 @@
                 </div>
                 <div class="timeline-panel">
                     <div class="timeline-heading">
-                        <h4 class="timeline-title">Be spiritual. </h4>
-                        <p class="timeline-date"><small class="text-muted"><i class="fa fa-clock-o"></i> October 2015</small>
+                        <h4 class="timeline-title"><?=wfMessage('settlein-skin-project-page-about-record-3-title')->plain()?></h4>
+                        <p class="timeline-date"><small class="text-muted"><i class="fa fa-clock-o"></i> <?=wfMessage('settlein-skin-project-page-about-record-3-date')->plain()?></small>
                         </p>
                     </div>
                     <div class="timeline-body">
                         <p>
-                            Special visions visualizes most purposes.
-                            Atomic stigmas illuminates most pains.
-                            Dogma doesn’t solitary love any sun — but the self is what flies.
+                            <?=wfMessage('settlein-skin-project-page-about-record-3-text')->plain()?>
                         </p>
                     </div>
                 </div>
@@ -108,15 +97,13 @@
                 </div>
                 <div class="timeline-panel">
                     <div class="timeline-heading">
-                        <h4 class="timeline-title">Be alchemistic.</h4>
-                        <p class="timeline-date"><small class="text-muted"><i class="fa fa-clock-o"></i> December 2015</small>
+                        <h4 class="timeline-title"><?=wfMessage('settlein-skin-project-page-about-record-4-title')->plain()?></h4>
+                        <p class="timeline-date"><small class="text-muted"><i class="fa fa-clock-o"></i> <?=wfMessage('settlein-skin-project-page-about-record-4-date')->plain()?></small>
                         </p>
                     </div>
                     <div class="timeline-body">
                         <p>
-                            Synthetic totalities loves most affirmations.
-                            Powerful chaos follows most joys.
-                            Going to the heavens of everything doesn’t view faith anymore than visualizing creates strange light.
+                            <?=wfMessage('settlein-skin-project-page-about-record-4-text')->plain()?>
                         </p>
                     </div>
                 </div>
@@ -127,8 +114,8 @@
                 </div>
                 <div class="timeline-panel">
                     <div class="timeline-heading">
-                        <h4 class="timeline-title">Be unconditional.</h4>
-                        <p class="timeline-date"><small class="text-muted"><i class="fa fa-clock-o"></i> February 2015</small>
+                        <h4 class="timeline-title"><?=wfMessage('settlein-skin-project-page-about-record-5-title')->plain()?></h4>
+                        <p class="timeline-date"><small class="text-muted"><i class="fa fa-clock-o"></i> <?=wfMessage('settlein-skin-project-page-about-record-5-date')->plain()?></small>
                         </p>
                     </div>
                     <div class="timeline-body">
@@ -136,9 +123,7 @@
                             <iframe src="https://player.vimeo.com/video/90429499" width="100%" height="250" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
                         </div>
                         <p>
-                            Occult volumes grasps most zens.
-                            Unbiased minds receives most booda-hoods.
-                            Going to the state of satori doesn’t fear chaos anymore than feeling creates unveiled afterlife.
+                            <?=wfMessage('settlein-skin-project-page-about-record-5-text')->plain()?>
                         </p>
                     </div>
                 </div>
@@ -153,13 +138,11 @@
 <div class="container">
 
     <div class="about-us-quoted-title">
-        Contributors
+        <?=wfMessage('settlein-skin-project-page-about-contributors-title')->plain()?>
     </div>
 
     <div class="about-us-quoted-text">
-        The ultimate zen of thought is to gain with silence.
-        The therapist hurts stigma which is not ultimate.
-        The closest extend of chaos is to avoid with mineral.
+        <?=wfMessage('settlein-skin-project-page-about-contributors-title-text')->plain()?>
     </div>
 
     <div id="contributors-about-list">

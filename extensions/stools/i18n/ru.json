@@ -1,9 +1,8 @@
 {
   "@metadata": {
-    "authors": [
-      "DCamer"
-    ]
+    "authors": []
   },
-  "stools-desc": "Это пример расширения",
-  "stools-i18n-welcome": "Добро пожаловать в файл локализации расширения stools."
+  "stools-desc": "Support tools for SettleIn skin",
+  "stools-i18n-welcome": "Welcome to the localization file of the stools extension.",
+  "stools-button-print": "Печать"
 }

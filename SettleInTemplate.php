@@ -18,10 +18,15 @@ class SettleInTemplate extends BaseTemplate {
     /** @var boolean */
     private $cleanPage;
 
+	private $countriesList;
+	private $connectedLanguagesList;
+
 	/**
 	 * Outputs the entire contents of the (X)HTML page
 	 */
 	public function execute() {
+
+		global $wgSettleTranslateDomains, $wgLanguageCode;
 
         $this->isCardPage = false;
         if( $this->getSkin()->getTitle() ) {
@@ -60,6 +65,17 @@ class SettleInTemplate extends BaseTemplate {
 		$this->data['view_urls'] = $nav['views'];
 		$this->data['action_urls'] = $nav['actions'];
 		$this->data['variant_urls'] = $nav['variants'];
+
+		// Prepare some data
+		$this->countriesList = stools::getPropertyAllowedValues('Country');
+		$this->connectedLanguagesList = array(
+			$wgLanguageCode => Language::fetchLanguageName($wgLanguageCode)
+		);
+		if( $wgSettleTranslateDomains && count($wgSettleTranslateDomains) ) {
+			foreach ($wgSettleTranslateDomains as $langKey => $domain) {
+				$this->connectedLanguagesList[$langKey] = Language::fetchLanguageName($langKey);
+			}
+		}
 
 		// Output HTML Page
 		$this->html( 'headelement' );
@@ -138,8 +154,7 @@ class SettleInTemplate extends BaseTemplate {
                             <select name="Search[Country]">
                                 <option></option>
                                 <?
-                                $propVals = stools::getPropertyAllowedValues('Country');
-                                foreach ($propVals as $val) {
+                                foreach ($this->countriesList as $val) {
                                     ?>
                                     <option value="<?=$val?>"><?=$val?></option>
                                     <?
@@ -394,12 +409,12 @@ class SettleInTemplate extends BaseTemplate {
         <div class="container">
             <ul class="nav navbar-nav">
                 <li>
-                    <a href="<?=Title::newFromText('About Us', NS_PROJECT)->getFullURL()?>">
+                    <a href="<?=SpecialPage::getTitleFor('SettleIn')->getFullURL()?>/about">
                         <?=wfMessage('settlein-skin-footer-about-us')->plain()?>
                     </a>
                 </li>
                 <li>
-                    <a href="<?=Title::newFromText('Contact', NS_PROJECT)->getFullURL()?>">
+                    <a href="<?=SpecialPage::getTitleFor('SettleIn')->getFullURL()?>/contact">
                         <?=wfMessage('settlein-skin-footer-contact')->plain()?>
                     </a>
                 </li>
@@ -409,7 +424,7 @@ class SettleInTemplate extends BaseTemplate {
                     </a>
                 </li>
                 <li>
-                    <a href="<?=Title::newFromText('Terms and Conditions', NS_PROJECT)->getFullURL()?>">
+                    <a href="<?=SpecialPage::getTitleFor('SettleIn')->getFullURL()?>/tos">
                         <?=wfMessage('settlein-skin-footer-tos')->plain()?>
                     </a>
                 </li>
@@ -546,12 +561,12 @@ class SettleInTemplate extends BaseTemplate {
         <div class="container">
             <ul class="nav navbar-nav">
                 <li>
-                    <a href="<?=Title::newFromText('About Us', NS_PROJECT)->getFullURL()?>">
+                    <a href="<?=SpecialPage::getTitleFor('SettleIn')->getFullURL()?>/about">
                         <?=wfMessage('settlein-skin-footer-about-us')->plain()?>
                     </a>
                 </li>
                 <li>
-                    <a href="<?=Title::newFromText('Contact', NS_PROJECT)->getFullURL()?>">
+                    <a href="<?=SpecialPage::getTitleFor('SettleIn')->getFullURL()?>/contact">
                         <?=wfMessage('settlein-skin-footer-contact')->plain()?>
                     </a>
                 </li>
@@ -561,7 +576,7 @@ class SettleInTemplate extends BaseTemplate {
                     </a>
                 </li>
                 <li>
-                    <a href="<?=Title::newFromText('Terms and Conditions', NS_PROJECT)->getFullURL()?>">
+                    <a href="<?=SpecialPage::getTitleFor('SettleIn')->getFullURL()?>/tos">
                         <?=wfMessage('settlein-skin-footer-tos')->plain()?>
                     </a>
                 </li>
@@ -706,6 +721,9 @@ class SettleInTemplate extends BaseTemplate {
 								}?>
                             </ul>
                         </li>
+                        <li>
+                            <a href="#" id="add-new-article-btn"><b><?=wfMessage('settlein-skin-add-new-article-button')->plain()?></b></a>
+                        </li>
                     <? else: ?>
                         <li id="why_signup">
                             <a href="#">
@@ -771,8 +789,7 @@ class SettleInTemplate extends BaseTemplate {
                     <select id="country-select" name="Search[Country]">
                         <option></option>
                         <?
-                            $propVals = stools::getPropertyAllowedValues('Country');
-                            foreach ($propVals as $val) {
+                            foreach ($this->countriesList as $val) {
                                 ?>
                                 <option value="<?=$val?>"><?=$val?></option>
                                 <?
@@ -858,7 +875,7 @@ class SettleInTemplate extends BaseTemplate {
                     <? else: ?>
 
                     <li class="btn-group-nav login-selector" id="login-selector">
-                        <a href="#">
+                        <a href="#" id="add-new-article-btn">
                             <i class="fa fa-lock"></i>
                             <?=wfMessage( 'settlein-skin-header-login' )->plain()?>
                         </a>
@@ -950,6 +967,68 @@ class SettleInTemplate extends BaseTemplate {
             </a>
         </div>
     </form>
+</div>
+
+<!-- Add new article popup form & wrapper -->
+<div id="add-new-article-popup-wrapper">
+</div>
+
+<div class="add-new-article-popup-form">
+    <h3>
+	    Add new article
+    </h3>
+	<p>
+		Please specify details for new article you want to be created
+	</p>
+	<form class="" method="post" action="" >
+		<div class="form-group">
+			<label for="new_pageTitle">Title</label>
+			<input type="text" class="form-control" placeholder="" name="pageTitle" id="new_pageTitle" />
+		</div>
+		<div class="form-group">
+			<label for="new_pageCategory">Category</label>
+			<select class="form-control" name="pageCategory" id="new_pageCategory">
+				<option></option>
+				<option>A</option>
+				<option>B</option>
+				<option>C</option>
+			</select>
+		</div>
+		<div class="form-group">
+			<label for="new_pageCountry">Country</label>
+			<select class="form-control" name="pageCountry" id="new_pageCountry">
+				<?
+				foreach ($this->countriesList as $val) {
+					?>
+					<option value="<?=$val?>"><?=$val?></option>
+					<?
+				}
+				?>
+			</select>
+		</div>
+		<div class="form-group">
+			<label for="new_pageLanguage">Language</label>
+            <select class="form-control" name="pageLanguage" id="new_pageLanguage">
+	            <?
+	            foreach ($this->connectedLanguagesList as $langCode => $langText) {
+	            	?>
+		            <option value="<?=$langCode?>"><?=$langText?></option>
+		            <?
+	            }
+	            ?>
+            </select>
+		</div>
+		<div class="new_page_suggestions">
+			<p></p>
+			<ul>
+
+			</ul>
+		</div>
+		<div class="form-group pull-right">
+			<a id="newpage_btn_cancel" href="#" class="btn btn-concrete">Cancel</a>
+			<a href="#123" id="newpage_btn_submit" class="disabled btn btn-primary">Proceed</a>
+		</div>
+	</form>
 </div>
 
 <?

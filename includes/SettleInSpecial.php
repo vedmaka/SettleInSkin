@@ -10,6 +10,8 @@ class SettleInSpecial extends UnlistedSpecialPage {
     public function execute( $subPage )
     {
 
+        $this->getOutput()->enableClientCache(false);
+
         switch ( $subPage ) {
             case "about":
                 $this->aboutUs();
@@ -29,9 +31,9 @@ class SettleInSpecial extends UnlistedSpecialPage {
      * @throws Exception
      */
     private function aboutUs() {
-        
-        $this->getOutput()->setPageTitle('About Us | SettleIn');
+
         $this->getOutput()->addModules('skins.settlein.special.about');
+        $this->getOutput()->setPageTitle('About Us | SettleIn');
         $data = array();
         $html = Views::forge( 'aboutus', $data );
         $this->getOutput()->addHTML( $html );
@@ -40,8 +42,8 @@ class SettleInSpecial extends UnlistedSpecialPage {
 
     private function contact() {
 
-        $this->getOutput()->setPageTitle('Contact Us | SettleIn');
         $this->getOutput()->addModules('skins.settlein.special.contact');
+        $this->getOutput()->setPageTitle('Contact Us | SettleIn');
         $data = array();
 
         if( $this->getRequest()->wasPosted() ) {
@@ -63,8 +65,8 @@ class SettleInSpecial extends UnlistedSpecialPage {
 
     private function tos() {
 
-        $this->getOutput()->setPageTitle('Terms and conditions | SettleIn');
         $this->getOutput()->addModules('skins.settlein.special.tos');
+        $this->getOutput()->setPageTitle('Terms and conditions | SettleIn');
         $data = array();
         $html = Views::forge('tos', $data);
         $this->getOutput()->addHTML( $html );
