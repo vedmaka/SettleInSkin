@@ -34,7 +34,8 @@
         "assets/css/select2.min.css",
         "assets/css/theme_combined.css",
         "assets/css/screen.css"
-      ]
+      ],
+      "position": "bottom"
     },
     "skins.settlein.js": {
       "scripts": [
@@ -63,7 +64,8 @@
         "assets/css/screen.css",
         "assets/css/double.css",
         "assets/css/double_print.css"
-      ]
+      ],
+      "position": "bottom"
     },
     "skins.settlein.page.js": {
       "scripts": [
