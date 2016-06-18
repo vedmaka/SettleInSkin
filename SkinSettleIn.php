@@ -125,4 +125,14 @@ class SkinSettleIn extends SkinTemplate {
     public function setupTemplate( $classname, $repository = false, $cache_dir = false ) {
         return new $classname( $this->settleinConfig );
     }
+    
+    public static function onResourceLoaderTestModules( &$testModules, &$resourceLoader ){
+        $testModules['qunit']['skin.settlein.tests'] = array(
+        	'scripts' => array( 'tests/qunit/skins.settlein.js' ),
+        	'dependencies' => array( 'skins.settlein.js' ),
+        	'localBasePath' => __DIR__,
+        	'remoteSkinPath' => 'SettleIn'
+        );
+    }
+    
 }

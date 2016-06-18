@@ -1,3 +1,4 @@
+/* global $,mw */
 $(function(){
 
     if( $('#add-new-article-btn').length ) {
@@ -15,15 +16,45 @@ $(function(){
             $('.add-new-article-popup-form').show();
             $('#add-new-article-popup-wrapper').show();
         });
+        
+        $('.add-new-article-popup-form select[name="pageLanguage"]').change(function(){
+            verifyTitle();
+        });
 
         $('.add-new-article-popup-form form input[name="pageTitle"]').keyup(function(){
-            var value = $('.add-new-article-popup-form form input[name="pageTitle"]').val();
-            if( !value.length ) {
-                return;
-            }
             clearTimeout( keyuptimeout );
             keyuptimeout = setTimeout( function() {
-                queryTitleApi( value, function(  exists, suggestions ){
+                verifyTitle();
+            }, 250 );
+        });
+
+    }
+
+    function startLoader() {
+        //$('#newpage_btn_submit').addClass('disabled');
+        if( !$('#newpage_btn_submit').hasClass('disabled') ) {
+            $('#newpage_btn_submit').addClass('disabled');
+        }
+
+        if( !$('#newpage_btn_submit').hasClass('btn-native-loader') ) {
+            $('#newpage_btn_submit').addClass('btn-native-loader');
+        }
+        $('.add-new-article-popup-form .new_page_suggestions').hide();
+    }
+
+    function stopLoader() {
+        //$('#newpage_btn_submit').removeClass('disabled');
+        $('#newpage_btn_submit').removeClass('btn-native-loader');
+    }
+    
+    function verifyTitle()
+    {
+        var value = $('.add-new-article-popup-form form input[name="pageTitle"]').val();
+        if( !value.length ) {
+            return;
+        }
+        startLoader();
+        queryTitleApi( value, function(  exists, suggestions ){
 
                     var pText = '';
 
@@ -53,32 +84,18 @@ $(function(){
                     }
 
                 });
-            }, 250 );
-            startLoader();
-        });
-
-    }
-
-    function startLoader() {
-        //$('#newpage_btn_submit').addClass('disabled');
-        if( !$('#newpage_btn_submit').hasClass('disabled') ) {
-            $('#newpage_btn_submit').addClass('disabled');
-        }
-
-        if( !$('#newpage_btn_submit').hasClass('btn-native-loader') ) {
-            $('#newpage_btn_submit').addClass('btn-native-loader');
-        }
-        $('.add-new-article-popup-form .new_page_suggestions').hide();
-    }
-
-    function stopLoader() {
-        //$('#newpage_btn_submit').removeClass('disabled');
-        $('#newpage_btn_submit').removeClass('btn-native-loader');
     }
 
     function queryTitleApi( page, callback )
     {
-        var endpoint = mw.config.get('wgServer') + mw.config.get('wgScriptPath') + '/api.php?format=json&action=settlein&do=check_unique&page=' + page;
+        var currentLanguageCode = mw.config.get('wgContentLanguage');
+        var selectedLanguageCode = $('.add-new-article-popup-form #new_pageLanguage').val();
+        var endpoint = mw.config.get('wgServer') + mw.config.get('wgScriptPath');
+        if( currentLanguageCode != selectedLanguageCode ) {
+            var endpoint = '//' + mw.config.get('wgSettleTranslateDomains')[selectedLanguageCode];
+        }
+        endpoint += '/api.php?format=json&action=settlein&do=check_unique&page=' + page;
+        
         $.get( endpoint, function( response ){
             if( response ) {
                 if( response.settlein ) {
