@@ -145,7 +145,15 @@
 
 	"settlein-skin-add-new-article-button": "Создать страницу",
 	"settlein-skin-add-new-article-text-exists": "Упс! Похоже у нас уже есть страница с идентичным названием. Пожалуйста, посомотрите список страниц ниже:",
-	"settlein-skin-add-new-article-text-not-exists": "Проверьте страницы похожие на ту, которую вы хотите создать:"
+	"settlein-skin-add-new-article-text-not-exists": "Проверьте страницы похожие на ту, которую вы хотите создать:",
+	"settlein-skin-add-new-article-window-title": "Создать страницу",
+	"settlein-skin-add-new-article-window-description": "Пожалуйста, заполните необходимые поля ниже:",
+	"settlein-skin-add-new-article-window-form-field-title": "Название",
+	"settlein-skin-add-new-article-window-form-field-category": "Категория",
+	"settlein-skin-add-new-article-window-form-field-country": "Страна",
+	"settlein-skin-add-new-article-window-form-field-language": "Язык",
+	"settlein-skin-add-new-article-window-form-btn-cancel": "Отмена",
+	"settlein-skin-add-new-article-window-form-btn-submit": "Продолжить"
 
 
 }

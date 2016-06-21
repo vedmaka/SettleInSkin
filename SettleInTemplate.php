@@ -984,18 +984,18 @@ class SettleInTemplate extends BaseTemplate {
 
 <div class="add-new-article-popup-form">
     <h3>
-	    Add new article
+	    <?=wfMessage('settlein-skin-add-new-article-window-title')->plain()?>
     </h3>
 	<p>
-		Please specify details for new article you want to be created
+		<?=wfMessage('settlein-skin-add-new-article-window-description')->plain()?>
 	</p>
 	<form class="" method="post" action="" >
 		<div class="form-group">
-			<label for="new_pageTitle">Title</label>
+			<label for="new_pageTitle"><?=wfMessage('settlein-skin-add-new-article-window-form-field-title')->plain()?></label>
 			<input type="text" class="form-control" placeholder="" name="Card[Title]" id="new_pageTitle" />
 		</div>
 		<div class="form-group">
-			<label for="new_pageCategory">Category</label>
+			<label for="new_pageCategory"><?=wfMessage('settlein-skin-add-new-article-window-form-field-category')->plain()?></label>
 			<select class="form-control" name="Card[Tags]" id="new_pageCategory">
                 <option></option>
 				<? foreach ( $this->categoriesList as $category ): ?>
@@ -1004,7 +1004,7 @@ class SettleInTemplate extends BaseTemplate {
 			</select>
 		</div>
 		<div class="form-group">
-			<label for="new_pageCountry">Country</label>
+			<label for="new_pageCountry"><?=wfMessage('settlein-skin-add-new-article-window-form-field-country')->plain()?></label>
 			<select class="form-control" name="Card[Country]" id="new_pageCountry">
 				<?
 				foreach ($this->countriesList as $val) {
@@ -1016,7 +1016,7 @@ class SettleInTemplate extends BaseTemplate {
 			</select>
 		</div>
 		<div class="form-group">
-			<label for="new_pageLanguage">Language</label>
+			<label for="new_pageLanguage"><?=wfMessage('settlein-skin-add-new-article-window-form-field-language')->plain()?></label>
             <select class="form-control" name="pageLanguage" id="new_pageLanguage">
 	            <?
 	            foreach ($this->connectedLanguagesList as $langCode => $langText) {
@@ -1034,8 +1034,8 @@ class SettleInTemplate extends BaseTemplate {
 			</ul>
 		</div>
 		<div class="form-group pull-right">
-			<a id="newpage_btn_cancel" href="#" class="btn btn-concrete">Cancel</a>
-			<a href="#123" id="newpage_btn_submit" class="disabled btn btn-primary">Proceed</a>
+			<a id="newpage_btn_cancel" href="#" class="btn btn-concrete"><?=wfMessage('settlein-skin-add-new-article-window-form-btn-cancel')->plain()?></a>
+			<a href="#" id="newpage_btn_submit" class="disabled btn btn-primary"><?=wfMessage('settlein-skin-add-new-article-window-form-btn-submit')->plain()?></a>
 		</div>
 	</form>
 </div>
