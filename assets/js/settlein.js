@@ -112,7 +112,10 @@ $(function(){
         if( currentLanguageCode != selectedLanguageCode ) {
             endpoint = '//' + mw.config.get('wgSettleTranslateDomains')[selectedLanguageCode];
         }
-        endpoint += '/api.php?origin='+ mw.config.get('wgServer') + '&format=json&action=settlein&do=check_unique&page=' + page;
+        endpoint += '/api.php?format=json&action=settlein&do=check_unique&page=' + page;
+        if( currentLanguageCode != selectedLanguageCode ) {
+            endpoint += '&origin='+ mw.config.get('wgServer');
+        }
         
         $.get( endpoint, function( response ){
             if( response ) {
