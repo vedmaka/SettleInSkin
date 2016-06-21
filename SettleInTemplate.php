@@ -80,7 +80,7 @@ class SettleInTemplate extends BaseTemplate {
 
 		$this->categoriesList = array();
         //TODO: this should be reworked once fixed list of categories will be introduced
-        $this->categoriesList = SFUtils::getAllValuesForProperty( 'Tags' );
+        $this->categoriesList = stools::getPropertyAllowedValues( 'Tags' );
 
 		// Output HTML Page
 		$this->html( 'headelement' );
