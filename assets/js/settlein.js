@@ -17,15 +17,33 @@ $(function(){
             $('#add-new-article-popup-wrapper').show();
         });
         
-        $('.add-new-article-popup-form select[name="pageLanguage"]').change(function(){
+        $('.add-new-article-popup-form select#new_pageLanguage').change(function(){
             verifyTitle();
         });
 
-        $('.add-new-article-popup-form form input[name="pageTitle"]').keyup(function(){
+        $('.add-new-article-popup-form form input#new_pageTitle').keyup(function(){
             clearTimeout( keyuptimeout );
             keyuptimeout = setTimeout( function() {
                 verifyTitle();
             }, 250 );
+        });
+
+        $('.add-new-article-popup-form #newpage_btn_submit').click(function(){
+
+            if( $(this).hasClass('disabled') ) {
+                return false;
+            }
+
+            var currentLanguageCode = mw.config.get('wgContentLanguage');
+            var selectedLanguageCode = $('.add-new-article-popup-form #new_pageLanguage').val();
+            var formUrl = mw.config.get('wgServer') + mw.config.get('wgScriptPath');
+            if( currentLanguageCode != selectedLanguageCode ) {
+                formUrl = '//' + mw.config.get('wgSettleTranslateDomains')[selectedLanguageCode];
+            }
+            formUrl += '/index.php/Special:FormEdit/Card/';
+            $('.add-new-article-popup-form form').prop('action', formUrl);
+            $('.add-new-article-popup-form form').submit();
+
         });
 
     }
@@ -49,7 +67,7 @@ $(function(){
     
     function verifyTitle()
     {
-        var value = $('.add-new-article-popup-form form input[name="pageTitle"]').val();
+        var value = $('.add-new-article-popup-form form input#new_pageTitle').val();
         if( !value.length ) {
             return;
         }
@@ -92,7 +110,7 @@ $(function(){
         var selectedLanguageCode = $('.add-new-article-popup-form #new_pageLanguage').val();
         var endpoint = mw.config.get('wgServer') + mw.config.get('wgScriptPath');
         if( currentLanguageCode != selectedLanguageCode ) {
-            var endpoint = '//' + mw.config.get('wgSettleTranslateDomains')[selectedLanguageCode];
+            endpoint = '//' + mw.config.get('wgSettleTranslateDomains')[selectedLanguageCode];
         }
         endpoint += '/api.php?format=json&action=settlein&do=check_unique&page=' + page;
         

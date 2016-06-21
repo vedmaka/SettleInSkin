@@ -20,6 +20,7 @@ class SettleInTemplate extends BaseTemplate {
 
 	private $countriesList;
 	private $connectedLanguagesList;
+    private $categoriesList;
 
 	/**
 	 * Outputs the entire contents of the (X)HTML page
@@ -76,6 +77,10 @@ class SettleInTemplate extends BaseTemplate {
 				$this->connectedLanguagesList[$langKey] = Language::fetchLanguageName($langKey);
 			}
 		}
+
+		$this->categoriesList = array();
+        //TODO: this should be reworked once fixed list of categories will be introduced
+        $this->categoriesList = SFUtils::getAllValuesForProperty( 'Tags' );
 
 		// Output HTML Page
 		$this->html( 'headelement' );
@@ -872,6 +877,10 @@ class SettleInTemplate extends BaseTemplate {
                         </ul>
                     </li>
 
+                    <li class="btn-group-nav login-selector">
+                        <a href="#" id="add-new-article-btn"><b><?=wfMessage('settlein-skin-add-new-article-button')->plain()?></b></a>
+                    </li>
+
                     <? else: ?>
 
                     <li class="btn-group-nav login-selector" id="login-selector">
@@ -983,20 +992,20 @@ class SettleInTemplate extends BaseTemplate {
 	<form class="" method="post" action="" >
 		<div class="form-group">
 			<label for="new_pageTitle">Title</label>
-			<input type="text" class="form-control" placeholder="" name="pageTitle" id="new_pageTitle" />
+			<input type="text" class="form-control" placeholder="" name="Card[Title]" id="new_pageTitle" />
 		</div>
 		<div class="form-group">
 			<label for="new_pageCategory">Category</label>
-			<select class="form-control" name="pageCategory" id="new_pageCategory">
-				<option></option>
-				<option>A</option>
-				<option>B</option>
-				<option>C</option>
+			<select class="form-control" name="Card[Tags]" id="new_pageCategory">
+                <option></option>
+				<? foreach ( $this->categoriesList as $category ): ?>
+                    <option value="<?=$category?>"><?=$category?></option>
+                <? endforeach; ?>
 			</select>
 		</div>
 		<div class="form-group">
 			<label for="new_pageCountry">Country</label>
-			<select class="form-control" name="pageCountry" id="new_pageCountry">
+			<select class="form-control" name="Card[Country]" id="new_pageCountry">
 				<?
 				foreach ($this->countriesList as $val) {
 					?>
