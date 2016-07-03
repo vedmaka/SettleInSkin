@@ -28,6 +28,27 @@ $(function(){
             }, 250 );
         });
 
+        $('#new_pageCountry').change( function(){
+            clearTimeout( keyuptimeout );
+            keyuptimeout = setTimeout( function() {
+                verifyTitle();
+            }, 250 );
+        } );
+
+        $('#new_pageState').change( function(){
+            clearTimeout( keyuptimeout );
+            keyuptimeout = setTimeout( function() {
+                verifyTitle();
+            }, 250 );
+        } );
+
+        $('#new_pageCity').change( function(){
+            clearTimeout( keyuptimeout );
+            keyuptimeout = setTimeout( function() {
+                verifyTitle();
+            }, 250 );
+        } );
+
         $('.add-new-article-popup-form #newpage_btn_submit').click(function(){
 
             if( $(this).hasClass('disabled') ) {
