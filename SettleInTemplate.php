@@ -1016,11 +1016,11 @@ class SettleInTemplate extends BaseTemplate {
 			</select>
 		</div>
         <div class="form-group settle-geo-input" data-geo-type="state" data-city-input-name="new_pageCity">
-            <label for="new_pageState">State</label>
+            <label for="new_pageState"><?=wfMessage('settlein-skin-add-new-article-window-form-field-state')->plain()?></label>
             <select class="form-control" name="Card[State]" id="new_pageState"></select>
         </div>
         <div class="form-group settle-geo-input" data-geo-type="city">
-            <label for="new_pageCity">City</label>
+            <label for="new_pageCity"><?=wfMessage('settlein-skin-add-new-article-window-form-field-city')->plain()?></label>
             <select class="form-control" name="Card[City]" id="new_pageCity"></select>
         </div>
 		<div class="form-group">
@@ -1034,8 +1034,8 @@ class SettleInTemplate extends BaseTemplate {
 	            }
 	            ?>
             </select>
-            <span>
-                Create page in other languages:
+            <span style="display: block;">
+				<?=wfMessage('settlein-skin-add-new-article-window-form-other-languages')->plain()?>
                 <?
                 global $wgSettleTranslateDomains;
                 $shiftedLangs = array_splice($this->connectedLanguagesList, 1);

@@ -154,6 +154,8 @@
 	"settlein-skin-add-new-article-window-form-field-country": "Country",
 	"settlein-skin-add-new-article-window-form-field-language": "Language",
 	"settlein-skin-add-new-article-window-form-btn-cancel": "Cancel",
-	"settlein-skin-add-new-article-window-form-btn-submit": "Proceed"
-
+	"settlein-skin-add-new-article-window-form-btn-submit": "Proceed",
+	"settlein-skin-add-new-article-window-form-other-languages": "Create page in other languages:",
+	"settlein-skin-add-new-article-window-form-field-state": "State",
+	"settlein-skin-add-new-article-window-form-field-city": "City"
 }

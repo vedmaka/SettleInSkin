@@ -76,8 +76,28 @@ $(function(){
         if( !value.length ) {
             return;
         }
+
+        // Geo infromation
+        var country = '', state = '', city = '';
+
+        var countryInput = $('#new_pageCountry');
+        var stateInput = $('#new_pageState');
+        var cityInput = $('#new_pageCity');
+
+        if( countryInput.val() ) {
+            country = countryInput.val();
+        }
+
+        if( stateInput.val() ) {
+            state = stateInput.val();
+        }
+
+        if( cityInput.val() ) {
+            city = cityInput.val();
+        }
+
         startLoader();
-        queryTitleApi( value, function(  exists, suggestions ){
+        queryTitleApi( value, country, state, city, function(  exists, suggestions ){
 
                     var pText = '';
 
@@ -109,7 +129,7 @@ $(function(){
                 });
     }
 
-    function queryTitleApi( page, callback )
+    function queryTitleApi( page, country, state, city, callback )
     {
         var currentLanguageCode = mw.config.get('wgContentLanguage');
         var selectedLanguageCode = $('.add-new-article-popup-form #new_pageLanguage').val();
@@ -118,6 +138,7 @@ $(function(){
             endpoint = '//' + mw.config.get('wgSettleTranslateDomains')[selectedLanguageCode];
         }
         endpoint += '/api.php?format=json&action=settlein&do=check_unique&page=' + page;
+        endpoint += '&country=' + country + '&state=' + state + '&city=' + city;
         if( currentLanguageCode != selectedLanguageCode ) {
             endpoint += '&origin='+ mw.config.get('wgServer');
         }
