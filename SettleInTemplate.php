@@ -68,7 +68,7 @@ class SettleInTemplate extends BaseTemplate {
 		$this->data['variant_urls'] = $nav['variants'];
 
 		// Prepare some data
-		$this->countriesList = stools::getPropertyAllowedValues('Country');
+		$this->countriesList = SettleGeoTaxonomy::getInstance()->getEntities( SettleGeoTaxonomy::TYPE_COUNTRY, null, $wgLanguageCode );
 		$this->connectedLanguagesList = array(
 			$wgLanguageCode => Language::fetchLanguageName($wgLanguageCode)
 		);
@@ -161,7 +161,7 @@ class SettleInTemplate extends BaseTemplate {
                                 <?
                                 foreach ($this->countriesList as $val) {
                                     ?>
-                                    <option value="<?=$val?>"><?=$val?></option>
+                                    <option value="<?=$val['geonamesCode']?>"><?=$val['name']?></option>
                                     <?
                                 }
                                 ?>
@@ -1003,18 +1003,26 @@ class SettleInTemplate extends BaseTemplate {
                 <? endforeach; ?>
 			</select>
 		</div>
-		<div class="form-group">
+		<div class="form-group settle-geo-input" data-geo-type="country" data-state-input-name="new_pageState" data-city-input-name="new_pageCity">
 			<label for="new_pageCountry"><?=wfMessage('settlein-skin-add-new-article-window-form-field-country')->plain()?></label>
 			<select class="form-control" name="Card[Country]" id="new_pageCountry">
 				<?
 				foreach ($this->countriesList as $val) {
 					?>
-					<option value="<?=$val?>"><?=$val?></option>
+					<option data-geo-id="<?=$val['geonamesCode']?>" value="<?=$val['name']?>"><?=$val['name']?></option>
 					<?
 				}
 				?>
 			</select>
 		</div>
+        <div class="form-group settle-geo-input" data-geo-type="state" data-city-input-name="new_pageCity">
+            <label for="new_pageState">State</label>
+            <select class="form-control" name="Card[State]" id="new_pageState"></select>
+        </div>
+        <div class="form-group settle-geo-input" data-geo-type="city">
+            <label for="new_pageCity">City</label>
+            <select class="form-control" name="Card[City]" id="new_pageCity"></select>
+        </div>
 		<div class="form-group">
 			<label for="new_pageLanguage"><?=wfMessage('settlein-skin-add-new-article-window-form-field-language')->plain()?></label>
             <select class="form-control" name="pageLanguage" id="new_pageLanguage">

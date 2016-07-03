@@ -60,6 +60,10 @@ class SkinSettleIn extends SkinTemplate {
         //$out->addModules( $scripts );
         $out->addModules( $scripts );
 
+	    if( $this->getUser() && $this->getUser()->isLoggedIn() ) {
+	    	$out->addModules( 'ext.settlegeoforminput.foo' );
+	    }
+
         $out->addMeta('viewport','width=device-width, initial-scale=1');
     }
 
@@ -111,6 +115,10 @@ class SkinSettleIn extends SkinTemplate {
             $font = htmlspecialchars( $out->getRequest()->getVal('beta_font') );
             $out->addStyle( $wgServer . $wgScriptPath . '/skins/SettleIn/assets/fonts/'.$font.'.css' );
         }
+
+	    if( $this->getUser() && $this->getUser()->isLoggedIn() ) {
+		    $out->addModuleStyles( 'ext.settlegeoforminput.foo' );
+	    }
 
         $out->addModuleStyles( $styles );
     }
