@@ -46,6 +46,11 @@ $(function(){
 
         });
 
+        /*if( window.location.hash && window.location.hash == '#add_new_article' ) {
+            $('.add-new-article-popup-form').show();
+            $('#add-new-article-popup-wrapper').show();
+        }*/
+
     }
 
     function startLoader() {

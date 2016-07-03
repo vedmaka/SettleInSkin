@@ -1025,7 +1025,7 @@ class SettleInTemplate extends BaseTemplate {
         </div>
 		<div class="form-group">
 			<label for="new_pageLanguage"><?=wfMessage('settlein-skin-add-new-article-window-form-field-language')->plain()?></label>
-            <select class="form-control" name="pageLanguage" id="new_pageLanguage">
+            <select class="form-control" name="pageLanguage" id="new_pageLanguage" style="display: none;">
 	            <?
 	            foreach ($this->connectedLanguagesList as $langCode => $langText) {
 	            	?>
@@ -1034,6 +1034,16 @@ class SettleInTemplate extends BaseTemplate {
 	            }
 	            ?>
             </select>
+            <span>
+                Create page in other languages:
+                <?
+                global $wgSettleTranslateDomains;
+                $shiftedLangs = array_splice($this->connectedLanguagesList, 1);
+                ?>
+                <? foreach ( $shiftedLangs as $langCode => $langText ): ?>
+                    <a target="_blank" href="//<?=$wgSettleTranslateDomains[$langCode]?>"><?=$langText?></a>&nbsp;
+                <? endforeach; ?>
+            </span>
 		</div>
 		<div class="new_page_suggestions">
 			<p></p>
