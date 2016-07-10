@@ -125,15 +125,17 @@ $(function(){
                     if( exists == 1 ) {
                         // Show exists warning
                         pText = mw.msg('settlein-skin-add-new-article-text-exists');
+                        $('.add-new-article-popup-form .new_page_suggestions p').addClass('text-danger');
                     }else{
                         $('#newpage_btn_submit').removeClass('disabled');
                         pText = mw.msg('settlein-skin-add-new-article-text-not-exists');
+                        $('.add-new-article-popup-form .new_page_suggestions p').removeClass('text-danger');
                     }
 
                     if( suggestions.length ) {
                         // Display similar pages
-                        $('.add-new-article-popup-form p').text(pText);
-                        var ul = $('.add-new-article-popup-form ul');
+                        $('.add-new-article-popup-form .new_page_suggestions p').text(pText);
+                        var ul = $('.add-new-article-popup-form .new_page_suggestions ul');
                         ul.html('');
                         $.each(suggestions, function(i,v){
                             var li = $('<li />');
