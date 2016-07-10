@@ -1006,6 +1006,7 @@ class SettleInTemplate extends BaseTemplate {
 		<div class="form-group settle-geo-input" data-geo-type="country" data-state-input-name="new_pageState" data-city-input-name="new_pageCity">
 			<label for="new_pageCountry"><?=wfMessage('settlein-skin-add-new-article-window-form-field-country')->plain()?></label>
 			<select class="form-control" name="Card[Country]" id="new_pageCountry">
+                <option></option>
 				<?
 				foreach ($this->countriesList as $val) {
 					?>
