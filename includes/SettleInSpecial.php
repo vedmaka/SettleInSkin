@@ -22,8 +22,18 @@ class SettleInSpecial extends UnlistedSpecialPage {
             case "tos":
                 $this->tos();
                 break;
+            case "tester":
+                $this->tester();
+                break;
         }
 
+    }
+    
+    private function tester() {
+        //error_reporting(E_ALL);ini_set('display_errors', 'on');
+        $search = new SettleGeoSearch();
+        $this->getOutput()->addModules( SettleGeoSearch::getModules() );
+        $this->getOutput()->addHtml( $search->getHtml() );
     }
 
     /**

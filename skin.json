@@ -122,6 +122,11 @@
         "assets/special/tos/style.css"
       ],
       "position": "top"
+    },
+    "skins.settlein.special.test": {
+      "scripts": [
+          "assets/js/test.js"
+        ]
     }
   },
   "ResourceFileModulePaths": {
