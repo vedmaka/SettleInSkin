@@ -33,7 +33,7 @@ class SettleInSpecial extends UnlistedSpecialPage {
         //error_reporting(E_ALL);ini_set('display_errors', 'on');
         $search = new SettleGeoSearch();
         $this->getOutput()->addModules( SettleGeoSearch::getModules() );
-        $this->getOutput()->addHtml( $search->getHtml() );
+        $this->getOutput()->addHTML( $search->getHtml() );
     }
 
     /**
