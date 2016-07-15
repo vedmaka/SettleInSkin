@@ -207,7 +207,7 @@ class SettleInTemplate extends BaseTemplate {
 
                     <div class="play-video-button">
                         <a href="#" data-toggle="modal" data-target="#videoModal" style="font-size: 20px; font-family: Arial; " >
-                            <img src="<?=$this->getSkin()->getSkinStylePath("/img/pl3.png")?>" width="31" />
+                            <img src="<?=$this->getSkin()->getSkinStylePath("/img/pl3_1.png")?>" width="31" />
                         </a>
                     </div>
                 </div>
@@ -270,7 +270,7 @@ class SettleInTemplate extends BaseTemplate {
             </div>
 
             <!-- Content start -->
-            <div class="container">
+            <!--<div class="container">
 
                 <div class="row" id="promo-blocks-row">
 
@@ -278,12 +278,12 @@ class SettleInTemplate extends BaseTemplate {
 
                         <div class="promo-block-item">
                             <div class="promo-block-img">
-                                <img src="<?=$this->getSkin()->getSkinStylePath("/img/house_green.png")?>" />
+                                <img src="<?/*=$this->getSkin()->getSkinStylePath("/img/house_green.png")*/?>" />
                             </div>
                             <div class="promo-block-text">
                                 <div class="promo-block-text-content">
-                                    <h3><?=wfMessage('settlein-skin-mainpage-section-1-title')->plain()?></h3>
-                                    <?=wfMessage('settlein-skin-mainpage-section-1-text')->plain()?>
+                                    <h3><?/*=wfMessage('settlein-skin-mainpage-section-1-title')->plain()*/?></h3>
+                                    <?/*=wfMessage('settlein-skin-mainpage-section-1-text')->plain()*/?>
                                 </div>
                             </div>
                         </div>
@@ -294,12 +294,12 @@ class SettleInTemplate extends BaseTemplate {
 
                         <div class="promo-block-item">
                             <div class="promo-block-img">
-                                <img src="<?=$this->getSkin()->getSkinStylePath("/img/suitcase_blue.png")?>" />
+                                <img src="<?/*=$this->getSkin()->getSkinStylePath("/img/suitcase_blue.png")*/?>" />
                             </div>
                             <div class="promo-block-text">
                                 <div class="promo-block-text-content">
-                                    <h3><?=wfMessage('settlein-skin-mainpage-section-2-title')->plain()?></h3>
-                                    <?=wfMessage('settlein-skin-mainpage-section-2-text')->plain()?>
+                                    <h3><?/*=wfMessage('settlein-skin-mainpage-section-2-title')->plain()*/?></h3>
+                                    <?/*=wfMessage('settlein-skin-mainpage-section-2-text')->plain()*/?>
                                 </div>
                             </div>
                         </div>
@@ -310,12 +310,12 @@ class SettleInTemplate extends BaseTemplate {
 
                         <div class="promo-block-item">
                             <div class="promo-block-img">
-                                <img src="<?=$this->getSkin()->getSkinStylePath("/img/chat_green.png")?>" />
+                                <img src="<?/*=$this->getSkin()->getSkinStylePath("/img/chat_green.png")*/?>" />
                             </div>
                             <div class="promo-block-text">
                                 <div class="promo-block-text-content">
-                                    <h3><?=wfMessage('settlein-skin-mainpage-section-3-title')->plain()?></h3>
-                                    <?=wfMessage('settlein-skin-mainpage-section-3-text')->plain()?>
+                                    <h3><?/*=wfMessage('settlein-skin-mainpage-section-3-title')->plain()*/?></h3>
+                                    <?/*=wfMessage('settlein-skin-mainpage-section-3-text')->plain()*/?>
                                 </div>
                             </div>
                         </div>
@@ -324,6 +324,25 @@ class SettleInTemplate extends BaseTemplate {
 
                 </div>
 
+            </div>-->
+
+            <div class="container-fluid" id="home-icons">
+                <div class="row hidden-xs">
+                    <div class="home-col col-md-12">
+
+                    </div>
+                </div>
+                <div class="row hidden-sm hidden-md hidden-lg">
+                    <div class="col-home-mobile col-xs-12">
+                        <img src="<?=$this->getSkin()->getSkinStylePath("/img/slices/slice_car.png");?>" />
+                    </div>
+                    <div class="col-home-mobile col-xs-12">
+                        <img src="<?=$this->getSkin()->getSkinStylePath("/img/slices/slice_home.png");?>" />
+                    </div>
+                    <div class="col-home-mobile col-xs-12">
+                        <img src="<?=$this->getSkin()->getSkinStylePath("/img/slices/slice_help.png");?>" />
+                    </div>
+                </div>
             </div>
 
             <div class="jumbotron jumbotron-middle">
@@ -331,7 +350,7 @@ class SettleInTemplate extends BaseTemplate {
                 <p>
                     <?=wfMessage( 'settlein-skin-mainpage-bottom-text' )->plain()?>
                 </p>
-                <a href="<?=SpecialPage::getSafeTitleFor('Userlogin')->getFullURL('type=signup')?>" class="btn btn-primary">
+                <a href="<?=SpecialPage::getSafeTitleFor('Userlogin')->getFullURL('type=signup')?>" class="btn btn-settle-orange">
                     <?=wfMessage( 'settlein-skin-mainpage-bottom-button-text' )->plain() ?>
                 </a>
             </div>
@@ -736,13 +755,17 @@ class SettleInTemplate extends BaseTemplate {
                             </a>
                         </li>
                         <li class="btn-group-nav" id="login-selector">
-                            <a href="<?=SpecialPage::getSafeTitleFor('Userlogin')->getFullURL()?>" class="btn btn-concrete" style="margin-right: 10px;"><b>
+                            <a href="<?=SpecialPage::getSafeTitleFor('Userlogin')->getFullURL()?>" ><b>
                                     <?=wfMessage( 'settlein-skin-header-login' )->plain()?>
                                 </b></a>
                         </li>
 
-                        <li class="btn-group-nav">
-                            <a href="<?=SpecialPage::getSafeTitleFor('Userlogin')->getFullURL('type=signup')?>" class="btn btn-primary" style="margin-right: 5px;"><b>
+                        <li class="header-menu-divider hidden-xs">
+                            |
+                        </li>
+
+                        <li class="btn-group-nav" id="register-selector">
+                            <a href="<?=SpecialPage::getSafeTitleFor('Userlogin')->getFullURL('type=signup')?>" ><b>
                                     <?=wfMessage( 'settlein-skin-header-signup' )->plain()?>
                                 </b></a>
                         </li>
@@ -884,7 +907,7 @@ class SettleInTemplate extends BaseTemplate {
                     <? else: ?>
 
                     <li class="btn-group-nav login-selector" id="login-selector">
-                        <a href="#" id="add-new-article-btn">
+                        <a href="#">
                             <i class="fa fa-lock"></i>
                             <?=wfMessage( 'settlein-skin-header-login' )->plain()?>
                         </a>

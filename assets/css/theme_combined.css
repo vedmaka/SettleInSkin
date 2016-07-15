@@ -7,6 +7,7 @@ html, body {
 body {
     /*background-image: url(../img/bgpat.png);*/
     background-color: white;
+    font-family: "MuseoSansCyrl", sans-serif;
 }
 
 #main-wrapper, #main-wrapper > section, #main-wrapper > section > .container {
@@ -193,11 +194,16 @@ nav ul>li>a.btn-concrete:hover {
 
 .jumbo-addition {
     padding: 5px 0 0 0;
-    background-color: #95a5a6;
     position: relative;
     margin-bottom: 20px;
     height: 50px;
     z-index: 1;
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#087ac0+0,2fbced+50,097bc0+100 */
+    background: #087ac0; /* Old browsers */
+    background: -moz-linear-gradient(left, #087ac0 0%, #2fbced 50%, #097bc0 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(left, #087ac0 0%,#2fbced 50%,#097bc0 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to right, #087ac0 0%,#2fbced 50%,#097bc0 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#087ac0', endColorstr='#097bc0',GradientType=1 ); /* IE6-9 */
 }
 
 .jumbo-addition .container {
@@ -232,12 +238,12 @@ nav ul>li>a.btn-concrete:hover {
     position: absolute;
     top: 0;
     left: 0;
-    background: url("../../img/samples/1.jpg") 0 -360px no-repeat;
+    background: url("../../img/jumbo_gate.jpg") 0 -380px no-repeat;
     background-size: cover;
     width: 1600px;
     height: 100%;
     z-index: 1;
-    opacity: 0.5;
+    /*opacity: 0.5;*/
 }
 
 .jumbo-play-block {
@@ -367,7 +373,7 @@ nav ul>li>a.btn-concrete:hover {
 
 .promo-block-text-content h3 {
     font-size: 25px;
-    font-family: 'PT Sans';
+    font-family: 'PT Sans', sans-serif;
 }
 
 .fluid-width-video-wrapper iframe {
@@ -435,10 +441,17 @@ body {
     color: white;
 }
 
+.jumbotron-middle h3 {
+    font-family: "MuseoSansCyrl", sans-serif;
+    font-weight: 300;
+}
+
 .jumbotron-middle p {
+    font-family: "MuseoSansCyrl", sans-serif;
     width: 50%;
     font-size: 18px;
     margin: 0 auto 15px auto;
+    line-height: 22px;
 }
 
 .modal-open .modal {
@@ -449,12 +462,16 @@ body {
     position: relative;
     top: 8px;
     color: white;
+    font-size: 15px;
+    font-weight: 700;
 }
 
 #faq-menu{
     position: relative;
     top: 8px;
     color: white;
+    font-size: 15px;
+    font-weight: 700;
 }
 
 .login-popup-form {
@@ -510,7 +527,84 @@ body {
 }
 
 #why_signup > a {
-    color: #3498db;
+    color: #cdced0;
+    padding-right: 8px;
+}
+
+.i-jumbotext h1 {
+    font-family: "MuseoSansCyrl", sans-serif;
+}
+
+.i-jumbotext p {
+    font-family: "MuseoSansCyrl", sans-serif;
+    font-weight: 300;
+    line-height: 24px;
+}
+
+#home-icons {
+    padding-top: 10px;
+    padding-bottom: 20px;
+}
+
+#home-icons .home-col {
+    padding-left: 0;
+    padding-right: 0;
+    min-height: 235px;
+    background: url('http://settlein.local/skins/SettleIn/assets/css/../../img/home_icons.png?2016-07-15T13:13:20Z') center center no-repeat;
+    background-size: cover;
+}
+
+#home-icons .home-col img {
+    width: 100%;
+}
+
+#home-icons .col-home-mobile {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+#home-icons .col-home-mobile:last-child {
+    margin-bottom: 0;
+}
+
+#home-icons .col-home-mobile img {
+    max-width: 250px;
+}
+
+.btn.btn-settle-orange {
+    color: #02ad4e;
+    font-weight: 900;
+    background-color: #ffde00;
+}
+
+.btn.btn-settle-orange:hover, .btn.btn-settle-orange:active {
+    background-color: #ffd100;
+}
+
+#login-selector a {
+    padding-left: 0;
+    padding-right: 0;
+    color: #57be74;
+}
+
+#register-selector a {
+    padding-left: 0;
+    padding-right: 0;
+    color: #57be74;
+}
+
+.header-menu-divider {
+    color: #57be74;
+    padding: 13.5px 7px 0 7px;
+}
+
+#nav .navbar-right {
+    font-size: 15px;
+}
+
+#nav .nav>li>a:focus, #nav .nav>li>a:hover {
+    text-decoration: none;
+    background: none;
 }
 
 /* --------------------------- media ----------------------------------------------- */
@@ -521,6 +615,9 @@ body {
     }
     .i-jumbotext p {
         font-size: 14px;
+    }
+    .login-popup-form.mobile-form-popup {
+        width: 98%;
     }
 }
 
@@ -556,10 +653,14 @@ body {
     .index-steps i {
         display: none;
     }
+    #home-icons .home-col {
+        background-size: 140%;
+        min-height: 200px;
+    }
 }
 
 @media ( min-width: 1600px ) {
-    .jumbotron {
+    .jumbotron, #home-icons, #nav > .container {
         width: 1600px;
         margin: 0 auto;
     }

@@ -38,7 +38,8 @@
         "assets/css/bootstrap.min.css",
         "assets/css/select2.min.css",
         "assets/css/theme_combined.css",
-        "assets/css/screen.css"
+        "assets/css/screen.css",
+        "assets/fonts/museosanscyrl.css"
       ],
       "position": "bottom"
     },
@@ -64,6 +65,7 @@
     "skins.settlein.page.styles": {
       "styles": [
         "assets/css/bootstrap.min.css",
+        "assets/fonts/museosanscyrl.css",
         "assets/css/select2.min.css",
         "assets/css/theme_combined.css",
         "assets/css/screen.css",
@@ -98,6 +100,7 @@
         "assets/special/about/fancybox/jquery.fancybox.pack.js"
       ],
       "styles": [
+        "assets/fonts/museosanscyrl.css",
         "assets/special/about/style.css",
         "assets/special/about/timeline.css",
         "assets/special/about/fancybox/jquery.fancybox.css"
