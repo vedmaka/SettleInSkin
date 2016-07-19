@@ -64,6 +64,8 @@ class SkinSettleIn extends SkinTemplate {
 	    	$out->addModules( 'ext.settlegeoforminput.foo' );
 	    }
 
+	    $out->addModules( SettleGeoSearch::getModules() );
+
         $out->addMeta('viewport','width=device-width, initial-scale=1');
     }
 

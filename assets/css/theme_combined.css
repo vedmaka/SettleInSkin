@@ -72,7 +72,68 @@ nav {
 .jumbo-search {
     width: 50%;
     margin: 0 auto;
+    position: relative;
 }
+
+.jumbo-search .selectize-dropdown-content {
+   font-size: 15px;
+}
+
+.jumbo-search .selectize-input input {
+    font-weight: 300;
+}
+
+.jumbo-search .selectize-dropdown-content .settle-geo-result-item-main {
+    font-weight: 500;
+}
+
+.jumbo-search .selectize-dropdown-content .settle-geo-result-item-suffix {
+    font-weight: 300;
+}
+
+.jumbo-search .selectize-input, .jumbo-search input.selectize-search-appendix {
+    border-radius: 0;
+    padding: 10px 12px;
+    min-height: 42px;
+    background-color: white;
+    outline: none;
+}
+
+.jumbo-search .selectize-input {
+    border-top-left-radius: 2px;
+    border-bottom-left-radius: 2px;
+    border: 0;
+    border-top: 1px solid rgb(204, 204, 204);
+    border-left: 1px solid rgb(204, 204, 204);
+    border-bottom: 1px solid rgb(204, 204, 204);
+}
+
+.jumbo-search input.selectize-search-appendix {
+    border-top-right-radius: 2px;
+    border-bottom-right-radius: 2px;
+    border: 1px solid rgb(204, 204, 204);
+}
+
+.jumbo-search .settle-geo-search-wrapper {
+    width: 50%;
+    float: left;
+}
+
+.jumbo-search .selectize-search-appendix {
+    width: 50%;
+    float: left;
+}
+
+.jumbo-search::after {
+    display: table;
+    content: "";
+    clear: left;
+}
+
+.jumbo-search .form-control::-webkit-input-placeholder, .jumbo-search input::-webkit-input-placeholder {color:#d9dadc;}
+.jumbo-search .form-control::-moz-placeholder, .jumbo-search input::-webkit-input-placeholder {color:#d9dadc;}/* Firefox 19+ */
+.jumbo-search .form-control:-moz-placeholder, .jumbo-search input::-webkit-input-placeholder {color:#d9dadc;}/* Firefox 18- */
+.jumbo-search .form-control:-ms-input-placeholder, .jumbo-search input::-webkit-input-placeholder {color:#d9dadc;}
 
 nav .navbar-header .navbar-toggle .icon-bar {
     background-color: #64bb5d;
@@ -171,7 +232,7 @@ nav ul>li>a.btn-concrete:hover {
     background: linear-gradient(to bottom, rgba(51,187,237,1) 0%,rgba(0,140,216,1) 100%); /* W3C */
 
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#33bbed', endColorstr='#008cd8',GradientType=0 ); /* IE6-9 */
-    padding-bottom: 60px;
+    /*padding-bottom: 60px;*/
     margin-bottom: 0;
 
     z-index: 2;
@@ -226,7 +287,7 @@ nav ul>li>a.btn-concrete:hover {
 
 .jumbotron {
     position: relative;
-    overflow: hidden;
+    /*overflow: hidden;*/
 }
 
 .jumbotron .jumbo-content {
@@ -234,16 +295,9 @@ nav ul>li>a.btn-concrete:hover {
     position: relative;
 }
 
-#jumbo-backlay {
-    position: absolute;
-    top: 0;
-    left: 0;
+.jumbo-backlay {
     background: url("../../img/jumbo_gate.jpg") 0 -380px no-repeat;
     background-size: cover;
-    width: 1600px;
-    height: 100%;
-    z-index: 1;
-    /*opacity: 0.5;*/
 }
 
 .jumbo-play-block {
@@ -508,6 +562,20 @@ body {
     position: relative;
 }
 
+.jumbo-search .search-submit {
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    font-size: 15px;
+    right: 10px;
+    top: 13px;
+    border: 0;
+    background: none;
+    text-align: center;
+    padding: 0;
+    color: #1c9cd7 !important;
+}
+
 #p-search_smw > .form-group .search-submit,
 #top-search .form-group .search-submit {
     position: absolute;
@@ -533,12 +601,15 @@ body {
 
 .i-jumbotext h1 {
     font-family: "MuseoSansCyrl", sans-serif;
+    font-weight: 100;
 }
 
 .i-jumbotext p {
     font-family: "MuseoSansCyrl", sans-serif;
     font-weight: 300;
     line-height: 24px;
+    font-size: 16px;
+    max-width: 600px;
 }
 
 #home-icons {
@@ -602,9 +673,14 @@ body {
     font-size: 15px;
 }
 
-#nav .nav>li>a:focus, #nav .nav>li>a:hover {
+.nav>li>a:focus, .nav>li>a:hover {
     text-decoration: none;
     background: none;
+    color: #282828;
+}
+
+#why_signup a:hover, #login-selector a:hover, #register-selector a:hover {
+    color: #282828;
 }
 
 /* --------------------------- media ----------------------------------------------- */

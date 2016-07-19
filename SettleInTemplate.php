@@ -126,17 +126,14 @@ class SettleInTemplate extends BaseTemplate {
     <!-- Main start -->
     <section>
 
-            <div class="jumbotron">
+            <div class="jumbotron jumbo-backlay">
 
-                <div id="jumbo-backlay"></div>
+                <!--<div id="jumbo-backlay"></div>-->
 
                 <div class="jumbo-content">
 
                     <div class="i-jumbotext">
                         <h1><?=wfMessage( 'settlein-skin-mainpage-jumbotron-title' )->plain()?></h1>
-                        <p>
-                            <?=wfMessage( 'settlein-skin-mainpage-jumbotron-text' )->plain()?>
-                        </p>
                     </div>
 
                     <!--<div class="i-logo">
@@ -153,29 +150,35 @@ class SettleInTemplate extends BaseTemplate {
                         </form>
                     </div>-->
 
-                    <div class="jumbo-country center-block">
-                        <!-- Single button -->
+                    <!--<div class="jumbo-country center-block">
                         <div class="btn-group">
                             <select name="Search[Country]">
                                 <option></option>
-                                <?
+                                <?/*
                                 foreach ($this->countriesList as $val) {
-                                    ?>
-                                    <option value="<?=$val['geonamesCode']?>"><?=$val['name']?></option>
-                                    <?
+                                    */?>
+                                    <option value="<?/*=$val['geonamesCode']*/?>"><?/*=$val['name']*/?></option>
+                                    <?/*
                                 }
-                                ?>
+                                */?>
                             </select>
                         </div>
-                    </div>
+                    </div>-->
 
                     <form role="search" action="<?=SpecialPage::getSafeTitleFor('RunQuery')->getFullURL().'/Search'?>" id="searchform_smw" method="post">
 
-                    <div class="jumbo-search" id="p-search_smw">
+                    <!--<div class="jumbo-search" id="p-search_smw">
                             <div class="form-group">
                                 <a href="#" class="search-submit fa fa-search"></a>
-                                <input type="text" class="form-control" placeholder="<?=wfMessage('settlein-skin-mainpage-jumbotron-search-placeholder')->plain()?>" name="Search[Title]" id="searchInput_smw">
+                                <input type="text" class="form-control" placeholder="<?/*=wfMessage('settlein-skin-mainpage-jumbotron-search-placeholder')->plain()*/?>" name="Search[Title]" id="searchInput_smw">
                             </div>
+                    </div>-->
+
+                    <div class="jumbo-search">
+                        <? $settlesearch = new SettleGeoSearch(); ?>
+                        <?=$settlesearch->getHtml( SettleGeoSearch::SGS_MODE_TEXT, 'Search[Country]' ); ?>
+                        <input type="text" placeholder="Search" name="Search[Title]" class="form-control selectize-search-appendix" />
+                        <a href="#" class="search-submit fa fa-search"></a>
                     </div>
 
                     <input type="hidden" name="query" value="true" />
@@ -183,6 +186,12 @@ class SettleInTemplate extends BaseTemplate {
                     <input type="hidden" value="Search" name="wpRunQuery">
 
                     </form>
+
+                    <div class="i-jumbotext">
+                    <p>
+                        <?=wfMessage( 'settlein-skin-mainpage-jumbotron-text' )->plain()?>
+                    </p>
+                    </div>
 
 
                 </div>

@@ -50,8 +50,14 @@ $(function(){
         $('.login-popup-form').fadeOut();
     });
 
-    $('#p-search_smw a.search-submit').click(function(){
+    $('.jumbo-search a.search-submit').click(function(){
        $('#searchform_smw').submit();
+    });
+
+    $('.jumbo-search .selectize-search-appendix').keyup(function(e){
+       if( e.keyCode == 13 ) {
+           $('#searchform_smw').submit();
+       }
     });
 
 });
