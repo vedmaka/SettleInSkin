@@ -108,6 +108,11 @@ nav {
     border-bottom: 1px solid rgb(204, 204, 204);
 }
 
+.jumbo-search .selectize-input.dropdown-active {
+    border-top-right-radius: 0 !important;
+    border-bottom-right-radius: 0 !important;
+}
+
 .jumbo-search input.selectize-search-appendix {
     border-top-right-radius: 2px;
     border-bottom-right-radius: 2px;
