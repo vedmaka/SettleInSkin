@@ -79,8 +79,13 @@ nav {
    font-size: 15px;
 }
 
+.jumbo-search .selectize-input {
+    cursor: text !important;
+}
+
 .jumbo-search .selectize-input input {
     font-weight: 300;
+    cursor: text !important;
 }
 
 .jumbo-search .selectize-dropdown-content .settle-geo-result-item-main {
