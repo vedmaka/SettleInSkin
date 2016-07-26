@@ -165,7 +165,7 @@ class SettleInTemplate extends BaseTemplate {
                         </div>
                     </div>-->
 
-                    <form role="search" action="<?=SpecialPage::getSafeTitleFor('RunQuery')->getFullURL().'/Search'?>" id="searchform_smw" method="post">
+                    <form role="search" action="<?=SettleGeoSearch::getSearchPageUrl()?>" id="searchform_smw" method="post">
 
                     <!--<div class="jumbo-search" id="p-search_smw">
                             <div class="form-group">
@@ -176,8 +176,8 @@ class SettleInTemplate extends BaseTemplate {
 
                     <div class="jumbo-search">
                         <? $settlesearch = new SettleGeoSearch(); ?>
-                        <?=$settlesearch->getHtml( SettleGeoSearch::SGS_MODE_TEXT, 'Search[Country]' ); ?>
-                        <input type="text" placeholder="Search" name="Search[Title]" class="form-control selectize-search-appendix" />
+                        <?=$settlesearch->getHtml( SettleGeoSearch::SGS_MODE_TEXT, 'geo_id' ); ?>
+                        <input type="text" placeholder="Search" name="geo_text" class="form-control selectize-search-appendix" />
                         <a href="#" class="search-submit fa fa-search"></a>
                     </div>
 
