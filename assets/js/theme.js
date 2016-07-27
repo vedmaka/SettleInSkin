@@ -16,9 +16,9 @@ $(function(){
         }
     });
 
-    $('.jumbo-country select').select2({
+    /*$('.jumbo-country select').select2({
         placeholder: mw.msg('settlein-skin-mainpage-jumbotron-country-placeholder')
-    });
+    });*/
 
     $('#login-popup-wrapper').click(function () {
         $(this).fadeOut();
@@ -33,11 +33,11 @@ $(function(){
         e.preventDefault();
     });
 
-    if( $('#country-select').length ) {
+    /*if( $('#country-select').length ) {
         $('#country-select').select2({
             placeholder: "Select country"
         });
-    }
+    }*/
 
     if( $('#why_signup').length ) {
         $('#why_signup').click(function () {

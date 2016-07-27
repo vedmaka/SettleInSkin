@@ -820,35 +820,25 @@ class SettleInTemplate extends BaseTemplate {
 
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 
-                <form action="<?=SpecialPage::getSafeTitleFor('RunQuery')->getFullURL().'/Search'?>" class="" role="search" method="post" id="form-top-search">
-
                 <ul class="nav navbar-nav" id="country-select-wrapper">
-                    <select id="country-select" name="Search[Country]">
-                        <option></option>
-                        <?
-                            foreach ($this->countriesList as $val) {
-                                ?>
-                                <option value="<?=$val?>"><?=$val?></option>
-                                <?
-                            }
+                    <form role="search" action="<?=SettleGeoSearch::getSearchPageUrl()?>" id="searchform_smw" method="post">
+                        <?php
+                        $search = new SettleGeoSearch();
+                        echo $search->getHtml( SettleGeoSearch::SGS_MODE_VALUE, 'geo_id' );
                         ?>
-                    </select>
+                        <input type="text" placeholder="Search" name="geo_text" class="form-control selectize-search-appendix" />
+                        <a href="#" class="search-submit fa fa-search"></a>
+                    </form>
                 </ul>
 
-                <ul class="nav navbar-nav" id="top-search">
+                <!--<ul class="nav navbar-nav" id="top-search">
 
                     <div class="form-group navbar-form navbar-left">
                         <a href="#" class="search-submit fa fa-search"></a>
-                        <input type="text" class="form-control" placeholder="<?=wfMessage( 'settlein-skin-header-search-placeholder' )->plain()?>" name="Search[Title]">
+                        <input type="text" class="form-control" placeholder="<?/*=wfMessage( 'settlein-skin-header-search-placeholder' )->plain()*/?>" name="Search[Title]">
                     </div>
 
-                </ul>
-
-                <input type="hidden" name="query" value="true" />
-                <input type="hidden" value="" name="sf_free_text">
-                <input type="hidden" value="Search" name="wpRunQuery">
-
-                </form>
+                </ul>-->
 
                 <ul class="nav navbar-nav">
                     <li>

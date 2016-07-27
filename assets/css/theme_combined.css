@@ -145,6 +145,110 @@ nav {
 .jumbo-search .form-control:-moz-placeholder, .jumbo-search input::-webkit-input-placeholder {color:#d9dadc;}/* Firefox 18- */
 .jumbo-search .form-control:-ms-input-placeholder, .jumbo-search input::-webkit-input-placeholder {color:#d9dadc;}
 
+/* ------------ same for country -------------- */
+
+#country-select-wrapper {
+    width: 50%;
+    margin: 0 auto;
+    position: relative;
+}
+
+#country-select-wrapper .selectize-dropdown-content {
+    font-size: 15px;
+}
+
+#country-select-wrapper .selectize-input {
+    cursor: text !important;
+}
+
+#country-select-wrapper .selectize-input input {
+    font-weight: 300;
+    cursor: text !important;
+}
+
+#country-select-wrapper .selectize-dropdown-content .settle-geo-result-item-main {
+    font-weight: 500;
+}
+
+#country-select-wrapper .selectize-dropdown-content .settle-geo-result-item-suffix {
+    font-weight: 300;
+}
+
+#country-select-wrapper .selectize-input, .jumbo-search input.selectize-search-appendix {
+    border-radius: 0;
+    padding: 10px 12px;
+    min-height: 42px;
+    background-color: white;
+    outline: none;
+}
+
+#country-select-wrapper .selectize-input {
+    border-top-left-radius: 2px;
+    border-bottom-left-radius: 2px;
+    border: 0;
+    border-top: 1px solid rgb(204, 204, 204);
+    border-left: 1px solid rgb(204, 204, 204);
+    border-bottom: 1px solid rgb(204, 204, 204);
+}
+
+#country-select-wrapper .selectize-input.dropdown-active {
+    border-top-right-radius: 0 !important;
+    border-bottom-right-radius: 0 !important;
+}
+
+#country-select-wrapper input.selectize-search-appendix {
+    border-radius: 0;
+    padding: 10px 12px;
+    min-height: 42px;
+    background-color: white;
+    outline: none;
+    width: 50%;
+    border-top: 1px solid rgb(204, 204, 204);
+    border-right: 1px solid rgb(204, 204, 204);
+    border-bottom: 1px solid rgb(204, 204, 204);
+}
+
+#country-select-wrapper .settle-geo-search-wrapper {
+    width: 50%;
+    float: left;
+}
+
+#country-select-wrapper .selectize-search-appendix {
+    width: 50%;
+    float: left;
+}
+
+#country-select-wrapper::after {
+    display: table;
+    content: "";
+    clear: left;
+}
+
+#country-select-wrapper {
+    max-width: 400px;
+}
+
+#country-select-wrapper .form-control::-webkit-input-placeholder, .jumbo-search input::-webkit-input-placeholder {color:#d9dadc;}
+#country-select-wrapper .form-control::-moz-placeholder, .jumbo-search input::-webkit-input-placeholder {color:#d9dadc;}/* Firefox 19+ */
+#country-select-wrapper .form-control:-moz-placeholder, .jumbo-search input::-webkit-input-placeholder {color:#d9dadc;}/* Firefox 18- */
+#country-select-wrapper .form-control:-ms-input-placeholder, .jumbo-search input::-webkit-input-placeholder {color:#d9dadc;}
+
+#country-select-wrapper .search-submit {
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    font-size: 15px;
+    right: 10px;
+    top: 13px;
+    border: 0;
+    background: none;
+    text-align: center;
+    padding: 0;
+    color: #1c9cd7 !important;
+}
+
+/* -------------------------------------------- */
+
 nav .navbar-header .navbar-toggle .icon-bar {
     background-color: #64bb5d;
 }
