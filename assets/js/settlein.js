@@ -178,4 +178,17 @@ $(function(){
         });
     }
 
+    if( $('#searchform_smw').length ) {
+
+        $('a.search-submit').click(function () {
+            $('#searchform_smw').submit();
+        });
+
+        $('.selectize-search-appendix').keyup(function (e) {
+            if (e.keyCode == 13) {
+                $('#searchform_smw').submit();
+            }
+        });
+
+    }
 });
