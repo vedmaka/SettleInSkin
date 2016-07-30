@@ -177,7 +177,7 @@ class SettleInTemplate extends BaseTemplate {
                     <div class="jumbo-search">
                         <? $settlesearch = new SettleGeoSearch(); ?>
                         <?=$settlesearch->getHtml( SettleGeoSearch::SGS_MODE_TEXT, 'geo_id' ); ?>
-                        <input type="text" placeholder="Search" name="geo_text" class="form-control selectize-search-appendix" />
+                        <input type="text" placeholder="<?=wfMessage('sil-search-form-field-label-search')->plain()?>" name="geo_text" class="form-control selectize-search-appendix" />
                         <a href="#" class="search-submit fa fa-search"></a>
                     </div>
 
@@ -826,7 +826,7 @@ class SettleInTemplate extends BaseTemplate {
                         $search = new SettleGeoSearch();
                         echo $search->getHtml( SettleGeoSearch::SGS_MODE_VALUE, 'geo_id' );
                         ?>
-                        <input type="text" placeholder="Search" name="geo_text" class="form-control selectize-search-appendix" />
+                        <input type="text" placeholder="<?=wfMessage('sil-search-form-field-label-search')->plain()?>" name="geo_text" class="form-control selectize-search-appendix" />
                         <a href="#" class="search-submit fa fa-search"></a>
                     </form>
                 </ul>
