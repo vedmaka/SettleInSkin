@@ -201,7 +201,7 @@
 
 			<div class="col-md-3 col-contributions">
 
-				<div class="sprite sprite-kz"></div>
+				<div class="sprite sprite-au"></div>
 
 				<div class="contrib-content">
 
@@ -227,7 +227,7 @@
 
 			<div class="col-md-3 col-contributions">
 
-				<div class="sprite sprite-kz"></div>
+				<div class="sprite sprite-sw"></div>
 
 				<div class="contrib-content">
 
