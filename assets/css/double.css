@@ -18,9 +18,9 @@ body {
     text-decoration: underline;
 }
 
-#content .well dd a, #content .well dd a:hover, #content dd a:visited {
+/*#content .well dd a, #content .well dd a:hover, #content dd a:visited {
     color: #57aae1;
-}
+}*/
 
 #nav {
     position: fixed;
