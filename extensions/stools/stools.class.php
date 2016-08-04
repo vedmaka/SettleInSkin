@@ -133,4 +133,32 @@ class stools
 
     }
 
+    public static function makebtn( &$parser )
+    {
+
+	    $params = func_get_args();
+	    array_shift( $params ); // We don't need the parser.
+
+	    $html = '';
+
+	    $text = 'Button';
+	    $class = 'btn-primary';
+	    $link = '#';
+
+	    if( count($params) ) {
+	    	$text = $params[0];
+		    if( count($params) > 1 ) {
+			    $link = $params[1];
+		    }
+		    if( count($params) > 2 ) {
+		    	$class = $params[2];
+		    }
+	    }
+
+	    $html .= $parser->insertStripItem('<a href="'.$link.'" type="button" class="btn '.$class.'">'.$text.'</a>', $parser->mStripState );
+
+	    return $html;
+
+    }
+
 }
