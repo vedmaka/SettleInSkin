@@ -156,6 +156,8 @@
 	"settlein-skin-add-new-article-window-form-btn-submit": "Продолжить",
 	"settlein-skin-add-new-article-window-form-other-languages": "Создать страницу на других языках:",
 	"settlein-skin-add-new-article-window-form-field-state": "Штат",
-	"settlein-skin-add-new-article-window-form-field-city": "Город"
+	"settlein-skin-add-new-article-window-form-field-city": "Город",
+
+	"settlein-skin-card-page-apply-button": "Перейти"
 
 }

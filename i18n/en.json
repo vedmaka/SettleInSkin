@@ -201,5 +201,7 @@
 	"settlein-skin-add-new-article-window-form-btn-submit": "Proceed",
 	"settlein-skin-add-new-article-window-form-other-languages": "Create page in other languages:",
 	"settlein-skin-add-new-article-window-form-field-state": "State",
-	"settlein-skin-add-new-article-window-form-field-city": "City"
+	"settlein-skin-add-new-article-window-form-field-city": "City",
+
+	"settlein-skin-card-page-apply-button": "Apply"
 }
