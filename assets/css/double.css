@@ -22,6 +22,10 @@ body {
     color: #57aae1;
 }*/
 
+#content .well .btn-application {
+    margin-bottom: 8px;
+}
+
 #nav {
     position: fixed;
     width: 100%;
