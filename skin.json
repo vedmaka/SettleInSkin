@@ -101,8 +101,8 @@
       ],
       "styles": [
         "assets/fonts/museosanscyrl.css",
-        "assets/special/about/style.css",
-        "assets/special/about/timeline.css",
+        "assets/special/about/style.less",
+        "assets/special/about/timeline_new.css",
         "assets/special/about/fancybox/jquery.fancybox.css"
       ],
       "position": "top"

@@ -1,0 +1,521 @@
+.timeline {
+    position: relative;
+    padding: 20px 0 20px;
+    list-style: none;
+}
+
+.timeline:before {
+    content: " ";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    width: 3px;
+    margin-left: -1.5px;
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffcc05+0,49b86a+50,00adef+100 */
+    background: #ffcc05; /* Old browsers */
+    background: -moz-linear-gradient(top, #ffcc05 0%, #49b86a 50%, #00adef 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, #ffcc05 0%,#49b86a 50%,#00adef 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, #ffcc05 0%,#49b86a 50%,#00adef 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffcc05', endColorstr='#00adef',GradientType=0 ); /* IE6-9 */
+}
+
+.timeline > li {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.timeline > li:before,
+.timeline > li:after {
+    content: " ";
+    display: table;
+}
+
+.timeline > li:after {
+    clear: both;
+}
+
+.timeline > li:before,
+.timeline > li:after {
+    content: " ";
+    display: table;
+}
+
+.timeline > li:after {
+    clear: both;
+}
+
+.timeline > li > .timeline-panel {
+    float: left;
+    position: relative;
+    width: 46%;
+    padding: 20px;
+    /*border: 1px solid #d4d4d4;*/
+    border-radius: 2px;
+    /*-webkit-box-shadow: 0 1px 6px rgba(0,0,0,0.175);
+    box-shadow: 0 1px 6px rgba(0,0,0,0.175);*/
+}
+
+.timeline > li > .timeline-panel:before {
+    content: " ";
+    display: inline-block;
+    position: absolute;
+    top: 10px;
+    right: -15px;
+    border-top: 15px solid transparent;
+    border-right: 0 solid #ccc;
+    border-bottom: 15px solid transparent;
+    border-left: 15px solid #ccc;
+}
+
+.timeline > li > .timeline-panel:after {
+    content: " ";
+    display: inline-block;
+    position: absolute;
+    top: 11px;
+    right: -14px;
+    border-top: 14px solid transparent;
+    border-right: 0 solid #fff;
+    border-bottom: 14px solid transparent;
+    border-left: 14px solid #fff;
+}
+
+.timeline > li > .timeline-badge {
+    z-index: 100;
+    position: absolute;
+    top: 16px;
+    left: 50%;
+    width: 21px;
+    height: 21px;
+    margin-left: -10px;
+    border-radius: 50% 50% 50% 50%;
+    text-align: center;
+    font-size: 1.4em;
+    line-height: 50px;
+    color: #fff;
+    border: 2px solid white;
+    background-color: #999999;
+}
+
+.timeline > li.timeline-inverted > .timeline-panel {
+    float: right;
+}
+
+.timeline > li.timeline-inverted > .timeline-panel:before {
+    right: auto;
+    left: -15px;
+    border-right-width: 15px;
+    border-left-width: 0;
+}
+
+.timeline > li.timeline-inverted > .timeline-panel:after {
+    right: auto;
+    left: -14px;
+    border-right-width: 14px;
+    border-left-width: 0;
+}
+
+.timeline-badge.primary {
+    background-color: #2e6da4 !important;
+}
+
+.timeline-badge.success {
+    background-color: #3f903f !important;
+}
+
+.timeline-badge.warning {
+    background-color: #f0ad4e !important;
+}
+
+.timeline-badge.danger {
+    background-color: #d9534f !important;
+}
+
+.timeline-badge.info {
+    background-color: #5bc0de !important;
+}
+
+.timeline-item-orange .timeline-badge,
+.timeline-item-orange-outline .timeline-badge {
+    background-color: #ffdd00 !important;
+}
+
+.timeline-item-green .timeline-badge,
+.timeline-item-green-full .timeline-badge {
+    background-color: #38b449 !important;
+}
+
+.timeline-item-blue .timeline-badge {
+    background-color: #00adef !important;
+}
+
+.timeline-title {
+    margin-top: 0;
+    color: inherit;
+}
+
+.timeline-body > p,
+.timeline-body > ul {
+    margin-bottom: 0;
+}
+
+.timeline-body > p + p {
+    margin-top: 5px;
+}
+
+.timeline .timeline-date {
+    font-size: 16px;
+}
+
+/* orange panel ------------------------------------------------------------------------------------------------------ */
+
+.timeline > li.timeline-item-orange > .timeline-panel:after {
+    border-left-color: #ffdd00;
+}
+
+.timeline > li.timeline-item-orange > .timeline-panel:before {
+    display: none !important;
+}
+
+.timeline > li.timeline-inverted.timeline-item-orange > .timeline-panel:after {
+    border-right-color: #ffdd00;
+}
+
+.timeline > li.timeline-item-orange .timeline-panel {
+    background-color: #ffdd00;
+}
+
+.timeline > li.timeline-item-orange .timeline-panel .timeline-heading .timeline-title {
+    color: white;
+    border-bottom: 1px solid white;
+    font-size: 32px;
+    font-weight: 300;
+    line-height: 30px;
+    margin-bottom: 10px;
+}
+
+.timeline > li.timeline-item-orange .timeline-panel .timeline-heading .timeline-title .timeline-date {
+
+}
+
+.timeline > li.timeline-item-orange .timeline-panel .timeline-body {
+    color: #939597;
+    font-size: 22px;
+    font-weight: 100;
+    line-height: 30px;
+}
+
+
+/* blue panel ------------------------------------------------------------------------------------------------------ */
+
+.timeline > li.timeline-item-blue > .timeline-panel:after {
+    border-right-color: white;
+}
+
+.timeline > li.timeline-item-blue > .timeline-panel:before {
+    border-right-color: #00aeef;
+    left: -16px;
+}
+
+.timeline > li.timeline-inverted.timeline-item-blue > .timeline-panel:after {
+    border-right-color: white;
+}
+
+.timeline > li.timeline-item-blue .timeline-panel {
+    background-color: white;
+    border: 2px solid #00aeef;
+}
+
+.timeline > li.timeline-item-blue .timeline-panel .timeline-heading .timeline-title {
+    color: #00aeef;
+    border-bottom: 1px solid #00aeef;
+    font-size: 32px;
+    font-weight: 300;
+    line-height: 30px;
+    margin-bottom: 10px;
+    text-align: right;
+}
+
+.timeline > li.timeline-item-blue .timeline-panel .timeline-heading .timeline-title .timeline-date {
+
+}
+
+.timeline > li.timeline-item-blue .timeline-panel .timeline-body {
+    color: #939597;
+    font-size: 22px;
+    font-weight: 100;
+    line-height: 30px;
+}
+
+/* orange panel outline ---------------------------------------------------------------------------------------------- */
+
+.timeline > li.timeline-item-orange-outline > .timeline-panel:after {
+    border-right-color: white;
+}
+
+.timeline > li.timeline-item-orange-outline > .timeline-panel:before {
+    border-right-color: #ffdd00;
+    left: -16px;
+}
+
+.timeline > li.timeline-inverted.timeline-item-orange-outline > .timeline-panel:after {
+    border-right-color: white;
+}
+
+.timeline > li.timeline-item-orange-outline .timeline-panel {
+    background-color: white;
+    border: 2px solid #ffdd00;
+}
+
+.timeline > li.timeline-item-orange-outline .timeline-panel .timeline-heading .timeline-title {
+    color: #ffdd00;
+    border-bottom: 1px solid #ffdd00;
+    font-size: 32px;
+    font-weight: 300;
+    line-height: 30px;
+    margin-bottom: 10px;
+    text-align: right;
+}
+
+.timeline > li.timeline-item-orange-outline .timeline-panel .timeline-heading .timeline-title .timeline-date {
+
+}
+
+.timeline > li.timeline-item-orange-outline .timeline-panel .timeline-body {
+    color: #939597;
+    font-size: 22px;
+    font-weight: 100;
+    line-height: 30px;
+}
+
+/* green panel ------------------------------------------------------------------------------------------------------ */
+
+.timeline > li.timeline-item-green > .timeline-panel:after {
+    border-left-color: white;
+}
+
+.timeline > li.timeline-item-green > .timeline-panel:before {
+    border-left-color: #38b449;
+    right: -16px;
+}
+
+.timeline > li.timeline-inverted.timeline-item-green > .timeline-panel:after {
+    border-right-color: #ffdd00;
+}
+
+.timeline > li.timeline-item-green .timeline-panel {
+    background-color: white;
+    border: 2px solid #38b449;
+}
+
+.timeline > li.timeline-item-green .timeline-panel .timeline-heading .timeline-title {
+    color: #38b449;
+    border-bottom: 1px solid #38b449;
+    font-size: 32px;
+    font-weight: 300;
+    line-height: 30px;
+    margin-bottom: 10px;
+    text-align: right;
+}
+
+.timeline > li.timeline-item-green .timeline-panel .timeline-heading .timeline-title .timeline-date {
+
+}
+
+.timeline > li.timeline-item-green .timeline-panel .timeline-body {
+    color: #939597;
+    font-size: 22px;
+    font-weight: 100;
+    line-height: 30px;
+}
+
+/* green full panel ------------------------------------------------------------------------------------------------------ */
+
+.timeline > li.timeline-item-green-full > .timeline-panel:after {
+    border-left-color: #38b449;
+}
+
+.timeline > li.timeline-item-green-full > .timeline-panel:before {
+    border-left-color: #38b449;
+    right: -16px;
+}
+
+.timeline > li.timeline-inverted.timeline-item-green-full > .timeline-panel:after {
+    border-right-color: #38b449;
+}
+
+.timeline > li.timeline-item-green-full .timeline-panel {
+    background-color: #38b449;
+    border: 2px solid #38b449;
+}
+
+.timeline > li.timeline-item-green-full .timeline-panel .timeline-heading .timeline-title {
+    color: white;
+    border-bottom: 1px solid white;
+    font-size: 32px;
+    font-weight: 300;
+    line-height: 30px;
+    margin-bottom: 10px;
+    text-align: right;
+}
+
+.timeline > li.timeline-item-green-full .timeline-panel .timeline-heading .timeline-title .timeline-date {
+
+}
+
+.timeline > li.timeline-item-green-full .timeline-panel .timeline-body {
+    color: white;
+    font-size: 22px;
+    font-weight: 100;
+    line-height: 30px;
+}
+
+/* -------------------------------------------------------------------------------------------------------------------*/
+
+/* ---- thumbnail ---- */
+
+.timeline .thumbnail {
+    max-width: 250px;
+    position: absolute;
+    border: 2px solid #39b54a;
+    border-radius: 0;
+    left: -110px;
+    top: -5px;
+    z-index: 10;
+    margin-bottom: 0;
+    line-height: 0;
+}
+
+.timeline .timeline-panel .thumbnail + .timeline-heading + .timeline-body {
+    margin-left: 130px;
+}
+
+.timeline .timeline-panel .thumbnail + .timeline-heading {
+    margin-left: 130px;
+}
+
+/* arrows */
+
+.ul-timeline-arrow-up {
+    background: transparent url(../../../img/arrow_up.png) 0 0 no-repeat;
+    width: 21px;
+    height: 13px;
+    position: absolute;
+    top: -15px;
+    left: 50%;
+    margin-left: -11px;
+}
+
+.ul-timeline-arrow-down {
+    background: transparent url(../../../img/arrow_down.png) 0 0 no-repeat;
+    width: 21px;
+    height: 13px;
+    position: absolute;
+    bottom: -15px;
+    left: 50%;
+    margin-left: -11px;
+}
+
+/* media */
+
+@media (max-width: 1360px) {
+    .timeline .thumbnail {
+        max-width: 200px;
+        left: -55px;
+    }
+}
+
+@media(max-width: 980px) {
+
+    .timeline .thumbnail {
+        max-width: 100%;
+        position: relative;
+        left: auto;
+        top: auto;
+        float: none;
+        display: block;
+        border: 0;
+        margin-bottom: 20px;
+    }
+
+    .timeline .timeline-panel .thumbnail + .timeline-heading + .timeline-body {
+        margin-left: 0;
+    }
+
+    .timeline .timeline-panel .thumbnail + .timeline-heading {
+        margin-left: 0;
+    }
+
+    .about-us-page-container {
+        padding-top: 40px;
+    }
+
+}
+
+@media(max-width:767px) {
+
+    .ul-timeline-arrow-up {
+        left: 40px;
+    }
+
+    .ul-timeline-arrow-down {
+        left: 40px;
+    }
+
+    ul.timeline:before {
+        left: 40px;
+    }
+
+    ul.timeline > li > .timeline-panel {
+        width: calc(100% - 90px);
+        width: -moz-calc(100% - 90px);
+        width: -webkit-calc(100% - 90px);
+    }
+
+    ul.timeline > li > .timeline-badge {
+        top: 16px;
+        left: 30px;
+        margin-left: 0;
+    }
+
+    ul.timeline > li > .timeline-panel {
+        float: right;
+    }
+
+    ul.timeline > li > .timeline-panel:before {
+        right: auto !important;
+        left: -15px;
+        border-right-width: 15px;
+        border-left-width: 0;
+    }
+
+    ul.timeline > li.timeline-item-green .timeline-panel:before {
+        border-right-color: #38b449;
+        left: -16px;
+    }
+
+    ul.timeline > li.timeline-item-green-full .timeline-panel:before {
+        border-right-color: #38b449;
+        left: -16px;
+    }
+
+    ul.timeline > li.timeline-item-green-full .timeline-panel:after {
+        border-right-color: #38b449;
+    }
+
+    ul.timeline > li > .timeline-panel:after {
+        right: auto;
+        left: -14px;
+        border-right-width: 14px;
+        border-left-width: 0;
+    }
+
+    .timeline .timeline-panel .thumbnail + .timeline-heading + .timeline-body {
+        margin-left: 0;
+    }
+
+    .timeline .timeline-panel .thumbnail + .timeline-heading {
+        margin-left: 0;
+    }
+
+}

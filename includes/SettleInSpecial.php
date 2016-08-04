@@ -44,8 +44,10 @@ class SettleInSpecial extends UnlistedSpecialPage {
 
         $this->getOutput()->addModules('skins.settlein.special.about');
         $this->getOutput()->setPageTitle('About Us | SettleIn');
-        $data = array();
-        $html = Views::forge( 'aboutus', $data );
+        $data = array(
+        	'img_placeholder' => $this->getSkin()->getSkinStylePath('img/point_m_placeholder.png')
+        );
+        $html = Views::forge( 'aboutus_new', $data );
         $this->getOutput()->addHTML( $html );
 
     }
