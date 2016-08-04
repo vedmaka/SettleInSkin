@@ -6,16 +6,11 @@
 			<div class="about-us-section-heading">
 
 				<div class="about-us-header-wrapper">
-					<span>Our Story</span>
+					<span><?=wfMessage('settlein-skin-project-page-about-title')->plain()?></span>
 				</div>
 
 				<div class="about-us-header-text-wrapper">
-					Why does the klingon fly?
-					I feed this sensor, it's called twisted powerdrain.
-					When the parasite flies for hyperspace, all collectives manifest huge, photonic hur'qs.
-					Processor of a unrelated energy, raise the vision!
-					I influence this mystery, it's called evil beauty.
-					Where is the post-apocalyptic starship?
+					<?=wfMessage('settlein-skin-project-page-about-title-text')->plain()?>
 				</div>
 
 			</div>
@@ -64,8 +59,8 @@
 						</div>
 						<div class="timeline-heading">
 							<div class="timeline-title">
-								<span class="timeline-date"><?=wfMessage('settlein-skin-project-page-about-record-1-date')->plain()?></span>
-								<?=wfMessage('settlein-skin-project-page-about-record-1-title')->plain()?>
+								<span class="timeline-date"><?=wfMessage('settlein-skin-project-page-about-record-2-date')->plain()?></span>
+								<?=wfMessage('settlein-skin-project-page-about-record-2-title')->plain()?>
 							</div>
 						</div>
 						<div class="timeline-body">
@@ -81,13 +76,13 @@
 					<div class="timeline-panel">
 						<div class="timeline-heading">
 							<div class="timeline-title">
-								<?=wfMessage('settlein-skin-project-page-about-record-1-title')->plain()?>
-								<span class="timeline-date"><?=wfMessage('settlein-skin-project-page-about-record-1-date')->plain()?></span>
+								<?=wfMessage('settlein-skin-project-page-about-record-3-title')->plain()?>
+								<span class="timeline-date"><?=wfMessage('settlein-skin-project-page-about-record-3-date')->plain()?></span>
 							</div>
 						</div>
 						<div class="timeline-body">
 							<p>
-								<?=wfMessage('settlein-skin-project-page-about-record-1-text')->plain()?>
+								<?=wfMessage('settlein-skin-project-page-about-record-3-text')->plain()?>
 							</p>
 						</div>
 					</div>
@@ -98,13 +93,13 @@
 					<div class="timeline-panel">
 						<div class="timeline-heading">
 							<div class="timeline-title">
-								<?=wfMessage('settlein-skin-project-page-about-record-1-title')->plain()?>
-								<span class="timeline-date"><?=wfMessage('settlein-skin-project-page-about-record-1-date')->plain()?></span>
+								<?=wfMessage('settlein-skin-project-page-about-record-4-title')->plain()?>
+								<span class="timeline-date"><?=wfMessage('settlein-skin-project-page-about-record-4-date')->plain()?></span>
 							</div>
 						</div>
 						<div class="timeline-body">
 							<p>
-								<?=wfMessage('settlein-skin-project-page-about-record-1-text')->plain()?>
+								<?=wfMessage('settlein-skin-project-page-about-record-4-text')->plain()?>
 							</p>
 						</div>
 					</div>
@@ -118,13 +113,13 @@
 						</div>
 						<div class="timeline-heading">
 							<div class="timeline-title">
-								<span class="timeline-date"><?=wfMessage('settlein-skin-project-page-about-record-1-date')->plain()?></span>
-								<?=wfMessage('settlein-skin-project-page-about-record-1-title')->plain()?>
+								<span class="timeline-date"><?=wfMessage('settlein-skin-project-page-about-record-5-date')->plain()?></span>
+								<?=wfMessage('settlein-skin-project-page-about-record-5-title')->plain()?>
 							</div>
 						</div>
 						<div class="timeline-body">
 							<p>
-								<?=wfMessage('settlein-skin-project-page-about-record-2-text')->plain()?>
+								<?=wfMessage('settlein-skin-project-page-about-record-5-text')->plain()?>
 							</p>
 						</div>
 					</div>
@@ -145,7 +140,7 @@
 		<div class="about-us-contributions-section-heading">
 
 			<div class="about-us-header-wrapper">
-				<span>Contributions</span>
+				<span><?=wfMessage('settlein-skin-project-page-about-contributors-title')->plain()?></span>
 			</div>
 
 		</div>
@@ -162,19 +157,16 @@
 						<img src="<?=$img_placeholder?>" />
 					</div>
 					<div class="contrib-name">
-						Oxana Summer
+						<?=wfMessage('settlein-skin-project-page-about-contributions-name-1')->plain()?>
 					</div>
 					<div class="contrib-title">
-						Kazakhstan
+						<?=wfMessage('settlein-skin-project-page-about-contributions-title-1')->plain()?>
 					</div>
 					<div class="contrib-text">
-						Teleporters go on love at subspace!
-						All of those advices will be lost in definitions like friendships in turbulences
-						This life has only been accelerated by a biological transporter.
-						Creatures walk with starlight travel!
+						<?=wfMessage('settlein-skin-project-page-about-contributions-text-1')->plain()?>
 					</div>
 					<div class="contrib-link">
-						<a target="_blank" href="#">upwork.com.oxanak</a>
+						<a target="_blank" href="<?=wfMessage('settlein-skin-project-page-about-contributions-link-1')->plain()?>"><?=wfMessage('settlein-skin-project-page-about-contributions-link-text-1')->plain()?></a>
 					</div>
 
 				</div>
@@ -191,19 +183,16 @@
 						<!--<img src="<?/*=$img_placeholder*/?>" />-->
 					</div>
 					<div class="contrib-name">
-						Dmitry Petrov
+						<?=wfMessage('settlein-skin-project-page-about-contributions-name-2')->plain()?>
 					</div>
 					<div class="contrib-title">
-						Russia
+						<?=wfMessage('settlein-skin-project-page-about-contributions-title-2')->plain()?>
 					</div>
 					<div class="contrib-text">
-						Teleporters go on love at subspace!
-						All of those advices will be lost in definitions like friendships in turbulences
-						This life has only been accelerated by a biological transporter.
-						Creatures walk with starlight travel!
+						<?=wfMessage('settlein-skin-project-page-about-contributions-text-2')->plain()?>
 					</div>
 					<div class="contrib-link">
-						<a target="_blank" href="#">upwork.com.oxanak</a>
+						<a target="_blank" href="<?=wfMessage('settlein-skin-project-page-about-contributions-link-2')->plain()?>"><?=wfMessage('settlein-skin-project-page-about-contributions-link-text-2')->plain()?></a>
 					</div>
 
 				</div>
@@ -220,19 +209,16 @@
 						<!--<img src="<?/*=$img_placeholder*/?>" />-->
 					</div>
 					<div class="contrib-name">
-						Barbara Harper
+						<?=wfMessage('settlein-skin-project-page-about-contributions-name-3')->plain()?>
 					</div>
 					<div class="contrib-title">
-						Australia
+						<?=wfMessage('settlein-skin-project-page-about-contributions-title-3')->plain()?>
 					</div>
 					<div class="contrib-text">
-						Teleporters go on love at subspace!
-						All of those advices will be lost in definitions like friendships in turbulences
-						This life has only been accelerated by a biological transporter.
-						Creatures walk with starlight travel!
+						<?=wfMessage('settlein-skin-project-page-about-contributions-text-3')->plain()?>
 					</div>
 					<div class="contrib-link">
-						<a target="_blank" href="#">upwork.com.oxanak</a>
+						<a target="_blank" href="<?=wfMessage('settlein-skin-project-page-about-contributions-link-3')->plain()?>"><?=wfMessage('settlein-skin-project-page-about-contributions-link-text-3')->plain()?></a>
 					</div>
 
 				</div>
@@ -249,19 +235,16 @@
 						<!--<img src="<?/*=$img_placeholder*/?>" />-->
 					</div>
 					<div class="contrib-name">
-						Tanita Welaska
+						<?=wfMessage('settlein-skin-project-page-about-contributions-name-4')->plain()?>
 					</div>
 					<div class="contrib-title">
-						Switzerland
+						<?=wfMessage('settlein-skin-project-page-about-contributions-title-4')->plain()?>
 					</div>
 					<div class="contrib-text">
-						Teleporters go on love at subspace!
-						All of those advices will be lost in definitions like friendships in turbulences
-						This life has only been accelerated by a biological transporter.
-						Creatures walk with starlight travel!
+						<?=wfMessage('settlein-skin-project-page-about-contributions-text-4')->plain()?>
 					</div>
 					<div class="contrib-link">
-						<a target="_blank" href="#">upwork.com.oxanak</a>
+						<a target="_blank" href="<?=wfMessage('settlein-skin-project-page-about-contributions-link-4')->plain()?>"><?=wfMessage('settlein-skin-project-page-about-contributions-link-text-4')->plain()?></a>
 					</div>
 
 				</div>
@@ -281,7 +264,7 @@
 		<div class="about-us-thanks-section-heading">
 
 			<div class="about-us-header-wrapper">
-				<span>Special Thanks</span>
+				<span><?=wfMessage('settlein-skin-project-page-about-special-thanks-title')->plain()?></span>
 			</div>
 
 		</div>
@@ -296,19 +279,16 @@
 						<!--<img src="<?/*=$img_placeholder*/?>" />-->
 					</div>
 					<div class="contrib-name">
-						Oxana Summer
+						<?=wfMessage('settlein-skin-project-page-about-special-thanks-name-1')->plain()?>
 					</div>
 					<div class="contrib-title">
-						Kazakhstan
+						<?=wfMessage('settlein-skin-project-page-about-special-thanks-title-1')->plain()?>
 					</div>
 					<div class="contrib-text">
-						Teleporters go on love at subspace!
-						All of those advices will be lost in definitions like friendships in turbulences
-						This life has only been accelerated by a biological transporter.
-						Creatures walk with starlight travel!
+						<?=wfMessage('settlein-skin-project-page-about-special-thanks-text-1')->plain()?>
 					</div>
 					<div class="contrib-link">
-						<a target="_blank" href="#">upwork.com.oxanak</a>
+						<a target="_blank" href="<?=wfMessage('settlein-skin-project-page-about-special-thanks-link-1')->plain()?>"><?=wfMessage('settlein-skin-project-page-about-special-thanks-link-text-1')->plain()?></a>
 					</div>
 					<div class="sprite sprite-kz"></div>
 
@@ -324,19 +304,16 @@
 						<!--<img src="<?/*=$img_placeholder*/?>" />-->
 					</div>
 					<div class="contrib-name">
-						Dmitry Petrov
+						<?=wfMessage('settlein-skin-project-page-about-special-thanks-name-2')->plain()?>
 					</div>
 					<div class="contrib-title">
-						Russia
+						<?=wfMessage('settlein-skin-project-page-about-special-thanks-title-2')->plain()?>
 					</div>
 					<div class="contrib-text">
-						Teleporters go on love at subspace!
-						All of those advices will be lost in definitions like friendships in turbulences
-						This life has only been accelerated by a biological transporter.
-						Creatures walk with starlight travel!
+						<?=wfMessage('settlein-skin-project-page-about-special-thanks-text-2')->plain()?>
 					</div>
 					<div class="contrib-link">
-						<a target="_blank" href="#">upwork.com.oxanak</a>
+						<a target="_blank" href="<?=wfMessage('settlein-skin-project-page-about-special-thanks-link-2')->plain()?>"><?=wfMessage('settlein-skin-project-page-about-special-thanks-link-text-2')->plain()?></a>
 					</div>
 					<div class="sprite sprite-ru"></div>
 
@@ -352,19 +329,16 @@
 						<!--<img src="<?/*=$img_placeholder*/?>" />-->
 					</div>
 					<div class="contrib-name">
-						Barbara Harper
+						<?=wfMessage('settlein-skin-project-page-about-special-thanks-name-3')->plain()?>
 					</div>
 					<div class="contrib-title">
-						Australia
+						<?=wfMessage('settlein-skin-project-page-about-special-thanks-title-3')->plain()?>
 					</div>
 					<div class="contrib-text">
-						Teleporters go on love at subspace!
-						All of those advices will be lost in definitions like friendships in turbulences
-						This life has only been accelerated by a biological transporter.
-						Creatures walk with starlight travel!
+						<?=wfMessage('settlein-skin-project-page-about-special-thanks-text-3')->plain()?>
 					</div>
 					<div class="contrib-link">
-						<a target="_blank" href="#">upwork.com.oxanak</a>
+						<a target="_blank" href="<?=wfMessage('settlein-skin-project-page-about-special-thanks-link-3')->plain()?>"><?=wfMessage('settlein-skin-project-page-about-special-thanks-link-text-3')->plain()?></a>
 					</div>
 					<div class="sprite sprite-au"></div>
 
