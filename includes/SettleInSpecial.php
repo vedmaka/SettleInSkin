@@ -80,7 +80,7 @@ class SettleInSpecial extends UnlistedSpecialPage {
         $this->getOutput()->addModules('skins.settlein.special.tos');
         $this->getOutput()->setPageTitle('Terms and conditions | SettleIn');
         $data = array();
-        $html = Views::forge('tos', $data);
+        $html = Views::forge('tos_new', $data);
         $this->getOutput()->addHTML( $html );
 
     }

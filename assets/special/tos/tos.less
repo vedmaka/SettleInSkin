@@ -1,0 +1,101 @@
+.tos-about-page-container {
+
+	font-family: "MuseoSansCyrl", sans-serif;
+
+	.about-us-section-heading {
+
+		margin-bottom: 40px;
+
+		.about-us-header-wrapper {
+
+			width: 100%;
+			text-align: center;
+			overflow: visible;
+			height: 4px;
+			border-radius: 4px;
+			/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffcc05+0,49b86a+50,ffcc05+100 */
+			background: #ffcc05; /* Old browsers */
+			background: -moz-linear-gradient(left, #ffcc05 0%, #49b86a 50%, #ffcc05 100%); /* FF3.6-15 */
+			background: -webkit-linear-gradient(left, #ffcc05 0%, #49b86a 50%, #ffcc05 100%); /* Chrome10-25,Safari5.1-6 */
+			background: linear-gradient(to right, #ffcc05 0%, #49b86a 50%, #ffcc05 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+			filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffcc05', endColorstr='#ffcc05', GradientType=1); /* IE6-9 */
+
+			margin-bottom: 38px;
+
+			span {
+
+				display: inline-block;
+				margin: 0 auto;
+				background-color: white;
+				padding: 0 15px;
+				font-size: 45px;
+				font-weight: 100;
+				position: relative;
+				top: -35px;
+				color: #38b449;
+			}
+
+		}
+
+		.about-us-header-text-wrapper {
+			font-size: 24px;
+			font-weight: 100;
+			color: #a7a9ab;
+			text-align: center;
+			line-height: 34px;
+		}
+
+	}
+
+	.tos-about-items-wrapper {
+		.tos-about-item {
+			.tos-item-legal {
+				h2 {
+					text-align: center;
+					color: #a7a9ab;
+					font-family: "MuseoSansCyrl", sans-serif;
+					text-transform: uppercase;
+					font-weight: 500;
+					font-size: 30px;
+				}
+				p {
+					color: #a7a9ab;
+					font-size: 22px;
+					line-height: 26px;
+					font-weight: 300;
+					text-align: justify;
+					padding-top: 20px;
+				}
+			}
+			.tos-item-short {
+				h2 {
+					text-align: center;
+					color: #38b449;
+					font-family: "MuseoSansCyrl", sans-serif;
+					text-transform: uppercase;
+					font-weight: 500;
+					font-size: 30px;
+				}
+				ol {
+					counter-reset: item;
+					list-style-position: inside;
+					padding: 20px;
+					border: 1px solid #38b449;
+					li {
+						display: block;
+						font-size: 20px;
+						font-weight: 300;
+						margin-bottom: 10px;
+						&:before {
+							content: counter(item) ". ";
+							counter-increment: item;
+							color: #38b449;
+							font-weight: 500;
+						}
+					}
+				}
+			}
+		}
+	}
+
+}
