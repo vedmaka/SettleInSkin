@@ -1,5 +1,10 @@
 .tos-about-page-container {
 
+	@media (min-width: 1200px) {
+		width: 100%;
+		max-width: 1400px;
+	}
+
 	font-family: "MuseoSansCyrl", sans-serif;
 
 	.about-us-section-heading {
@@ -50,6 +55,11 @@
 	.tos-about-items-wrapper {
 		.tos-about-item {
 			.tos-item-legal {
+
+				@media(min-width: 980px) {
+					border-right: 2px solid #ffdd00;
+				}
+
 				h2 {
 					text-align: center;
 					color: #a7a9ab;
@@ -65,9 +75,11 @@
 					font-weight: 300;
 					text-align: justify;
 					padding-top: 20px;
+					padding-right: 15px;
 				}
 			}
 			.tos-item-short {
+				padding-left: 30px;
 				h2 {
 					text-align: center;
 					color: #38b449;
