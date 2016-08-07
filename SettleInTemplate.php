@@ -94,6 +94,11 @@ class SettleInTemplate extends BaseTemplate {
             '<link rel="icon" type="image/png" href="'.$this->getSkin()->getSkinStylePath("img/favicon.jpg").'">'
 		);
 
+		$this->printSlideMenu();
+		?>
+		<main>
+		<?
+
 		$title = $this->getSkin()->getTitle();
 		if( $title && $title->exists() && $title->getNamespace() == NS_MAIN ) {
 		    if( $title->getArticleID() === Title::newMainPage()->getArticleID() ) {
@@ -109,10 +114,134 @@ class SettleInTemplate extends BaseTemplate {
 
 		$this->printTrail(); // system trail
 		?>
+		</main>
 	</body>
 </html>
 <?php
 	}
+
+	private function printSlideMenu() {
+	    ?>
+        <!-- Slideout menu start -->
+        <div id="slideout">
+
+            <? if( $this->isLoggedIn ): ?>
+	        <div class="slide-userpanel">
+		        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIwAAACMCAYAAACuwEE+AAAFOUlEQVR4Xu3YZ0ujURCG4YkgFuyoiGLBiiJi+f+/QLGBqNjLBwvG3sCyzIGIyeqSwTEks7dfXHGYN/PMtScnZrLZ7LvwRQJFJpABTJFJUZYSAAwQTAkAxhQXxYDBgCkBwJjiohgwGDAlABhTXBQDBgOmBABjiotiwGDAlABgTHFRDBgMmBIAjCkuigGDAVMCgDHFRTFgMGBKADCmuCgGDAZMCQDGFBfFgMGAKQHAmOKiGDAYMCUAGFNcFAMGA6YEAGOKi2LAYMCUAGBMcVEMGAyYEgCMKS6KAYMBUwKAMcVFMWAwYEoAMKa4KAYMBkwJAMYUF8WAwYApAcCY4qIYMBgwJQAYU1wUAwYDpgQAY4qLYsBgwJQAYExxUQwYDJgSAIwpLooBgwFTAoAxxUUxYDBgSgAwprgoBgwGTAkAxhQXxYDBgCkBwJjiohgwGDAlABhTXBQDBgOmBABjiotiwGDAlABgTHFRDBgMmBIAjCkuigGDAVMCgDHFRTFgMGBKoOLBPD4+ytLSUhp6dnZWamtr8wLY2NiQ4+NjGR4eloGBgfS7g4MD2d3dldfXV2lsbJSJiYn0vZivUj+vmNdUypqKBfP+/i7n5+eyubkpz8/PUl9f/xeYbDYrq6ur8vLy8gHm+vpaVlZWpLm5OQHSfyuW6elpyWQy32Zf6ueVEoHlWRUL5vb2VhYXF0UX+fb2lk6WzyeMnh6K4fLyMtXkThg9Xba2tmRkZET6+/tlfn5enp6eZGZmJgHUk6ejoyPVLy8vp1NoampKqqqq3J/X0NBg2VVZ1FYsmLu7u7T47u5u0bed6urqPDCHh4eys7MjLS0tcnFx8QFmbW1Nzs7OZHx8XLq6uj5QTU5OplpF+PDwIE1NTQmbnkJDQ0PyG89rb28vCwSWF1GxYHJD5k6az2By94y6urqEQOHkTphCMIU/n5ycyPr6ejpZ9ASYm5tLGH/reZZllUNtSDB64ugpom8lV1dXsr29XdQJo//j9b6zsLCQTpS+vj4ZHR3N29NXQH/yvHJAYHkN4cDo8Lm3lcIg9JTRi+13dxg9Ufb29tI9Ru89NTU1CZ1ekL87YX76PMuyyqE2HJjCj9X7+/t5J4zeS/Qy3NraKoODg+liq1D0U9L9/X36iK6oOjs75ejoSNra2vI+QX11wnxepOV5//pUVg44vnoN/x0YDUEh6L1G335yf4dRNHqfOT09TZB6e3sTppubGxkbG5Oenp6UnxXMd88r9u8+5Qan4sGUW6DRXw9gom/YeT7AOAcavR1gom/YeT7AOAcavR1gom/YeT7AOAcavR1gom/YeT7AOAcavR1gom/YeT7AOAcavR1gom/YeT7AOAcavR1gom/YeT7AOAcavR1gom/YeT7AOAcavR1gom/YeT7AOAcavR1gom/YeT7AOAcavR1gom/YeT7AOAcavR1gom/YeT7AOAcavR1gom/YeT7AOAcavR1gom/YeT7AOAcavR1gom/YeT7AOAcavR1gom/YeT7AOAcavR1gom/YeT7AOAcavR1gom/YeT7AOAcavR1gom/YeT7AOAcavR1gom/YeT7AOAcavR1gom/YeT7AOAcavR1gom/YeT7AOAcavR1gom/YeT7AOAcavR1gom/YeT7AOAcavR1gom/YeT7AOAcavR1gom/YeT7AOAcavR1gom/YeT7AOAcavR1gom/YeT7AOAcavR1gom/YeT7AOAcavR1gom/YeT7AOAcavR1gom/YeT7AOAcavR1gom/YeT7AOAcavR1gom/Yeb4/HZAutcoP83oAAAAASUVORK5CYII="
+		             class="img-circle user-avatar"
+		        />
+		        <div class="user-name">
+                    <b><?=$this->user->getName()?></b>
+                    <a title="<?=wfMessage( 'settlein-skin-header-usermenu-profile' )->plain()?>" style="color: white;" href="<?=SpecialPage::getSafeTitleFor('Preferences')->getFullURL()?>">
+                        <i class="glyphicon glyphicon-cog"></i>
+                    </a>
+                </div>
+                <a class="badge badge-berry mobile-notifications-badge" href="#">
+                    15 <i class="glyphicon glyphicon-bell"></i></a>
+	        </div>
+
+            <ul class="nav nav-pills nav-stacked">
+                <li>
+                    <a href="#" class="add-new-article-btn"><i class="glyphicon glyphicon-plus"></i> <?=wfMessage('settlein-skin-add-new-article-button')->plain()?></a>
+                </li>
+
+                <? if( $this->isCardPage): ?>
+                    <li>
+                        <a class="faq-menu" href="#" data-toggle="modal" data-target="#myModal" >
+                            <i class="glyphicon glyphicon-question-sign"></i>
+                            <?=wfMessage( 'settlein-skin-header-help-link' )->plain()?>
+                        </a>
+                    </li>
+                <? else: ?>
+
+                <!--<li>
+		            <a href="#">Page actions</a>
+	            </li>-->
+
+                <div class="panel panel-default">
+                    <div class="panel-heading">Page actions</div>
+                    <div class="panel-body">
+                        <ul class="nav nav-pills nav-stacked">
+
+                        <!-- Views actions -->
+                        <? if( count($this->data['view_urls']) ): ?>
+                            <?php
+                            foreach ( $this->data['view_urls'] as $link ) {
+                                ?>
+                                <li id="<?=$link['id']?>">
+                                    <a href="<?php echo htmlspecialchars( $link['href'] )?>"><?php echo htmlspecialchars( $link['text'] )?></a>
+                                </li>
+                                <?php
+                            }
+                            ?>
+                        <? endif; ?>
+
+                        <!-- Modify actions -->
+                        <? if(count($this->data['action_urls'])): ?>
+                            <?php
+                            foreach ( $this->data['action_urls'] as $link ) {
+                                ?>
+                                <li id="<?=$link['id']?>">
+                                    <a href="<?php echo htmlspecialchars( $link['href'] )?>"><?php echo htmlspecialchars( $link['text'] )?></a>
+                                </li>
+                                <?php
+                            }
+                            ?>
+                        <? endif; ?>
+
+                        <!-- Toolbox -->
+                        <? foreach( $this->getToolbox() as $key => $item ) {
+                            echo $this->makeListItem( $key, $item );
+                        }?>
+
+                        </ul>
+                    </div>
+                </div>
+
+                <? endif; ?>
+
+                <li>
+                    <a href="<?=SpecialPage::getSafeTitleFor('UserLogout')->getFullURL()?>">
+                        <i class="glyphicon glyphicon-log-in"></i>
+                        <?=wfMessage( 'settlein-skin-header-usermenu-logout' )->plain()?>
+                    </a>
+                </li>
+            </ul>
+
+            <? else: ?>
+
+                <ul class="nav nav-pills nav-stacked">
+                    <li class="login-selector">
+                        <a href="<?=SpecialPage::getSafeTitleFor('Userlogin')->getFullURL()?>" ><b>
+                                <?=wfMessage( 'settlein-skin-header-login' )->plain()?>
+                            </b></a>
+                    </li>
+                    <li class="register-selector">
+                        <a href="<?=SpecialPage::getSafeTitleFor('Userlogin')->getFullURL('type=signup')?>" ><b>
+                                <?=wfMessage( 'settlein-skin-header-signup' )->plain()?>
+                            </b></a>
+                    </li>
+                    <li id="why_signup">
+                        <a href="#">
+                            <?=wfMessage( 'settlein-skin-header-why-signup' )->plain()?>
+                        </a>
+                    </li>
+                    <? if( $this->isCardPage): ?>
+                        <li>
+                            <a class="faq-menu" href="#" data-toggle="modal" data-target="#myModal" >
+                                <i class="glyphicon glyphicon-question-sign"></i>
+                                <?=wfMessage( 'settlein-skin-header-help-link' )->plain()?>
+                            </a>
+                        </li>
+                    <? endif; ?>
+                </ul>
+
+            <? endif; ?>
+
+        </div>
+        <!-- /Slideout menu end -->
+        <?
+    }
 
 	private function printMainPage() {
 
@@ -128,51 +257,13 @@ class SettleInTemplate extends BaseTemplate {
 
             <div class="jumbotron jumbo-backlay">
 
-                <!--<div id="jumbo-backlay"></div>-->
-
                 <div class="jumbo-content">
 
                     <div class="i-jumbotext">
                         <h1><?=wfMessage( 'settlein-skin-mainpage-jumbotron-title' )->plain()?></h1>
                     </div>
 
-                    <!--<div class="i-logo">
-                        <img src="<?/*=$this->getSkin()->getSkinStylePath("/img/i.png")*/?>" />
-                    </div>-->
-
-
-                    <!--<div class="jumbo-search" id="p-search">
-                        <form role="search" action="<?php /*$this->text( 'wgScript' ) */?>" id="searchform">
-                            <div class="form-group">
-                                <input type="text" class="form-control" placeholder="Search" name="search" id="searchInput">
-                                <input type="hidden" name="title" value="<?/*=$this->get( 'searchtitle' )*/?>" />
-                            </div>
-                        </form>
-                    </div>-->
-
-                    <!--<div class="jumbo-country center-block">
-                        <div class="btn-group">
-                            <select name="Search[Country]">
-                                <option></option>
-                                <?/*
-                                foreach ($this->countriesList as $val) {
-                                    */?>
-                                    <option value="<?/*=$val['geonamesCode']*/?>"><?/*=$val['name']*/?></option>
-                                    <?/*
-                                }
-                                */?>
-                            </select>
-                        </div>
-                    </div>-->
-
                     <form role="search" action="<?=SettleGeoSearch::getSearchPageUrl()?>" id="searchform_smw" method="post">
-
-                    <!--<div class="jumbo-search" id="p-search_smw">
-                            <div class="form-group">
-                                <a href="#" class="search-submit fa fa-search"></a>
-                                <input type="text" class="form-control" placeholder="<?/*=wfMessage('settlein-skin-mainpage-jumbotron-search-placeholder')->plain()*/?>" name="Search[Title]" id="searchInput_smw">
-                            </div>
-                    </div>-->
 
                     <div class="jumbo-search">
                         <? $settlesearch = new SettleGeoSearch(); ?>
@@ -278,63 +369,6 @@ class SettleInTemplate extends BaseTemplate {
 
             </div>
 
-            <!-- Content start -->
-            <!--<div class="container">
-
-                <div class="row" id="promo-blocks-row">
-
-                    <div class="col-lg-4">
-
-                        <div class="promo-block-item">
-                            <div class="promo-block-img">
-                                <img src="<?/*=$this->getSkin()->getSkinStylePath("/img/house_green.png")*/?>" />
-                            </div>
-                            <div class="promo-block-text">
-                                <div class="promo-block-text-content">
-                                    <h3><?/*=wfMessage('settlein-skin-mainpage-section-1-title')->plain()*/?></h3>
-                                    <?/*=wfMessage('settlein-skin-mainpage-section-1-text')->plain()*/?>
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-
-                    <div class="col-lg-4">
-
-                        <div class="promo-block-item">
-                            <div class="promo-block-img">
-                                <img src="<?/*=$this->getSkin()->getSkinStylePath("/img/suitcase_blue.png")*/?>" />
-                            </div>
-                            <div class="promo-block-text">
-                                <div class="promo-block-text-content">
-                                    <h3><?/*=wfMessage('settlein-skin-mainpage-section-2-title')->plain()*/?></h3>
-                                    <?/*=wfMessage('settlein-skin-mainpage-section-2-text')->plain()*/?>
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-
-                    <div class="col-lg-4">
-
-                        <div class="promo-block-item">
-                            <div class="promo-block-img">
-                                <img src="<?/*=$this->getSkin()->getSkinStylePath("/img/chat_green.png")*/?>" />
-                            </div>
-                            <div class="promo-block-text">
-                                <div class="promo-block-text-content">
-                                    <h3><?/*=wfMessage('settlein-skin-mainpage-section-3-title')->plain()*/?></h3>
-                                    <?/*=wfMessage('settlein-skin-mainpage-section-3-text')->plain()*/?>
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-
-                </div>
-
-            </div>-->
-
             <div class="container-fluid" id="home-icons">
                 <div class="row hidden-xs">
                     <div class="home-col col-md-12">
@@ -402,7 +436,7 @@ class SettleInTemplate extends BaseTemplate {
     </div>
 
 	<?
-	$this->printFooter();
+        $this->printFooter();
 	}
 
 	private function printNormalPage() {
@@ -659,36 +693,6 @@ class SettleInTemplate extends BaseTemplate {
 
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 
-                <!--<form action="<?/*=SpecialPage::getSafeTitleFor('RunQuery')->getFullURL().'/Search'*/?>" method="post" role="search">
-
-                <ul class="nav navbar-nav" id="top-search">
-
-                        <div class="form-group navbar-form navbar-left ">
-                            <input type="text" class="form-control" placeholder="Search" name="Search[Title]">
-                        </div>
-
-                </ul>
-
-                <ul class="nav navbar-nav" id="country-select-wrapper">
-                    <select id="country-select" name="Search[Country]">
-                        <option></option>
-                        <?/*
-                            $propVals = SFUtils::getAllValuesForProperty('Country');
-                            foreach ($propVals as $val) {
-                                */?>
-                                <option value="<?/*=$val*/?>"><?/*=$val*/?></option>
-                                <?/*
-                            }
-                        */?>
-                    </select>
-                </ul>
-
-                <input type="hidden" name="query" value="true" />
-                <input type="hidden" value="" name="sf_free_text">
-                <input type="hidden" value="Search" name="wpRunQuery">
-
-                </form>-->
-
                 <ul class="nav navbar-nav navbar-right">
 
                     <? if( $this->isLoggedIn ) :?>
@@ -755,7 +759,7 @@ class SettleInTemplate extends BaseTemplate {
                             </ul>
                         </li>
                         <li>
-                            <a href="#" id="add-new-article-btn"><b><?=wfMessage('settlein-skin-add-new-article-button')->plain()?></b></a>
+                            <a href="#" class="add-new-article-btn"><b><?=wfMessage('settlein-skin-add-new-article-button')->plain()?></b></a>
                         </li>
                     <? else: ?>
                         <li id="why_signup">
@@ -779,14 +783,6 @@ class SettleInTemplate extends BaseTemplate {
                                 </b></a>
                         </li>
                     <? endif; ?>
-
-                    <!--<li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" style="padding-right: 0;">En <b class="caret"></b></a>
-                        <ul class="dropdown-menu primary-back">
-                            <li><a href="#">English</a></li>
-                            <li><a href="#">Russian</a></li>
-                        </ul>
-                    </li>-->
 
                 </ul>
 
@@ -816,10 +812,6 @@ class SettleInTemplate extends BaseTemplate {
                 <a class="navbar-brand" href="<?=Title::newMainPage()->getFullURL()?>">
                     <img src="<?=$this->getSkin()->getSkinStylePath("/img/i.png")?>" width="30"/>
                 </a>
-            </div>
-
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-
                 <ul class="nav navbar-nav" id="country-select-wrapper">
                     <form role="search" action="<?=SettleGeoSearch::getSearchPageUrl()?>" id="searchform_smw" method="post">
                         <?php
@@ -830,23 +822,16 @@ class SettleInTemplate extends BaseTemplate {
                         <a href="#" class="search-submit fa fa-search"></a>
                     </form>
                 </ul>
-
-                <!--<ul class="nav navbar-nav" id="top-search">
-
-                    <div class="form-group navbar-form navbar-left">
-                        <a href="#" class="search-submit fa fa-search"></a>
-                        <input type="text" class="form-control" placeholder="<?/*=wfMessage( 'settlein-skin-header-search-placeholder' )->plain()*/?>" name="Search[Title]">
-                    </div>
-
-                </ul>-->
-
-                <ul class="nav navbar-nav">
+                <ul class="nav navbar-nav navbar-faq-menu">
                     <li>
                         <a id="faq-menu" href="#" data-toggle="modal" data-target="#myModal" style="" >
                             <?=wfMessage( 'settlein-skin-header-help-link' )->plain()?>
                         </a>
                     </li>
                 </ul>
+            </div>
+
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 
                 <ul class="nav navbar-nav navbar-right" id="right-side-actions">
 
@@ -900,7 +885,7 @@ class SettleInTemplate extends BaseTemplate {
                     </li>
 
                     <li class="btn-group-nav login-selector">
-                        <a href="#" id="add-new-article-btn"><b><?=wfMessage('settlein-skin-add-new-article-button')->plain()?></b></a>
+                        <a href="#" class="add-new-article-btn"><b><?=wfMessage('settlein-skin-add-new-article-button')->plain()?></b></a>
                     </li>
 
                     <? else: ?>

@@ -27,10 +27,14 @@ $(function(){
         $('.why-sign-up-popup').fadeOut();
     });
 
-    $('#login-selector').click(function (e) {
+    $('#login-selector, .login-selector').click(function (e) {
         $('#login-popup-wrapper').fadeIn();
         $('.login-popup-form').fadeIn();
         e.preventDefault();
+        if( window.slideoutMenu && window.slideoutMenu.isOpen() )
+        {
+            window.slideoutMenu.close();
+        }
     });
 
     /*if( $('#country-select').length ) {
@@ -43,6 +47,10 @@ $(function(){
         $('#why_signup').click(function () {
             $('#login-popup-wrapper').fadeIn();
             $('.why-sign-up-popup').fadeIn();
+            if( window.slideoutMenu && window.slideoutMenu.isOpen() )
+            {
+                window.slideoutMenu.close();
+            }
         });
     }
 

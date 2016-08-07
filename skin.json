@@ -53,6 +53,7 @@
         "assets/js/bootstrap-modalmanager.js",
         "assets/js/bootstrap-modal.js",
         "assets/js/jquery.fitvids.js",
+        "assets/js/slideout.min.js",
         "assets/js/settlein.js"
       ],
       "position": "top",
@@ -83,6 +84,7 @@
         "assets/js/bootstrap-modalmanager.js",
         "assets/js/bootstrap-modal.js",
         "assets/js/jquery.fitvids.js",
+        "assets/js/slideout.min.js",
         "assets/js/settlein.js",
         "assets/js/page.js"
       ],

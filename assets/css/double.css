@@ -10,6 +10,10 @@ body {
     background-color: #a4d27c;
 }
 
+main {
+    background-color: #a4d27c !important;
+}
+
 #content a, #content a:hover, #content a:visited {
     color: white;
 }

@@ -25,9 +25,15 @@ $(function () {
         $('[data-dismiss]').click();
     });
 
-    $('#login-selector').click(function () {
+    $('#login-selector, .login-selector').click(function (e) {
         $('#login-popup-wrapper').fadeIn();
         $('.login-popup-form').fadeIn();
+        if( window.slideoutMenu && window.slideoutMenu.isOpen() )
+        {
+            window.slideoutMenu.close();
+        }
+        e.preventDefault();
+        return false;
     });
 
     $('[data-toggle="tooltip"]').tooltip();
@@ -37,14 +43,22 @@ $(function () {
         $('#login-popup-wrapper').fadeIn();
     });
 
-    $('#faq-menu').click(function(){
-        $('#login-popup-wrapper').fadeIn();
+    $('#faq-menu, .faq-menu').click(function(){
+        //$('#login-popup-wrapper').fadeIn();
+        if( window.slideoutMenu && window.slideoutMenu.isOpen() )
+        {
+            window.slideoutMenu.close();
+        }
     });
 
     if( $('#why_signup').length ) {
         $('#why_signup').click(function () {
             $('#login-popup-wrapper').fadeIn();
             $('.why-sign-up-popup').fadeIn();
+            if( window.slideoutMenu && window.slideoutMenu.isOpen() )
+            {
+                window.slideoutMenu.close();
+            }
         });
     }
 

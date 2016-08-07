@@ -23,7 +23,7 @@
     padding: 15px;
     background-color: white;
     left: 50%;
-    top: 45%;
+    top: 400px;
     -webkit-transform: translate(-50%, -50%);
     -moz-transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
@@ -71,6 +71,101 @@
 
 .add-new-article-popup-form .new_page_suggestions {
     display: none;
+}
+
+/* Slideout styles */
+
+body {
+    width: 100%;
+    height: 100%;
+    min-height: 100%;
+}
+
+#slideout {
+    display: none;
+    background-color: white;
+}
+
+#slideout.slideout-menu {
+    position: fixed;
+    left: auto;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 0;
+    width: 256px;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    display: none;
+}
+
+.slideout-panel {
+    position:relative;
+    z-index: 1;
+    will-change: transform;
+}
+
+.slideout-open,
+.slideout-open body,
+.slideout-open .slideout-panel {
+    overflow: hidden;
+}
+
+.slideout-open #slideout.slideout-menu {
+    display: block;
+}
+
+#slideout > ul.nav {
+    padding: 10px;
+}
+
+#slideout ul li a {
+    border: none;
+}
+
+#slideout > ul.nav .panel {
+    margin-bottom: 8px;
+}
+
+#slideout .slide-userpanel {
+    text-align: center;
+    color: white;
+    padding-top: 15px;
+    padding-bottom: 8px;
+    background: linear-gradient(to right,#087ac0 0%,#2fbced 50%,#097bc0 100%);
+}
+
+#slideout .slide-userpanel img {
+    max-width: 100px;
+    position: relative;
+}
+
+#slideout .slide-userpanel .user-name {
+    margin-top: 8px;
+    font-size: 16px;
+}
+
+#slideout .login-selector a {
+    color: #00adef;
+}
+
+#slideout .register-selector a {
+    color: #57be74;
+}
+
+#slideout .faq-menu {
+
+}
+
+#slideout .mobile-notifications-badge {
+    position: absolute;
+    top: 25px;
+    right: 50px;
+    font-size: 18px;
+}
+
+#slideout .mobile-notifications-badge i {
+    font-size: 14px;
 }
 
 /* ---------------------- MEDIA -------------------------- */

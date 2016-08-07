@@ -1,7 +1,23 @@
 /* global $,mw */
 $(function(){
 
-    if( $('#add-new-article-btn').length ) {
+    // Activate slideout
+    window.slideoutMenu = new Slideout({
+        'panel': $('main').get(0),
+        'menu': document.getElementById('slideout'),
+        'padding': 256,
+        'tolerance': 70,
+        'side': 'right',
+        'touch': false
+    });
+
+    $('nav button.navbar-toggle').unbind().bind('click', function(e){
+        window.slideoutMenu.toggle();
+        e.preventDefault();
+        return false;
+    });
+
+    if( $('.add-new-article-btn').length ) {
 
         var keyuptimeout = null;
 
@@ -12,9 +28,12 @@ $(function(){
             $('#add-new-article-popup-wrapper').hide();
         });
 
-        $('#add-new-article-btn').click(function(){
+        $('.add-new-article-btn').click(function(){
             $('.add-new-article-popup-form').show();
             $('#add-new-article-popup-wrapper').show();
+            if( window.slideoutMenu && window.slideoutMenu.isOpen() ) {
+                window.slideoutMenu.close();
+            }
         });
         
         $('.add-new-article-popup-form select#new_pageLanguage').change(function(){
@@ -191,4 +210,5 @@ $(function(){
         });
 
     }
+
 });
