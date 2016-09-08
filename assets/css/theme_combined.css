@@ -153,6 +153,10 @@ nav {
     position: relative;
 }
 
+#country-select-wrapper.normal-page-country-block {
+    margin-left: 15px;
+}
+
 #country-select-wrapper .selectize-dropdown-content {
     font-size: 15px;
 }
@@ -211,6 +215,7 @@ nav {
 #country-select-wrapper .settle-geo-search-wrapper {
     width: 50%;
     float: left;
+    min-width: 167px;
 }
 
 #country-select-wrapper .selectize-search-appendix {
@@ -883,6 +888,14 @@ nav .navbar-toggle {
         display: none;
     }
 
+    #country-select-wrapper.normal-page-country-block {
+        margin-left: 170px;
+        padding: 0 5px 0 5px;
+    }
+
+    #country-select-wrapper .settle-geo-search-wrapper {
+        min-width: inherit;
+    }
 
 }
 
@@ -916,5 +929,9 @@ nav .navbar-toggle {
     }
     nav a.navbar-brand {
         display: none;
+    }
+    #country-select-wrapper.normal-page-country-block {
+        margin-left: 5px;
+        padding: 0 5px 0 5px;
     }
 }

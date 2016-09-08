@@ -689,6 +689,16 @@ class SettleInTemplate extends BaseTemplate {
                 <a class="navbar-brand" href="<?=Title::newMainPage()->getFullURL()?>">
                     <img src="<?=$this->getSkin()->getSkinStylePath('/img/logo50h.png')?>" />
                 </a>
+                <ul class="nav navbar-nav normal-page-country-block" id="country-select-wrapper">
+                    <form role="search" action="<?=SettleGeoSearch::getSearchPageUrl()?>" id="searchform_smw" method="post">
+                        <?php
+                        $search = new SettleGeoSearch();
+                        echo $search->getHtml( SettleGeoSearch::SGS_MODE_VALUE, 'geo_id' );
+                        ?>
+                        <input type="text" placeholder="<?=wfMessage('sil-search-form-field-label-search')->plain()?>" name="geo_text" class="form-control selectize-search-appendix" />
+                        <a href="#" class="search-submit fa fa-search"></a>
+                    </form>
+                </ul>
             </div>
 
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
