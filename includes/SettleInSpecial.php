@@ -54,6 +54,8 @@ class SettleInSpecial extends UnlistedSpecialPage {
 
     private function contact() {
 
+    	global $wgEmergencyContact;
+
         $this->getOutput()->addModules('skins.settlein.special.contact');
         $this->getOutput()->setPageTitle('Contact Us | SettleIn');
         $data = array();
@@ -64,11 +66,24 @@ class SettleInSpecial extends UnlistedSpecialPage {
             $email = $this->getRequest()->getVal('email');
             $message = $this->getRequest()->getVal('message');
             $reason = $this->getRequest()->getVal('reason');
-            //TODO: send email
+            $reason = wfMessage('settlein-skin-project-page-contact-field-reason-value-'.$reason)->plain();
 
-            $html = Views::forge( 'contactpost', $data );
+            $to = new MailAddress( $wgEmergencyContact );
+            $from = new MailAddress( $email, $name );
+            $subject = "New request from SettleIn website";
+            $body = "Reason: " .$reason ."\n\n" . $message;
+
+            UserMailer::send( $to, $from, $subject, $body );
+
+            $this->getOutput()->redirect( $this->getFullTitle()->getFullURL('success=yes') );
+            return false;
+
         }else {
-            $html = Views::forge( 'contact', $data );
+        	if( $this->getRequest()->getVal('success') ) {
+		        $html = Views::forge( 'contactpost_new', $data );
+	        }else {
+		        $html = Views::forge( 'contact_new', $data );
+	        }
         }
 
         $this->getOutput()->addHTML( $html );

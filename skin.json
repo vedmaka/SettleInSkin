@@ -115,7 +115,7 @@
         "assets/special/about/holder.min.js"
       ],
       "styles": [
-        "assets/special/contact/style.css"
+        "assets/special/contact/contact.less"
       ],
       "position": "top"
     },
