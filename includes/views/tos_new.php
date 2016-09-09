@@ -13,7 +13,7 @@
 	<div class="row tos-about-item">
 		<div class="col-md-6 tos-item-legal">
 			<h2><?=wfMessage('settlein-skin-project-page-tos-heading-left')->plain()?></h2>
-			<p>
+			<p id="tos-height-scroll">
 				<?=wfMessage('settlein-skin-project-page-tos-item-1-left-text')->plain()?>
 			</p>
 		</div>

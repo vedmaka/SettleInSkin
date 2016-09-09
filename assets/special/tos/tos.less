@@ -11,6 +11,10 @@
 
 		margin-bottom: 40px;
 
+		@media (max-width: 780px) {
+			margin-top: 40px;
+		}
+
 		.about-us-header-wrapper {
 
 			width: 100%;
@@ -58,6 +62,7 @@
 
 				@media(min-width: 980px) {
 					border-right: 2px solid #ffdd00;
+					overflow-x: hidden;
 				}
 
 				h2 {
@@ -76,6 +81,21 @@
 					text-align: justify;
 					padding-top: 20px;
 					padding-right: 15px;
+				}
+				p#tos-height-scroll {
+					display: block;
+					overflow-y: scroll;
+					max-height: 300px;
+					@media (min-width: 980px) {
+						position: relative;
+						right: -32px;
+						padding-right: 32px;
+						height: ~"calc(100vh - 322px)";
+						max-height: inherit;
+					}
+					@media (min-width: 980px) and (min-height: 900px) {
+						height: ~"calc(100vh - 434px)";
+					}
 				}
 			}
 			.tos-item-short {
