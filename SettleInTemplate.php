@@ -692,7 +692,7 @@ class SettleInTemplate extends BaseTemplate {
 
                 <!-- Header search block for "normal" pages -->
                 <!-- This block should be excluded on Search page to prevent conflicts -->
-                <? if( $this->getSkin()->getTitle()->equals( SpecialPage::getTitleFor('SettleGeoSearch')->getBaseTitle() ) ): ?>
+                <? if( $this->getSkin()->getTitle()->equals( SpecialPage::getTitleFor('SettleGeoSearch')->getBaseTitle() ) || $this->getSkin()->getTitle()->isMainPage() ): ?>
                     <!-- No search block on Search results page -->
                 <? else: ?>
                 <ul class="nav navbar-nav normal-page-country-block" id="country-select-wrapper">
