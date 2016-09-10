@@ -689,6 +689,12 @@ class SettleInTemplate extends BaseTemplate {
                 <a class="navbar-brand" href="<?=Title::newMainPage()->getFullURL()?>">
                     <img src="<?=$this->getSkin()->getSkinStylePath('/img/logo50h.png')?>" />
                 </a>
+
+                <!-- Header search block for "normal" pages -->
+                <!-- This block should be excluded on Search page to prevent conflicts -->
+                <? if( $this->getSkin()->getTitle()->equals( SpecialPage::getTitleFor('SettleGeoSearch')->getBaseTitle() ) ): ?>
+                    <!-- No search block on Search results page -->
+                <? else: ?>
                 <ul class="nav navbar-nav normal-page-country-block" id="country-select-wrapper">
                     <form role="search" action="<?=SettleGeoSearch::getSearchPageUrl()?>" id="searchform_smw" method="post">
                         <?php
@@ -699,6 +705,8 @@ class SettleInTemplate extends BaseTemplate {
                         <a href="#" class="search-submit fa fa-search"></a>
                     </form>
                 </ul>
+                <? endif; ?>
+
             </div>
 
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
