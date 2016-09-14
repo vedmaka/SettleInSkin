@@ -66,7 +66,7 @@ class SettleInSpecial extends UnlistedSpecialPage {
             $email = $this->getRequest()->getVal('email');
             $message = $this->getRequest()->getVal('message');
             $reason = $this->getRequest()->getVal('reason');
-            $reason = wfMessage('settlein-skin-project-page-contact-field-reason-value-'.$reason)->plain();
+            $reason = wfMessage('settlein-skin-project-page-contact-field-reason-value-'.((int)$reason + 1) )->plain();
 
             $to = new MailAddress( $wgEmergencyContact );
             $from = new MailAddress( $email, $name );
