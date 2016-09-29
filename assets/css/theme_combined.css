@@ -215,7 +215,7 @@ nav {
 #country-select-wrapper .settle-geo-search-wrapper {
     width: 50%;
     float: left;
-    min-width: 167px;
+    /*min-width: 167px;*/
 }
 
 #country-select-wrapper .selectize-search-appendix {
@@ -230,7 +230,7 @@ nav {
 }
 
 #country-select-wrapper {
-    max-width: 400px;
+    width: 398px;
 }
 
 #country-select-wrapper .form-control::-webkit-input-placeholder, .jumbo-search input::-webkit-input-placeholder {color:#d9dadc;}
@@ -846,6 +846,15 @@ nav .navbar-toggle {
         width: 870px;
         margin-left: -435px;
     }
+    /* Country-select */
+    #country-select-wrapper {
+        min-width: 500px;
+        max-width: inherit;
+    }
+}
+
+@media ( max-width: 992px ) {
+
 }
 
 @media ( max-width: 780px ) {
@@ -933,5 +942,6 @@ nav .navbar-toggle {
     #country-select-wrapper.normal-page-country-block {
         margin-left: 5px;
         padding: 0 5px 0 5px;
+        width: auto;
     }
 }

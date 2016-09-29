@@ -173,7 +173,7 @@ body {
 @media (max-width: 780px) {
 
     #nav {
-        box-shadow: 0 6px 13px rgba(0, 0, 0, 0.24);
+        box-shadow: 0 -1px 13px rgba(0,0,0,0.24);
     }
 
     nav.navbar #faq-menu {

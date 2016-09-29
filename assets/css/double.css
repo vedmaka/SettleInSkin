@@ -670,4 +670,8 @@ ul.page-editors-list li a {
         bottom: 10px;
     }
 
+    #country-select-wrapper {
+        width: auto;
+    }
+
 }
