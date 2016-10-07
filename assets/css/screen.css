@@ -168,6 +168,10 @@ body {
     font-size: 14px;
 }
 
+.navbar .settle-geo-search-input.form-control {
+    border: none;
+}
+
 /* ---------------------- MEDIA -------------------------- */
 
 @media (max-width: 780px) {
