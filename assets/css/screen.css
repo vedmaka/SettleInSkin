@@ -102,7 +102,7 @@ body {
 .slideout-panel {
     position:relative;
     z-index: 1;
-    will-change: transform;
+    /*will-change: transform;*/
 }
 
 .slideout-open,
@@ -212,6 +212,20 @@ body {
         padding-right: 0;
         padding-left: 0;
         font-size: 14px;
+    }
+
+    .footer-social-icons {
+        margin: 0;
+        padding: 0;
+    }
+
+    .footer-menu-items {
+        text-align: center;
+    }
+
+    .footer-menu-items li {
+        display: inline-block;
+        text-align: center;
     }
 
 }

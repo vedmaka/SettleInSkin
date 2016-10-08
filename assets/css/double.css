@@ -470,11 +470,11 @@ ul.page-editors-list li a {
 
 /* ----------------------------------- media -------------------------------------------------------- */
 
-@media (min-width: 1024px) {
+/*@media (min-width: 1024px) {
     main.slideout-panel {
         will-change: initial !important;
     }
-}
+}*/
 
 @media (max-width: 1024px) {
     #double-wrapper #double-col-left {

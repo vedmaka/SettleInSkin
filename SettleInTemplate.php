@@ -474,7 +474,7 @@ class SettleInTemplate extends BaseTemplate {
     </div>
     <div class="bottom-footer-content">
         <div class="container">
-            <ul class="nav navbar-nav">
+            <ul class="nav navbar-nav footer-menu-items">
                 <li>
                     <a href="<?=SpecialPage::getTitleFor('SettleIn')->getFullURL()?>/about">
                         <?=wfMessage('settlein-skin-footer-about-us')->plain()?>
@@ -497,18 +497,18 @@ class SettleInTemplate extends BaseTemplate {
                 </li>
             </ul>
 
-            <ul class="nav navbar-nav navbar-right">
-                <li>
+            <ul class="nav navbar-nav navbar-right col-xs-12 footer-social-icons">
+                <li class="col-xs-4">
                     <a target="_blank" href="<?=$this->config->get('SettleinTwitterURL')?>">
                         <i class="fa fa-twitter"></i>
                     </a>
                 </li>
-                <li>
+                <li class="col-xs-4">
                     <a target="_blank" href="<?=$this->config->get('SettleinFacebookURL')?>">
                         <i class="fa fa-facebook"></i>
                     </a>
                 </li>
-                <li>
+                <li class="col-xs-4">
                     <a target="_blank" href="<?=$this->config->get('SettleinGoogleURL')?>">
                         <i class="fa fa-google-plus"></i>
                     </a>
@@ -626,7 +626,7 @@ class SettleInTemplate extends BaseTemplate {
 <!-- footer -->
     <footer class="footer">
         <div class="container">
-            <ul class="nav navbar-nav">
+            <ul class="nav navbar-nav footer-menu-items">
                 <li>
                     <a href="<?=SpecialPage::getTitleFor('SettleIn')->getFullURL()?>/about">
                         <?=wfMessage('settlein-skin-footer-about-us')->plain()?>
@@ -649,18 +649,18 @@ class SettleInTemplate extends BaseTemplate {
                 </li>
             </ul>
 
-            <ul class="nav navbar-nav navbar-right">
-                <li>
+            <ul class="nav navbar-nav navbar-right col-xs-12 footer-social-icons">
+                <li class="col-xs-4 text-center">
                     <a target="_blank" href="<?=$this->config->get('SettleinTwitterURL')?>">
                         <i class="fa fa-twitter"></i>
                     </a>
                 </li>
-                <li>
+                <li class="col-xs-4 text-center">
                     <a target="_blank" href="<?=$this->config->get('SettleinFacebookURL')?>">
                         <i class="fa fa-facebook"></i>
                     </a>
                 </li>
-                <li>
+                <li class="col-xs-4 text-center">
                     <a target="_blank" href="<?=$this->config->get('SettleinGoogleURL')?>">
                         <i class="fa fa-google-plus"></i>
                     </a>
