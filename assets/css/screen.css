@@ -172,6 +172,10 @@ body {
     border: none;
 }
 
+.modal-scrollable {
+    z-index: 100;
+}
+
 /* ---------------------- MEDIA -------------------------- */
 
 @media (max-width: 780px) {

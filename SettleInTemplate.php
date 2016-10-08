@@ -497,7 +497,7 @@ class SettleInTemplate extends BaseTemplate {
                 </li>
             </ul>
 
-            <ul class="nav navbar-nav navbar-right col-xs-12 footer-social-icons">
+            <ul class="nav navbar-nav navbar-right col-xs-12 col-sm-2 footer-social-icons">
                 <li class="col-xs-4">
                     <a target="_blank" href="<?=$this->config->get('SettleinTwitterURL')?>">
                         <i class="fa fa-twitter"></i>
@@ -649,7 +649,7 @@ class SettleInTemplate extends BaseTemplate {
                 </li>
             </ul>
 
-            <ul class="nav navbar-nav navbar-right col-xs-12 footer-social-icons">
+            <ul class="nav navbar-nav navbar-right col-xs-12 col-sm-2 footer-social-icons">
                 <li class="col-xs-4 text-center">
                     <a target="_blank" href="<?=$this->config->get('SettleinTwitterURL')?>">
                         <i class="fa fa-twitter"></i>
