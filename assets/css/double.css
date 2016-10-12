@@ -675,9 +675,15 @@ ul.page-editors-list li a {
     #nav #why_signup {
         bottom: 10px;
     }
+    
+    nav a.navbar-brand {
+        display: block !important;
+    }
 
     #country-select-wrapper {
-        width: auto;
+        width: 250px;
+        float: left;
+        margin-right: 0;
     }
 
 }

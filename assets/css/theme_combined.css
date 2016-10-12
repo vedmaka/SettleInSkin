@@ -918,6 +918,9 @@ nav .navbar-toggle {
     .login-popup-form.mobile-form-popup {
         width: 98%;
     }
+    #country-select-wrapper {
+        width: auto;
+    }
 }
 
 @media (max-width: 480px) {
@@ -938,6 +941,9 @@ nav .navbar-toggle {
     }
     nav a.navbar-brand {
         display: none;
+    }
+    .page-Main_Page nav a.navbar-brand {
+        display: block !important;
     }
     #country-select-wrapper.normal-page-country-block {
         margin-left: 5px;
