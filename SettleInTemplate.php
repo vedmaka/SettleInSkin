@@ -255,7 +255,19 @@ class SettleInTemplate extends BaseTemplate {
     <!-- Main start -->
     <section>
 
-            <div class="jumbotron jumbo-backlay">
+            <div class="jumbotron">
+                
+                <div class="jumbo-slider-backlay">
+                    <div class="slider-backlay-slide">
+                        <img src="<?=$this->getSkin()->getSkinStylePath("/img/jumbo_gate.jpg")?>" />
+                    </div>
+                    <div class="slider-backlay-slide">
+                        <img src="<?=$this->getSkin()->getSkinStylePath("/img/samples/1.jpg")?>" />
+                    </div>
+                    <div class="slider-backlay-slide">
+                        <img src="<?=$this->getSkin()->getSkinStylePath("/img/jumbo_gate.jpg")?>" />
+                    </div>
+                </div>
 
                 <div class="jumbo-content">
 

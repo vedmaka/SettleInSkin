@@ -57,5 +57,21 @@ $(function(){
     $('[data-dismiss]').click(function(){
         $('.login-popup-form').fadeOut();
     });
+    
+    if($('.jumbo-slider-backlay').length) {
+        mw.loader.using('skins.settlein.slick', function(){
+            $('.jumbo-slider-backlay').slick({
+                autoplay: true,
+                arrows: false,
+                dots: false,
+                draggable: false,
+                fade: true,
+                pauseOnFocus: false,
+                pauseOnHover: false,
+                swipe: false,
+                touchMove: false
+            });
+        });
+    }
 
 });

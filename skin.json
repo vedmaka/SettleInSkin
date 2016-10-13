@@ -132,6 +132,14 @@
       "scripts": [
           "assets/js/test.js"
         ]
+    },
+    "skins.settlein.slick": {
+      "scripts": [
+        "assets/js/slick.min.js"
+      ],
+      "styles": [
+        "assets/css/slick.css"
+      ]
     }
   },
   "ResourceFileModulePaths": {
