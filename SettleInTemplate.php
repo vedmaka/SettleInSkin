@@ -256,18 +256,20 @@ class SettleInTemplate extends BaseTemplate {
     <section>
 
             <div class="jumbotron">
-                
+
+                <!-- Dynamic slider for main page background -->
                 <div class="jumbo-slider-backlay">
                     <div class="slider-backlay-slide">
-                        <img src="<?=$this->getSkin()->getSkinStylePath("/img/jumbo_gate.jpg")?>" />
+                        <img src="<?=$this->getSkin()->getSkinStylePath("/img/slider/1.jpg")?>" />
                     </div>
                     <div class="slider-backlay-slide">
-                        <img src="<?=$this->getSkin()->getSkinStylePath("/img/samples/1.jpg")?>" />
+                        <img src="<?=$this->getSkin()->getSkinStylePath("/img/slider/2.jpg")?>" />
                     </div>
-                    <div class="slider-backlay-slide">
-                        <img src="<?=$this->getSkin()->getSkinStylePath("/img/jumbo_gate.jpg")?>" />
+                    <div class="slider-backlay-slide" >
+                        <img src="<?=$this->getSkin()->getSkinStylePath("/img/slider/3.jpg")?>" />
                     </div>
                 </div>
+                <!-- /Dynamic slider -->
 
                 <div class="jumbo-content">
 
