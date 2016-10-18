@@ -927,6 +927,11 @@ nav .navbar-toggle {
     #country-select-wrapper .settle-geo-search-wrapper {
         min-width: inherit;
     }
+    
+    .jumbotron .jumbo-slider-backlay .slider-backlay-slide img {
+        width: auto;
+        max-height: 400px;
+    }
 
 }
 
@@ -942,6 +947,10 @@ nav .navbar-toggle {
     }
     #country-select-wrapper {
         width: auto;
+    }
+    .jumbotron .jumbo-slider-backlay .slider-backlay-slide img {
+        width: auto;
+        max-height: 400px;
     }
 }
 

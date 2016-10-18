@@ -265,7 +265,7 @@ class SettleInTemplate extends BaseTemplate {
                     <div class="slider-backlay-slide">
                         <img src="<?=$this->getSkin()->getSkinStylePath("/img/slider/2.jpg")?>" />
                     </div>
-                    <div class="slider-backlay-slide" >
+                    <div class="slider-backlay-slide">
                         <img src="<?=$this->getSkin()->getSkinStylePath("/img/slider/3.jpg")?>" />
                     </div>
                 </div>

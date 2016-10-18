@@ -62,7 +62,8 @@ $(function(){
         mw.loader.using('skins.settlein.slick', function(){
             $('.jumbo-slider-backlay').slick({
                 autoplay: true,
-				autoplaySpeed: 6000,
+                //initialSlide: 2,
+				autoplaySpeed: 12000,
                 arrows: false,
                 dots: false,
                 draggable: false,
