@@ -14,5 +14,9 @@ $magicWords['en'] = array(
     'stoolsmoddate' => array( 0, 'stoolsmoddate' ),
     'stoolseditorlist' => array( 0, 'stoolseditorlist' ),
     'stoolsprintbtn' => array( 0, 'stoolsprintbtn' ),
-	'stoolsmakebtn' => array( 0, 'stoolsmakebtn' )
+	'stoolsmakebtn' => array( 0, 'stoolsmakebtn' ),
+	'stoolspageauthor' => array( 0, 'stoolspageauthor' ),
+	'stoolslanglinks' => array( 0, 'stoolslanglinks' ),
+	'stoolssociallinks' => array( 0, 'stoolssociallinks' ),
+	'stoolsfooterlinks' => array( 0, 'stoolsfooterlinks' )
 );

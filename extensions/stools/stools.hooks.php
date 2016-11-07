@@ -29,6 +29,10 @@ class stoolsHooks
         $parser->setFunctionHook('stoolseditorlist', 'stools::editorlist' );
         $parser->setFunctionHook('stoolsprintbtn', 'stools::sprintbtn' );
         $parser->setFunctionHook('stoolsmakebtn', 'stools::makebtn' );
+        $parser->setFunctionHook('stoolspageauthor', 'stools::pageauthor' );
+        $parser->setFunctionHook('stoolslanglinks', 'stools::langlinks' );
+        $parser->setFunctionHook('stoolssociallinks', 'stools::sociallinks' );
+        $parser->setFunctionHook('stoolsfooterlinks', 'stools::footerlinks' );
 	}
 
 }

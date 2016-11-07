@@ -96,7 +96,7 @@ class SettleInTemplate extends BaseTemplate {
 
 		$this->printSlideMenu();
 		?>
-		<main>
+		<main class="<?=($this->isCardPage) ? 'card-page' : '' ?>">
 		<?
 
 		$title = $this->getSkin()->getTitle();
@@ -482,7 +482,7 @@ class SettleInTemplate extends BaseTemplate {
 
 	private function printFooterForm() {
 	    ?>
-<div id="bottom-footer">
+<!--<div id="bottom-footer">
     <div class="bottom-footer-badge">
         <i class="fa fa-chevron-up"></i>
     </div>
@@ -531,7 +531,7 @@ class SettleInTemplate extends BaseTemplate {
 
         </div>
     </div>
-</div>
+</div>-->
 
 <div class="comments-popup-form mobile-form-popup">
     <h3>
@@ -831,9 +831,9 @@ class SettleInTemplate extends BaseTemplate {
 ?>
 <div id="nav">
     <div class="container-fluid">
-        <nav class="navbar">
+        <nav class="navbar row">
 
-            <div class="navbar-header">
+            <div class="navbar-header col-md-5">
                 <button type="button" class="navbar-toggle" data-toggle="collapse"
                         data-target="#bs-example-navbar-collapse-1">
                     <span class="sr-only">Toggle navigation</span>
@@ -854,22 +854,22 @@ class SettleInTemplate extends BaseTemplate {
                         <a href="#" class="search-submit fa fa-search"></a>
                     </form>
                 </ul>
-                <ul class="nav navbar-nav navbar-faq-menu">
+                <!--<ul class="nav navbar-nav navbar-faq-menu">
                     <li>
                         <a id="faq-menu" href="#" data-toggle="modal" data-target="#myModal" style="" >
-                            <?=wfMessage( 'settlein-skin-header-help-link' )->plain()?>
+                            <?/*=wfMessage( 'settlein-skin-header-help-link' )->plain()*/?>
                         </a>
                     </li>
-                </ul>
+                </ul>-->
             </div>
 
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <div class="col-md-7" id="bs-example-navbar-collapse-1">
 
                 <ul class="nav navbar-nav navbar-right" id="right-side-actions">
 
                     <? if( $this->isLoggedIn ) :?>
 
-                    <li class="btn-group-nav login-selector" id="user-panel-bell">
+                    <li class="btn-group-nav" id="user-panel-bell">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                             <i class="fa fa-bell-o"></i>
                             <!--<span class="fa-add-count">3</span>-->
@@ -900,7 +900,7 @@ class SettleInTemplate extends BaseTemplate {
                         </div>
                     </li>
 
-                    <li class="btn-group-nav login-selector" id="user-panel-selector">
+                    <li class="btn-group-nav" id="user-panel-selector">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                             <i class="fa fa-user"></i>
                             <?=$this->user->getName()?>
@@ -916,15 +916,21 @@ class SettleInTemplate extends BaseTemplate {
                         </ul>
                     </li>
 
-                    <li class="btn-group-nav login-selector">
+                    <li class="btn-group-nav">
                         <a href="#" class="add-new-article-btn"><b><?=wfMessage('settlein-skin-add-new-article-button')->plain()?></b></a>
                     </li>
 
                     <? else: ?>
 
+                    <li>
+                        <a class="faq-menu" href="#" data-toggle="modal" data-target="#myModal" >
+		                    <?=wfMessage( 'settlein-skin-header-help-link' )->plain()?>
+                        </a>
+                    </li>
+
                     <li class="btn-group-nav login-selector" id="login-selector">
                         <a href="#">
-                            <i class="fa fa-lock"></i>
+                            <!--<i class="fa fa-lock"></i>-->
                             <?=wfMessage( 'settlein-skin-header-login' )->plain()?>
                         </a>
                     </li>
@@ -944,11 +950,11 @@ class SettleInTemplate extends BaseTemplate {
                 </ul>
 
                 <? if( !$this->isLoggedIn ) :?>
-                    <div id="why_signup">
+                    <!--<div id="why_signup">
                         <a href="#">
-                            <?=wfMessage( 'settlein-skin-header-why-signup' )->plain()?>
+                            <?/*=wfMessage( 'settlein-skin-header-why-signup' )->plain()*/?>
                         </a>
-                    </div>
+                    </div>-->
                 <? endif; ?>
 
             </div>
