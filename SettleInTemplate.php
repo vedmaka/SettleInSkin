@@ -19,8 +19,11 @@ class SettleInTemplate extends BaseTemplate {
     private $cleanPage;
 
 	private $countriesList;
+
+	/** @var array Contains list of connected languages including current one */
 	private $connectedLanguagesList;
-    private $categoriesList;
+
+	private $categoriesList;
 
 	/**
 	 * Outputs the entire contents of the (X)HTML page
@@ -69,6 +72,7 @@ class SettleInTemplate extends BaseTemplate {
 
 		// Prepare some data
 		$this->countriesList = SettleGeoTaxonomy::getInstance()->getEntities( SettleGeoTaxonomy::TYPE_COUNTRY, null, $wgLanguageCode );
+
 		$this->connectedLanguagesList = array(
 			$wgLanguageCode => Language::fetchLanguageName($wgLanguageCode)
 		);
@@ -213,10 +217,17 @@ class SettleInTemplate extends BaseTemplate {
                         <i class="glyphicon glyphicon-font"></i>
                         Change language
                     </a>
-                    <div class="collapse" id="side-language-selector">
+                    <div class="collapse language-selection-action" id="side-language-selector">
                         <ul>
-                            <li><a href="#">Russian</a></li>
-                            <li><a href="#">English</a></li>
+                            <?php
+                            global $wgSettleTranslateDomains;
+                            $shiftedLangs = array_slice($this->connectedLanguagesList, 1); // Exclude current language
+                            ?>
+	                        <? foreach ( $shiftedLangs as $langCode => $langText ): ?>
+                                <li>
+                                    <a target="_blank" href="//<?=$wgSettleTranslateDomains[$langCode]?>"><?=$langText?></a>
+                                </li>
+	                        <? endforeach; ?>
                         </ul>
                     </div>
                 </li>
@@ -971,13 +982,20 @@ class SettleInTemplate extends BaseTemplate {
 
                     <? endif; ?>
 
-                    <li class="dropdown" id="language-selector">
+                    <li class="dropdown language-selection-action" id="language-selector">
+	                    <?php
+	                    global $wgSettleTranslateDomains;
+	                    $shiftedLangs = array_slice($this->connectedLanguagesList, 1); // Exclude current language
+	                    ?>
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                            En
+                            <?=array_keys($this->connectedLanguagesList)[0]?>
                             <b class="caret"></b></a>
                         <ul class="dropdown-menu primary-back">
-                            <li><a href="#">English</a></li>
-                            <li><a href="#">Russian</a></li>
+	                        <? foreach ( $shiftedLangs as $langCode => $langText ): ?>
+                                <li>
+                                    <a target="_blank" href="//<?=$wgSettleTranslateDomains[$langCode]?>"><?=$langText?></a>
+                                </li>
+	                        <? endforeach; ?>
                         </ul>
                     </li>
 
@@ -1118,7 +1136,7 @@ class SettleInTemplate extends BaseTemplate {
 				<?=wfMessage('settlein-skin-add-new-article-window-form-other-languages')->plain()?>
                 <?
                 global $wgSettleTranslateDomains;
-                $shiftedLangs = array_splice($this->connectedLanguagesList, 1);
+                $shiftedLangs = array_slice($this->connectedLanguagesList, 1); // Exclude current language
                 ?>
                 <? foreach ( $shiftedLangs as $langCode => $langText ): ?>
                     <a target="_blank" href="//<?=$wgSettleTranslateDomains[$langCode]?>"><?=$langText?></a>&nbsp;
