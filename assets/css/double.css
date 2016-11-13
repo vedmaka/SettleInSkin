@@ -820,6 +820,14 @@ main.card-page .dropdown-menu.primary-back {
     display: block;
 }
 
+#double-col-right .right-col-inshort-wrapper .inshort-col .well.height-shrink a.btn-yellow {
+    text-decoration: none !important;
+}
+
+#double-col-right .right-col-inshort-wrapper .inshort-col .btn-yellow:hover {
+    background-color: #ffc300;
+}
+
 #double-col-right .right-col-inshort-wrapper .inshort-col .well-round-user-picture {
     width: 25px;
     height: 25px;
