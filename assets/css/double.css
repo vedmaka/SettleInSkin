@@ -845,14 +845,20 @@ main.card-page .dropdown-menu.primary-back {
     margin: 0;
     padding: 0;
     text-align: center;
+    min-height: 22px;
 }
 
-#double-col-right .col-right-languages li {
+#double-col-right .col-right-languages ul {
+    margin: 0;
+    padding: 0;
+}
+
+#double-col-right .col-right-languages ul li {
     list-style: none;
     display: inline-block;
 }
 
-#double-col-right .col-right-languages li::before {
+#double-col-right .col-right-languages ul li::before {
     content: "";
     display: inline-block;
     width: 7px;
@@ -864,11 +870,11 @@ main.card-page .dropdown-menu.primary-back {
     top: -2px;
 }
 
-#double-col-right .col-right-languages li + li {
+#double-col-right .col-right-languages ul li + li {
     margin-left: 20px;
 }
 
-#double-col-right .col-right-languages li a {
+#double-col-right .col-right-languages ul li a {
     color: white;
     font-size: 16px;
 }
