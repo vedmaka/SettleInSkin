@@ -158,6 +158,10 @@ body {
 
 }
 
+#slideout .user-panel-watchlist-action.is-watched {
+    display: none;
+}
+
 #slideout .mobile-notifications-badge {
     position: absolute;
     top: 25px;

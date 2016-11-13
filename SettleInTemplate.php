@@ -151,8 +151,8 @@ class SettleInTemplate extends BaseTemplate {
 
                 <? if( $this->isCardPage): ?>
                     <? if($this->isLoggedIn): ?>
-                        <li>
-                            <a class="user-panel-watchlist-action" href="">
+                        <li class="user-panel-watchlist-action">
+                            <a href="#" title="<?=wfMessage('customwatchlist-add')->plain()?>">
                                 <i class="glyphicon glyphicon-eye-open"></i>
                                 <?=wfMessage('customwatchlist-add')->plain()?>
                             </a>

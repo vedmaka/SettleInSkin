@@ -428,15 +428,18 @@ div.left-tabs ul.nav-tabs > li {
 
 }
 
-#user-panel-watchlist a {
+main.card-page #bs-example-navbar-collapse-1 > ul > li#user-panel-watchlist > a {
     color: white;
     display: block !important;
     width: 30px;
     height: 20px;
-    background: url("../../img/fa-watchlist.png") 0 0 no-repeat !important;
-    background-size: 28px !important;
+    background: url("../../img/fa-watchlist.png") 0 0 no-repeat;
     position: relative;
     top: 7px;
+}
+
+main.card-page #bs-example-navbar-collapse-1 > ul > li#user-panel-watchlist.is-watched > a {
+    background: url("../../img/fa-watchlist.png") 0 -20px no-repeat;
 }
 
 /*#user-panel-watchlist a .fa-stack {
