@@ -894,6 +894,10 @@ main.card-page .dropdown-menu.primary-back {
     margin: 0 6px 6px 6px;
 }
 
+#double-col-right .col-right-social-links li a::before {
+    display: none;
+}
+
 #double-col-right .col-right-social-links li a.social-link-twitter {
     width: 50px;
     height: 50px;
