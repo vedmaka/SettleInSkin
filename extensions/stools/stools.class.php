@@ -204,7 +204,7 @@ class stools
     	$html = '<ul class="col-right-social-links">' .
 	            '<li><a href="#" class="social-link-twitter"></a></li>' .
 	            '<li><a href="#" class="social-link-facebook"></a></li>' .
-	            '<li><a href="#" class="social-link-google"></a></li>' .
+	            //'<li><a href="#" class="social-link-google"></a></li>' .
 	            '<li><a href="#" class="social-link-some"></a></li>' .
 	            '</ul>';
 	    return array(

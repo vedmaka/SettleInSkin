@@ -133,7 +133,7 @@ main {
 #double-wrapper #double-col-right {
 
     background-color: #00a6e3;
-    padding: 0 15px 0 15px;
+    padding: 106px 15px 0 15px;
 }
 
 #country-select-wrapper {
@@ -390,9 +390,16 @@ div.left-tabs ul.nav-tabs > li {
 }
 
 .left-tabs .tab-content {
-    height: 320px;
+    height: 380px;
     overflow-y: scroll;
     font-size: 16px;
+}
+
+/* Reduce left content height on smaller devices */
+@media all and (max-height: 690px) and (min-width: 986px) {
+    .left-tabs .tab-content {
+        max-height: 280px;
+    }
 }
 
 ul.page-editors-list {
@@ -645,7 +652,7 @@ main.card-page .dropdown-menu.primary-back {
 }
 
 #double-col-right .right-col-inshort-wrapper {
-    margin-top: 25px;
+    margin-top: 14px;
     /*margin-bottom: 25px;*/
 }
 
@@ -794,7 +801,7 @@ main.card-page .dropdown-menu.primary-back {
 #double-col-right .col-right-social-links li {
     list-style: none;
     display: inline-block;
-    margin: 0 12px 12px 0;
+    margin: 0 6px 6px 6px;
 }
 
 #double-col-right .col-right-social-links li a.social-link-twitter {
@@ -854,9 +861,28 @@ main.card-page .dropdown-menu.primary-back {
 }
 
 #double-col-right .right-col-tips-collapser > ul > li.active a {
-    border-color: #38b449;
-    color: #38b449;
     background-color: white;
+}
+
+/* Color status for tips active links */
+#double-col-right .right-col-tips-collapser > ul > li.active a.tips-applying {
+    color: #38b449;
+    border-color: #38b449;
+}
+
+#double-col-right .right-col-tips-collapser > ul > li.active a.tips-time {
+    color: #5acbf5;
+    border-color: #5acbf5;
+}
+
+#double-col-right .right-col-tips-collapser > ul > li.active a.tips-money {
+    color: #ffe200;
+    border-color: #ffe200;
+}
+
+#double-col-right .right-col-tips-collapser > ul > li.active a.tips-other {
+    color: #f7931d;
+    border-color: #f7931d;
 }
 
 #double-col-right .right-col-tips-collapser > ul > li + li {
@@ -870,11 +896,25 @@ main.card-page .dropdown-menu.primary-back {
 }
 
 #double-col-right .right-col-tips-collapser .tab-pane {
-    border: 1px solid #38b449;
+    border: 1px solid white;
     background-color: white;
     color: gray;
     padding: 10px;
-    min-height: 264px;
+    min-height: 210px;
+}
+
+/* Tips page states */
+#double-col-right .right-col-tips-collapser .tab-pane.active#tips-applying {
+    border-color: #38b449;
+}
+#double-col-right .right-col-tips-collapser .tab-pane.active#tips-time {
+    border-color: #5acbf5;
+}
+#double-col-right .right-col-tips-collapser .tab-pane.active#tips-money {
+    border-color: #ffe200;
+}
+#double-col-right .right-col-tips-collapser .tab-pane.active#tips-other {
+    border-color: #f7931d;
 }
 
 #double-col-right .col-right-related-pages {
