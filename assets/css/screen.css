@@ -121,6 +121,7 @@ body {
 
 #slideout ul li a {
     border: none;
+    color: #282828;
 }
 
 #slideout > ul.nav .panel {

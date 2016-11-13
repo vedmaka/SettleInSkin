@@ -76,7 +76,7 @@ main {
 
 #nav #why_signup {
     position: absolute;
-    right: 0px;
+    right: 0;
     bottom: -10px;
 }
 
@@ -91,13 +91,35 @@ main {
 
 #nav #language-selector > a {
     color: white;
-    background-color: rgba(255, 255, 255, 0.3);
+    /*background-color: rgba(255, 255, 255, 0.3);*/
     border-radius: 4px;
     padding: 5px 10px;
 }
 
+#language-selector .dropdown-menu a:hover {
+    background-color: #00a6e3;
+}
+
 #nav #language-selector > a:hover, #nav #language-selector a:active {
-    color: #64bb5d;
+    /*color: #64bb5d;*/
+}
+
+#nav #language-selector .dropdown-toggle {
+    border: 1px solid #ffe200;
+    padding: 0 4px;
+    font-size: 11px;
+    margin: 5px 10px;
+    border-radius: 0;
+    line-height: 19px;
+}
+
+#nav #language-selector .caret {
+    border-top-color: white !important;
+    border-bottom-color: white !important;
+}
+
+#nav #language-selector .dropdown-menu a {
+    color: black;
 }
 
 #nav .login-selector > a {
@@ -388,6 +410,53 @@ div.left-tabs ul.nav-tabs > li {
 #user-panel-bell div.dropdown-menu ul li {
     margin: 0 0 5px 0;
 }
+
+/* Remove separator between bell & watchlist */
+#user-panel-bell::before {
+    display: none !important;
+}
+
+#user-panel-bell.has-notifications .dropdown-toggle {
+    color: #ffdd17;
+}
+
+#user-panel-watchlist {
+
+}
+
+#user-panel-watchlist a {
+    color: white;
+    display: block !important;
+    width: 30px;
+    height: 20px;
+    background: url("../../img/fa-watchlist.png") 0 0 no-repeat !important;
+    background-size: 28px !important;
+    position: relative;
+    top: 7px;
+}
+
+/*#user-panel-watchlist a .fa-stack {
+    position: relative;
+    top: -4px;
+}
+
+#user-panel-watchlist a .fa-stack .fa:first-child {
+    font-size: 18px;
+}
+
+#user-panel-watchlist a .fa-stack .fa:last-child {
+    right: -7px;
+    left: auto;
+    bottom: 0;
+    background-color: #00a6e3;
+    padding: 0;
+    width: 17px;
+    height: 15px;
+    font-weight: 100;
+    line-height: 15px;
+    margin: 0;
+    font-size: 13px;
+}*/
 
 .left-tabs .tab-content {
     height: 380px;
@@ -1301,9 +1370,9 @@ main.card-page .dropdown-menu.primary-back {
         color: #64bb5d;
     }
 
-    #nav #language-selector > a {
+/*    #nav #language-selector > a {
         color: #64bb5d;
-    }
+    }*/
 
     #nav .fa-add-count {
         color: white !important;

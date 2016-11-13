@@ -146,6 +146,14 @@ class SettleInTemplate extends BaseTemplate {
                 </li>
 
                 <? if( $this->isCardPage): ?>
+                    <? if($this->isLoggedIn): ?>
+                        <li>
+                            <a class="user-panel-watchlist-action" href="">
+                                <i class="glyphicon glyphicon-eye-open"></i>
+                                <?=wfMessage('customwatchlist-add')->plain()?>
+                            </a>
+                        </li>
+                    <? endif; ?>
                     <li>
                         <a class="faq-menu" href="#" data-toggle="modal" data-target="#myModal" >
                             <i class="glyphicon glyphicon-question-sign"></i>
@@ -199,6 +207,19 @@ class SettleInTemplate extends BaseTemplate {
                 </div>
 
                 <? endif; ?>
+
+                <li>
+                    <a role="button" data-toggle="collapse" href="#side-language-selector" aria-expanded="false" aria-controls="side-language-selector">
+                        <i class="glyphicon glyphicon-font"></i>
+                        Change language
+                    </a>
+                    <div class="collapse" id="side-language-selector">
+                        <ul>
+                            <li><a href="#">Russian</a></li>
+                            <li><a href="#">English</a></li>
+                        </ul>
+                    </div>
+                </li>
 
                 <li>
                     <a href="<?=SpecialPage::getSafeTitleFor('UserLogout')->getFullURL()?>">
@@ -869,6 +890,16 @@ class SettleInTemplate extends BaseTemplate {
 
                     <? if( $this->isLoggedIn ) :?>
 
+                    <!-- Watchlist icon -->
+                    <li class="btn-group-nav user-panel-watchlist-action" id="user-panel-watchlist">
+                        <a href="#">
+                            <!--<span class="fa-stack">
+                                <i class="fa fa-list fa-stack-1x"></i>
+                                <i class="fa fa-plus fa-stack-1x"></i>
+                            </span>-->
+                        </a>
+                    </li>
+
                     <li class="btn-group-nav" id="user-panel-bell">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                             <i class="fa fa-bell-o"></i>
@@ -899,6 +930,15 @@ class SettleInTemplate extends BaseTemplate {
                             <?=wfMessage( 'settlein-skin-header-notifications-empty' )->plain()?>
                         </div>
                     </li>
+                    <? endif; ?>
+
+                    <li>
+                        <a class="faq-menu" href="#" data-toggle="modal" data-target="#myModal" >
+			                <?=wfMessage( 'settlein-skin-header-help-link' )->plain()?>
+                        </a>
+                    </li>
+
+                    <? if( $this->isLoggedIn ): ?>
 
                     <li class="btn-group-nav" id="user-panel-selector">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">
@@ -922,12 +962,6 @@ class SettleInTemplate extends BaseTemplate {
 
                     <? else: ?>
 
-                    <li>
-                        <a class="faq-menu" href="#" data-toggle="modal" data-target="#myModal" >
-		                    <?=wfMessage( 'settlein-skin-header-help-link' )->plain()?>
-                        </a>
-                    </li>
-
                     <li class="btn-group-nav login-selector" id="login-selector">
                         <a href="#">
                             <!--<i class="fa fa-lock"></i>-->
@@ -937,15 +971,15 @@ class SettleInTemplate extends BaseTemplate {
 
                     <? endif; ?>
 
-                    <!-- TODO: Disabled temporary -->
-                    <!--<li class="dropdown" id="language-selector">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" style="padding-right: 0;">En <b
-                                class="caret"></b></a>
+                    <li class="dropdown" id="language-selector">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                            En
+                            <b class="caret"></b></a>
                         <ul class="dropdown-menu primary-back">
                             <li><a href="#">English</a></li>
                             <li><a href="#">Russian</a></li>
                         </ul>
-                    </li>-->
+                    </li>
 
                 </ul>
 
