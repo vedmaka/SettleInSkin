@@ -59,6 +59,10 @@ main {
     padding-right: 5px;
 }
 
+#nav #language-selector::before {
+    display: none !important;
+}
+
 #nav #language-selector b.caret {
     margin-right: 5px;
 }
@@ -108,7 +112,7 @@ main {
     border: 1px solid #ffe200;
     padding: 0 4px;
     font-size: 11px;
-    margin: 5px 10px;
+    margin: 5px 10px 5px 5px;
     border-radius: 0;
     line-height: 19px;
 }
