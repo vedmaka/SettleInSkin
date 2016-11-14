@@ -203,5 +203,20 @@
 	"settlein-skin-add-new-article-window-form-field-state": "State",
 	"settlein-skin-add-new-article-window-form-field-city": "City",
 
-	"settlein-skin-card-page-apply-button": "Apply"
+	"settlein-skin-card-page-apply-button": "Apply",
+    "settlein-skin-card-page-share-email": "Email",
+    "settlein-skin-card-page-section-written-by": "Written by:",
+    "settlein-skin-card-page-section-minimum-requirements": "Minimum requirements:",
+    "settlein-skin-card-page-section-related-pages": "related pages",
+    "settlein-skin-card-page-section-contributors": "Contributors",
+    "settlein-skin-card-page-section-send-thank-you": "send thank you",
+    "settlein-skin-card-page-section-how-you-can-contribute": "How You can Contribute",
+    "settlein-skin-card-page-section-how-you-can-contribute-write-an-article": "Write an Article",
+    "settlein-skin-card-page-section-how-you-can-contribute-edit-article": "Edit Article",
+    "settlein-skin-card-page-section-how-you-can-contribute-translate-article": "Translate Article",
+    "settlein-skin-card-page-section-how-you-can-contribute-donate": "Donate",
+    "settlein-skin-card-page-section-how-you-can-contribute-more": "More",
+    "settlein-skin-card-page-section-comments": "Comments",
+    "settlein-skin-card-page-section-comments-send-comment": "POST",
+    "settlein-skin-side-panel-change-language": "Change language"
 }

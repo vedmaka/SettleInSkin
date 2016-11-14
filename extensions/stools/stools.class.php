@@ -218,10 +218,10 @@ class stools
     public static function footerlinks( $parser ) {
 
 	    $html = '<ul class="col-right-footer-links">' .
-	            '<li><a href="#">Our Story</a></li>' .
-	            '<li><a href="#">Contact Us</a></li>' .
-	            '<li><a href="#">Help Out</a></li>' .
-	            '<li><a href="#">Terms of Use</a></li>' .
+	            '<li><a href="'.SpecialPage::getTitleFor('SettleIn')->getFullURL().'/about">'.wfMessage('settlein-skin-footer-about-us')->plain().'</a></li>' .
+	            '<li><a href="'.SpecialPage::getTitleFor('SettleIn')->getFullURL().'/contact">'.wfMessage('settlein-skin-footer-contact')->plain().'</a></li>' .
+	            '<li><a href="'.Title::newFromText('Help Out', NS_PROJECT)->getFullURL().'">'.wfMessage('settlein-skin-footer-helpout')->plain().'</a></li>' .
+	            '<li><a href="'.SpecialPage::getTitleFor('SettleIn')->getFullURL().'/tos">'.wfMessage('settlein-skin-footer-tos')->plain().'</a></li>' .
 	            '</ul>';
 	    return array(
 		    $html,

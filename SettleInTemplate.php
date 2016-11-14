@@ -215,7 +215,7 @@ class SettleInTemplate extends BaseTemplate {
                 <li>
                     <a role="button" data-toggle="collapse" href="#side-language-selector" aria-expanded="false" aria-controls="side-language-selector">
                         <i class="glyphicon glyphicon-font"></i>
-                        Change language
+                        <?=wfMessage('settlein-skin-side-panel-change-language')->plain()?>
                     </a>
                     <div class="collapse language-selection-action" id="side-language-selector">
                         <ul>
