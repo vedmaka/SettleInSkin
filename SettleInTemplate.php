@@ -565,9 +565,9 @@ class SettleInTemplate extends BaseTemplate {
     </div>
 </div>-->
 
-<div class="comments-popup-form mobile-form-popup">
+<!--<div class="comments-popup-form mobile-form-popup">
     <h3>
-        <?=wfMessage('settlein-skin-modal-comments-title')->plain()?>
+        <?/*=wfMessage('settlein-skin-modal-comments-title')->plain()*/?>
     </h3>
 
     <div class="comments-list">
@@ -630,11 +630,11 @@ class SettleInTemplate extends BaseTemplate {
 
     <form class="form-inline" id="comment-form">
         <div class="form-group">
-            <input type="text" class="form-control" placeholder="<?=wfMessage('settlein-skin-modal-comments-input-placeholder')->plain()?>"/>
-            <input type="submit" class="btn btn-primary" value="<?=wfMessage('settlein-skin-modal-comments-input-submit')->plain()?>"/>
+            <input type="text" class="form-control" placeholder="<?/*=wfMessage('settlein-skin-modal-comments-input-placeholder')->plain()*/?>"/>
+            <input type="submit" class="btn btn-primary" value="<?/*=wfMessage('settlein-skin-modal-comments-input-submit')->plain()*/?>"/>
         </div>
     </form>
-</div>
+</div>-->
 
 <!-- Modal ? -->
 <div class="modal fade container fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true" style="display: none; margin-top: -150px;">
