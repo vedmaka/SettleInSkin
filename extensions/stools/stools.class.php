@@ -65,7 +65,7 @@ class stools
         $tEditors = $page->getContributors();
         $editors = array();
 
-        $html = '<ul class="page-editors-list">';
+        $html = '<ul>';
 
         foreach( $tEditors as $teditor ) {
             if( !array_key_exists( $teditor->getId(), $editors ) ) {
@@ -79,9 +79,9 @@ class stools
         foreach( $editors as $editor ) {
             $html .= '<li>'
                 . $parser->insertStripItem(
-                    '<a href="' .$editor->getUserPage()->getFullURL()
+                    '<li><a href="' .$editor->getUserPage()->getFullURL()
                     . '" data-toggle="tooltip" data-placement="top" data-original-title="'.$editor->getName().'">' .
-                    '<i class="fa fa-user"></i>' . '</a>'
+                    '</a></li>'
                 ) . '</li>';
         }
 
