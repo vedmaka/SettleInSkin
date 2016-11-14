@@ -1,6 +1,3 @@
-/**
- * Created by vedmaka on 06.09.2015.
- */
 $(function () {
 
     $('#country-select').select2({
@@ -65,5 +62,16 @@ $(function () {
     $('#top-search a.search-submit').click(function(){
         $('#form-top-search').submit();
     });
+
+    // Scroll-spy for dynamic navbar
+	$(window).scroll(function(e) {
+		var scrollValue = $(window).scrollTop();
+		console.log(scrollValue);
+		if (scrollValue > 30) {
+			$('#bs-example-navbar-collapse-1').addClass('scrolled-state');
+		}else{
+			$('#bs-example-navbar-collapse-1').removeClass('scrolled-state');
+		}
+	});
 
 });

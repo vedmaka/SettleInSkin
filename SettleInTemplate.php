@@ -565,77 +565,6 @@ class SettleInTemplate extends BaseTemplate {
     </div>
 </div>-->
 
-<!--<div class="comments-popup-form mobile-form-popup">
-    <h3>
-        <?/*=wfMessage('settlein-skin-modal-comments-title')->plain()*/?>
-    </h3>
-
-    <div class="comments-list">
-
-        <ul>
-            <li class="well well-primary">
-                <div class="row">
-                    <div class="col-md-3">
-                        <a href="#">
-                            <i class="fa fa-user-secret fa-inverse"></i>
-                            Anonymous
-                        </a>
-                        Anonymous
-                        10 Jan 2015
-                    </div>
-                    <div class="col-md-9">
-                        Fly technically like a clear captain.
-                        It is a colorful understanding, sir.
-                        Revolutionary avoid a particle.
-                    </div>
-                </div>
-            </li>
-            <li class="well well-primary">
-                <div class="row">
-                    <div class="col-md-3">
-                        <a href="#">
-                            <i class="fa fa-user-secret fa-inverse"></i>
-                            Anonymous
-                        </a>
-                        at
-                        9 Jan 2015
-                    </div>
-                    <div class="col-md-9">
-                        The courage is a small admiral.
-                        Countless protons arrest ancient, gravimetric emitters.
-                        Oddly experience a cosmonaut.
-                    </div>
-                </div>
-            </li>
-            <li class="well well-primary">
-                <div class="row">
-                    <div class="col-md-3">
-                        <a href="#">
-                            <i class="fa fa-user-secret fa-inverse"></i>
-                            Anonymous
-                        </a>
-                        at
-                        8 Jan 2015
-                    </div>
-                    <div class="col-md-9">
-                        It is a collective core, sir.
-                        The tragedy is a fantastic space.
-                        Flight, shield, and attitude.
-                    </div>
-                </div>
-            </li>
-        </ul>
-
-    </div>
-
-    <form class="form-inline" id="comment-form">
-        <div class="form-group">
-            <input type="text" class="form-control" placeholder="<?/*=wfMessage('settlein-skin-modal-comments-input-placeholder')->plain()*/?>"/>
-            <input type="submit" class="btn btn-primary" value="<?/*=wfMessage('settlein-skin-modal-comments-input-submit')->plain()*/?>"/>
-        </div>
-    </form>
-</div>-->
-
 <!-- Modal ? -->
 <div class="modal fade container fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true" style="display: none; margin-top: -150px;">
 
@@ -865,7 +794,7 @@ class SettleInTemplate extends BaseTemplate {
     <div class="container-fluid">
         <nav class="navbar row">
 
-            <div class="navbar-header col-md-5">
+            <div class="navbar-header col-md-6">
                 <button type="button" class="navbar-toggle" data-toggle="collapse"
                         data-target="#bs-example-navbar-collapse-1">
                     <span class="sr-only">Toggle navigation</span>
@@ -895,7 +824,7 @@ class SettleInTemplate extends BaseTemplate {
                 </ul>-->
             </div>
 
-            <div class="col-md-7" id="bs-example-navbar-collapse-1">
+            <div class="col-md-6" id="bs-example-navbar-collapse-1">
 
                 <ul class="nav navbar-nav navbar-right" id="right-side-actions">
 
