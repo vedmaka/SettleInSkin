@@ -144,6 +144,7 @@
         "skins.settlein.landing.js": {
             "scripts": [
                 "assets/js/jquery.fullpage.min.js",
+                "assets/js/vegas.min.js",
                 "assets/js/landing.js"
             ],
             "position": "top"
@@ -152,6 +153,7 @@
             "styles": [
                 "assets/css/jquery.fullpage.min.css",
                 "assets/css/animate.min.css",
+                "assets/css/vegas.min.css",
                 "assets/css/landing.css"
             ],
             "position": "top"

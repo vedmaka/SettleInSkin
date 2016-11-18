@@ -1,7 +1,5 @@
 $(function(){
 
-	console.log('Landing page initiated.');
-
 	$('#fullpage').fullpage({
 		afterRender: function() {
 			$('#nav').addClass('animated');
@@ -25,7 +23,25 @@ $(function(){
 					$(v).addClass('animated ' + animationType).removeClass('.js-animated');
 				});
 			}
+			if( nextIndex == 1 ) {
+				$('.slide-1 .vegas-bg').vegas('play');
+			}else{
+				$('.slide-1 .vegas-bg').vegas('pause');
+			}
 		}
+	});
+
+	// Slideshow
+	$('.slide-1 .vegas-bg').vegas({
+		slides: [
+			{ src: mw.config.get('stylepath') + '/SettleIn/img/landing/slide_1.jpg' },
+			{ src: mw.config.get('stylepath') + '/SettleIn/img/landing/slide_2.jpg' },
+			{ src: mw.config.get('stylepath') + '/SettleIn/img/landing/slide_3.jpg' },
+			{ src: mw.config.get('stylepath') + '/SettleIn/img/landing/slide_4.jpg' }
+		],
+		//overlay: mw.config.get('stylepath') + '/SettleIn/img/overlays/01.png',
+		delay: 3000,
+		timer: false
 	});
 
 	// Click handlers

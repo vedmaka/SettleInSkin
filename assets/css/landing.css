@@ -42,8 +42,9 @@ main.main-page-landing #nav #bs-example-navbar-collapse-1 ul li {
 	float: left;
 }
 
-main.main-page-landing #nav #bs-example-navbar-collapse-1 ul li a:hover {
+main.main-page-landing #nav #bs-example-navbar-collapse-1 > ul > li > a:hover {
 	background: transparent;
+	color: black;
 }
 
 main.main-page-landing #nav #bs-example-navbar-collapse-1 ul li a {
@@ -55,6 +56,10 @@ main.main-page-landing #nav #bs-example-navbar-collapse-1 ul li a {
 
 main.main-page-landing #nav #bs-example-navbar-collapse-1 ul li#login-selector-main a {
 	color: #00adef;
+}
+
+main.main-page-landing #nav #bs-example-navbar-collapse-1 ul li#login-selector-main a:hover {
+	color: black;
 }
 
 @media (max-width: 780px) {
@@ -74,8 +79,17 @@ main.main-page-landing #nav #bs-example-navbar-collapse-1 ul li#login-selector-m
 /* Slide 1 ---------------------------------------------------------------------------------------------------- */
 
 main.main-page-landing #fullpage .slide-1 {
-	background: url('../../img/landing/slide_1.jpg') center 0 no-repeat;
-	background-size: cover;
+	/*background: url('../../img/landing/slide_1.jpg') center 0 no-repeat;
+	background-size: cover;*/
+}
+
+main.main-page-landing #fullpage .vegas-bg {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 99%;
+    z-index: -1;
 }
 
 main.main-page-landing #fullpage .slide-1 .jumbotron {
