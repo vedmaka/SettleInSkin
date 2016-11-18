@@ -41,7 +41,7 @@ class SkinSettleIn extends SkinTemplate {
 
         if( $title && $title->exists() && $title->getNamespace() == NS_MAIN ) {
             if( $title->getArticleID() === Title::newMainPage()->getArticleID() ) {
-                $scripts = array( 'skins.settlein.js' );
+                $scripts = array( 'skins.settlein.js', 'skins.settlein.landing.js' );
             }else{
                 if( $isCard ) {
                     $scripts = array( 'skins.settlein.page.js' );
@@ -57,7 +57,6 @@ class SkinSettleIn extends SkinTemplate {
             }
         }
 
-        //$out->addModules( $scripts );
         $out->addModules( $scripts );
 
 	    if( $this->getUser() && $this->getUser()->isLoggedIn() ) {
@@ -90,7 +89,7 @@ class SkinSettleIn extends SkinTemplate {
 
         if( $title && $title->exists() && $title->getNamespace() == NS_MAIN ) {
             if( $title->getArticleID() === Title::newMainPage()->getArticleID() ) {
-                $styles = array( 'skins.settlein.styles' );
+                $styles = array( 'skins.settlein.styles', 'skins.settlein.landing.css' );
             }else{
                 if( $isCard ) {
                     $styles = array( 'skins.settlein.page.styles' );
@@ -106,7 +105,7 @@ class SkinSettleIn extends SkinTemplate {
             }
         }
 
-        if( $out->getRequest()->getVal('color') ) {
+        /*if( $out->getRequest()->getVal('color') ) {
             global $wgServer, $wgScriptPath;
             $color = htmlspecialchars( $out->getRequest()->getVal('color') );
             $out->addStyle( $wgServer . $wgScriptPath . '/skins/SettleIn/assets/colors/'.$color.'.css' );
@@ -116,7 +115,7 @@ class SkinSettleIn extends SkinTemplate {
             global $wgServer, $wgScriptPath;
             $font = htmlspecialchars( $out->getRequest()->getVal('beta_font') );
             $out->addStyle( $wgServer . $wgScriptPath . '/skins/SettleIn/assets/fonts/'.$font.'.css' );
-        }
+        }*/
 
 	    if( $this->getUser() && $this->getUser()->isLoggedIn() ) {
 		    $out->addModuleStyles( 'ext.settlegeoforminput.foo' );

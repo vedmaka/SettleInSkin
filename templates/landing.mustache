@@ -1,0 +1,192 @@
+<div id="nav" class="animated fadeInDown">
+    <div class="container">
+        <nav class="navbar">
+            <div class="navbar-header">
+                <a href="{{ root_link }}">
+                    <img src="{{ img_logo }}" />
+                </a>
+            </div>
+            <div id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    {{# isloggedin }}
+                        <li class="btn-group-nav">
+                            <a class="dropdown-toggle" data-toggle="dropdown">
+                                Hi,
+                                {{ username }}
+                                <b class="caret"></b>
+                            </a>
+                            <ul class="dropdown-menu primary-back">
+                                <li>
+                                    <a href="{{ preferences_link }}">
+                                        {{ _ 'settlein-skin-header-usermenu-profile' }}
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="{{ logout_link }}">
+                                        {{ _ 'settlein-skin-header-usermenu-logout' }}
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                    {{/ isloggedin}}
+                    {{^ isloggedin }}
+                        <li class="btn-group-nav" id="login-selector-main">
+                            <a href="{{ login_link }}" ><b>
+                                {{ _ 'settlein-skin-header-login' }}
+                            </b></a>
+                        </li>
+                        <li class="btn-group-nav" id="register-selector-main">
+                            <a href="{{ register_link }}" ><b>
+                                {{ _ 'settlein-skin-header-signup' }}
+                            </b></a>
+                        </li>
+                    {{/ isloggedin}}
+                </ul>
+            </div>
+        </nav>
+    </div>
+</div>
+
+<div id="fullpage">
+    <div class="section slide-1">
+
+        <section>
+
+            <div class="jumbotron animated fadeIn">
+
+                <div class="jumbo-content">
+
+                    <div class="i-jumbotext">
+                        <h1>{{ _ 'settlein-skin-mainpage-jumbotron-title' }}</h1>
+                    </div>
+
+                    <form role="search" action="{{& geosearchurl }}" id="searchform_smw" method="post">
+
+                        <div class="jumbo-search">
+                            {{& geosearch }}
+                            <input type="text" placeholder="{{ _ "sil-search-form-field-label-search" }}" name="geo_text"
+                                   class="form-control selectize-search-appendix" />
+                            <a href="#" class="search-submit fa fa-search"></a>
+                        </div>
+
+                        <input type="hidden" name="query" value="true" />
+                        <input type="hidden" value="" name="sf_free_text">
+                        <input type="hidden" value="Search" name="wpRunQuery">
+
+                    </form>
+
+                    <div class="i-jumbotext">
+                        <p>
+                            {{ _ "settlein-skin-mainpage-jumbotron-text" }}
+                        </p>
+                    </div>
+
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <div class="above-fold animated fadeInUp" id="fold-how-it-works">
+            How It Works?
+        </div>
+
+    </div>
+
+    <div class="section slide-2">
+
+        <div class="container-fluid js-animated" data-custom-animation="fadeIn" id="home-icons">
+            <div class="row hidden-xs">
+                <div class="home-col col-md-12">
+
+                </div>
+            </div>
+            <div class="row hidden-sm hidden-md hidden-lg">
+                <div class="col-home-mobile">
+                    <img src="{{ img_car }}" />
+                </div>
+                <div class="col-home-mobile">
+                    <img src="{{ img_home }}" />
+                </div>
+                <div class="col-home-mobile">
+                    <img src="{{ img_help }}" />
+                </div>
+            </div>
+            <div class="row home-icons-text">
+                <div class="col-md-8 col-md-offset-2 col-sm-12 col-xs-12 text-center">
+                    Emitters harvest with alignment!
+                    It is a quirky courage, sir. Conscious transporters, to the solar system.
+                    The teleporter is never ugly. The mermaid is rudely strange.
+                    This mystery has only been acquired by a spheroid particle.
+                </div>
+            </div>
+        </div>
+
+        <div class="above-fold js-animated" data-custom-animation="fadeInUp" id="fold-how-you-can-help">
+            How you can help?
+        </div>
+
+    </div>
+
+    <div class="section slide-3">
+
+        <div class="jumbotron jumbotron-middle js-animated" data-custom-animation="fadeIn">
+            <h3>{{ _ 'settlein-skin-mainpage-bottom-title' }}</h3>
+            <p>
+                {{ _ 'settlein-skin-mainpage-bottom-text' }}
+            </p>
+            <a href="#" class="btn btn-settle-orange">
+                {{ _ 'settlein-skin-mainpage-bottom-button-text' }}
+            </a>
+        </div>
+
+        <footer class="footer js-animated" data-custom-animation="fadeInUp">
+            <div class="container">
+                <ul class="nav navbar-nav footer-menu-items">
+                    <li>
+                        <a href="#">
+                            {{ _ 'settlein-skin-footer-about-us' }}
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            {{ _ 'settlein-skin-footer-contact' }}
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            {{ _ 'settlein-skin-footer-helpout' }}
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            {{ _ 'settlein-skin-footer-tos' }}
+                        </a>
+                    </li>
+                </ul>
+
+                <ul class="nav navbar-nav navbar-right col-xs-12 col-sm-2 footer-social-icons">
+                    <li class="col-xs-4 text-center">
+                        <a target="_blank" href="#">
+                            <i class="fa fa-twitter"></i>
+                        </a>
+                    </li>
+                    <li class="col-xs-4 text-center">
+                        <a target="_blank" href="#">
+                            <i class="fa fa-facebook"></i>
+                        </a>
+                    </li>
+                    <li class="col-xs-4 text-center">
+                        <a target="_blank" href="#">
+                            <i class="fa fa-google-plus"></i>
+                        </a>
+                    </li>
+                </ul>
+
+            </div>
+        </footer>
+
+    </div>
+
+</div>

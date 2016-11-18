@@ -16,6 +16,9 @@ class SettleInTemplate extends BaseTemplate {
     private $isCardPage;
 
     /** @var boolean */
+    private $isMainPage;
+
+    /** @var boolean */
     private $cleanPage;
 
 	private $countriesList;
@@ -31,6 +34,8 @@ class SettleInTemplate extends BaseTemplate {
 	public function execute() {
 
 		global $wgSettleTranslateDomains, $wgLanguageCode;
+
+		$this->isMainPage = $this->getSkin()->getTitle()->getArticleID() === Title::newMainPage()->getArticleID();
 
         $this->isCardPage = false;
         if( $this->getSkin()->getTitle() ) {
@@ -98,15 +103,18 @@ class SettleInTemplate extends BaseTemplate {
             '<link rel="icon" type="image/png" href="'.$this->getSkin()->getSkinStylePath("img/favicon.jpg").'">'
 		);
 
-		$this->printSlideMenu();
+		if( !$this->isMainPage ) {
+			$this->printSlideMenu();
+		}
 		?>
-		<main class="<?=($this->isCardPage) ? 'card-page' : '' ?>">
+		<main class="<?=($this->isMainPage) ? 'main-page-landing' : ''?> <?=($this->isCardPage) ? 'card-page' : '' ?>">
 		<?
 
 		$title = $this->getSkin()->getTitle();
 		if( $title && $title->exists() && $title->getNamespace() == NS_MAIN ) {
-		    if( $title->getArticleID() === Title::newMainPage()->getArticleID() ) {
-		        $this->printMainPage(); // main page layout
+		    if( $this->isMainPage ) {
+		        //$this->printMainPage(); // main page layout
+                $this->printMainPageLanding();
 		    }else{
 		        $this->printNormalPage(); // normal page layout
 		    }
@@ -123,6 +131,34 @@ class SettleInTemplate extends BaseTemplate {
 </html>
 <?php
 	}
+
+	private function printMainPageLanding() {
+
+	    $data = array();
+
+	    // Geo-search html
+		$settlesearch = new SettleGeoSearch();
+        $data['geosearch'] = $settlesearch->getHtml( SettleGeoSearch::SGS_MODE_TEXT, 'geo_id' );
+        $data['img_logo'] = $this->getSkin()->getSkinStylePath('/img/logo50h.png');
+        $data['isloggedin'] = $this->isLoggedIn;
+        $data['register_link'] = SpecialPage::getSafeTitleFor('Userlogin')->getFullURL('type=signup');
+        $data['login_link'] = SpecialPage::getSafeTitleFor('Userlogin')->getFullURL();
+        $data['root_link'] = Title::newMainPage()->getFullURL();
+        if( $this->isLoggedIn ) {
+	        $data['username']         = $this->user->getName();
+	        $data['logout_link']      = SpecialPage::getSafeTitleFor( 'UserLogout' )->getFullURL();
+	        $data['preferences_link'] = SpecialPage::getSafeTitleFor( 'Preferences' )->getFullURL();
+	        $data['geosearchurl']     = SettleGeoSearch::getSearchPageUrl();
+        }
+        $data['img_car'] = $this->getSkin()->getSkinStylePath("/img/slices/slice_car.png");
+        $data['img_home'] = $this->getSkin()->getSkinStylePath("/img/slices/slice_home.png");
+        $data['img_help'] = $this->getSkin()->getSkinStylePath("/img/slices/slice_help.png");
+
+        $templater = new TemplateParser( dirname(__FILE__).'/templates', true );
+        $html = $templater->processTemplate('landing', $data);
+        echo $html;
+
+    }
 
 	private function printSlideMenu() {
 	    ?>
@@ -431,6 +467,9 @@ class SettleInTemplate extends BaseTemplate {
                     <div class="col-home-mobile col-xs-12">
                         <img src="<?=$this->getSkin()->getSkinStylePath("/img/slices/slice_help.png");?>" />
                     </div>
+                </div>
+                <div class="row">
+
                 </div>
             </div>
 
@@ -948,6 +987,10 @@ class SettleInTemplate extends BaseTemplate {
 	}
 
 	private function printFooterThings() {
+
+	    if ( $this->isMainPage ) {
+	        return false;
+        }
 
 	    // prepare login token:
 	    $loginToken = MWCryptRand::generateHex( 32 );

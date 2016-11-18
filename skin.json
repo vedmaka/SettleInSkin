@@ -1,154 +1,169 @@
 {
-  "name": "SettleIn",
-  "author": [
-    ""
-  ],
-  "url": "https://www.settlein.org/",
-  "descriptionmsg": "settlein-skin-desc",
-  "namemsg": "skinname-settlein",
-  "license-name": "GPL-2.0+",
-  "type": "skin",
-  "ConfigRegistry": {
-    "settlein": "GlobalVarConfig::newInstance"
-  },
-  "ValidSkinNames": {
-    "settlein": "SettleIn"
-  },
-  "MessagesDirs": {
-    "SettleIn": [
-      "i18n"
-    ]
-  },
-  "Hooks": {
-    "ResourceLoaderTestModules": [
-        "SkinSettleIn::onResourceLoaderTestModules"
-      ]
-  },
-  "AutoloadClasses": {
-    "SkinSettleIn": "SkinSettleIn.php",
-    "SettleInTemplate": "SettleInTemplate.php",
-    "SettleInSpecial": "includes/SettleInSpecial.php"
-  },
-  "SpecialPages": {
-    "SettleIn": "SettleInSpecial"
-  },
-  "ResourceModules": {
-    "skins.settlein.styles": {
-      "styles": [
-        "assets/css/bootstrap.min.css",
-        "assets/css/select2.min.css",
-        "assets/css/theme_combined.css",
-        "assets/css/screen.css",
-        "assets/fonts/museosanscyrl.css"
-      ],
-      "position": "bottom"
+    "name": "SettleIn",
+    "author": [
+        ""
+    ],
+    "url": "https://www.settlein.org/",
+    "descriptionmsg": "settlein-skin-desc",
+    "namemsg": "skinname-settlein",
+    "license-name": "GPL-2.0+",
+    "type": "skin",
+    "ConfigRegistry": {
+        "settlein": "GlobalVarConfig::newInstance"
     },
-    "skins.settlein.js": {
-      "scripts": [
-        "assets/js/bootstrap.min.js",
-        "assets/js/jquery.cookies.js",
-        "assets/js/modernizr.custom.js",
-        "assets/js/select2.full.min.js",
-        "assets/js/theme.js",
-        "assets/js/bootstrap-modalmanager.js",
-        "assets/js/bootstrap-modal.js",
-        "assets/js/jquery.fitvids.js",
-        "assets/js/slideout.min.js",
-        "assets/js/settlein.js"
-      ],
-      "position": "top",
-      "messages": [
-        "settlein-skin-mainpage-jumbotron-country-placeholder",
-        "settlein-skin-add-new-article-text-exists",
-        "settlein-skin-add-new-article-text-not-exists"
-      ]
+    "ValidSkinNames": {
+        "settlein": "SettleIn"
     },
-    "skins.settlein.page.styles": {
-      "styles": [
-        "assets/css/bootstrap.min.css",
-        "assets/fonts/museosanscyrl.css",
-        "assets/css/select2.min.css",
-        "assets/css/theme_combined.css",
-        "assets/css/screen.css",
-        "assets/css/double.css",
-        "assets/css/double_print.css"
-      ],
-      "position": "bottom"
-    },
-    "skins.settlein.page.js": {
-      "scripts": [
-        "assets/js/bootstrap.min.js",
-        "assets/js/jquery.cookies.js",
-        "assets/js/modernizr.custom.js",
-        "assets/js/select2.full.min.js",
-        "assets/js/bootstrap-modalmanager.js",
-        "assets/js/bootstrap-modal.js",
-        "assets/js/jquery.fitvids.js",
-        "assets/js/slideout.min.js",
-        "assets/js/settlein.js",
-        "assets/js/page.js"
-      ],
-      "position": "top",
-      "messages": [
-        "settlein-skin-header-select-country-placeholder",
-        "settlein-skin-add-new-article-text-exists",
-        "settlein-skin-add-new-article-text-not-exists"
-      ]
-    },
-    "skins.settlein.special.about": {
-      "scripts": [
-        "assets/special/about/script.js",
-        "assets/special/about/holder.min.js",
-        "assets/special/about/fancybox/jquery.fancybox.pack.js"
-      ],
-      "styles": [
-        "assets/fonts/museosanscyrl.css",
-        "assets/special/about/style.less",
-        "assets/special/about/timeline_new.css",
-        "assets/special/about/fancybox/jquery.fancybox.css"
-      ],
-      "position": "top"
-    },
-    "skins.settlein.special.contact": {
-      "scripts": [
-        "assets/special/contact/script.js",
-        "assets/special/about/holder.min.js"
-      ],
-      "styles": [
-        "assets/special/contact/contact.less"
-      ],
-      "position": "top"
-    },
-    "skins.settlein.special.tos": {
-      "scripts": [
-        "assets/special/tos/script.js"
-      ],
-      "styles": [
-        "assets/special/tos/tos.less"
-      ],
-      "position": "top"
-    },
-    "skins.settlein.special.test": {
-      "scripts": [
-          "assets/js/test.js"
+    "MessagesDirs": {
+        "SettleIn": [
+            "i18n"
         ]
     },
-    "skins.settlein.slick": {
-      "scripts": [
-        "assets/js/slick.min.js"
-      ],
-      "styles": [
-        "assets/css/slick.css"
-      ]
+    "Hooks": {
+        "ResourceLoaderTestModules": [
+            "SkinSettleIn::onResourceLoaderTestModules"
+        ]
+    },
+    "AutoloadClasses": {
+        "SkinSettleIn": "SkinSettleIn.php",
+        "SettleInTemplate": "SettleInTemplate.php",
+        "SettleInSpecial": "includes/SettleInSpecial.php"
+    },
+    "SpecialPages": {
+        "SettleIn": "SettleInSpecial"
+    },
+    "ResourceModules": {
+        "skins.settlein.styles": {
+            "styles": [
+                "assets/css/bootstrap.min.css",
+                "assets/css/select2.min.css",
+                "assets/css/theme_combined.css",
+                "assets/css/screen.css",
+                "assets/fonts/museosanscyrl.css"
+            ],
+            "position": "bottom"
+        },
+        "skins.settlein.js": {
+            "scripts": [
+                "assets/js/bootstrap.min.js",
+                "assets/js/jquery.cookies.js",
+                "assets/js/modernizr.custom.js",
+                "assets/js/select2.full.min.js",
+                "assets/js/theme.js",
+                "assets/js/bootstrap-modalmanager.js",
+                "assets/js/bootstrap-modal.js",
+                "assets/js/jquery.fitvids.js",
+                "assets/js/slideout.min.js",
+                "assets/js/settlein.js"
+            ],
+            "position": "top",
+            "messages": [
+                "settlein-skin-mainpage-jumbotron-country-placeholder",
+                "settlein-skin-add-new-article-text-exists",
+                "settlein-skin-add-new-article-text-not-exists"
+            ]
+        },
+        "skins.settlein.page.styles": {
+            "styles": [
+                "assets/css/bootstrap.min.css",
+                "assets/fonts/museosanscyrl.css",
+                "assets/css/select2.min.css",
+                "assets/css/theme_combined.css",
+                "assets/css/screen.css",
+                "assets/css/double.css",
+                "assets/css/double_print.css"
+            ],
+            "position": "bottom"
+        },
+        "skins.settlein.page.js": {
+            "scripts": [
+                "assets/js/bootstrap.min.js",
+                "assets/js/jquery.cookies.js",
+                "assets/js/modernizr.custom.js",
+                "assets/js/select2.full.min.js",
+                "assets/js/bootstrap-modalmanager.js",
+                "assets/js/bootstrap-modal.js",
+                "assets/js/jquery.fitvids.js",
+                "assets/js/slideout.min.js",
+                "assets/js/settlein.js",
+                "assets/js/page.js"
+            ],
+            "position": "top",
+            "messages": [
+                "settlein-skin-header-select-country-placeholder",
+                "settlein-skin-add-new-article-text-exists",
+                "settlein-skin-add-new-article-text-not-exists"
+            ]
+        },
+        "skins.settlein.special.about": {
+            "scripts": [
+                "assets/special/about/script.js",
+                "assets/special/about/holder.min.js",
+                "assets/special/about/fancybox/jquery.fancybox.pack.js"
+            ],
+            "styles": [
+                "assets/fonts/museosanscyrl.css",
+                "assets/special/about/style.less",
+                "assets/special/about/timeline_new.css",
+                "assets/special/about/fancybox/jquery.fancybox.css"
+            ],
+            "position": "top"
+        },
+        "skins.settlein.special.contact": {
+            "scripts": [
+                "assets/special/contact/script.js",
+                "assets/special/about/holder.min.js"
+            ],
+            "styles": [
+                "assets/special/contact/contact.less"
+            ],
+            "position": "top"
+        },
+        "skins.settlein.special.tos": {
+            "scripts": [
+                "assets/special/tos/script.js"
+            ],
+            "styles": [
+                "assets/special/tos/tos.less"
+            ],
+            "position": "top"
+        },
+        "skins.settlein.special.test": {
+            "scripts": [
+                "assets/js/test.js"
+            ]
+        },
+        "skins.settlein.slick": {
+            "scripts": [
+                "assets/js/slick.min.js"
+            ],
+            "styles": [
+                "assets/css/slick.css"
+            ]
+        },
+        "skins.settlein.landing.js": {
+            "scripts": [
+                "assets/js/jquery.fullpage.min.js",
+                "assets/js/landing.js"
+            ],
+            "position": "top"
+        },
+        "skins.settlein.landing.css": {
+            "styles": [
+                "assets/css/jquery.fullpage.min.css",
+                "assets/css/animate.min.css",
+                "assets/css/landing.css"
+            ],
+            "position": "top"
+        }
+    },
+    "ResourceFileModulePaths": {
+        "localBasePath": "",
+        "remoteSkinPath": "SettleIn"
+    },
+    "config": {
+        "SettleinTwitterURL": "http://twitter.com",
+        "SettleinFacebookURL": "http://facebook.com",
+        "SettleinGoogleURL": "http://plus.google.com"
     }
-  },
-  "ResourceFileModulePaths": {
-    "localBasePath": "",
-    "remoteSkinPath": "SettleIn"
-  },
-  "config": {
-    "SettleinTwitterURL": "http://twitter.com",
-    "SettleinFacebookURL": "http://facebook.com",
-    "SettleinGoogleURL": "http://plus.google.com"
-  }
 }

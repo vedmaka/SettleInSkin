@@ -2,14 +2,16 @@
 $(function(){
 
     // Activate slideout
-    window.slideoutMenu = new Slideout({
-        'panel': $('main').get(0),
-        'menu': document.getElementById('slideout'),
-        'padding': 256,
-        'tolerance': 70,
-        'side': 'right',
-        'touch': false
-    });
+    if( $('main').length && !$('main.main-page-landing').length ) {
+		window.slideoutMenu = new Slideout({
+			'panel': $('main').get(0),
+			'menu': document.getElementById('slideout'),
+			'padding': 256,
+			'tolerance': 70,
+			'side': 'right',
+			'touch': false
+		});
+	}
 
     $('nav button.navbar-toggle').unbind().bind('click', function(e){
         window.slideoutMenu.toggle();
