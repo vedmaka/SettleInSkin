@@ -66,7 +66,7 @@ $(function () {
     // Scroll-spy for dynamic navbar
 	$(window).scroll(function(e) {
 		var scrollValue = $(window).scrollTop();
-		console.log(scrollValue);
+		//console.log(scrollValue);
 		if (scrollValue > 30) {
 			$('#bs-example-navbar-collapse-1').addClass('scrolled-state');
 		}else{

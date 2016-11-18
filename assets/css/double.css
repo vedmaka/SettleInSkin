@@ -782,8 +782,9 @@ main.card-page .dropdown-menu.primary-back {
 #double-col-right .right-col-inshort-wrapper .inshort-col .well {
     border-radius: 20px 20px 0 0;
     margin-bottom: 0;
-    min-height: 300px;
+    min-height: 275px;
     text-align: center;
+    padding: 15px 15px 10px 15px;
 }
 
 #double-col-right .right-col-inshort-wrapper .inshort-col .well .text-muted {
@@ -792,7 +793,7 @@ main.card-page .dropdown-menu.primary-back {
 }
 
 #double-col-right .right-col-inshort-wrapper .inshort-col .well.height-shrink {
-    min-height: 227px;
+    min-height: 210px;
 }
 
 #double-col-right .right-col-inshort-wrapper .inshort-col .well h2 {
@@ -814,13 +815,12 @@ main.card-page .dropdown-menu.primary-back {
     margin-top: 3px;
     min-height: 1px;
     text-align: center;
-    padding-left: 0;
-    padding-right: 0;
     color: #808284;
+    padding: 8px 0;
 }
 
 #double-col-right .right-col-inshort-wrapper .inshort-col .well-bottom h2 {
-    margin: 0 0 5px 0;
+    margin: 0 0 0 0;
     text-transform: uppercase;
     color: black;
     display: block;
@@ -838,9 +838,8 @@ main.card-page .dropdown-menu.primary-back {
     border-radius: 0;
     margin-top: 3px;
     min-height: 1px;
-    padding-left: 0;
-    padding-right: 0;
     line-height: 15px;
+    padding: 15px 0;
 }
 
 #double-col-right .right-col-inshort-wrapper .inshort-col .btn-yellow {
@@ -849,7 +848,7 @@ main.card-page .dropdown-menu.primary-back {
     max-width: 200px;
     color: black;
     font-weight: bold;
-    margin: 30px auto 0 auto;
+    margin: 15px auto 0 auto;
     display: block;
 }
 
