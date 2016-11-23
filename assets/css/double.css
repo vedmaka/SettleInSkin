@@ -1184,6 +1184,9 @@ main.card-page .dropdown-menu.primary-back {
     background-color: #00a6e3;
     border: 2px solid #ffe200;
     padding: 10px;
+    max-height: 500px;
+    overflow-y: scroll;
+    overflow-x: hidden;
 }
 
 #double-col-right .right-col-comments-block .right-comments-header {
