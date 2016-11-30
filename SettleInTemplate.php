@@ -148,8 +148,8 @@ class SettleInTemplate extends BaseTemplate {
 	        $data['username']         = $this->user->getName();
 	        $data['logout_link']      = SpecialPage::getSafeTitleFor( 'UserLogout' )->getFullURL();
 	        $data['preferences_link'] = SpecialPage::getSafeTitleFor( 'Preferences' )->getFullURL();
-	        $data['geosearchurl']     = SettleGeoSearch::getSearchPageUrl();
         }
+		$data['geosearchurl']     = SettleGeoSearch::getSearchPageUrl();
         $data['img_car'] = $this->getSkin()->getSkinStylePath("/img/slices/slice_car.png");
         $data['img_home'] = $this->getSkin()->getSkinStylePath("/img/slices/slice_home.png");
         $data['img_help'] = $this->getSkin()->getSkinStylePath("/img/slices/slice_help.png");
@@ -345,7 +345,7 @@ class SettleInTemplate extends BaseTemplate {
                         <h1><?=wfMessage( 'settlein-skin-mainpage-jumbotron-title' )->plain()?></h1>
                     </div>
 
-                    <form role="search" action="/index.php/Special:SettleGeoSearch<? /*SettleGeoSearch::getSearchPageUrl()*/?>" id="searchform_smw" method="post">
+                    <form role="search" action="<?=SettleGeoSearch::getSearchPageUrl()?>" id="searchform_smw" method="post">
 
                     <div class="jumbo-search">
                         <? $settlesearch = new SettleGeoSearch(); ?>
