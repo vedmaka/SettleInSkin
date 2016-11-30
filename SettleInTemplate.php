@@ -345,7 +345,7 @@ class SettleInTemplate extends BaseTemplate {
                         <h1><?=wfMessage( 'settlein-skin-mainpage-jumbotron-title' )->plain()?></h1>
                     </div>
 
-                    <form role="search" action="<?=SettleGeoSearch::getSearchPageUrl()?>" id="searchform_smw" method="post">
+                    <form role="search" action="/index.php/Special:SettleGeoSearch<? /*SettleGeoSearch::getSearchPageUrl()*/?>" id="searchform_smw" method="post">
 
                     <div class="jumbo-search">
                         <? $settlesearch = new SettleGeoSearch(); ?>
