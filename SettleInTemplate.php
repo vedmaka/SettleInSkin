@@ -154,6 +154,15 @@ class SettleInTemplate extends BaseTemplate {
         $data['img_home'] = $this->getSkin()->getSkinStylePath("/img/slices/slice_home.png");
         $data['img_help'] = $this->getSkin()->getSkinStylePath("/img/slices/slice_help.png");
 
+        $data['categories_links'] = '';
+        $categories = SettleGeoCategories::getAllCategories();
+        foreach ($categories as $category) {
+            $data['categories_links'] .= '<span class="label"><a href="'
+                                         .SpecialPage::getTitleFor('Category')->getFullURL().'/'.$category->getId()
+                                         .'">'.$category->getTitleKey().'</a></span> ';
+        }
+        $data['categories_heading'] = wfMessage('settlein-skin-mainpage-section-categories-heading', count($categories), SiteStats::articles())->plain();
+
         $templater = new TemplateParser( dirname(__FILE__).'/templates', true );
         $html = $templater->processTemplate('landing', $data);
         echo $html;

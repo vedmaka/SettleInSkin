@@ -53,4 +53,8 @@ $(function(){
 		$.fn.fullpage.moveSectionDown();
 	});
 
+	$(document).on('click touch', '#fold-what-else', function(){
+		$.fn.fullpage.moveSectionDown();
+	});
+
 });

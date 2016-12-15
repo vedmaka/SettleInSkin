@@ -218,15 +218,21 @@ main.main-page-landing #fullpage .slide-3 .jumbotron.jumbotron-middle .btn.btn-s
 	font-weight: 500;
 }
 
-main.main-page-landing #fullpage .slide-3 footer {
+main.main-page-landing #fullpage .slide-3 .above-fold {
 	position: absolute;
 	bottom: 0;
+	width: 100%;
+	text-align: center;
+	font-weight: bold;
+	font-size: 18px;
+	cursor: pointer;
 	background-color: white;
-	height: auto;
-	-webkit-animation-delay: 0.75s;
-	-moz-animation-delay: 0.75s;
-	-o-animation-delay: 0.75s;
-	animation-delay: 0.75s;
+	padding: 8px 0;
+	-webkit-animation-delay: 0.5s;
+	-moz-animation-delay: 0.5s;
+	-o-animation-delay: 0.5s;
+	animation-delay: 0.5s;
+	color: #33BBED;
 	z-index: 2;
 }
 
@@ -279,4 +285,31 @@ main.main-page-landing #fullpage .slide-3 footer {
 	main.main-page-landing #fullpage .slide-3 footer ul > li > a {
 		padding: 10px 5px;
 	}
+}
+
+/* Slide 4 --------------------------------------------------------------------------------------------------- */
+
+main.main-page-landing #fullpage .slide-4 {
+	background-color: white;
+}
+
+main.main-page-landing #fullpage .slide-4 .jumbotron.jumbotron-middle {
+	background: transparent;
+	color: #33BBED;
+	-webkit-animation-delay: 0.5s;
+	-moz-animation-delay: 0.5s;
+	-o-animation-delay: 0.5s;
+	animation-delay: 0.5s;
+}
+
+main.main-page-landing #fullpage .slide-4 footer {
+	position: absolute;
+	bottom: 0;
+	background-color: white;
+	height: auto;
+	-webkit-animation-delay: 0.75s;
+	-moz-animation-delay: 0.75s;
+	-o-animation-delay: 0.75s;
+	animation-delay: 0.75s;
+	z-index: 2;
 }
