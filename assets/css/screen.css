@@ -181,6 +181,10 @@ body {
     z-index: 100;
 }
 
+span.label.label-default > a {
+    color: white;
+}
+
 /* ---------------------- MEDIA -------------------------- */
 
 @media (max-width: 780px) {
