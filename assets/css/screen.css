@@ -185,6 +185,20 @@ span.label.label-default > a {
     color: white;
 }
 
+.multipleTemplateWrapper .instanceRearranger {
+    vertical-align: top;
+}
+
+.multipleTemplateWrapper .instanceRearranger span.numberer {
+    font-weight: bold;
+    display: block;
+    width: 20px;
+    height: 20px;
+    background-color: white;
+    text-align: center;
+}
+
+
 /* ---------------------- MEDIA -------------------------- */
 
 @media (max-width: 780px) {
