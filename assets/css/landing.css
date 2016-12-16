@@ -313,3 +313,7 @@ main.main-page-landing #fullpage .slide-4 footer {
 	animation-delay: 0.75s;
 	z-index: 2;
 }
+
+main.main-page-landing #fullpage .slide-4 .main-page-categoris-links a {
+	font-weight: normal;
+}
