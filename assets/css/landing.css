@@ -34,6 +34,13 @@ main.main-page-landing #nav .navbar-header {
 	float: left;
 }
 
+main.main-page-landing #nav .navbar-header a {
+	display: block;
+	width: 164px;
+	height: 41px;
+	background: url("../../img/logo50h.png") 0 0 no-repeat;
+}
+
 main.main-page-landing #nav #bs-example-navbar-collapse-1 {
 	float: right;
 }
@@ -73,6 +80,16 @@ main.main-page-landing #nav #bs-example-navbar-collapse-1 ul li#login-selector-m
 		position: absolute !important;
 		background-color: white;
 		left: -20px;
+	}
+}
+
+@media (max-width: 570px) {
+	main.main-page-landing #nav .navbar-header a {
+		display: block;
+		width: 135px;
+		height: 34px;
+		background-size: 100%;
+		margin-top: 5px;
 	}
 }
 
@@ -197,6 +214,16 @@ main.main-page-landing #fullpage .slide-2 .above-fold {
 }
 
 /* Slide 3 --------------------------------------------------------------------------------------------------- */
+
+main.main-page-landing[data-custom-slide-num="3"] #nav .navbar-header a {
+	background-position-y: -41px;
+}
+
+@media (max-width: 570px) {
+	main.main-page-landing[data-custom-slide-num="3"] #nav .navbar-header a {
+		background-position-y: -34px;
+	}
+}
 
 main.main-page-landing[data-custom-slide-num="3"] #nav #bs-example-navbar-collapse-1 > ul > li > a {
 	color: white !important;

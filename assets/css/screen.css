@@ -198,6 +198,13 @@ span.label.label-default > a {
     text-align: center;
 }
 
+.navbar-header a.normal-logo {
+    display: block;
+    width: 164px;
+    height: 41px;
+    background: url("../../img/logo50h.png") 0 0 no-repeat;
+    margin-top: 5px;
+}
 
 /* ---------------------- MEDIA -------------------------- */
 
@@ -239,6 +246,27 @@ span.label.label-default > a {
 
 }
 
+@media (max-width: 570px) {
+    .footer-social-icons {
+        margin: 0;
+        padding: 0;
+    }
+
+    .footer-menu-items {
+        text-align: center;
+        margin: 0;
+    }
+
+    .footer-menu-items li {
+        display: inline-block;
+        text-align: center;
+    }
+
+    .footer-menu-items li a {
+        padding: 5px 7px;
+    }
+}
+
 @media (max-width: 480px) {
 
     #sfForm #input_2 {
@@ -251,18 +279,8 @@ span.label.label-default > a {
         font-size: 14px;
     }
 
-    .footer-social-icons {
-        margin: 0;
-        padding: 0;
-    }
-
-    .footer-menu-items {
-        text-align: center;
-    }
-
-    .footer-menu-items li {
-        display: inline-block;
-        text-align: center;
+    .navbar-header a.normal-logo {
+        display: none;
     }
 
 }

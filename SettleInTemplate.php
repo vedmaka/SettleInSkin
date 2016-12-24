@@ -709,8 +709,7 @@ class SettleInTemplate extends BaseTemplate {
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="<?=Title::newMainPage()->getFullURL()?>">
-                    <img src="<?=$this->getSkin()->getSkinStylePath('/img/logo50h.png')?>" />
+                <a class="navbar-brand normal-logo" href="<?=Title::newMainPage()->getFullURL()?>">
                 </a>
 
                 <!-- Header search block for "normal" pages -->
