@@ -157,6 +157,11 @@
                 "assets/css/landing.css"
             ],
             "position": "top"
+        },
+        "skins.settlein.animate.standalone": {
+            "styles": [
+                "assets/css/animate.min.css"
+            ]
         }
     },
     "ResourceFileModulePaths": {
