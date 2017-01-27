@@ -206,6 +206,10 @@ span.label.label-default > a {
     margin-top: 5px;
 }
 
+#userloginForm > form {
+    margin: 0 auto;
+}
+
 /* ---------------------- MEDIA -------------------------- */
 
 @media (max-width: 780px) {
