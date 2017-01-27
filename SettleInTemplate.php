@@ -148,6 +148,7 @@ class SettleInTemplate extends BaseTemplate {
 	        $data['username']         = $this->user->getName();
 	        $data['logout_link']      = SpecialPage::getSafeTitleFor( 'UserLogout' )->getFullURL();
 	        $data['preferences_link'] = SpecialPage::getSafeTitleFor( 'Preferences' )->getFullURL();
+	        $data['new_article_link'] = SpecialPage::getSafeTitleFor( 'SettleNewArticle' )->getFullURL();
         }
 		$data['geosearchurl']     = SettleGeoSearch::getSearchPageUrl();
         $data['img_car'] = $this->getSkin()->getSkinStylePath("/img/slices/slice_car.png");
@@ -191,7 +192,7 @@ class SettleInTemplate extends BaseTemplate {
 
             <ul class="nav nav-pills nav-stacked">
                 <li>
-                    <a href="#" class="add-new-article-btn"><i class="glyphicon glyphicon-plus"></i> <?=wfMessage('settlein-skin-add-new-article-button')->plain()?></a>
+                    <a href="<?=SpecialPage::getTitleFor('SettleNewArticle')->getFullURL()?>" class="add-new-article-btn"><i class="glyphicon glyphicon-plus"></i> <?=wfMessage('settlein-skin-add-new-article-button')->plain()?></a>
                 </li>
 
                 <? if( $this->isCardPage): ?>
@@ -799,7 +800,7 @@ class SettleInTemplate extends BaseTemplate {
                             </ul>
                         </li>
                         <li>
-                            <a href="#" class="add-new-article-btn"><b><?=wfMessage('settlein-skin-add-new-article-button')->plain()?></b></a>
+                            <a href="<?=SpecialPage::getTitleFor('SettleNewArticle')->getFullURL()?>" class="add-new-article-btn"><b><?=wfMessage('settlein-skin-add-new-article-button')->plain()?></b></a>
                         </li>
                     <? else: ?>
                         <li id="why_signup">
@@ -1056,7 +1057,7 @@ class SettleInTemplate extends BaseTemplate {
 </div>
 
 <!-- Add new article popup form & wrapper -->
-<div id="add-new-article-popup-wrapper">
+<!--<div id="add-new-article-popup-wrapper">
 </div>
 
 <div class="add-new-article-popup-form">
@@ -1135,6 +1136,7 @@ class SettleInTemplate extends BaseTemplate {
 		</div>
 	</form>
 </div>
+-->
 
 <?
 	}
