@@ -19,7 +19,7 @@ $(function(){
         return false;
     });
 
-    if( $('.add-new-article-btn').length ) {
+    /*if( $('.add-new-article-btn').length ) {
 
         var keyuptimeout = null;
 
@@ -88,14 +88,9 @@ $(function(){
 
         });
 
-        /*if( window.location.hash && window.location.hash == '#add_new_article' ) {
-            $('.add-new-article-popup-form').show();
-            $('#add-new-article-popup-wrapper').show();
-        }*/
+    }*/
 
-    }
-
-    function startLoader() {
+    /*function startLoader() {
         //$('#newpage_btn_submit').addClass('disabled');
         if( !$('#newpage_btn_submit').hasClass('disabled') ) {
             $('#newpage_btn_submit').addClass('disabled');
@@ -197,7 +192,7 @@ $(function(){
                 }
             }
         });
-    }
+    }*/
 
     if( $('#searchform_smw').length ) {
 
