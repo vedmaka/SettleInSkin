@@ -1395,6 +1395,11 @@ main.card-page .dropdown-menu.primary-back {
     }
 }
 
+main.card-page .navbar-brand {
+    width: 32px;
+    height: 42px;
+}
+
 /* ----------------------------------- media -------------------------------------------------------- */
 
 /*@media (min-width: 1024px) {

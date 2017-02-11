@@ -206,7 +206,7 @@ span.label.label-default > a {
     display: block;
     width: 164px;
     height: 41px;
-    background: url("../../img/logo50h.png") 0 0 no-repeat;
+    /*background: url("../../img/logo50h.png") 0 0 no-repeat;*/
     margin-top: 5px;
 }
 
