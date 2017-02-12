@@ -1293,6 +1293,27 @@ main.card-page .dropdown-menu.primary-back {
     padding-top: 10px;
 }
 
+#double-col-left span.card-category-label + span.card-category-label {
+    margin-left: 5px;
+}
+
+#double-col-left .card-header-info-block {
+
+}
+
+#double-col-left .card-header-info-block .card-location-list {
+
+}
+
+#double-col-left .card-header-info-block .card-categories-list {
+    font-size: 13px;
+    margin: 18px 0;
+}
+
+#double-col-left .card-header-info-block .card-categories-list li a {
+    background-color: #00a6e3;
+}
+
 @media all and (max-width: 960px) {
     #double-col-right .right-col-inshort-wrapper .inshort-col .well,
     #double-col-right .right-col-inshort-wrapper .inshort-col .well.height-shrink {
