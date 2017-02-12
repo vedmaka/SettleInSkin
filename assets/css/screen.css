@@ -14,6 +14,10 @@
     top: 10px !important;
 }
 
+#sfForm .radioButtonSpan .radioButtonItem + .radioButtonItem {
+    margin-left: 8px;
+}
+
 .login-popup-form, .comments-popup-form, .why-sign-up-popup, .add-new-article-popup-form {
     display: none;
     z-index: 1001;
