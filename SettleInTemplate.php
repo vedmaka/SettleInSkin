@@ -963,7 +963,7 @@ class SettleInTemplate extends BaseTemplate {
                     </li>
 
                     <li class="btn-group-nav">
-                        <a href="#" class="add-new-article-btn"><b><?=wfMessage('settlein-skin-add-new-article-button')->plain()?></b></a>
+                        <a href="<?=SpecialPage::getTitleFor('SettleNewArticle')->getFullURL()?>" class="add-new-article-btn"><b><?=wfMessage('settlein-skin-add-new-article-button')->plain()?></b></a>
                     </li>
 
                     <? else: ?>
