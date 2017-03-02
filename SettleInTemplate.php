@@ -164,6 +164,12 @@ class SettleInTemplate extends BaseTemplate {
         }
         $data['categories_heading'] = wfMessage('settlein-skin-mainpage-section-categories-heading', count($categories), SiteStats::articles())->plain();
 
+        $requests_count = count( SettleArticleRequest::find(array(
+                'request_status' => SettleArticleRequest::STATUS_OPEN
+        )) );
+        $data['requests_heading'] = wfMessage('settlein-skin-mainpage-section-requests-heading', $requests_count)->plain();
+        $data['requests_link'] = SpecialPage::getTitleFor('SettleRequestsList')->getFullURL();
+
         $templater = new TemplateParser( dirname(__FILE__).'/templates', true );
         $html = $templater->processTemplate('landing', $data);
         echo $html;

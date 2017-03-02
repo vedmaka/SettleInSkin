@@ -57,4 +57,8 @@ $(function(){
 		$.fn.fullpage.moveSectionDown();
 	});
 
+	$(document).on('click touch', '#fold-contribute', function(){
+		$.fn.fullpage.moveSectionDown();
+	});
+
 });

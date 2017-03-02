@@ -348,18 +348,70 @@ main.main-page-landing #fullpage .slide-4 .jumbotron.jumbotron-middle {
 	animation-delay: 0.5s;
 }
 
-main.main-page-landing #fullpage .slide-4 footer {
-	position: absolute;
-	bottom: 0;
-	background-color: white;
-	height: auto;
-	-webkit-animation-delay: 0.75s;
-	-moz-animation-delay: 0.75s;
-	-o-animation-delay: 0.75s;
-	animation-delay: 0.75s;
-	z-index: 2;
-}
-
 main.main-page-landing #fullpage .slide-4 .main-page-categoris-links a {
 	font-weight: normal;
+}
+
+main.main-page-landing #fullpage .slide-4 .above-fold {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    font-weight: bold;
+    font-size: 18px;
+    cursor: pointer;
+    background-color: #33BBED;
+    padding: 8px 0;
+    -webkit-animation-delay: 0.5s;
+    -moz-animation-delay: 0.5s;
+    -o-animation-delay: 0.5s;
+    animation-delay: 0.5s;
+    color: white;
+    z-index: 2;
+}
+
+
+/* Slide 5 --------------------------------------------------------------------------------------------------- */
+
+main.main-page-landing[data-custom-slide-num="5"] #nav .navbar-header a svg path.st1 {
+    /*background-position-y: -41px;*/
+    fill: white;
+}
+
+@media (max-width: 570px) {
+    main.main-page-landing[data-custom-slide-num="5"] #nav .navbar-header a {
+        /*background-position-y: -34px;*/
+    }
+}
+
+main.main-page-landing[data-custom-slide-num="5"] #nav #bs-example-navbar-collapse-1 > ul > li > a {
+    color: white !important;
+}
+
+main.main-page-landing #fullpage .slide-5 {
+    background-color: #33BBED;
+}
+
+main.main-page-landing #fullpage .slide-5 .jumbotron.jumbotron-middle {
+    background: transparent;
+    -webkit-animation-delay: 0.5s;
+    -moz-animation-delay: 0.5s;
+    -o-animation-delay: 0.5s;
+    animation-delay: 0.5s;
+}
+
+main.main-page-landing #fullpage .slide-5 .jumbotron.jumbotron-middle .btn.btn-settle-orange {
+    font-weight: 500;
+}
+
+main.main-page-landing #fullpage .slide-5 footer {
+    position: absolute;
+    bottom: 0;
+    background-color: white;
+    height: auto;
+    -webkit-animation-delay: 0.75s;
+    -moz-animation-delay: 0.75s;
+    -o-animation-delay: 0.75s;
+    animation-delay: 0.75s;
+    z-index: 2;
 }
