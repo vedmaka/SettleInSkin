@@ -1057,14 +1057,7 @@ class SettleInTemplate extends BaseTemplate {
 
     <div class="row login-popup-form-social-block">
         <div class="col-xs-12">
-            <a href="<?= OpauthHelper::getLoginLink('facebook') ?>" class="btn btn-info btn-sm">
-                Login via <b>Facebook</b>
-                <i class="fa fa-facebook-official" aria-hidden="true"></i>
-            </a>
-            <a href="<?= OpauthHelper::getLoginLink('google') ?>" class="btn btn-danger btn-sm">
-                Login via <b>Google</b>
-                <i class="fa fa-google" aria-hidden="true"></i>
-            </a>
+            <?php echo OpauthLogin::getButtonsMarkup() ?>
         </div>
     </div>
 
