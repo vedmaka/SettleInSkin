@@ -36,6 +36,10 @@
     border-radius: 4px;
 }
 
+.login-popup-form .login-popup-form-social-block {
+    padding-bottom: 10px;
+}
+
 #add-new-article-popup-wrapper {
     z-index: 1000;
     position: fixed;
