@@ -9,6 +9,39 @@
 class stools
 {
 
+	/**
+	 * @param Parser $parser
+	 *
+	 * @return string
+	 */
+	public static function userpic( $parser )
+	{
+
+		$params = func_get_args();
+		array_shift( $params ); // We don't need the parser.
+
+		$html = '';
+
+		$user = User::newFromName( $params[0] );
+		if( !$user || $user->getId() === 0 ) {
+			return '';
+		}
+
+		if( !OpauthProfile::exists( $user->getId() ) ) {
+			return '';
+		}
+
+		$profile = new OpauthProfile( $user->getId() );
+		if( !$profile->image ) {
+			return '';
+		}
+
+		$html = '<img src="'.$profile->image.'" class="user-profile-image" />';
+
+		return $parser->insertStripItem( $html );
+
+	}
+
     /**
      * @param Parser $parser
      * @return mixed
@@ -76,12 +109,22 @@ class stools
             $editors[] = User::newFromId( $page->getUser() );
         }
 
-        foreach( $editors as $editor ) {
+        /** @var User $editor */
+	    foreach( $editors as $editor ) {
+
+	    	$image = '';
+		    if( OpauthProfile::exists($editor->getId()) ) {
+			    $profile = new OpauthProfile($editor->getId());
+			    if( $profile->image ) {
+					$image = '<img src="'.$profile->image.'" class="user-profile-image" />';
+			    }
+		    }
+
             $html .= '<li>'
                 . $parser->insertStripItem(
                     '<li><a href="' .$editor->getUserPage()->getFullURL()
-                    . '" data-toggle="tooltip" data-placement="top" data-original-title="'.$editor->getName().'">' .
-                    '</a></li>'
+                    . '" data-toggle="tooltip" data-placement="top" data-original-title="'.$editor->getName().'">'
+                    .$image.'</a></li>'
                 ) . '</li>';
         }
 

@@ -33,6 +33,7 @@ class stoolsHooks
         $parser->setFunctionHook('stoolslanglinks', 'stools::langlinks' );
         $parser->setFunctionHook('stoolssociallinks', 'stools::sociallinks' );
         $parser->setFunctionHook('stoolsfooterlinks', 'stools::footerlinks' );
+        $parser->setFunctionHook('stoolsuserpic', 'stools::userpic' );
 	}
 
 }

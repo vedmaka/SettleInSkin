@@ -867,6 +867,12 @@ main.card-page .dropdown-menu.primary-back {
     border: 1px solid #00a6e3;
     background-color: lightgrey;
     margin-top: 3px;
+    overflow: hidden;
+}
+
+#double-col-right .right-col-inshort-wrapper .inshort-col .well-round-user-picture > img {
+    width: 100%;
+    height: 100%;
 }
 
 #double-col-right .col-right-languages {
@@ -1100,8 +1106,13 @@ main.card-page .dropdown-menu.primary-back {
     height: 50px;
     border-radius: 30px;
     overflow: hidden;
-    border: 1px solid white;
+    border: 2px solid white;
     background-color: gray;
+}
+
+#double-col-right .right-col-contributors ul li a > img {
+    width: 100%;
+    height: 100%;
 }
 
 #double-col-right a.contrib-send-thankyou {
