@@ -156,7 +156,7 @@ class SettleInTemplate extends BaseTemplate {
         if( $this->isLoggedIn ) {
 	        $data['username']         = $this->user->getName();
 	        $data['logout_link']      = SpecialPage::getSafeTitleFor( 'UserLogout' )->getFullURL();
-	        $data['preferences_link'] = SpecialPage::getSafeTitleFor( 'Preferences' )->getFullURL();
+	        $data['preferences_link'] = SpecialPage::getSafeTitleFor( 'UserProfile' )->getFullURL();
 	        $data['new_article_link'] = SpecialPage::getSafeTitleFor( 'SettleNewArticle' )->getFullURL();
         }
 		$data['geosearchurl']     = SettleGeoSearch::getSearchPageUrl();
