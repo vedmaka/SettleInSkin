@@ -48,6 +48,24 @@
 	"settlein-skin-mainpage-section-contribute-fold": "Contribute!",
 	"settlein-skin-mainpage-section-answer-a-request": "Answer a request",
 
+    "settlein-skin-mainpage-section-help-modal-create-title": "Create New Page",
+    "settlein-skin-mainpage-section-help-modal-create-text": "Creating a page is easy. Just click on the add new article link and follow the instructions on the page. Creating a new page will involve finding out how to do something from a reputable site and putting it into the easy format that Settlein has created. We know it’s a lot to ask to spend 10-15 minutes to do this, but the end result is that thousands of people will benefit from that time spent. Plus, you will be given credit as the person who added the new article.",
+
+    "settlein-skin-mainpage-section-help-modal-edit-title": "Edit a Page",
+    "settlein-skin-mainpage-section-help-modal-edit-text": "See a page that has some spelling mistakes or missing information? Then Edit that page. Simply click on the Edit button and go to the section that needs changing. Once you have edited the page, you will be added to the list of contributors for that page. It’s as simple as that!",
+
+    "settlein-skin-mainpage-section-help-modal-rate-title": "Rate a Page",
+    "settlein-skin-mainpage-section-help-modal-rate-text": "Did a page help you out? Save you time or money? or simply prevent you from having a headache? then please rate the article. 5 Stars if you found the information really useful. 1 Star if you didn’t think it helped you too much. But, remember, it is a wiki website. If the information is not as good as it should be to help others, instead of rating it a 1, go to the edit button and make the changes necessary so that others will find the information more valuable than you did as it’s been improved.",
+
+    "settlein-skin-mainpage-section-help-modal-like-title": "Like us on Facebook",
+    "settlein-skin-mainpage-section-help-modal-like-text": "We need your help to get the word out about Settlein. Like us on Facebook and share our page on your home page to help inform others about Settlein. It just takes a few seconds. This is the modern version of a Word of Mouth campaign, so every like and share could lead to thousands of more people getting and giving help on our platform.",
+
+    "settlein-skin-mainpage-section-help-modal-send-title": "Send us an Idea",
+    "settlein-skin-mainpage-section-help-modal-send-text": "We aren’t perfect and haven’t thought of everything. If you have an idea for a new feature or a different design that will make the website even better and simpler to use we would love to hear about it. If you know how to code and would like to donate a feature that could also improve the website, we would like that too. Any ideas that are put into use will get a special attribution on our About Us page. We feel it’s only fair for any idea you come up with that you should also get the credit for it.",
+
+    "settlein-skin-mainpage-section-help-modal-donate-title": "Donate",
+    "settlein-skin-mainpage-section-help-modal-donate-text": "This website is free to use, but it does have costs with keeping it up and running as well when we need to make updates or fixes. We are not a large corporation. It is just me, a freelance programmer and web designer. As much as I wish we could do everything for free, the truth is that it costs money. We are not asking for a lot, and you should only give what you can afford. Every dollar helps. We will only generally accept individual contributions of $50 or less. Should you wish to donate more, please get in contact with us.",
+
 	"settlein-skin-footer-about-us": "Our Story",
 	"settlein-skin-footer-contact": "Contact Us",
 	"settlein-skin-footer-helpout": "Help Out",
