@@ -227,6 +227,9 @@
                 <a href="{{& requests_link }}" class="btn btn-settle-orange">
                     {{ _ "settlein-skin-mainpage-section-answer-a-request" }}
                 </a>
+                <a href="{{& requests_new_link }}">
+                    {{ _ "settlein-skin-mainpage-section-send-a-request" }}
+                </a>
             </p>
         </div>
 
@@ -296,6 +299,11 @@
                 <p>
                     {{ _ "settlein-skin-mainpage-section-help-modal-create-text" }}
                 </p>
+            </div>
+            <div class="modal-footer">
+                <a class="btn btn-primary" href="{{& requests_link }}">
+                    {{ _ "settlein-skin-mainpage-section-help-modal-create-button" }}
+                </a>
             </div>
         </div><!-- /.modal-content -->
     </div><!-- /.modal-dialog -->

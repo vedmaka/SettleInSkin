@@ -382,6 +382,12 @@ main.main-page-landing #fullpage .slide-4 .above-fold {
 
 /* Slide 5 --------------------------------------------------------------------------------------------------- */
 
+main.main-page-landing #fullpage .slide-5 .main-page-categoris-links a.btn + a {
+	color: white;
+	font-size: 15px;
+	margin-left: 8px;
+}
+
 main.main-page-landing[data-custom-slide-num="5"] #nav .navbar-header a svg path.st1 {
     /*background-position-y: -41px;*/
     fill: white;

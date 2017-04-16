@@ -178,6 +178,7 @@ class SettleInTemplate extends BaseTemplate {
         )) );
         $data['requests_heading'] = wfMessage('settlein-skin-mainpage-section-requests-heading', $requests_count)->plain();
         $data['requests_link'] = SpecialPage::getTitleFor('SettleRequestsList')->getFullURL();
+        $data['requests_new_link'] = SpecialPage::getTitleFor('SettleRequestArticle')->getFullURL();
 
         // Format statistics string
         $pages = SiteStats::pagesInNs(NS_MAIN);
