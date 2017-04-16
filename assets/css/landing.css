@@ -213,13 +213,15 @@ main.main-page-landing #fullpage .slide-2 .above-fold {
 	}
 }
 
-@media (orientation: portrait) and (max-width: 480px) {
+@media (max-width: 960px) {
 	main.main-page-landing #home-icons .col-home-mobile {
 		/*float: none;
 		width: 100%;*/
-		float: left;
-		display: block;
+		display: inline-block;
 		margin-bottom: 5px;
+	}
+	main.main-page-landing #home-icons .home-icons-mobile {
+		text-align: center;
 	}
 	main.main-page-landing #home-icons .col-home-mobile img {
 		max-width: 100px;
@@ -291,22 +293,41 @@ main.main-page-landing #fullpage .slide-3 .above-fold {
 		font-size: 22px;
 		margin-top: 0;
 	}
-	main.main-page-landing #fullpage .slide-3 .jumbotron.jumbotron-middle p {
+	main.main-page-landing #fullpage .slide-5 .jumbotron.jumbotron-middle p {
 		width: 95%;
 		font-size: 14px;
 	}
-	main.main-page-landing #fullpage .slide-3 footer {
+	main.main-page-landing #fullpage .slide-5 footer {
 		font-size: 12px;
 	}
-	main.main-page-landing #fullpage .slide-3 footer ul {
+	main.main-page-landing #fullpage .slide-5 footer ul {
 		margin: 8px 0;
 		text-align: center;
 	}
-	main.main-page-landing #fullpage .slide-3 footer ul > li {
+	main.main-page-landing #fullpage .slide-5 footer ul > li {
 		display: inline-block;
 		text-align: center;
 	}
-	main.main-page-landing #fullpage .slide-3 footer ul > li > a {
+	main.main-page-landing #fullpage .slide-5 footer ul > li > a {
+		padding-top: 0;
+		padding-bottom: 0;
+		line-height: 12px;
+	}
+}
+
+@media (orientation: landscape) and (max-width: 960px) {
+	main.main-page-landing #fullpage .slide-5 footer {
+		font-size: 12px;
+	}
+	main.main-page-landing #fullpage .slide-5 footer ul {
+		margin: 8px 0;
+		text-align: center;
+	}
+	main.main-page-landing #fullpage .slide-5 footer ul > li {
+		display: inline-block;
+		text-align: center;
+	}
+	main.main-page-landing #fullpage .slide-5 footer ul > li > a {
 		padding-top: 0;
 		padding-bottom: 0;
 		line-height: 12px;
@@ -439,4 +460,22 @@ main.main-page-landing #fullpage .slide-5 footer {
 
 .jumbotron .how-help-links > span > a:hover {
     color: #eaeaea;
+}
+
+@media (orientation: portrait) and (max-width: 570px) {
+	.jumbotron-middle p {
+		width: 90% !important;
+	}
+	.jumbotron-middle h3 br {
+		display: none;
+	}
+}
+
+@media (orientation: landscape) and (max-width: 960px)  {
+	.jumbotron-middle p {
+		width: 90% !important;
+	}
+	.jumbotron-middle h3 br {
+		display: none;
+	}
 }
