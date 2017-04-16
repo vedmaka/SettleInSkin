@@ -179,6 +179,27 @@ class SettleInTemplate extends BaseTemplate {
         $data['requests_heading'] = wfMessage('settlein-skin-mainpage-section-requests-heading', $requests_count)->plain();
         $data['requests_link'] = SpecialPage::getTitleFor('SettleRequestsList')->getFullURL();
 
+        // Format statistics string
+        $pages = SiteStats::pagesInNs(NS_MAIN);
+        $countries = 0;
+        $languages = 2;
+        $users = SiteStats::users();
+
+        // Special handling for countries
+        // TODO: imported from SpecialSettleCategorySearch, remove duplication
+        // TODO: cache this
+		$query = SphinxStore::getInstance()->getQuery();
+        foreach ($this->countriesList as $country) {
+	        $result = $query->query( 'SELECT id, IN( properties.country_code, ' . $country['geonamesCode'].' ) AS p FROM '.SphinxStore::getInstance()->getIndex().' WHERE p = 1')->execute();
+            if( $result->count() ) {
+                $countries++;
+            }
+        }
+
+        $data['statistics_string_formatted'] = wfMessage('settlein-skin-mainpage-section-statistics-formatted')
+            ->params( $pages, $countries, $languages, $users )
+            ->plain();
+
         $templater = new TemplateParser( dirname(__FILE__).'/templates', true );
         $html = $templater->processTemplate('landing', $data);
         echo $html;
