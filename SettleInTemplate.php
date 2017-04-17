@@ -201,6 +201,33 @@ class SettleInTemplate extends BaseTemplate {
             ->params( $pages, $countries, $languages, $users )
             ->plain();
 
+        // Randomly picked users
+
+        $data['first_jumbo_text'] = wfMessage('settlein-skin-mainpage-jumbotron-text')->plain();
+
+        // More dynamic way
+        $dbr = wfGetDB(DB_SLAVE);
+		$rndRows = $dbr->select(
+			'user',
+			'user_id',
+			array(),
+			__METHOD__,
+			array(
+				'ORDER BY' => 'user_editcount DESC',
+				'LIMIT' => 10
+			)
+		);
+
+		$rndUsers = array();
+		while($row = $rndRows->fetchRow()) {
+		    $rUser = User::newFromId( $row['user_id'] );
+		    $rndUsers[] = array(
+                'name' => $rUser->getName(),
+                'url' => $rUser->getUserPage()->getFullURL()
+            );
+        }
+        $data['rndUsersJson'] = json_encode($rndUsers);
+
         $templater = new TemplateParser( dirname(__FILE__).'/templates', true );
         $html = $templater->processTemplate('landing', $data);
         echo $html;

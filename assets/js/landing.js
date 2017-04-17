@@ -93,4 +93,17 @@ $(function(){
 		}
 	});
 
+	if( window.rndUsers && window.rndUsers.length ) {
+		setInterval( showRandomUser, 3000 );
+	}
+
+    function showRandomUser() {
+        var $wrapper = $('#rndUserPlaceholder');
+        var rndUser = window.rndUsers[ Math.floor( Math.random() * window.rndUsers.length ) ];
+        $wrapper.fadeOut(function(){
+            $wrapper.html( '<a href="'+ rndUser.url +'">'+ rndUser.name +'</a>' );
+            $wrapper.fadeIn('slow');
+		});
+    }
+
 });

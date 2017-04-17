@@ -135,6 +135,11 @@ main.main-page-landing #fullpage .slide-1 .jumbotron {
 	animation-delay: 0.5s;
 }
 
+main.main-page-landing #fullpage .slide-1 .jumbotron .i-jumbotext a {
+    color: white;
+    text-decoration: underline;
+}
+
 main.main-page-landing #fullpage .slide-1 .jumbotron .i-jumbotext h1 {
 	text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.38);
 }

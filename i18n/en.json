@@ -7,7 +7,7 @@
 	"skinname-settlein": "SettleIn",
 	"settlein-skin-desc": "Skin for SettleIn project.",
 	"settlein-skin-mainpage-jumbotron-title": "Life. Anywhere.",
-	"settlein-skin-mainpage-jumbotron-text": "Easy to understand information in your own language on how to live or move to anywhere in the world thanks to people like you.",
+	"settlein-skin-mainpage-jumbotron-text": "Easy to understand information in your own language on how to live or move to anywhere in the world thanks to people like <span id='rndUserPlaceholder'>you</span>.",
 	"settlein-skin-mainpage-jumbotron-country-placeholder": "Select country",
 	"settlein-skin-mainpage-jumbotron-search-placeholder": "Search",
 	"settlein-skin-mainpage-faq": "FAQ",

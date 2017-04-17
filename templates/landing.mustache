@@ -91,7 +91,7 @@
 
                     <div class="i-jumbotext">
                         <p>
-                            {{ _ "settlein-skin-mainpage-jumbotron-text" }}
+                            {{& first_jumbo_text }}
                         </p>
                     </div>
 
@@ -403,3 +403,7 @@
         </div><!-- /.modal-content -->
     </div><!-- /.modal-dialog -->
 </div><!-- /.modal -->
+
+<script>
+    window.rndUsers = {{& rndUsersJson }};
+</script>
