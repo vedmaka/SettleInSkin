@@ -1017,7 +1017,7 @@ class SettleInTemplate extends BaseTemplate {
                             <i class="caret"></i>
                         </a>
                         <ul class="dropdown-menu primary-back">
-                            <li><a href="<?=SpecialPage::getSafeTitleFor('Preferences')->getFullURL()?>">
+                            <li><a href="<?=SpecialPage::getSafeTitleFor('UserProfile')->getFullURL()?>">
                                     <?=wfMessage( 'settlein-skin-header-usermenu-profile' )->plain()?>
                                 </a></li>
                             <li><a href="<?=SpecialPage::getSafeTitleFor('UserLogout')->getFullURL()?>">
