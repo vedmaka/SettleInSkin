@@ -838,6 +838,70 @@ nav .navbar-toggle {
     margin-right: 0 !important;
 }
 
+/* --------------------------- preview/diff ---------------------------------------- */
+
+.diff-currentversion-title + #double-wrapper {
+	display: none;
+}
+
+table.diff-contentalign-left {
+	width: 99% !important;
+}
+
+table.diff-contentalign-left #mw-diff-otitle1,
+table.diff-contentalign-left #mw-diff-ntitle1 {
+	margin-top: 100px;
+}
+
+.diff-currentversion-title {
+	font-size: 15px;
+	color: white;
+	text-indent: 20px;
+}
+
+table.diff-contentalign-left a,
+table.diff-contentalign-left a:hover {
+	color: white;
+}
+
+table.diff-contentalign-left a.mw-userlink,
+table.diff-contentalign-left a.mw-userlink:hover {
+	color: #e0e0e0;
+}
+
+table.diff-contentalign-left .diff-lineno {
+	color: #e9e9e9;
+	font-weight: normal;
+}
+
+table.diff-contentalign-left .diff-deletedline {
+	background-color: #e0a99e;
+}
+
+table.diff-contentalign-left .diff-addedline {
+	background-color: #b0e08f;
+}
+
+table.diff-contentalign-left .diffchange.diffchange-inline {
+	font-weight: bold;
+}
+
+table.diff-contentalign-left .patrollink {
+	display: none;
+}
+
+span.patrollink {
+	display: block;
+	margin: 0 auto;
+	width: 150px;
+	text-align: center;
+}
+
+span.patrollink a {
+	color: white;
+	font-size: 15px;
+}
+
 /* --------------------------- media ----------------------------------------------- */
 @media ( min-width: 1600px ) {
     .jumbotron, #home-icons, #nav > .container {
