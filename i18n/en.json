@@ -41,6 +41,7 @@
 	"settlein-skin-mainpage-section-how-to-help-example-like": "Like us on Facebook",
 	"settlein-skin-mainpage-section-how-to-help-example-send": "Send us an idea",
 	"settlein-skin-mainpage-section-how-to-help-example-donate": "Donate",
+	"settlein-skin-mainpage-section-how-to-help-example-patrol": "Patrol edits",
 	"settlein-skin-mainpage-section-what-else-fold": "Why we're here ?",
 	"settlein-skin-mainpage-section-statistics-formatted": "<b>$1</b> Pages in <b>$2</b> Countries in <b>$3</b> languages<br/> created by <b>$4</b> People just like you.",
 	"settlein-skin-mainpage-section-statistics-text1": "Settlein is here to make information more accessible and easy to understand by connecting people with information to those who need it in order to help simplify life anywhere in the world.",
@@ -72,6 +73,10 @@
     "settlein-skin-mainpage-section-help-modal-donate-title": "Donate",
     "settlein-skin-mainpage-section-help-modal-donate-text": "This website is free to use, but it does have costs with keeping it up and running as well when we need to make updates or fixes. We are not a large corporation. It is just me, a freelance programmer and web designer. As much as I wish we could do everything for free, the truth is that it costs money. We are not asking for a lot, and you should only give what you can afford. Every dollar helps. We will only generally accept individual contributions of $50 or less. Should you wish to donate more, please get in contact with us.",
     "settlein-skin-mainpage-section-help-modal-donate-button": "Donate",
+
+	"settlein-skin-mainpage-section-help-modal-patrol-title": "Patrol edits",
+	"settlein-skin-mainpage-section-help-modal-patrol-text": "You can help out by patrolling edits of other users, just browse through list of recently made edits and either approve, skip or even rollback harmful ones.",
+	"settlein-skin-mainpage-section-help-modal-patrol-button": "Start patrolling",
 
 	"settlein-skin-footer-about-us": "Our Story",
 	"settlein-skin-footer-contact": "Contact Us",

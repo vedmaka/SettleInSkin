@@ -168,6 +168,11 @@
                         {{ _ "settlein-skin-mainpage-section-how-to-help-example-rate" }}
                     </a>
                 </span>
+	            <span class="label">
+                    <a href="#" data-toggle="modal" data-target="#modal-patrol">
+	                    {{ _ "settlein-skin-mainpage-section-how-to-help-example-patrol" }}
+                    </a>
+                </span>
                 <span class="label">
                     <a href="#" data-toggle="modal" data-target="#modal-like">
                         {{ _ "settlein-skin-mainpage-section-how-to-help-example-like" }}
@@ -402,6 +407,30 @@
             </div>
         </div><!-- /.modal-content -->
     </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+<!-- Patrol a page -->
+<div class="modal fade" tabindex="-1" role="dialog" id="modal-patrol">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+				<h4 class="modal-title">
+					{{ _ "settlein-skin-mainpage-section-help-modal-patrol-title" }}
+				</h4>
+			</div>
+			<div class="modal-body">
+				<p>
+					{{ _ "settlein-skin-mainpage-section-help-modal-patrol-text" }}
+				</p>
+			</div>
+			<div class="modal-footer">
+				<a class="btn btn-primary" href="{{& patrols_link }}">
+					{{ _ "settlein-skin-mainpage-section-help-modal-patrol-button" }}
+				</a>
+			</div>
+		</div><!-- /.modal-content -->
+	</div><!-- /.modal-dialog -->
 </div><!-- /.modal -->
 
 <script>

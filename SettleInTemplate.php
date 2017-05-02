@@ -228,6 +228,10 @@ class SettleInTemplate extends BaseTemplate {
         }
         $data['rndUsersJson'] = json_encode($rndUsers);
 
+		// Patrolling
+		$data['patrolsCount'] = SettleContributions::getInstance()->getPendingPatrolsCount();
+		$data['patrols_link'] = SpecialPage::getTitleFor('SettleContributionsPatrol')->getFullURL();
+
         $templater = new TemplateParser( dirname(__FILE__).'/templates', true );
         $html = $templater->processTemplate('landing', $data);
         echo $html;
