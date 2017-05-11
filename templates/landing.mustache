@@ -26,6 +26,11 @@
                             </a>
                             <ul class="dropdown-menu primary-back">
                                 <li>
+                                    <a href="{{& helpout_link }}">
+                                        {{ _ 'settlein-skin-mainpage-bottom-button-text' }}
+                                    </a>
+                                </li>
+                                <li>
                                     <a href="{{ new_article_link }}">
                                         {{ _ "settlein-skin-add-new-article-button" }}
                                     </a>
@@ -189,9 +194,9 @@
                     </a>
                 </span>
             </p>
-            <!--<a href="#" class="btn btn-settle-orange">
+            <a href="{{& helpout_link }}" class="btn btn-settle-orange">
                 {{ _ 'settlein-skin-mainpage-bottom-button-text' }}
-            </a>-->
+            </a>
         </div>
 
         <div class="above-fold js-animated" data-custom-animation="fadeInUp" id="fold-what-else">

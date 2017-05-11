@@ -231,6 +231,7 @@ class SettleInTemplate extends BaseTemplate {
 		// Patrolling
 		$data['patrolsCount'] = SettleContributions::getInstance()->getPendingPatrolsCount();
 		$data['patrols_link'] = SpecialPage::getTitleFor('SettleContributionsPatrol')->getFullURL();
+		$data['helpout_link'] = SpecialPage::getTitleFor('HelpOut')->getFullURL();
 
         $templater = new TemplateParser( dirname(__FILE__).'/templates', true );
         $html = $templater->processTemplate('landing', $data);
@@ -826,12 +827,19 @@ class SettleInTemplate extends BaseTemplate {
                             <b class="caret"></b>
                             </a>
                             <ul class="dropdown-menu primary-back">
+                                <li>
+                                    <a href="<?=SpecialPage::getTitleFor('HelpOut')->getFullURL()?>">
+                                        <?=wfMessage('settlein-skin-mainpage-bottom-button-text')->plain()?>
+                                    </a>
+                                </li>
                                 <li><a href="<?=SpecialPage::getSafeTitleFor('UserProfile')->getFullURL()?>">
                                         <?=wfMessage( 'settlein-skin-header-usermenu-profile' )->plain()?>
-                                    </a></li>
+                                    </a>
+                                </li>
                                 <li><a href="<?=SpecialPage::getSafeTitleFor('UserLogout')->getFullURL()?>">
                                         <?=wfMessage( 'settlein-skin-header-usermenu-logout' )->plain()?>
-                                    </a></li>
+                                    </a>
+                                </li>
                             </ul>
                         </li>
                         <li id="useractions" class="dropdown">
@@ -1021,12 +1029,19 @@ class SettleInTemplate extends BaseTemplate {
                             <i class="caret"></i>
                         </a>
                         <ul class="dropdown-menu primary-back">
+                            <li>
+                                <a href="<?=SpecialPage::getTitleFor('HelpOut')->getFullURL()?>">
+			                        <?=wfMessage('settlein-skin-mainpage-bottom-button-text')->plain()?>
+                                </a>
+                            </li>
                             <li><a href="<?=SpecialPage::getSafeTitleFor('UserProfile')->getFullURL()?>">
                                     <?=wfMessage( 'settlein-skin-header-usermenu-profile' )->plain()?>
-                                </a></li>
+                                </a>
+                            </li>
                             <li><a href="<?=SpecialPage::getSafeTitleFor('UserLogout')->getFullURL()?>">
                                     <?=wfMessage( 'settlein-skin-header-usermenu-logout' )->plain()?>
-                                </a></li>
+                                </a>
+                            </li>
                         </ul>
                     </li>
 
