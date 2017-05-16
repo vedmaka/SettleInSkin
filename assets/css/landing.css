@@ -484,3 +484,19 @@ main.main-page-landing #fullpage .slide-5 footer {
 		display: none;
 	}
 }
+
+
+#first_jumbo_p {
+	position: relative;
+}
+
+#rndUserPlaceholder {
+	display: inline-block;
+	width: 100px;
+	text-align: left;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	height: 19px;
+	position: relative;
+	top: 1px;
+}
