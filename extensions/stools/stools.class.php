@@ -120,12 +120,11 @@ class stools
 			    }
 		    }
 
-            $html .= '<li>'
-                . $parser->insertStripItem(
+            $html .= $parser->insertStripItem(
                     '<li><a href="' .$editor->getUserPage()->getFullURL()
                     . '" data-toggle="tooltip" data-placement="top" data-original-title="'.$editor->getName().'">'
                     .$image.'</a></li>'
-                ) . '</li>';
+                );
         }
 
         $html .= '</ul>';
