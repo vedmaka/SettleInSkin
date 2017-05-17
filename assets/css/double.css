@@ -1020,6 +1020,10 @@ main.card-page .dropdown-menu.primary-back {
     padding-right: 0;
 }
 
+#double-col-right .right-col-tips-collapser .tab-content a {
+    color: #64bb5d;
+}
+
 #double-col-right .right-col-tips-collapser .tab-pane {
     border: 1px solid white;
     background-color: white;
