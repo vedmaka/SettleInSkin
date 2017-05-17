@@ -1492,6 +1492,10 @@ main.card-page .navbar-brand {
 
 @media (max-width: 768px) {
 
+    #double-col-left h1.left-heading {
+        margin-top: 30px;
+    }
+
     .navbar-form {
         margin: 6.5px 0 6.5px -15px;
     }
