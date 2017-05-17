@@ -1092,6 +1092,7 @@ main.card-page .dropdown-menu.primary-back {
     margin: 0;
     padding: 0;
     text-align: center;
+    font-size: 0;
 }
 
 #double-col-right .right-col-contributors ul li {
