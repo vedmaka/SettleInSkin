@@ -224,7 +224,7 @@ class stools
 		    }
 	    }
 
-	    $html .= $parser->insertStripItem('<a href="'.$link.'" type="button" class="btn '.$class.'">'.$text.'</a>', $parser->mStripState );
+	    $html .= $parser->insertStripItem('<a target="_blank" href="'.$link.'" type="button" class="btn '.$class.'">'.$text.'</a>', $parser->mStripState );
 
 	    return $html;
 
