@@ -1196,7 +1196,7 @@ main.card-page .dropdown-menu.primary-back {
     background-color: #00a6e3;
     border: 2px solid #ffe200;
     padding: 10px;
-    max-height: 500px;
+    max-height: 250px;
     overflow-y: scroll;
     overflow-x: hidden;
 }
