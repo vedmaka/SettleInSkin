@@ -5,7 +5,7 @@
 
             <div class="contact-us-section-heading">
 
-                <div class="contact-us-header-wrapper">
+	            <div class="contact-us-header-wrapper">
                     <span><?=wfMessage('settlein-skin-project-page-contact-title')->plain()?></span>
                 </div>
 
@@ -29,8 +29,10 @@
                     <div class="col-md-9 col-lg-8">
                         <select name="reason" id="input-why" class="form-control" required>
                             <option value="0" selected><?=wfMessage('settlein-skin-project-page-contact-field-reason-value-1')->plain()?></option>
-                            <option value="1"><?=wfMessage('settlein-skin-project-page-contact-field-reason-value-2')->plain()?></option>
                             <option value="1"><?=wfMessage('settlein-skin-project-page-contact-field-reason-value-3')->plain()?></option>
+                            <option value="2"><?=wfMessage('settlein-skin-project-page-contact-field-reason-value-4')->plain()?></option>
+                            <option value="3"><?=wfMessage('settlein-skin-project-page-contact-field-reason-value-5')->plain()?></option>
+                            <option value="4"><?=wfMessage('settlein-skin-project-page-contact-field-reason-value-6')->plain()?></option>
                         </select>
                     </div>
                 </div>
