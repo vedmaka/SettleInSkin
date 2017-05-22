@@ -1303,6 +1303,10 @@ main.card-page .dropdown-menu.primary-back {
     margin-left: 18px;
 }
 
+#double-col-left .left-tabs .tab-content .tab-pane .panel-body dd a {
+    word-wrap: break-word;
+}
+
 .foreign-render-list {
     margin-top: 10px;
 }
