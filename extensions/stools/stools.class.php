@@ -36,7 +36,7 @@ class stools
 			return '';
 		}
 
-		$html = '<img src="'.$profile->image.'" class="user-profile-image" />';
+		$html = '<img data-toggle="tooltip" data-placement="left" title="'.$params[0].'" src="'.$profile->image.'" class="user-profile-image" />';
 
 		return $parser->insertStripItem( $html );
 
