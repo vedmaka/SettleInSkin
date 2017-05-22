@@ -793,21 +793,28 @@ class SettleInTemplate extends BaseTemplate {
                 </a>
 
                 <!-- Header search block for "normal" pages -->
-                <!-- This block should be excluded on Search page to prevent conflicts -->
-                <? if( $this->getSkin()->getTitle()->equals( SpecialPage::getTitleFor('SettleGeoSearch')->getBaseTitle() ) || $this->getSkin()->getTitle()->isMainPage() ): ?>
-                    <!-- No search block on Search results page -->
-                <? else: ?>
                 <ul class="nav navbar-nav normal-page-country-block" id="country-select-wrapper">
                     <form role="search" action="<?=SettleGeoSearch::getSearchPageUrl()?>" id="searchform_smw" method="post">
                         <?php
                         $search = new SettleGeoSearch();
-                        echo $search->getHtml( SettleGeoSearch::SGS_MODE_VALUE, 'geo_id' );
+                        // Fetch any posted geo-information to populate search bar on every page
+
+                        $geoCode = $this->getSkin()->getRequest()->getVal('geo_id', '');
+                        $geoText = $this->getSkin()->getRequest()->getVal('geo_text', '');
+                        $geoName = '';
+                        if( $geoCode && !empty($geoCode) && $geoCode !== '' ) {
+	                        $entity = SettleGeoSearch::getGeoEntityFromId( $geoCode );
+                            if( $entity ) {
+                            	$geoName = $entity->inflict('default')->getShortName();
+                            }
+                        }
+
+                        echo $search->getHtml( SettleGeoSearch::SGS_MODE_VALUE, 'geo_id', '', $geoCode, $geoName );
                         ?>
-                        <input type="text" placeholder="<?=wfMessage('sil-search-form-field-label-search')->plain()?>" name="geo_text" class="form-control selectize-search-appendix" />
+                        <input type="text" placeholder="<?=wfMessage('sil-search-form-field-label-search')->plain()?>" name="geo_text" class="form-control selectize-search-appendix" value="<?=$geoText?>" />
                         <a href="#" class="search-submit fa fa-search"></a>
                     </form>
                 </ul>
-                <? endif; ?>
 
             </div>
 
