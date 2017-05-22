@@ -5,8 +5,8 @@
 
             <div class="contact-us-section-heading">
 
-	            <div class="contact-us-header-wrapper">
-                    <span><?=wfMessage('settlein-skin-project-page-contact-title')->plain()?></span>
+	            <div class="contact-us-header-wrapper" style="background: none;">
+                    <span style="color: #555;"><?=wfMessage('settlein-skin-project-page-contact-title')->plain()?></span>
                 </div>
 
                 <div class="contact-us-header-text-wrapper">
