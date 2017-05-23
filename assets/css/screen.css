@@ -223,6 +223,15 @@ span.label.label-default > a {
 	max-width: 800px;
 }
 
+.well-round-user-picture {
+	width: 35px;
+	height: 35px;
+}
+
+.well-round-user-picture .user-profile-image {
+	margin: 5px auto 0 auto;
+}
+
 @media (max-width: 1280px) {
     #userpanel span.user-name {
         display: inline-block;

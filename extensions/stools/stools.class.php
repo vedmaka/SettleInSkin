@@ -36,7 +36,21 @@ class stools
 			return '';
 		}
 
-		$html = '<img src="'.$profile->image.'" class="user-profile-image" />';
+		$data = '';
+		if( count($params) > 1 ) {
+			if( $params[1] == 'tooltip' ) {
+				$data = 'data-toggle="tooltip" data-placement="top" title="'.$params[0].'"';
+				$html .= '<a href="'.$user->getUserPage()->getFullURL().'" '.$data.'>';
+			}
+		}
+
+		$html .= '<img src="'.$profile->image.'" class="user-profile-image" />';
+
+		if( count($params) > 1 ) {
+			if ( $params[1] == 'tooltip' ) {
+				$html .= '</a>';
+			}
+		}
 
 		return $parser->insertStripItem( $html );
 
