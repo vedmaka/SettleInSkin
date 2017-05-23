@@ -867,13 +867,12 @@ main.card-page .dropdown-menu.primary-back {
     border-radius: 20px;
     border: 1px solid #00a6e3;
     background-color: lightgrey;
-    margin-top: 3px;
+	margin: 5px auto 0 auto;
     overflow: hidden;
 }
 
 #double-col-right .right-col-inshort-wrapper .inshort-col .well-round-user-picture a {
     display: inline-block;
-    margin: 0 auto;
 }
 
 #double-col-right .right-col-inshort-wrapper .inshort-col .well-round-user-picture a img {
