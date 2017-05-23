@@ -720,11 +720,11 @@ class SettleInTemplate extends BaseTemplate {
     <footer class="footer">
         <div class="container">
             <ul class="nav navbar-nav footer-menu-items">
-                <li>
-                    <a href="<?=SpecialPage::getTitleFor('SettleIn')->getFullURL()?>/about">
-                        <?=wfMessage('settlein-skin-footer-about-us')->plain()?>
+                <!--<li>
+                    <a href="<?/*=SpecialPage::getTitleFor('SettleIn')->getFullURL()*/?>/about">
+                        <?/*=wfMessage('settlein-skin-footer-about-us')->plain()*/?>
                     </a>
-                </li>
+                </li>-->
                 <li>
                     <a href="<?=SpecialPage::getTitleFor('SettleIn')->getFullURL()?>/contact">
                         <?=wfMessage('settlein-skin-footer-contact')->plain()?>
@@ -735,11 +735,11 @@ class SettleInTemplate extends BaseTemplate {
                         <?=wfMessage('settlein-skin-footer-helpout')->plain()?>
                     </a>
                 </li>
-                <li>
-                    <a href="<?=SpecialPage::getTitleFor('SettleIn')->getFullURL()?>/tos">
-                        <?=wfMessage('settlein-skin-footer-tos')->plain()?>
+                <!--<li>
+                    <a href="<?/*=SpecialPage::getTitleFor('SettleIn')->getFullURL()*/?>/tos">
+                        <?/*=wfMessage('settlein-skin-footer-tos')->plain()*/?>
                     </a>
-                </li>
+                </li>-->
             </ul>
 
             <ul class="nav navbar-nav navbar-right col-xs-12 col-sm-2 footer-social-icons">
