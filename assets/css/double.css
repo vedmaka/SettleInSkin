@@ -872,7 +872,9 @@ main.card-page .dropdown-menu.primary-back {
 }
 
 #double-col-right .right-col-inshort-wrapper .inshort-col .well-round-user-picture a {
-    display: inline-block;
+    display: block;
+    width: 100%;
+    height: 100%;
 }
 
 #double-col-right .right-col-inshort-wrapper .inshort-col .well-round-user-picture a img {
