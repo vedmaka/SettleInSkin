@@ -50,6 +50,9 @@ class SettleInTemplate extends BaseTemplate {
                 }
             }
         }
+        if( $this->getSkin()->getTitle()->isSpecialPage() && $this->getSkin()->getTitle()->isSpecial('SettleCategorySearch') && count(explode('/',$this->getSkin()->getRequest()->getVal('title'))) > 1 ) {
+        	$this->isCardPage = true;
+        }
 
         $this->cleanPage = false;
         if( $this->getSkin()->getTitle() ) {

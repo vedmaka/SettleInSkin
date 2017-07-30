@@ -39,6 +39,10 @@ class SkinSettleIn extends SkinTemplate {
             }
         }
 
+	    if( $this->getSkin()->getTitle()->isSpecialPage() && $this->getSkin()->getTitle()->isSpecial('SettleCategorySearch') && count(explode('/',$this->getRequest()->getVal('title'))) > 1 ) {
+		    $isCard = true;
+	    }
+
         if( $title && $title->exists() && $title->getNamespace() == NS_MAIN ) {
             if( $title->getArticleID() === Title::newMainPage()->getArticleID() ) {
                 $scripts = array( 'skins.settlein.js', 'skins.settlein.landing.js' );
@@ -86,6 +90,9 @@ class SkinSettleIn extends SkinTemplate {
                 }
             }
         }
+	    if( $this->getSkin()->getTitle()->isSpecialPage() && $this->getSkin()->getTitle()->isSpecial('SettleCategorySearch') && count(explode('/',$this->getRequest()->getVal('title'))) > 1 ) {
+		    $isCard = true;
+	    }
 
         if( $title && $title->exists() && $title->getNamespace() == NS_MAIN ) {
             if( $title->getArticleID() === Title::newMainPage()->getArticleID() ) {
