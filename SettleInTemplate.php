@@ -224,6 +224,9 @@ class SettleInTemplate extends BaseTemplate {
 		$rndUsers = array();
 		while($row = $rndRows->fetchRow()) {
 		    $rUser = User::newFromId( $row['user_id'] );
+		    if( in_array('bot' , $rUser->getGroups() ) || in_array('sysop' , $rUser->getGroups() ) ) {
+		    	continue;
+		    }
 		    $rndUsers[] = array(
                 'name' => $rUser->getName(),
                 'url' => $rUser->getUserPage()->getFullURL()
