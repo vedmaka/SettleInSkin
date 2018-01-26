@@ -384,10 +384,12 @@ main.main-page-landing #fullpage .slide-4 .jumbotron.jumbotron-middle {
 
 main.main-page-landing #fullpage .slide-4 .jumbotron.jumbotron-middle h3 {
     color: #33BBED;
+	margin-bottom: 32px;
 }
 
 main.main-page-landing #fullpage .slide-4 .jumbotron.jumbotron-middle p {
     color: black;
+	margin-bottom: 32px;
 }
 
 main.main-page-landing #fullpage .slide-4 .main-page-categoris-links a {
@@ -507,4 +509,16 @@ main.main-page-landing #fullpage .slide-5 footer {
 	height: 19px;
 	position: relative;
 	top: 1px;
+}
+
+.btn-settle-blue {
+	border: 1px solid #33BBED!important;
+	color: #33BBED;
+	background-color: white;
+}
+
+.btn-settle-blue:hover {
+	border: 1px solid #33BBED!important;
+	color: white !important;
+	background-color: #33BBED;
 }
