@@ -269,7 +269,7 @@ main.main-page-landing #fullpage .slide-3 .jumbotron.jumbotron-middle {
 }
 
 main.main-page-landing #fullpage .slide-3 .jumbotron.jumbotron-middle h3 {
-	margin-bottom: 120px;
+	margin-bottom: 32px;
 }
 
 main.main-page-landing #fullpage .slide-3 .jumbotron.jumbotron-middle p {
@@ -516,13 +516,25 @@ main.main-page-landing #fullpage .slide-5 footer {
 }
 
 .btn-settle-blue {
-	border: 1px solid #33BBED!important;
+	border: 1px solid #33BBED !important;
 	color: #33BBED;
 	background-color: white;
 }
 
 .btn-settle-blue:hover {
-	border: 1px solid #33BBED!important;
+	border: 1px solid #33BBED !important;
 	color: white !important;
 	background-color: #33BBED;
+}
+
+.btn-settle-white {
+	border: 1px solid white !important;
+	color: white;
+	background-color: transparent;
+}
+
+.btn-settle-white:hover {
+	border: 1px solid white !important;
+	color: #33BBED !important;
+	background-color: white;
 }
