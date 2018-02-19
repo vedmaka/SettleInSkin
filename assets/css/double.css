@@ -820,9 +820,9 @@ main.card-page .dropdown-menu.primary-back {
 
 #double-col-right .left-tabs li.active a {
     background-color: white;
-    border: 1px solid #38b449;
-    font-weight: bold;
-    color: #38b449;
+    border: 1px solid #0098d0;
+    font-weight: 500;
+    color: #01a6e3;
 }
 
 @media all and (max-width: 1300px) {
