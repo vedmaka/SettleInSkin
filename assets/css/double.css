@@ -45,8 +45,14 @@ main {
     background-color: transparent;
 }
 
+#nav + #mw-content-text {
+    padding-top: 30px;
+}
+
 #nav .navbar {
     padding-top: 5px;
+    background-color: #38b449; /*#00a6e3;*/
+    border-radius: 0;
 }
 
 main.card-page #nav .navbar {
@@ -59,23 +65,25 @@ main.card-page .navbar-header {
 }
 
 main.card-page #bs-example-navbar-collapse-1 {
-    padding-top: 5px;
-    padding-bottom: 15px;
+    padding-top: 15px;
+    /*padding-bottom: 15px;*/
 }
 
-main.card-page #bs-example-navbar-collapse-1.scrolled-state {
-    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#00a6e3+0,00a6e3+71&1+0,0.42+77,0+100 */
-    background: -moz-linear-gradient(top, rgba(0,166,227,1) 0%, rgba(0,166,227,0.47) 71%, rgba(0,166,227,0.42) 77%, rgba(0,166,227,0) 100%); /* FF3.6-15 */
-    background: -webkit-linear-gradient(top, rgba(0,166,227,1) 0%,rgba(0,166,227,0.47) 71%,rgba(0,166,227,0.42) 77%,rgba(0,166,227,0) 100%); /* Chrome10-25,Safari5.1-6 */
-    background: linear-gradient(to bottom, rgba(0,166,227,1) 0%,rgba(0,166,227,0.47) 71%,rgba(0,166,227,0.42) 77%,rgba(0,166,227,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00a6e3', endColorstr='#0000a6e3',GradientType=0 ); /* IE6-9 */
-}
+/*main.card-page #bs-example-navbar-collapse-1.scrolled-state {
+    background: -moz-linear-gradient(top, rgba(0,166,227,1) 0%, rgba(0,166,227,0.47) 71%, rgba(0,166,227,0.42) 77%, rgba(0,166,227,0) 100%); !* FF3.6-15 *!
+    background: -webkit-linear-gradient(top, rgba(0,166,227,1) 0%,rgba(0,166,227,0.47) 71%,rgba(0,166,227,0.42) 77%,rgba(0,166,227,0) 100%); !* Chrome10-25,Safari5.1-6 *!
+    background: linear-gradient(to bottom, rgba(0,166,227,1) 0%,rgba(0,166,227,0.47) 71%,rgba(0,166,227,0.42) 77%,rgba(0,166,227,0) 100%); !* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ *!
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00a6e3', endColorstr='#0000a6e3',GradientType=0 ); !* IE6-9 *!
+}*/
 
 #double-wrapper {
     margin: 0;
     min-height: 100%;
 }
 
+#nav {
+
+}
 
 #nav #language-selector {
     padding-right: 5px;
@@ -168,20 +176,18 @@ main.card-page #bs-example-navbar-collapse-1.scrolled-state {
 }
 
 #double-wrapper #double-col-left {
-    background-color: white;
-    position: fixed;
-    width: 50%; /*41.66666667%*/
+    background-color: #00a6e3;
+    /*position: fixed;
+    width: 50%;
     height: 100%;
-    z-index: 10;
+    z-index: 10;*/
     padding: 62px 0 0 0;
-    /*max-width: 800px;*/
-    /*box-shadow: 1px 1px 28px 1px rgba(0, 0, 0, 0.24);*/
 }
 
 #double-wrapper #double-col-right {
 
     background-color: #00a6e3;
-    padding: 106px 15px 0 15px;
+    /*padding: 106px 15px 0 15px;*/
 }
 
 #country-select-wrapper {
@@ -397,7 +403,7 @@ div.left-tabs ul.nav-tabs > li {
 #double-col-left h1.left-heading {
     margin-top: 10px;
     margin-bottom: 10px;
-    font-size: 36px;
+    /*font-size: 36px;*/
 }
 
 #double-col-left .bottom-left-subtitle {
@@ -736,7 +742,7 @@ main.card-page .dropdown-menu.primary-back {
 
 #double-col-right #content .col-right-label {
     max-width: 500px;
-    margin: 0 auto 20px auto;
+    margin: 0 auto 50px auto;
 }
 
 #double-col-right #content .col-right-label h1 {
@@ -755,13 +761,68 @@ main.card-page .dropdown-menu.primary-back {
 }
 
 #double-col-right .right-col-inshort-wrapper {
-    margin-top: 14px;
+    /*margin-top: 14px;*/
     /*margin-bottom: 25px;*/
+    max-width: 700px;
+    margin: 0 auto;
 }
 
 #double-col-right .right-col-inshort-wrapper .inshort-col {
     padding: 0;
     margin-bottom: 25px;
+}
+
+#double-col-right .inshort-col .card-special-skin-link,
+#double-col-right .inshort-col .card-special-skin-link-divider {
+    color: #00a6e3;
+}
+
+.article-layout-section {
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+.article-layout-section.section-blue {
+    background-color: #00a6e3;
+}
+
+.article-layout-section.section-white {
+    background-color: white;;
+}
+
+#double-col-right .right-col-inshort-wrapper .inshort-col .well {
+    box-shadow: 1px 1px 15px 0px #00000059;
+}
+
+#double-col-right .left-tabs {
+    max-width: 980px;
+    margin: 0 auto;
+    box-shadow: 0px 0px 9px #0000002e;
+    margin-top: -125px;
+}
+
+#double-col-right .left-tabs li:first-child a {
+    border-top-left-radius: 4px;
+}
+
+#double-col-right .left-tabs li:last-child a {
+    border-top-right-radius: 4px;
+}
+
+#double-col-right .left-tabs li a {
+    background-color: #00a6e3;
+    border: 1px solid #00a6e3;
+}
+
+#double-col-right .left-tabs li a:hover {
+    color: white;
+}
+
+#double-col-right .left-tabs li.active a {
+    background-color: white;
+    border: 1px solid #38b449;
+    font-weight: bold;
+    color: #38b449;
 }
 
 @media all and (max-width: 1300px) {
@@ -1331,16 +1392,55 @@ main.card-page .dropdown-menu.primary-back {
 }
 
 #double-col-left .card-header-info-block .card-location-list {
-
+    text-align: center;
+    font-size: 24px;
 }
 
 #double-col-left .card-header-info-block .card-categories-list {
-    font-size: 13px;
+    font-size: 18px;
     margin: 18px 0;
+    text-align: center;
 }
 
 #double-col-left .card-header-info-block .card-categories-list li a {
-    background-color: #00a6e3;
+    /*background-color: #00a6e3;*/
+    background-color: transparent;
+}
+
+#double-col-left .card-header-info-block .card-categories-list li+li:before {
+    color: white;
+}
+
+/* ---------------------  */
+
+#double-col-left .left-heading {
+    text-align: center;
+    font-size: 56px;
+}
+
+#double-col-left .mw-headline {
+    color: white;
+    text-shadow: 1px 1px 1px #00000087;
+}
+
+#double-col-left .card-location-list.text-muted {
+    color: white;
+}
+
+.inshort-col .col-right-social-links li a {
+    color: #00a6e3 !important;
+}
+
+#double-col-right .col-right-languages {
+    margin-bottom: 15px;
+}
+
+#double-col-right .right-col-inshort-wrapper .inshort-col .well.height-shrink a.btn-yellow {
+    box-shadow: 1px 1px 2px #0000003b;
+}
+
+#double-col-right .left-tabs .tab-content {
+    min-height: 500px;
 }
 
 @media all and (max-width: 960px) {
@@ -1678,4 +1778,8 @@ main.card-page .navbar-brand {
         margin-right: 0;
     }
 
+}
+
+#mark_svg_logo path {
+    fill: white !important;
 }
