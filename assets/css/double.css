@@ -186,7 +186,7 @@ main.card-page #bs-example-navbar-collapse-1 {
 
 #double-wrapper #double-col-right {
 
-    background-color: #00a6e3;
+    /*background-color: #00a6e3;*/
     /*padding: 106px 15px 0 15px;*/
 }
 
@@ -499,9 +499,12 @@ main.card-page #bs-example-navbar-collapse-1 > ul > li#user-panel-watchlist.is-w
 }*/
 
 .left-tabs .tab-content {
-    height: 380px;
-    overflow-y: scroll;
+    /*height: 380px;*/
+    /*overflow-y: scroll;*/
     font-size: 16px;
+    padding: 30px;
+    height: auto;
+    min-height: 300px;
 }
 
 /* Reduce left content height on smaller devices */
@@ -1147,14 +1150,14 @@ main.card-page .dropdown-menu.primary-back {
     text-align: center;
 }
 
-#double-col-right .right-col-contributors::before {
+/*#double-col-right .right-col-contributors::before {
     content: "";
     display: block;
     margin-bottom: 15px;
     width: 100%;
     background-color: #ffe200;
     height: 3px;
-}
+}*/
 
 #double-col-right .right-col-contributors h1 .mw-headline {
     font-size: 30px;
@@ -1211,10 +1214,10 @@ main.card-page .dropdown-menu.primary-back {
 }
 
 #double-col-right .right-col-how-to-contribute .how-to-contrib-title {
-    font-size: 20px;
+    font-size: 50px;
     color: #00a6e3;
     font-weight: 400;
-    margin: 0 0 8px 0;
+    margin: 55px 0 8px 0;
 }
 
 #double-col-right .right-col-how-to-contribute ul {
@@ -1261,25 +1264,27 @@ main.card-page .dropdown-menu.primary-back {
 }
 
 #double-col-right .right-col-comments-block {
-    margin-top: 35px;
+    /*margin-top: 35px;*/
 }
 
 #double-col-right .right-col-comments-block {
-    margin-top: 35px;
+    /*margin-top: 35px;*/
     color: white;
-    background-color: #00a6e3;
-    border: 2px solid #ffe200;
+    /*background-color: #00a6e3;
+    border: 2px solid #ffe200;*/
     padding: 10px;
-    max-height: 250px;
-    overflow-y: scroll;
+    /*max-height: 250px;*/
+    /*overflow-y: scroll;*/
     overflow-x: hidden;
+    max-width: 980px;
+    margin: 0 auto;
 }
 
 #double-col-right .right-col-comments-block .right-comments-header {
-    margin-top: 2px;
+    /*margin-top: 2px;*/
     text-align: center;
-    font-size: 17px;
-    margin-bottom: 5px;
+    font-size: 50px;
+    margin: 23px 0 55px 0;
 }
 
 #double-col-right .right-col-comments-block .right-comments-input-wrapper {
@@ -1443,6 +1448,82 @@ main.card-page .dropdown-menu.primary-back {
     min-height: 500px;
 }
 
+#double-col-right .tipcs-section-wrapper h1 {
+    color: white;
+    text-align: center;
+    margin-bottom: 55px;
+}
+
+#double-col-right .tipcs-section-wrapper {
+    max-width: 980px;
+    margin: 0 auto;
+}
+
+#double-col-right .tipcs-section-wrapper .right-col-tips-collapser .tab-content > .tab-pane {
+    border: 0;
+    background: 0;
+    color: white !important;
+    padding-top: 0;
+    overflow-y: auto;
+    height: auto;
+}
+
+#double-col-right .tipcs-section-wrapper .right-col-tips-collapser .tab-content > .tab-pane {
+    color: white !important;
+    font-size: 16px;
+}
+
+#double-col-right .tipcs-section-wrapper .right-col-tips-collapser > ul {
+    border-right: 1px solid #ffffff40;
+    padding-right: 35px;
+}
+
+#double-col-right .tipcs-section-wrapper .right-col-tips-collapser ul li a {
+    border-color: transparent;
+    border-radius: 4px;
+}
+
+#double-col-right .tipcs-section-wrapper .right-col-tips-collapser ul li.active a {
+    border-color: #38b449;
+}
+
+.right-col-contributors h1 {
+    color: #00a6e3;
+    text-align: center;
+    margin-bottom: 55px;
+
+}
+
+.right-col-contributors h1 span {
+    font-weight: 300;
+    font-size: 50px !important;
+}
+
+.footerlinks-wrapper {
+    max-width: 980px;
+    margin: 110px auto 0 auto;
+    text-align: center;
+}
+
+.footerlinks-wrapper ul {
+    margin: 0;
+    padding: 0;
+}
+
+.footerlinks-wrapper li {
+    list-style: none;
+    display: inline-block;
+    margin: 0 10px 0 10px;
+}
+
+.footerlinks-wrapper a {
+    color: white;
+}
+
+main.card-page {
+    padding-bottom: 0;
+}
+
 @media all and (max-width: 960px) {
     #double-col-right .right-col-inshort-wrapper .inshort-col .well,
     #double-col-right .right-col-inshort-wrapper .inshort-col .well.height-shrink {
@@ -1528,7 +1609,7 @@ main.card-page .dropdown-menu.primary-back {
     }
     #double-col-right .right-col-how-to-contribute ul li::before {
         content: "";
-        background-color: #00a6e3;
+        /*background-color: #00a6e3;*/
         width: 2px;
         height: 19px;
         display: inline-block;
