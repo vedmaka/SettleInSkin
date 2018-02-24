@@ -1520,6 +1520,15 @@ main.card-page .dropdown-menu.primary-back {
     color: white;
 }
 
+.settle-related-articles-block {
+
+}
+
+.settle-related-articles-block ul li a {
+    background-color: transparent;
+    color: #00a6e3;
+}
+
 main.card-page {
     padding-bottom: 0;
 }
