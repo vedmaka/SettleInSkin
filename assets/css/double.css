@@ -1525,8 +1525,7 @@ main.card-page .dropdown-menu.primary-back {
 }
 
 .settle-related-articles-block ul li a {
-    background-color: transparent;
-    color: #00a6e3;
+    background-color: transparent !important;
 }
 
 main.card-page {
