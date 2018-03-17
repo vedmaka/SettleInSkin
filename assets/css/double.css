@@ -51,22 +51,29 @@ main {
 
 #nav .navbar {
     padding-top: 5px;
-    background-color: #38b449; /*#00a6e3;*/
+    background-color: #00a6e3; /*#00a6e3;*/
     border-radius: 0;
 }
 
 main.card-page #nav .navbar {
     padding-top: 0;
     border-top: 0;
+    display: flex;
 }
 
 main.card-page .navbar-header {
     padding-top: 5px;
+    flex-grow: 1;
+    margin-right: 25px;
+    margin-left: 10px;
+    float: none;
 }
 
 main.card-page #bs-example-navbar-collapse-1 {
     padding-top: 15px;
     /*padding-bottom: 15px;*/
+    margin-right: 10px;
+    float: none;
 }
 
 /*main.card-page #bs-example-navbar-collapse-1.scrolled-state {
@@ -1206,7 +1213,7 @@ main.card-page .dropdown-menu.primary-back {
 }
 
 #double-col-right .right-col-how-to-contribute {
-    background-color: white;
+    /*background-color: white;*/
     width: 100%;
     margin: 35px auto 0 auto;
     text-align: center;
@@ -1214,8 +1221,8 @@ main.card-page .dropdown-menu.primary-back {
 }
 
 #double-col-right .right-col-how-to-contribute .how-to-contrib-title {
-    font-size: 50px;
-    color: #00a6e3;
+    font-size: 25px;
+    color: white;
     font-weight: 400;
     margin: 55px 0 8px 0;
 }
@@ -1232,7 +1239,7 @@ main.card-page .dropdown-menu.primary-back {
 
 #double-col-right .right-col-how-to-contribute ul li + li::before {
     content: "";
-    background-color: #00a6e3;
+    background-color: white;
     width: 2px;
     height: 19px;
     display: inline-block;
@@ -1242,7 +1249,7 @@ main.card-page .dropdown-menu.primary-back {
 }
 
 #double-col-right .right-col-how-to-contribute ul li a {
-    color: black;
+    color: white;
     font-size: 18px;
     font-weight: 300;
 }
@@ -1283,7 +1290,7 @@ main.card-page .dropdown-menu.primary-back {
 #double-col-right .right-col-comments-block .right-comments-header {
     /*margin-top: 2px;*/
     text-align: center;
-    font-size: 50px;
+    font-size: 25px;
     margin: 23px 0 55px 0;
 }
 
@@ -1452,6 +1459,7 @@ main.card-page .dropdown-menu.primary-back {
     color: white;
     text-align: center;
     margin-bottom: 55px;
+    font-size: 25px;
 }
 
 #double-col-right .tipcs-section-wrapper {
@@ -1496,7 +1504,7 @@ main.card-page .dropdown-menu.primary-back {
 
 .right-col-contributors h1 span {
     font-weight: 300;
-    font-size: 50px !important;
+    font-size: 25px !important;
 }
 
 .footerlinks-wrapper {
@@ -1531,6 +1539,64 @@ main.card-page .dropdown-menu.primary-back {
 
 main.card-page {
     padding-bottom: 0;
+}
+
+#nav .navbar .navbar-header .navbar-toggle .icon-bar {
+    background-color: white !important;
+}
+
+#page-tips-achor, #page-contributors-achor {
+    padding-top: 50px;
+}
+
+#double-col-right #page-steps-achor li.tab-green.active > a {
+    color: #38b449;
+    border-color: #38b449;
+    background-color: white;
+}
+
+#double-col-right #page-steps-achor li.tab-blue.active > a {
+    color: #5acbf5;
+    border-color: #5acbf5;
+    background-color: white;
+}
+
+#double-col-right #page-steps-achor li.tab-yellow.active > a {
+    color: #ffe200;
+    border-color: #ffe200;
+    background-color: white;
+}
+
+#double-col-right #page-steps-achor li.tab-orange.active > a {
+    color: #f7931d;
+    border-color: #f7931d;
+    background-color: white;
+}
+
+/* ---- */
+
+#double-col-right #page-steps-achor li.tab-green > a {
+    color: white;
+    border-color: #38b449;
+    background-color: #38b449;
+}
+
+#double-col-right #page-steps-achor li.tab-blue > a {
+    color: white;
+    border-color: #5acbf5;
+    background-color: #5acbf5;
+}
+
+#double-col-right #page-steps-achor li.tab-yellow > a {
+    color: white;
+    border-color: #ffe200;
+    background-color: #ffe200;
+}
+
+#double-col-right #page-steps-achor li.tab-orange > a {
+    color: white;
+    border-color: #f7931d;
+    background-color: #f7931d;
 }
 
 @media all and (max-width: 960px) {

@@ -941,7 +941,7 @@ class SettleInTemplate extends BaseTemplate {
     <div class="container-fluid">
         <nav class="navbar row">
 
-            <div class="navbar-header col-md-6">
+            <div class="navbar-header "> <!-- col-md-6 -->
                 <button type="button" class="navbar-toggle" data-toggle="collapse"
                         data-target="#bs-example-navbar-collapse-1">
                     <span class="sr-only">Toggle navigation</span>
@@ -979,7 +979,7 @@ class SettleInTemplate extends BaseTemplate {
                 </ul>-->
             </div>
 
-            <div class="col-md-6" id="bs-example-navbar-collapse-1">
+            <div class="" id="bs-example-navbar-collapse-1"> <!-- col-md-6 -->
 
                 <ul class="nav navbar-nav navbar-right" id="right-side-actions">
 
