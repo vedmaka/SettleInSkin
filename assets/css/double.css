@@ -1069,8 +1069,8 @@ main.card-page .dropdown-menu.primary-back {
 
 /* Color status for tips active links */
 #double-col-right .right-col-tips-collapser > ul > li.active a.tips-applying {
-    color: #38b449;
-    border-color: #38b449;
+    color: #5acbf5;
+    border-color: #5acbf5;
 }
 
 #double-col-right .right-col-tips-collapser > ul > li.active a.tips-time {
@@ -1079,13 +1079,13 @@ main.card-page .dropdown-menu.primary-back {
 }
 
 #double-col-right .right-col-tips-collapser > ul > li.active a.tips-money {
-    color: #ffe200;
-    border-color: #ffe200;
+    color: #5acbf5;
+    border-color: #5acbf5;
 }
 
 #double-col-right .right-col-tips-collapser > ul > li.active a.tips-other {
-    color: #f7931d;
-    border-color: #f7931d;
+    color: #5acbf5;
+    border-color: #5acbf5;
 }
 
 #double-col-right .right-col-tips-collapser > ul > li + li {
@@ -1099,7 +1099,8 @@ main.card-page .dropdown-menu.primary-back {
 }
 
 #double-col-right .right-col-tips-collapser .tab-content a {
-    color: #64bb5d;
+    color: white;
+    text-decoration: underline;
 }
 
 #double-col-right .right-col-tips-collapser .tab-pane {
@@ -1427,7 +1428,7 @@ main.card-page .dropdown-menu.primary-back {
 
 #double-col-left .left-heading {
     text-align: center;
-    font-size: 56px;
+    font-size: 45px;
 }
 
 #double-col-left .mw-headline {
