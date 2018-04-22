@@ -801,14 +801,14 @@ main.card-page .dropdown-menu.primary-back {
 }
 
 #double-col-right .right-col-inshort-wrapper .inshort-col .well {
-    box-shadow: 1px 1px 15px 0px #00000059;
+    box-shadow: 1px 1px 15px 0 #00000059;
 }
 
 #double-col-right .left-tabs {
     max-width: 980px;
     margin: 0 auto;
-    box-shadow: 0px 0px 9px #0000002e;
-    margin-top: -125px;
+    box-shadow: 0 0 9px #0000002e;
+    /*margin-top: -125px;*/
 }
 
 #double-col-right .left-tabs li:first-child a {
@@ -1499,7 +1499,21 @@ main.card-page .dropdown-menu.primary-back {
     color: #00a6e3;
     text-align: center;
     margin-bottom: 55px;
+}
 
+.step-by-step-section {
+    padding-top: 50px;
+}
+
+.step-by-step-section h1 {
+    color: #00a6e3;
+    text-align: center;
+    margin-bottom: 55px;
+}
+
+.step-by-step-section h1 span {
+    font-weight: 300;
+    font-size: 25px !important;
 }
 
 .right-col-contributors h1 span {
@@ -1549,55 +1563,142 @@ main.card-page {
     padding-top: 50px;
 }
 
+/* step by step colors */
+
+#double-col-right #page-steps-achor .nav-tabs {
+    border: 0;
+}
+
 #double-col-right #page-steps-achor li.tab-green.active > a {
-    color: #38b449;
-    border-color: #38b449;
-    background-color: white;
-}
-
-#double-col-right #page-steps-achor li.tab-blue.active > a {
-    color: #5acbf5;
-    border-color: #5acbf5;
-    background-color: white;
-}
-
-#double-col-right #page-steps-achor li.tab-yellow.active > a {
-    color: #ffe200;
-    border-color: #ffe200;
-    background-color: white;
-}
-
-#double-col-right #page-steps-achor li.tab-orange.active > a {
-    color: #f7931d;
-    border-color: #f7931d;
-    background-color: white;
-}
-
-/* ---- */
-
-#double-col-right #page-steps-achor li.tab-green > a {
     color: white;
     border-color: #38b449;
     background-color: #38b449;
 }
 
-#double-col-right #page-steps-achor li.tab-blue > a {
+#double-col-right #page-steps-achor li.tab-blue.active > a {
     color: white;
     border-color: #5acbf5;
     background-color: #5acbf5;
 }
 
-#double-col-right #page-steps-achor li.tab-yellow > a {
+#double-col-right #page-steps-achor li.tab-yellow.active > a {
     color: white;
     border-color: #ffe200;
     background-color: #ffe200;
 }
 
-#double-col-right #page-steps-achor li.tab-orange > a {
+#double-col-right #page-steps-achor li.tab-orange.active > a {
     color: white;
     border-color: #f7931d;
     background-color: #f7931d;
 }
+
+#double-col-right #page-steps-achor li.tab-purple.active > a {
+    color: white;
+    border-color: #c15dc1;
+    background-color: #c15dc1;
+}
+
+/* ---- */
+
+#double-col-right #page-steps-achor li a {
+    cursor: pointer;
+}
+
+#double-col-right #page-steps-achor li::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    top: 0;
+    left: 0;
+    z-index: 2;
+}
+
+#double-col-right #page-steps-achor li.tab-green > a {
+    color: #38b449;
+    border-color: #38b449;
+    /*background-color: #38b449;*/
+    background-color: white;
+    position: relative;
+}
+
+#double-col-right #page-steps-achor li.tab-green::before {
+    background-color: #38b449;
+}
+
+#double-col-right #page-steps-achor li.tab-blue > a {
+    color: #5acbf5;
+    border-color: #5acbf5;
+    /*background-color: #5acbf5;*/
+    background-color: white;
+}
+
+#double-col-right #page-steps-achor li.tab-blue::before {
+    background-color: #5acbf5;
+}
+
+#double-col-right #page-steps-achor li.tab-yellow > a {
+    color: #ffe200;
+    border-color: #ffe200;
+    /*background-color: #ffe200;*/
+    background-color: white;
+}
+
+#double-col-right #page-steps-achor li.tab-yellow::before {
+    background-color: #ffe200;
+}
+
+#double-col-right #page-steps-achor li.tab-orange > a {
+    color: #f7931d;
+    border-color: #f7931d;
+    /*background-color: #f7931d;*/
+    background-color: white;
+}
+
+#double-col-right #page-steps-achor li.tab-orange::before {
+    background-color: #f7931d;
+}
+
+#double-col-right #page-steps-achor li.tab-purple > a {
+    color: #c15dc1;
+    border-color: #c15dc1;
+    /*background-color: #f7931d;*/
+    background-color: white;
+}
+
+#double-col-right #page-steps-achor li.tab-purple::before {
+    background-color: #c15dc1;
+}
+
+/* ---- */
+
+#double-col-right #page-steps-achor .tab-content.tab-green {
+    border: 1px solid #38b449;
+    border-top: 0;
+}
+
+#double-col-right #page-steps-achor .tab-content.tab-blue {
+    border: 1px solid #5acbf5;
+    border-top: 0;
+}
+
+#double-col-right #page-steps-achor .tab-content.tab-yellow {
+    border: 1px solid #ffe200;
+    border-top: 0;
+}
+
+#double-col-right #page-steps-achor .tab-content.tab-orange {
+    border: 1px solid #f7931d;
+    border-top: 0;
+}
+
+#double-col-right #page-steps-achor .tab-content.tab-purple {
+    border: 1px solid #c15dc1;
+    border-top: 0;
+}
+
+/* ---- */
 
 @media all and (max-width: 960px) {
     #double-col-right .right-col-inshort-wrapper .inshort-col .well,

@@ -106,4 +106,10 @@ $(function () {
         }
     });
 
+	if($('#page-steps-achor').size()) {
+		$('#page-steps-achor .left-tabs ul li').click(function(){
+			$('#page-steps-achor').find('.tab-content').attr('class', '').addClass('tab-content').addClass( $(this).attr('class') );
+		});
+	}
+
 });
