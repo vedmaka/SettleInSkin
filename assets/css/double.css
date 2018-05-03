@@ -1752,7 +1752,7 @@ main.card-page {
         height: 16px;
     }
     #double-col-right .right-col-how-to-contribute > ul > li a {
-        font-size: 13px;
+        font-size: 16px;
     }
 }
 
@@ -1909,6 +1909,27 @@ main.card-page .navbar-brand {
     #bottom-footer ul.navbar-nav li a {
         padding: 0 5px !important;
         margin: 0;
+    }
+
+    #double-col-right .right-col-how-to-contribute .how-to-contrib-title {
+        text-align: center;
+    }
+
+    #double-col-right .right-col-how-to-contribute ul {
+        text-align: center;
+    }
+
+    .right-col-contributors h1 {
+        text-align: center;
+    }
+
+    #double-col-right .right-col-contributors ul {
+        text-align: center;
+    }
+
+    #double-col-right .right-col-contributors {
+        text-align: center;
+        padding-left: 0;
     }
 
 }
