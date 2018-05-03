@@ -1155,7 +1155,8 @@ main.card-page .dropdown-menu.primary-back {
 
 #double-col-right .right-col-contributors {
     margin-top: 25px;
-    text-align: center;
+    text-align: left;
+    padding-left: 80px;
 }
 
 /*#double-col-right .right-col-contributors::before {
@@ -1168,13 +1169,13 @@ main.card-page .dropdown-menu.primary-back {
 }*/
 
 #double-col-right .right-col-contributors h1 .mw-headline {
-    font-size: 30px;
+    font-size: 19px;
 }
 
 #double-col-right .right-col-contributors ul {
     margin: 0;
     padding: 0;
-    text-align: center;
+    text-align: left;
     font-size: 0;
 }
 
@@ -1183,6 +1184,10 @@ main.card-page .dropdown-menu.primary-back {
     display: inline-block;
     margin: 0 5px;
     vertical-align: top;
+}
+
+#double-col-right .right-col-contributors ul li:first-child {
+    margin-left: 0;
 }
 
 #double-col-right .right-col-contributors ul li a {
@@ -1202,11 +1207,12 @@ main.card-page .dropdown-menu.primary-back {
 
 #double-col-right a.contrib-send-thankyou {
     margin-top: 25px;
-    font-size: 22px;
+    font-size: 18px;
     display: inline-block;
     padding-bottom: 0;
-    border-bottom: 2px solid #ffe200;
+    border-bottom: 1px solid #ffe200;
     line-height: 28px;
+    font-weight: 300;
 }
 
 #double-col-right a.contrib-send-thankyou:hover {
@@ -1215,26 +1221,28 @@ main.card-page .dropdown-menu.primary-back {
 
 #double-col-right .right-col-how-to-contribute {
     /*background-color: white;*/
-    width: 100%;
-    margin: 35px auto 0 auto;
+    /*width: 100%;
+    margin: 35px auto 0 auto;*/
     text-align: center;
     padding: 15px 10px;
 }
 
 #double-col-right .right-col-how-to-contribute .how-to-contrib-title {
-    font-size: 25px;
-    color: white;
+    font-size: 19px;
+    color: #00a6e3;
     font-weight: 400;
     margin: 55px 0 8px 0;
+    text-align: right;
 }
 
 #double-col-right .right-col-how-to-contribute ul {
     margin: 0;
+    text-align: right;
     padding: 0;
 }
 
 #double-col-right .right-col-how-to-contribute ul li {
-    display: inline-block;
+    display: block;
     list-style: none;
 }
 
@@ -1243,14 +1251,19 @@ main.card-page .dropdown-menu.primary-back {
     background-color: white;
     width: 2px;
     height: 19px;
-    display: inline-block;
+    display: none;
     margin: 0 10px;
     position: relative;
     top: 3px;
 }
 
+.double-column-contrib {
+    max-width: 980px;
+    margin: 0 auto;
+}
+
 #double-col-right .right-col-how-to-contribute ul li a {
-    color: white;
+    color: #00a6e3;
     font-size: 18px;
     font-weight: 300;
 }
@@ -1498,8 +1511,8 @@ main.card-page .dropdown-menu.primary-back {
 
 .right-col-contributors h1 {
     color: #00a6e3;
-    text-align: center;
-    margin-bottom: 55px;
+    text-align: left;
+    margin-bottom: 25px;
 }
 
 .step-by-step-section {
@@ -1519,7 +1532,7 @@ main.card-page .dropdown-menu.primary-back {
 
 .right-col-contributors h1 span {
     font-weight: 300;
-    font-size: 25px !important;
+    font-size: 20px !important;
 }
 
 .footerlinks-wrapper {
