@@ -671,8 +671,6 @@ ul.page-editors-list li a {
 }
 
 a.card-special-skin-link {
-    color: black;
-    font-size: 16px;
     cursor: pointer;
     outline: none;
 }
@@ -696,6 +694,7 @@ span.card-special-skin-link-divider {
 main.card-page ul#country-select-wrapper {
     width: calc(100% - 50px);
     min-width: 1px !important;
+    max-width: 70%;
 }
 
 main.card-page #login-selector {
@@ -755,7 +754,7 @@ main.card-page .dropdown-menu.primary-back {
 
 #double-col-right #content .col-right-label {
     max-width: 500px;
-    margin: 0 auto 50px auto;
+    margin: 0 auto 35px auto;
 }
 
 #double-col-right #content .col-right-label h1 {
@@ -864,7 +863,7 @@ main.card-page .dropdown-menu.primary-back {
 }
 
 #double-col-right .right-col-inshort-wrapper .inshort-col .well.well-long {
-    min-height: 318px;
+    min-height: 199px;
 }
 
 #double-col-right .right-col-inshort-wrapper .inshort-col .well.well-border-rounded-top {
@@ -957,14 +956,68 @@ main.card-page .dropdown-menu.primary-back {
     padding: 15px 0;
 }
 
-#double-col-right .right-col-inshort-wrapper .inshort-col .btn-yellow {
+.btn-yellow {
     background-color: #ffe200;
-    width: 80%;
+    color: black;
+    font-weight: normal;
+    display: inline-block;
+    text-decoration: none;
+}
+
+.btn-yellow:hover {
+    text-decoration: none !important;
+}
+
+.btn-blue {
+    background-color: #00a6e3;
+    color: white;
+    font-weight: normal;
+    display: inline-block;
+    text-decoration: none;
+}
+
+.btn-blue:hover {
+    background-color: #00b2ef;
+    text-decoration: none !important;;
+}
+
+.btn-green {
+    background-color: #64bb5d;
+    color: white;
+    font-weight: normal;
+    display: inline-block;
+    text-decoration: none;
+}
+
+.btn-green:hover {
+    background-color: #70ca60;
+    text-decoration: none !important;;
+}
+
+#double-col-right .right-col-inshort-wrapper .inshort-col .well-long .btn-yellow {
+    background-color: #ffe200;
+    width: 90%;
     max-width: 200px;
     color: black;
     font-weight: bold;
     margin: 15px auto 0 auto;
     display: block;
+}
+
+#double-col-right .right-col-inshort-wrapper .inshort-col .well-round .btn-blue {
+    width: 80%;
+    max-width: 200px;
+    display: block;
+    margin: 0 auto;
+    color: white !important;
+}
+
+#double-col-right .right-col-inshort-wrapper .inshort-col .well-round .btn-green {
+    width: 80%;
+    max-width: 200px;
+    display: block;
+    margin: 10px auto 0 auto;
+    color: white !important;
 }
 
 #double-col-right .right-col-inshort-wrapper .inshort-col .well.height-shrink a.btn-yellow {
@@ -1252,8 +1305,6 @@ main.card-page .dropdown-menu.primary-back {
     margin-top: 25px;
     font-size: 18px;
     display: inline-block;
-    padding-bottom: 0;
-    border-bottom: 1px solid #ffe200;
     line-height: 28px;
     font-weight: 300;
 }
@@ -1465,19 +1516,27 @@ main.card-page .dropdown-menu.primary-back {
     font-size: 24px;
 }
 
-#double-col-left .card-header-info-block .card-categories-list {
-    font-size: 18px;
-    margin: 18px 0;
+#double-col-right .categories-list-wrapper {
     text-align: center;
+    margin-bottom: 25px;
 }
 
-#double-col-left .card-header-info-block .card-categories-list li a {
+#double-col-right ol.card-categories-list {
+    font-size: 18px;
+    text-align: center;
+    margin: 0;
+}
+
+#double-col-right ol.card-categories-list li a {
     /*background-color: #00a6e3;*/
     background-color: transparent;
+    font-size: 15px;
+    font-weight: normal;
 }
 
-#double-col-left .card-header-info-block .card-categories-list li+li:before {
+#double-col-right ol.card-categories-list li+li:before {
     color: white;
+    content: " > ";
 }
 
 /* ---------------------  */
@@ -1610,6 +1669,9 @@ main.card-page .dropdown-menu.primary-back {
 .settle-related-articles-block ul li a {
     background-color: transparent !important;
     border: none !important;
+    font-weight: 300 !important;
+    text-decoration: underline;
+    color: #107498 !important;
 }
 
 main.card-page {
