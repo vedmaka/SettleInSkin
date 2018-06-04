@@ -856,11 +856,25 @@ main.card-page .dropdown-menu.primary-back {
 }
 
 #double-col-right .right-col-inshort-wrapper .inshort-col .well {
-    border-radius: 20px 20px 0 0;
     margin-bottom: 0;
     min-height: 275px;
     text-align: center;
     padding: 15px 15px 10px 15px;
+    border-radius: 0;
+}
+
+#double-col-right .right-col-inshort-wrapper .inshort-col .well.well-long {
+    min-height: 318px;
+}
+
+#double-col-right .right-col-inshort-wrapper .inshort-col .well.well-border-rounded-top {
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+#double-col-right .right-col-inshort-wrapper .inshort-col .well.well-border-rounded-bottom {
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
 }
 
 #double-col-right .right-col-inshort-wrapper .inshort-col .well .text-muted {
@@ -882,6 +896,31 @@ main.card-page .dropdown-menu.primary-back {
 }
 
 #double-col-right .right-col-inshort-wrapper .inshort-col .well h2 .mw-headline {
+    color: black;
+    font-size: 14px;
+}
+
+#double-col-right .right-col-inshort-wrapper .inshort-col .well-top {
+    border-radius: 20px 20px 0 0;
+    margin-bottom: 3px;
+    min-height: 1px;
+    text-align: center;
+    color: #808284;
+    padding: 8px 0;
+}
+
+
+#double-col-right .right-col-inshort-wrapper .inshort-col .well-top h2 {
+    margin: 0 0 0 0;
+    text-transform: uppercase;
+    color: black;
+    display: block;
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+}
+
+#double-col-right .right-col-inshort-wrapper .inshort-col .well-top h2 .mw-headline {
     color: black;
     font-size: 14px;
 }
