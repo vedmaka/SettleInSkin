@@ -76,11 +76,123 @@ main.card-page #bs-example-navbar-collapse-1 {
     float: none;
 }
 
+main.card-page .navbar-header #search-trigger {
+	float: left;
+	font-size: 24px;
+	color: white;
+	line-height: 55px;
+	margin: 0 20px 0 5px;
+	font-weight: normal;
+	cursor: pointer;
+}
+
+main.card-page .navbar-header #country-select-wrapper {
+	display: none;
+}
+
+main.card-page .navbar-header #country-select-wrapper .settle-geo-search-wrapper .settle-geo-search-input.form-control {
+	background-color: transparent;
+	color: white;
+}
+
+main.card-page .navbar-header #country-select-wrapper .settle-geo-search-wrapper .selectize-input {
+	background-color: transparent;
+	color: white;
+	border-top: 0;
+	border-left: 0;
+	border-right: 0;
+	border-bottom: 1px solid white;
+}
+
+main.card-page .navbar-header #country-select-wrapper .settle-geo-search-wrapper .selectize-input input {
+	color: white;
+}
+
+main.card-page .navbar-header #country-select-wrapper .settle-geo-search-wrapper .selectize-input input::-webkit-input-placeholder {
+	color: white;
+}
+
+main.card-page .navbar-header #country-select-wrapper .settle-geo-search-wrapper .selectize-input input::-moz-placeholder {
+	color: white;
+}
+
+main.card-page .navbar-header #country-select-wrapper .settle-geo-search-wrapper .selectize-input input::-ms-input-placeholder {
+	color: white;
+}
+
+main.card-page .navbar-header #country-select-wrapper .settle-geo-search-wrapper .selectize-input input::-moz-placeholder {
+	color: white;
+}
+
+main.card-page .navbar-header #country-select-wrapper .settle-geo-search-wrapper .selectize-input input::placeholder {
+	color: white;
+}
+
+main.card-page .navbar-header #country-select-wrapper .settle-geo-search-wrapper .selectize-dropdown .selectize-dropdown-content {
+
+}
+
+main.card-page .navbar-header #country-select-wrapper .settle-geo-search-wrapper .selectize-dropdown .selectize-dropdown-content .settle-geo-search-result-item-wrapper {
+
+}
+
+main.card-page .navbar-header #country-select-wrapper .settle-geo-search-wrapper .selectize-dropdown .selectize-dropdown-content .settle-geo-search-result-item-wrapper .glyphicon.glyphicon-map-marker {
+	color: white;
+}
+
+main.card-page .navbar-header #country-select-wrapper .settle-geo-search-wrapper .selectize-dropdown .selectize-dropdown-content .settle-geo-search-result-item-wrapper .settle-geo-result-item-suffix {
+	color: rgba(255, 255, 255, 0.81);
+}
+
+main.card-page .navbar-header #country-select-wrapper .settle-geo-search-wrapper .selectize-dropdown .selectize-dropdown-content .settle-geo-search-result-item-wrapper.active .glyphicon.glyphicon-map-marker {
+	color: #4a4a4a;
+}
+
+main.card-page .navbar-header #country-select-wrapper .settle-geo-search-wrapper .selectize-dropdown .selectize-dropdown-content .settle-geo-search-result-item-wrapper.active .settle-geo-result-item-suffix {
+	color: #4a4a4a;
+}
+
+main.card-page .navbar-header #country-select-wrapper .form-control.selectize-search-appendix {
+	background-color: transparent;
+	color: white;
+	border-top: 0;
+	border-left: 0;
+	border-right: 0;
+	border-bottom: 1px solid white;
+}
+
+main.card-page .navbar-header #country-select-wrapper .form-control.selectize-search-appendix::-webkit-input-placeholder {
+	color: white;
+}
+
+main.card-page .navbar-header #country-select-wrapper .form-control.selectize-search-appendix::-moz-placeholder {
+	color: white;
+}
+
+main.card-page .navbar-header #country-select-wrapper .form-control.selectize-search-appendix::-ms-input-placeholder {
+	color: white;
+}
+
+main.card-page .navbar-header #country-select-wrapper .form-control.selectize-search-appendix::-moz-placeholder {
+	color: white;
+}
+
+main.card-page .navbar-header #country-select-wrapper .form-control.selectize-search-appendix::placeholder {
+	color: white;
+}
+
+main.card-page .navbar-header #country-select-wrapper #searchform_smw a.search-submit {
+	color: white !important;
+	font-size: 20px;
+	right: 10px;
+	top: 9px;
+}
+
 /*main.card-page #bs-example-navbar-collapse-1.scrolled-state {
-    background: -moz-linear-gradient(top, rgba(0,166,227,1) 0%, rgba(0,166,227,0.47) 71%, rgba(0,166,227,0.42) 77%, rgba(0,166,227,0) 100%); !* FF3.6-15 *!
-    background: -webkit-linear-gradient(top, rgba(0,166,227,1) 0%,rgba(0,166,227,0.47) 71%,rgba(0,166,227,0.42) 77%,rgba(0,166,227,0) 100%); !* Chrome10-25,Safari5.1-6 *!
-    background: linear-gradient(to bottom, rgba(0,166,227,1) 0%,rgba(0,166,227,0.47) 71%,rgba(0,166,227,0.42) 77%,rgba(0,166,227,0) 100%); !* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ *!
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00a6e3', endColorstr='#0000a6e3',GradientType=0 ); !* IE6-9 *!
+	background: -moz-linear-gradient(top, rgba(0,166,227,1) 0%, rgba(0,166,227,0.47) 71%, rgba(0,166,227,0.42) 77%, rgba(0,166,227,0) 100%); !* FF3.6-15 *!
+	background: -webkit-linear-gradient(top, rgba(0,166,227,1) 0%,rgba(0,166,227,0.47) 71%,rgba(0,166,227,0.42) 77%,rgba(0,166,227,0) 100%); !* Chrome10-25,Safari5.1-6 *!
+	background: linear-gradient(to bottom, rgba(0,166,227,1) 0%,rgba(0,166,227,0.47) 71%,rgba(0,166,227,0.42) 77%,rgba(0,166,227,0) 100%); !* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ *!
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00a6e3', endColorstr='#0000a6e3',GradientType=0 ); !* IE6-9 *!
 }*/
 
 #double-wrapper {

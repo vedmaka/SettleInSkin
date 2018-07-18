@@ -960,6 +960,7 @@ class SettleInTemplate extends BaseTemplate {
                         <circle class="st3" cx="5" cy="25.3" r="1.8"/>
                     </svg>
                 </a>
+	            <a class="fa fa-search" id="search-trigger"></a>
                 <ul class="nav navbar-nav" id="country-select-wrapper">
                     <form role="search" action="<?=SettleGeoSearch::getSearchPageUrl()?>" id="searchform_smw" method="post">
                         <?php

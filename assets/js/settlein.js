@@ -208,4 +208,16 @@ $(function(){
 
     }
 
+    if( $('#search-trigger').length ) {
+    	$('#search-trigger').click(function(){
+    		if( $('#country-select-wrapper').is(':visible') ) {
+				$(this).removeClass('fa-close').addClass('fa-search');
+				$('#country-select-wrapper').hide();
+			}else {
+				$(this).removeClass('fa-search').addClass('fa-close');
+				$('#country-select-wrapper').show();
+			}
+		});
+	}
+
 });

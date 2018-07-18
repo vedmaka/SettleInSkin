@@ -249,9 +249,9 @@ span.label.label-default > a {
         margin: 0 !important;
     }
 
-    nav.navbar .fa {
+/*    nav.navbar .fa {
         display: none;
-    }
+    }*/
 
     #nav #top-search, #nav #top-search .form-group {
         margin-bottom: 0 !important;
