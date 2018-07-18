@@ -1530,7 +1530,7 @@ main.card-page .dropdown-menu.primary-back {
 #double-col-right ol.card-categories-list li a {
     /*background-color: #00a6e3;*/
     background-color: transparent;
-    font-size: 15px;
+    font-size: 13px;
     font-weight: normal;
 }
 
@@ -1923,6 +1923,42 @@ main.card-page {
 main.card-page .navbar-brand {
     width: 32px;
     height: 42px;
+}
+
+
+#double-col-right .right-col-inshort-wrapper .inshort-col .well-round .main-btns {
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    align-items: baseline;
+    box-sizing: border-box;
+    padding: 0 10px;
+}
+
+#double-col-right .right-col-inshort-wrapper .inshort-col .well-round .main-btns .main-btn-edit {
+    text-align: center;
+    float: none;
+    padding: 0;
+}
+
+#double-col-right .right-col-inshort-wrapper .inshort-col .well-round .main-btns .main-btn-edit a {
+    margin: 0;
+    width: 100%;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+#double-col-right .right-col-inshort-wrapper .inshort-col .well-round .main-btns .main-btn-translate {
+    text-align: center;
+    float: none;
+    padding: 0;
+}
+
+#double-col-right .right-col-inshort-wrapper .inshort-col .well-round .main-btns .main-btn-translate a {
+    margin: 0;
+    width: 100%;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
 }
 
 /* ----------------------------------- media -------------------------------------------------------- */
