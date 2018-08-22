@@ -77,6 +77,7 @@ main.card-page #bs-example-navbar-collapse-1 {
     display: flex;
     justify-content: flex-end;
     flex-grow: 1;
+    align-items: flex-start;
 }
 
 main.card-page nav #search-trigger {
@@ -87,6 +88,7 @@ main.card-page nav #search-trigger {
     float: none;
     font-size: 18px;
     line-height: 40px;
+    transition: none;
 }
 
 main.card-page nav #country-select-wrapper {
@@ -169,6 +171,7 @@ main.card-page nav #country-select-wrapper .form-control.selectize-search-append
 	border-bottom: 1px solid white;
     position: relative;
     top: -5px;
+    padding-right: 30px;
 }
 
 main.card-page nav #country-select-wrapper .form-control.selectize-search-appendix::-webkit-input-placeholder {
@@ -1803,7 +1806,11 @@ main.card-page {
     padding-bottom: 0;
 }
 
-#nav .navbar .navbar-header .navbar-toggle .icon-bar {
+#nav .navbar .navbar-toggle {
+    margin: 4px 0 0 0;
+}
+
+#nav .navbar .navbar-toggle .icon-bar {
     background-color: white !important;
 }
 
@@ -1951,14 +1958,42 @@ main.card-page {
 }
 
 @media all and (max-width: 991px) {
-    main.card-page #bs-example-navbar-collapse-1 {
+    main.card-page #bs-example-navbar-collapse-1 #right-side-actions {
         display: none;
     }
     main.card-page ul#country-select-wrapper {
-        width: calc(100% - 130px);
+        /*width: calc(100% - 130px);
         margin-left: 45px;
         margin-right: 0;
-        float: none;
+        float: none;*/
+    }
+    main.card-page nav #country-select-wrapper .settle-geo-search-wrapper .settle-geo-search-input.form-control {
+        height: 42px;
+    }
+    main.card-page .navbar-header {
+        margin-right: 0;
+    }
+    main.card-page #country-select-wrapper .settle-geo-search-wrapper {
+        width: 50%;
+    }
+    main.card-page #country-select-wrapper input.selectize-search-appendix {
+        width: 50%;
+    }
+    main.card-page nav #searchform_smw {
+        display: flex;
+    }
+    main.card-page nav #search-trigger.opened-search {
+        margin-right: 0;
+    }
+    main.card-page .navbar-brand.opened-search,
+    main.card-page .navbar-toggle.opened-search {
+        display: none !important;
+    }
+    main.card-page nav #country-select-wrapper #searchform_smw a.search-submit {
+        top: 9px;
+    }
+    main.card-page nav #country-select-wrapper .settle-geo-search-wrapper .selectize-dropdown .selectize-dropdown-content {
+        background-color: #00a6e3;
     }
 }
 

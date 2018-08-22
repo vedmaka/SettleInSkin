@@ -942,13 +942,7 @@ class SettleInTemplate extends BaseTemplate {
         <nav class="navbar row">
 
             <div class="navbar-header "> <!-- col-md-6 -->
-                <button type="button" class="navbar-toggle" data-toggle="collapse"
-                        data-target="#bs-example-navbar-collapse-1">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
+
                 <a class="navbar-brand" href="<?=Title::newMainPage()->getFullURL()?>">
                     <svg id="mark_svg_logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 37">
                         <style>
@@ -1095,13 +1089,13 @@ class SettleInTemplate extends BaseTemplate {
 
                 </ul>
 
-                <? if( !$this->isLoggedIn ) :?>
-                    <!--<div id="why_signup">
-                        <a href="#">
-                            <?/*=wfMessage( 'settlein-skin-header-why-signup' )->plain()*/?>
-                        </a>
-                    </div>-->
-                <? endif; ?>
+	            <button type="button" class="navbar-toggle" data-toggle="collapse"
+	                    data-target="#bs-example-navbar-collapse-1">
+		            <span class="sr-only">Toggle navigation</span>
+		            <span class="icon-bar"></span>
+		            <span class="icon-bar"></span>
+		            <span class="icon-bar"></span>
+	            </button>
 
             </div>
 

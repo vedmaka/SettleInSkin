@@ -213,9 +213,15 @@ $(function(){
     		if( $('#country-select-wrapper').is(':visible') ) {
 				$(this).removeClass('fa-close').addClass('fa-search');
 				$('#country-select-wrapper').hide();
+				$('#search-trigger').removeClass('opened-search');
+				$('.navbar-toggle').removeClass('opened-search');
+				$('.navbar-brand').removeClass('opened-search');
 			}else {
 				$(this).removeClass('fa-search').addClass('fa-close');
 				$('#country-select-wrapper').show();
+				$('#search-trigger').addClass('opened-search');
+				$('.navbar-toggle').addClass('opened-search');
+				$('.navbar-brand').addClass('opened-search');
 			}
 		});
 	}
