@@ -36,11 +36,12 @@ $(function(){
 		slides: [
 			//{ src: mw.config.get('stylepath') + '/SettleIn/img/landing/slide_1.jpg' }//,
 			//{ src: mw.config.get('stylepath') + '/SettleIn/img/landing/slide_2.jpg' }//,
-			{ src: mw.config.get('stylepath') + '/SettleIn/img/landing/slide_3.jpg' }//,
+			{ src: mw.config.get('stylepath') + '/SettleIn/img/landing/new/slide1.JPG' },//,
+			{ src: mw.config.get('stylepath') + '/SettleIn/img/landing/new/slide2.JPG' }//,
 			//{ src: mw.config.get('stylepath') + '/SettleIn/img/landing/slide_4.jpg' }
 		],
 		//overlay: mw.config.get('stylepath') + '/SettleIn/img/overlays/01.png',
-		delay: 3000,
+		delay: 5000,
 		timer: false
 	});
 
