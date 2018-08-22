@@ -960,17 +960,7 @@ class SettleInTemplate extends BaseTemplate {
                         <circle class="st3" cx="5" cy="25.3" r="1.8"/>
                     </svg>
                 </a>
-	            <a class="fa fa-search" id="search-trigger"></a>
-                <ul class="nav navbar-nav" id="country-select-wrapper">
-                    <form role="search" action="<?=SettleGeoSearch::getSearchPageUrl()?>" id="searchform_smw" method="post">
-                        <?php
-                        $search = new SettleGeoSearch();
-                        echo $search->getHtml( SettleGeoSearch::SGS_MODE_VALUE, 'geo_id' );
-                        ?>
-                        <input type="text" placeholder="<?=wfMessage('sil-search-form-field-label-search')->plain()?>" name="geo_text" class="form-control selectize-search-appendix" />
-                        <a href="#" class="search-submit fa fa-search"></a>
-                    </form>
-                </ul>
+
                 <!--<ul class="nav navbar-nav navbar-faq-menu">
                     <li>
                         <a id="faq-menu" href="#" data-toggle="modal" data-target="#myModal" style="" >
@@ -981,6 +971,18 @@ class SettleInTemplate extends BaseTemplate {
             </div>
 
             <div class="" id="bs-example-navbar-collapse-1"> <!-- col-md-6 -->
+
+	            <a class="fa fa-search" id="search-trigger"></a>
+	            <ul class="nav navbar-nav" id="country-select-wrapper">
+		            <form role="search" action="<?=SettleGeoSearch::getSearchPageUrl()?>" id="searchform_smw" method="post">
+			            <?php
+			            $search = new SettleGeoSearch();
+			            echo $search->getHtml( SettleGeoSearch::SGS_MODE_VALUE, 'geo_id' );
+			            ?>
+			            <input type="text" placeholder="<?=wfMessage('sil-search-form-field-label-search')->plain()?>" name="geo_text" class="form-control selectize-search-appendix" />
+			            <a href="#" class="search-submit fa fa-search"></a>
+		            </form>
+	            </ul>
 
                 <ul class="nav navbar-nav navbar-right" id="right-side-actions">
 

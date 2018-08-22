@@ -63,7 +63,7 @@ main.card-page #nav .navbar {
 
 main.card-page .navbar-header {
     padding-top: 5px;
-    flex-grow: 1;
+    flex-grow: 0;
     margin-right: 25px;
     margin-left: 10px;
     float: none;
@@ -74,28 +74,36 @@ main.card-page #bs-example-navbar-collapse-1 {
     /*padding-bottom: 15px;*/
     margin-right: 10px;
     float: none;
+    display: flex;
+    justify-content: flex-end;
+    flex-grow: 1;
 }
 
-main.card-page .navbar-header #search-trigger {
-	float: left;
-	font-size: 24px;
+main.card-page nav #search-trigger {
 	color: white;
-	line-height: 55px;
 	margin: 0 20px 0 5px;
 	font-weight: normal;
 	cursor: pointer;
+    float: none;
+    font-size: 18px;
+    line-height: 40px;
 }
 
-main.card-page .navbar-header #country-select-wrapper {
+main.card-page nav #country-select-wrapper {
 	display: none;
 }
 
-main.card-page .navbar-header #country-select-wrapper .settle-geo-search-wrapper .settle-geo-search-input.form-control {
+main.card-page nav #country-select-wrapper .settle-geo-search-wrapper {
+    position: relative;
+    top: -5px;
+}
+
+main.card-page nav #country-select-wrapper .settle-geo-search-wrapper .settle-geo-search-input.form-control {
 	background-color: transparent;
 	color: white;
 }
 
-main.card-page .navbar-header #country-select-wrapper .settle-geo-search-wrapper .selectize-input {
+main.card-page nav #country-select-wrapper .settle-geo-search-wrapper .selectize-input {
 	background-color: transparent;
 	color: white;
 	border-top: 0;
@@ -104,88 +112,90 @@ main.card-page .navbar-header #country-select-wrapper .settle-geo-search-wrapper
 	border-bottom: 1px solid white;
 }
 
-main.card-page .navbar-header #country-select-wrapper .settle-geo-search-wrapper .selectize-input input {
+main.card-page nav #country-select-wrapper .settle-geo-search-wrapper .selectize-input input {
 	color: white;
 }
 
-main.card-page .navbar-header #country-select-wrapper .settle-geo-search-wrapper .selectize-input input::-webkit-input-placeholder {
+main.card-page nav #country-select-wrapper .settle-geo-search-wrapper .selectize-input input::-webkit-input-placeholder {
 	color: white;
 }
 
-main.card-page .navbar-header #country-select-wrapper .settle-geo-search-wrapper .selectize-input input::-moz-placeholder {
+main.card-page nav #country-select-wrapper .settle-geo-search-wrapper .selectize-input input::-moz-placeholder {
 	color: white;
 }
 
-main.card-page .navbar-header #country-select-wrapper .settle-geo-search-wrapper .selectize-input input::-ms-input-placeholder {
+main.card-page nav #country-select-wrapper .settle-geo-search-wrapper .selectize-input input::-ms-input-placeholder {
 	color: white;
 }
 
-main.card-page .navbar-header #country-select-wrapper .settle-geo-search-wrapper .selectize-input input::-moz-placeholder {
+main.card-page nav #country-select-wrapper .settle-geo-search-wrapper .selectize-input input::-moz-placeholder {
 	color: white;
 }
 
-main.card-page .navbar-header #country-select-wrapper .settle-geo-search-wrapper .selectize-input input::placeholder {
+main.card-page nav #country-select-wrapper .settle-geo-search-wrapper .selectize-input input::placeholder {
 	color: white;
 }
 
-main.card-page .navbar-header #country-select-wrapper .settle-geo-search-wrapper .selectize-dropdown .selectize-dropdown-content {
+main.card-page nav #country-select-wrapper .settle-geo-search-wrapper .selectize-dropdown .selectize-dropdown-content {
 
 }
 
-main.card-page .navbar-header #country-select-wrapper .settle-geo-search-wrapper .selectize-dropdown .selectize-dropdown-content .settle-geo-search-result-item-wrapper {
+main.card-page nav #country-select-wrapper .settle-geo-search-wrapper .selectize-dropdown .selectize-dropdown-content .settle-geo-search-result-item-wrapper {
 
 }
 
-main.card-page .navbar-header #country-select-wrapper .settle-geo-search-wrapper .selectize-dropdown .selectize-dropdown-content .settle-geo-search-result-item-wrapper .glyphicon.glyphicon-map-marker {
+main.card-page nav #country-select-wrapper .settle-geo-search-wrapper .selectize-dropdown .selectize-dropdown-content .settle-geo-search-result-item-wrapper .glyphicon.glyphicon-map-marker {
 	color: white;
 }
 
-main.card-page .navbar-header #country-select-wrapper .settle-geo-search-wrapper .selectize-dropdown .selectize-dropdown-content .settle-geo-search-result-item-wrapper .settle-geo-result-item-suffix {
+main.card-page nav #country-select-wrapper .settle-geo-search-wrapper .selectize-dropdown .selectize-dropdown-content .settle-geo-search-result-item-wrapper .settle-geo-result-item-suffix {
 	color: rgba(255, 255, 255, 0.81);
 }
 
-main.card-page .navbar-header #country-select-wrapper .settle-geo-search-wrapper .selectize-dropdown .selectize-dropdown-content .settle-geo-search-result-item-wrapper.active .glyphicon.glyphicon-map-marker {
+main.card-page nav #country-select-wrapper .settle-geo-search-wrapper .selectize-dropdown .selectize-dropdown-content .settle-geo-search-result-item-wrapper.active .glyphicon.glyphicon-map-marker {
 	color: #4a4a4a;
 }
 
-main.card-page .navbar-header #country-select-wrapper .settle-geo-search-wrapper .selectize-dropdown .selectize-dropdown-content .settle-geo-search-result-item-wrapper.active .settle-geo-result-item-suffix {
+main.card-pagenavr #country-select-wrapper .settle-geo-search-wrapper .selectize-dropdown .selectize-dropdown-content .settle-geo-search-result-item-wrapper.active .settle-geo-result-item-suffix {
 	color: #4a4a4a;
 }
 
-main.card-page .navbar-header #country-select-wrapper .form-control.selectize-search-appendix {
+main.card-page nav #country-select-wrapper .form-control.selectize-search-appendix {
 	background-color: transparent;
 	color: white;
 	border-top: 0;
 	border-left: 0;
 	border-right: 0;
 	border-bottom: 1px solid white;
+    position: relative;
+    top: -5px;
 }
 
-main.card-page .navbar-header #country-select-wrapper .form-control.selectize-search-appendix::-webkit-input-placeholder {
+main.card-page nav #country-select-wrapper .form-control.selectize-search-appendix::-webkit-input-placeholder {
 	color: white;
 }
 
-main.card-page .navbar-header #country-select-wrapper .form-control.selectize-search-appendix::-moz-placeholder {
+main.card-page nav #country-select-wrapper .form-control.selectize-search-appendix::-moz-placeholder {
 	color: white;
 }
 
-main.card-page .navbar-header #country-select-wrapper .form-control.selectize-search-appendix::-ms-input-placeholder {
+main.card-page nav #country-select-wrapper .form-control.selectize-search-appendix::-ms-input-placeholder {
 	color: white;
 }
 
-main.card-page .navbar-header #country-select-wrapper .form-control.selectize-search-appendix::-moz-placeholder {
+main.card-page nav #country-select-wrapper .form-control.selectize-search-appendix::-moz-placeholder {
 	color: white;
 }
 
-main.card-page .navbar-header #country-select-wrapper .form-control.selectize-search-appendix::placeholder {
+main.card-page nav #country-select-wrapper .form-control.selectize-search-appendix::placeholder {
 	color: white;
 }
 
-main.card-page .navbar-header #country-select-wrapper #searchform_smw a.search-submit {
+main.card-page nav #country-select-wrapper #searchform_smw a.search-submit {
 	color: white !important;
-	font-size: 20px;
-	right: 10px;
-	top: 9px;
+	font-size: 18px;
+    right: 7px;
+    top: 11px;
 }
 
 /*main.card-page #bs-example-navbar-collapse-1.scrolled-state {
@@ -804,9 +814,12 @@ span.card-special-skin-link-divider {
 }
 
 main.card-page ul#country-select-wrapper {
-    width: calc(100% - 50px);
+    /*width: calc(100% - 50px);
     min-width: 1px !important;
-    max-width: 70%;
+    max-width: 70%;*/
+    float: none;
+    margin: 0 15px 0 0;
+    flex-grow: 1;
 }
 
 main.card-page #login-selector {
