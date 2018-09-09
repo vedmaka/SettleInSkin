@@ -34,11 +34,11 @@ $(function(){
 	// Slideshow
 	$('.slide-1 .vegas-bg').vegas({
 		slides: [
-			//{ src: mw.config.get('stylepath') + '/SettleIn/img/landing/slide_1.jpg' }//,
-			//{ src: mw.config.get('stylepath') + '/SettleIn/img/landing/slide_2.jpg' }//,
-			{ src: mw.config.get('stylepath') + '/SettleIn/img/landing/new/slide1.JPG' },//,
-			{ src: mw.config.get('stylepath') + '/SettleIn/img/landing/new/slide2.JPG' }//,
-			//{ src: mw.config.get('stylepath') + '/SettleIn/img/landing/slide_4.jpg' }
+			{ src: mw.config.get('stylepath') + '/SettleIn/img/landing/slide_3.jpg' }, // city
+			{ src: mw.config.get('stylepath') + '/SettleIn/img/landing/new/small_town.jpg' },
+			{ src: mw.config.get('stylepath') + '/SettleIn/img/landing/new/ocean.jpg' },
+			{ src: mw.config.get('stylepath') + '/SettleIn/img/landing/new/slide1.JPG' },
+			{ src: mw.config.get('stylepath') + '/SettleIn/img/landing/new/bike.jpg' }
 		],
 		//overlay: mw.config.get('stylepath') + '/SettleIn/img/overlays/01.png',
 		delay: 5000,
