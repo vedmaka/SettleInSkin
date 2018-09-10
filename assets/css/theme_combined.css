@@ -206,14 +206,14 @@ nav {
     min-height: 42px;
     background-color: white;
     outline: none;
-    width: 30%;
+    width: 50%;
     border-top: 1px solid rgb(204, 204, 204);
     border-right: 1px solid rgb(204, 204, 204);
     border-bottom: 1px solid rgb(204, 204, 204);
 }
 
 #country-select-wrapper .settle-geo-search-wrapper {
-    width: 70%;
+    width: 50%;
     float: left;
     /*min-width: 167px;*/
 }
@@ -991,7 +991,7 @@ span.patrollink a {
     #country-select-wrapper .settle-geo-search-wrapper {
         min-width: inherit;
     }
-    
+
     .jumbotron .jumbo-slider-backlay .slider-backlay-slide img {
         width: auto;
         max-height: 400px;
