@@ -918,6 +918,13 @@ main.card-page .dropdown-menu.primary-back {
     margin-bottom: 25px;
 }
 
+#double-col-right .right-col-inshort-wrapper .social-links-well {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
 #double-col-right .inshort-col .card-special-skin-link,
 #double-col-right .inshort-col .card-special-skin-link-divider {
     color: #00a6e3;
