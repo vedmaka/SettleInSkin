@@ -903,8 +903,12 @@ main.card-page .dropdown-menu.primary-back {
 #double-col-right .right-col-inshort-wrapper {
     /*margin-top: 14px;*/
     /*margin-bottom: 25px;*/
-    max-width: 700px;
+    max-width: 750px;
     margin: 0 auto;
+}
+
+#double-col-right .right-col-inshort-wrapper .inshort-col:first-child {
+    max-width: 225px;
 }
 
 #double-col-right .right-col-inshort-wrapper .inshort-col {
@@ -978,7 +982,7 @@ main.card-page .dropdown-menu.primary-back {
 
 @media all and (min-width: 1024px) {
     #double-col-right .right-col-inshort-wrapper .inshort-col + .inshort-col {
-        padding-left: 10px;
+        padding-left: 25px;
     }
 }
 
