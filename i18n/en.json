@@ -31,8 +31,8 @@
 	"settlein-skin-mainpage-section-categories-heading": "More than <b>$2</b> pages in <b>$1</b> categories",
 	"settlein-skin-mainpage-section-requests-heading": "More than <b>$1</b> requests awaiting to be answered",
 
-	"settlein-skin-mainpage-section-using-title": "Using Settlein is easy",
-	"settlein-skin-mainpage-section-using-text": "Simply enter a location and search topic to instantly find the information you are looking for. No pages match your description or it’s not in your language? Not a problem! Just make a request and it should be up shortly. Or, even better, SettleIn allows you to contribute by creating a new page yourself or translating a page!",
+	"settlein-skin-mainpage-section-using-title": "Using settlein is easy",
+	"settlein-skin-mainpage-section-using-text": "Simply enter a location and search topic to instantly find the information you are looking for. No pages match your description or it’s not in your language? Not a problem! Just make a request and it should be up shortly. Or, even better, settleIn allows you to contribute by creating a new page yourself or translating a page!",
 	"settlein-skin-mainpage-section-how-it-works-fold": "How It Works?",
 	"settlein-skin-mainpage-section-how-to-help-fold": "How you can help?",
 	"settlein-skin-mainpage-section-how-to-help-example-create": "Create a new page",
@@ -44,14 +44,14 @@
 	"settlein-skin-mainpage-section-how-to-help-example-patrol": "Patrol edits",
 	"settlein-skin-mainpage-section-what-else-fold": "Why we're here ?",
 	"settlein-skin-mainpage-section-statistics-formatted": "<b>$1</b> Pages in <b>$2</b> Countries in <b>$3</b> languages<br/> created by <b>$4</b> People just like you.",
-	"settlein-skin-mainpage-section-statistics-text1": "Settlein is here to make information more accessible and easy to understand by connecting people with information to those who need it in order to help simplify life anywhere in the world.",
+	"settlein-skin-mainpage-section-statistics-text1": "settlein is here to make information more accessible and easy to understand by connecting people with information to those who need it in order to help simplify life anywhere in the world.",
 	"settlein-skin-mainpage-section-statistics-text2": "Join the settlein movement by clicking the button below to be able to save pages that are useful for you to easily find again, get notifications when they are updated and create a profile to show your username for any new pages you create or edit.",
 	"settlein-skin-mainpage-section-contribute-fold": "Contribute!",
 	"settlein-skin-mainpage-section-answer-a-request": "Answer a request",
 	"settlein-skin-mainpage-section-send-a-request": "Request new page",
 
     "settlein-skin-mainpage-section-help-modal-create-title": "Create New Page",
-    "settlein-skin-mainpage-section-help-modal-create-text": "Creating a page is easy. Just click on the add new article link and follow the instructions on the page. Creating a new page will involve finding out how to do something from a reputable site and putting it into the easy format that Settlein has created. We know it’s a lot to ask to spend 10-15 minutes to do this, but the end result is that thousands of people will benefit from that time spent. Plus, you will be given credit as the person who added the new article.",
+    "settlein-skin-mainpage-section-help-modal-create-text": "Creating a page is easy. Just click on the add new article link and follow the instructions on the page. Creating a new page will involve finding out how to do something from a reputable site and putting it into the easy format that settlein has created. We know it’s a lot to ask to spend 10-15 minutes to do this, but the end result is that thousands of people will benefit from that time spent. Plus, you will be given credit as the person who added the new article.",
     "settlein-skin-mainpage-section-help-modal-create-button": "See page requests",
 
     "settlein-skin-mainpage-section-help-modal-edit-title": "Edit a Page",
@@ -63,7 +63,7 @@
     "settlein-skin-mainpage-section-help-modal-rate-button": "See pages without rating",
 
     "settlein-skin-mainpage-section-help-modal-like-title": "Like us on Facebook",
-    "settlein-skin-mainpage-section-help-modal-like-text": "We need your help to get the word out about Settlein. Like us on Facebook and share our page on your home page to help inform others about Settlein. It just takes a few seconds. This is the modern version of a Word of Mouth campaign, so every like and share could lead to thousands of more people getting and giving help on our platform.",
+    "settlein-skin-mainpage-section-help-modal-like-text": "We need your help to get the word out about settlein. Like us on Facebook and share our page on your home page to help inform others about settlein. It just takes a few seconds. This is the modern version of a Word of Mouth campaign, so every like and share could lead to thousands of more people getting and giving help on our platform.",
     "settlein-skin-mainpage-section-help-modal-like-button": "Like",
 
     "settlein-skin-mainpage-section-help-modal-send-title": "Send us an Idea",
