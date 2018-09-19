@@ -1007,6 +1007,10 @@ main.card-page .dropdown-menu.primary-back {
 	min-height: 268px;
 }
 
+#double-col-right .right-col-inshort-wrapper .inshort-col .well.well-long p.text-muted {
+    color: black;
+}
+
 #double-col-right .right-col-inshort-wrapper .inshort-col .well.well-border-rounded-top {
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
