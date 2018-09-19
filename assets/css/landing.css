@@ -475,6 +475,8 @@ main.main-page-landing #fullpage .slide-5 footer {
     color: white;
     font-size: 15px;
     font-weight: normal;
+	margin-bottom: 10px;
+	display: inline-block;
 }
 
 .jumbotron .how-help-links > span > a:hover {
