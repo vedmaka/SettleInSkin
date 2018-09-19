@@ -907,8 +907,10 @@ main.card-page .dropdown-menu.primary-back {
     margin: 0 auto;
 }
 
-#double-col-right .right-col-inshort-wrapper .inshort-col:first-child {
-    max-width: 225px;
+@media screen and (min-width: 1024px) {
+    #double-col-right .right-col-inshort-wrapper .inshort-col:first-child {
+        max-width: 225px;
+    }
 }
 
 #double-col-right .right-col-inshort-wrapper .inshort-col {
