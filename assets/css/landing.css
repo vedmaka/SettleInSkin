@@ -501,6 +501,9 @@ main.main-page-landing #fullpage .slide-5 footer {
 	}
 }
 
+#contribute-landing {
+	margin-top: -50px;
+}
 
 #first_jumbo_p {
 	position: relative;
