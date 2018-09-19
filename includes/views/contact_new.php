@@ -28,8 +28,8 @@
                     <label for="input-why" class="col-sm-2"><?=wfMessage('settlein-skin-project-page-contact-field-reason')->plain()?></label>
                     <div class="col-md-9 col-lg-8">
                         <select name="reason" id="input-why" class="form-control" required>
-                            <option value="0" selected><?=wfMessage('settlein-skin-project-page-contact-field-reason-value-1')->plain()?></option>
-                            <option value="1"><?=wfMessage('settlein-skin-project-page-contact-field-reason-value-3')->plain()?></option>
+                            <!-- <option value="0" selected><?=wfMessage('settlein-skin-project-page-contact-field-reason-value-1')->plain()?></option> -->
+                            <option value="1" selected><?=wfMessage('settlein-skin-project-page-contact-field-reason-value-3')->plain()?></option>
                             <option value="2"><?=wfMessage('settlein-skin-project-page-contact-field-reason-value-4')->plain()?></option>
                             <option value="3"><?=wfMessage('settlein-skin-project-page-contact-field-reason-value-5')->plain()?></option>
                             <option value="4"><?=wfMessage('settlein-skin-project-page-contact-field-reason-value-6')->plain()?></option>
