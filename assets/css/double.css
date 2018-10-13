@@ -1098,7 +1098,7 @@ main.card-page .dropdown-menu.primary-back {
     margin-top: 3px;
     min-height: 1px;
     line-height: 15px;
-    padding: 15px 0;
+    padding: 0;
 }
 
 .btn-yellow {
@@ -2109,7 +2109,23 @@ main.card-page .navbar-brand {
     margin: 0;
     align-items: baseline;
     box-sizing: border-box;
-    padding: 0 10px;
+    padding: 0;
+}
+
+#double-col-right .right-col-inshort-wrapper .inshort-col .well-round .main-btns > div {
+    box-shadow: 1px 1px 10px 0 #00000059;
+    padding: 0;
+    background-color: white;
+    margin-right: 3px;
+}
+
+#double-col-right .right-col-inshort-wrapper .inshort-col .well-round .main-btns > div > a {
+    display: block;
+    padding: 17px 15px 17px 15px !important;
+}
+
+#double-col-right .right-col-inshort-wrapper .inshort-col .well-round .main-btns > div:last-child {
+    margin-right: 0;
 }
 
 #double-col-right .right-col-inshort-wrapper .inshort-col .well-round .main-btns .main-btn-edit {
@@ -2387,7 +2403,7 @@ main.card-page .navbar-brand {
     #nav #why_signup {
         bottom: 10px;
     }
-    
+
     nav a.navbar-brand {
         display: block !important;
     }
