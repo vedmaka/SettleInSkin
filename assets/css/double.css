@@ -1708,6 +1708,19 @@ main.card-page .dropdown-menu.primary-back {
     margin-bottom: 15px;
 }
 
+@media (max-width: 480px) {
+    #double-col-right .right-col-inshort-wrapper {
+        display: flex;
+        flex-direction: column;
+    }
+    #double-col-right .right-col-inshort-wrapper > div {
+        order: 1;
+    }
+    #double-col-right .right-col-inshort-wrapper > div:nth-child(2) {
+        order: 0;
+    }
+}
+
 #double-col-right .right-col-inshort-wrapper .inshort-col .well.height-shrink a.btn-yellow {
     box-shadow: 1px 1px 2px #0000003b;
 }
