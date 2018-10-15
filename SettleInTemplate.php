@@ -238,6 +238,8 @@ class SettleInTemplate extends BaseTemplate {
 		$data['patrolsCount'] = SettleContributions::getInstance()->getPendingPatrolsCount();
 		$data['patrols_link'] = SpecialPage::getTitleFor('SettleContributionsPatrol')->getFullURL();
 		$data['helpout_link'] = SpecialPage::getTitleFor('HelpOut')->getFullURL();
+		$data['contactus_link'] = SpecialPage::getTitleFor('SettleIn')->getFullURL().'/contact';
+		$data['aboutus_link'] = SpecialPage::getTitleFor('SettleIn')->getFullURL().'/about';
 
         $templater = new TemplateParser( dirname(__FILE__).'/templates', true );
         $html = $templater->processTemplate('landing', $data);
@@ -656,7 +658,7 @@ class SettleInTemplate extends BaseTemplate {
                     </a>
                 </li>
                 <li>
-                    <a href="<?=Title::newFromText('Help Out', NS_PROJECT)->getFullURL()?>">
+                    <a href="<?=SpecialPage::getTitleFor('HelpOut')->getFullURL()?>">
                         <?=wfMessage('settlein-skin-footer-helpout')->plain()?>
                     </a>
                 </li>
@@ -737,7 +739,7 @@ class SettleInTemplate extends BaseTemplate {
                     </a>
                 </li>
                 <li>
-                    <a href="<?=Title::newFromText('Help Out', NS_PROJECT)->getFullURL()?>">
+                    <a href="<?=SpecialPage::getTitleFor('HelpOut')->getFullURL()?>">
                         <?=wfMessage('settlein-skin-footer-helpout')->plain()?>
                     </a>
                 </li>
