@@ -1396,7 +1396,7 @@ main.card-page .dropdown-menu.primary-back {
 
 #double-col-right .right-col-contributors {
     margin-top: 25px;
-    text-align: left;
+    text-align: center;
     padding-left: 80px;
 }
 
@@ -1416,7 +1416,7 @@ main.card-page .dropdown-menu.primary-back {
 #double-col-right .right-col-contributors ul {
     margin: 0;
     padding: 0;
-    text-align: left;
+    text-align: center;
     font-size: 0;
 }
 
@@ -1468,21 +1468,21 @@ main.card-page .dropdown-menu.primary-back {
 
 #double-col-right .right-col-how-to-contribute .how-to-contrib-title {
     font-size: 19px;
-    color: #00a6e3;
+    color: white;
     font-weight: 400;
     margin: 55px 0 8px 0;
-    text-align: right;
 }
 
 #double-col-right .right-col-how-to-contribute ul {
     margin: 0;
-    text-align: right;
     padding: 0;
 }
 
 #double-col-right .right-col-how-to-contribute ul li {
     display: block;
     list-style: none;
+    display: inline-block;
+    margin: 0 10px;
 }
 
 #double-col-right .right-col-how-to-contribute ul li + li::before {
@@ -1502,7 +1502,7 @@ main.card-page .dropdown-menu.primary-back {
 }
 
 #double-col-right .right-col-how-to-contribute ul li a {
-    color: #00a6e3;
+    color: white;
     font-size: 18px;
     font-weight: 300;
 }
@@ -1775,7 +1775,7 @@ main.card-page .dropdown-menu.primary-back {
 
 .right-col-contributors h1 {
     color: #00a6e3;
-    text-align: left;
+    text-align: center;
     margin-bottom: 25px;
 }
 
