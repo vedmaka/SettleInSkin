@@ -96,6 +96,35 @@ class stools
 
     }
 
+	/**
+	 * @param Parser $parser
+	 */
+    public static function pageinfocontributors( $parser ) {
+		$title = $parser->getTitle();
+	    if( !$title || !$title->exists() ) {
+		    return '';
+	    }
+	    $html = '<dl class="pageinfo-settlein">';
+
+	    $html .= '<span>';
+	    $html .= '<dt>Added by</dt>';
+	    $html .= '<dd>'.$title->getFirstRevision()->getUserText().'</dd>';
+	    $html .= '</span>';
+
+	    $html .= '<span>';
+	    $html .= '<dt>Date added</dt>';
+	    $html .= '<dd>'.date('j F Y', wfTimestamp(TS_UNIX, $title->getFirstRevision()->getTimestamp())).'</dd>';
+	    $html .= '</span>';
+
+	    $html .= '<span>';
+	    $html .= '<dt>Last updated</dt>';
+	    $html .= '<dd>'.date('j F Y', wfTimestamp( TS_UNIX, Revision::newFromId( $title->getLatestRevID() )->getTimestamp())).'</dd>';
+	    $html .= '</span>';
+
+	    $html .= '</dl>';
+	    return $html;
+    }
+
     /**
      * @param Parser $parser
      * @return string

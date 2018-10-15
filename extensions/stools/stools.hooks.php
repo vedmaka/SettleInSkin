@@ -34,6 +34,7 @@ class stoolsHooks
         $parser->setFunctionHook('stoolssociallinks', 'stools::sociallinks' );
         $parser->setFunctionHook('stoolsfooterlinks', 'stools::footerlinks' );
         $parser->setFunctionHook('stoolsuserpic', 'stools::userpic' );
+        $parser->setFunctionHook('pageinfocontributors', 'stools::pageinfocontributors' );
 	}
 
 }

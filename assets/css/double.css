@@ -2441,3 +2441,25 @@ main.card-page .navbar-brand {
 #mark_svg_logo path {
     fill: white !important;
 }
+
+dl.pageinfo-settlein {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 15px;
+    text-align: center;
+}
+
+dl.pageinfo-settlein span {
+    margin: 0 25px;
+}
+
+dl.pageinfo-settlein dt {
+    text-align: center;
+    margin: 0 0 10px 0;
+}
+
+dl.pageinfo-settlein dd {
+    text-align: center;
+    margin: 0;
+}
