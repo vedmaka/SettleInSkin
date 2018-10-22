@@ -1466,11 +1466,15 @@ main.card-page .dropdown-menu.primary-back {
     padding: 15px 10px;
 }
 
+#double-col-right .right-col-how-to-contribute p {
+    color: white;
+}
+
 #double-col-right .right-col-how-to-contribute .how-to-contrib-title {
     font-size: 19px;
-    color: white;
+    color: #555;
     font-weight: 400;
-    margin: 55px 0 8px 0;
+    margin: 55px 0 45px 0;
 }
 
 #double-col-right .right-col-how-to-contribute ul {
@@ -1479,21 +1483,7 @@ main.card-page .dropdown-menu.primary-back {
 }
 
 #double-col-right .right-col-how-to-contribute ul li {
-    display: block;
     list-style: none;
-    display: inline-block;
-    margin: 0 10px;
-}
-
-#double-col-right .right-col-how-to-contribute ul li + li::before {
-    content: "";
-    background-color: white;
-    width: 2px;
-    height: 19px;
-    display: none;
-    margin: 0 10px;
-    position: relative;
-    top: 3px;
 }
 
 .double-column-contrib {
@@ -1501,10 +1491,37 @@ main.card-page .dropdown-menu.primary-back {
     margin: 0 auto;
 }
 
+#double-col-right .right-col-how-to-contribute ul {
+    display: flex;
+    justify-content: space-around;
+    max-width: 960px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+}
+
+#double-col-right .right-col-how-to-contribute ul li {
+    flex: 0 0 auto;
+    width: 100px;
+    height: 100px;
+    display: block;
+    margin: 40px;
+}
+
 #double-col-right .right-col-how-to-contribute ul li a {
     color: white;
-    font-size: 18px;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 16px;
     font-weight: 300;
+    width: 130px;
+    height: 130px;
+    background-color: #00a6e3;
+    align-items: center;
+    border-radius: 8px;
+    box-sizing: border-box;
+    padding: 0 10px;
 }
 
 #double-col-right .col-right-footer-links {
@@ -2086,20 +2103,6 @@ main.card-page {
     #double-col-right .col-right-footer-links li {
         display: block;
         margin-bottom: 8px;
-    }
-    #double-col-right .right-col-how-to-contribute ul li {
-        display: block;
-        text-align: left;
-    }
-    #double-col-right .right-col-how-to-contribute ul li::before {
-        content: "";
-        /*background-color: #00a6e3;*/
-        width: 2px;
-        height: 19px;
-        display: inline-block;
-        margin: 0 15px;
-        position: relative;
-        top: 3px;
     }
     #double-col-right .col-right-related-pages ul li {
         width: 100%;
