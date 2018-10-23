@@ -107,12 +107,12 @@ class stools
 	    $html = '<dl class="pageinfo-settlein">';
 
 	    $html .= '<span>';
-	    $html .= '<dt>Added by</dt>';
-	    $html .= '<dd>'.$title->getFirstRevision()->getUserText().'</dd>';
+	    $html .= '<dt>Created by</dt>';
+	    $html .= '<dd><a href="'.User::newFromId($title->getFirstRevision()->getUser() )->getUserPage()->getFullURL().'">'.$title->getFirstRevision()->getUserText().'</a></dd>';
 	    $html .= '</span>';
 
 	    $html .= '<span>';
-	    $html .= '<dt>Date added</dt>';
+	    $html .= '<dt>Date created</dt>';
 	    $html .= '<dd>'.date('j F Y', wfTimestamp(TS_UNIX, $title->getFirstRevision()->getTimestamp())).'</dd>';
 	    $html .= '</span>';
 
@@ -121,8 +121,63 @@ class stools
 	    $html .= '<dd>'.date('j F Y', wfTimestamp( TS_UNIX, Revision::newFromId( $title->getLatestRevID() )->getTimestamp())).'</dd>';
 	    $html .= '</span>';
 
+	    $page = WikiPage::factory( $title );
+	    $tEditors = $page->getContributors();
+	    $editors = array();
+	    foreach( $tEditors as $teditor ) {
+		    if( !array_key_exists( $teditor->getId(), $editors ) ) {
+			    $editors[] = '<a href="'.$teditor->getUserPage()->getFullURL().'">'.$teditor->getName().'</a>';
+		    }
+	    }
+	    if( !array_key_exists( $page->getUser(), $editors ) ) {
+		    $editors[] = '<a href="'.User::newFromId( $page->getUser() )->getUserPage()->getFullURL().'">'.User::newFromId( $page->getUser() )->getName().'</a>';
+	    }
+
+	    $html .= '<span>';
+	    $html .= '<dt>Contributors</dt>';
+	    $html .= '<dd>'.implode(', ', $editors).'</dd>';
+	    $html .= '</span>';
+
 	    $html .= '</dl>';
-	    return $html;
+
+	    $html .= '<a href="#" class="contrib-send-thankyou btn btn-yellow" data-toggle="modal" data-target="#thankyouModal" >send thank you</a>';
+
+	    $userid = $page->getUser();
+	    $paget = $title->getBaseText();
+
+	    $modal = <<<EOT
+<div class="modal fade" id="thankyouModal" tabindex="-1" role="dialog" aria-labelledby="thankyouModal" data-user="$userid">
+<div class="modal-dialog" role="document">
+<div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+<h4 class="modal-title" id="myModalLabel">Send thank you message</h4>
+</div>
+<div class="modal-body">
+<form>
+<div class="form-group">
+<label for="message1">Message</label>
+<textarea class="form-control" id="message1" placeholder="..." required>
+Thank you for creating the "$paget" page!
+</textarea>
+</div>
+</form>
+</div>
+<div class="modal-footer">
+<button type="button" class="btn btn-primary">Submit</button>
+</div>
+</div>
+</div>
+</div>
+EOT;
+
+	    $html .= $modal;
+
+	    return array(
+	    	$html,
+		    'isHTML' => 'true',
+		    'markerType' => 'nowiki'
+	    );
     }
 
     /**

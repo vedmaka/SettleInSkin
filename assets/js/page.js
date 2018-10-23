@@ -112,4 +112,14 @@ $(function () {
 		});
 	}
 
+	if( $('#thankyouModal').size() ) {
+	    $('#thankyouModal').find('.btn-primary').click(function(){
+			$('#thankyouModal').modal('hide');
+			$.post('/api.php?action=stoolsapi&format=json', {
+			    user: $('#thankyouModal').data('user'),
+                message: $('#thankyouModal textarea').val()
+            });
+        });
+    }
+
 });

@@ -11,7 +11,8 @@
 	"AutoloadClasses": {
         "stools": "stools.class.php",
 		"stoolsHooks": "stools.hooks.php",
-		"Specialstools": "specials/Specialstools.php"
+		"Specialstools": "specials/Specialstools.php",
+		"stoolsapi":  "stoolsapi.api.php"
 	},
 	"config": {
 		"stoolsEnableFoo": true
@@ -51,6 +52,9 @@
 	},
 	"SpecialPages": {
 		"stools": "Specialstools"
+	},
+	"APIModules": {
+		"stoolsapi":  "stoolsapi"
 	},
 	"manifest_version": 1
 }

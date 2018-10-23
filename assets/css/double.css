@@ -1397,7 +1397,6 @@ main.card-page .dropdown-menu.primary-back {
 #double-col-right .right-col-contributors {
     margin-top: 25px;
     text-align: center;
-    padding-left: 80px;
 }
 
 /*#double-col-right .right-col-contributors::before {
@@ -1447,11 +1446,19 @@ main.card-page .dropdown-menu.primary-back {
 }
 
 #double-col-right a.contrib-send-thankyou {
-    margin-top: 25px;
     font-size: 18px;
-    display: inline-block;
-    line-height: 28px;
     font-weight: 300;
+    width: 180px;
+    height: 180px;
+    display: flex;
+    align-items: center;
+    border-radius: 180px;
+    background-color: white;
+    border: 1px solid yellow;
+    margin: 50px auto 0 auto;
+    text-align: center;
+    color: #00a6e3;
+    justify-content: center;
 }
 
 #double-col-right a.contrib-send-thankyou:hover {
@@ -1467,7 +1474,12 @@ main.card-page .dropdown-menu.primary-back {
 }
 
 #double-col-right .right-col-how-to-contribute p {
-    color: white;
+    color: #555;
+    font-size: 16px;
+    max-width: 600px;
+    margin: 0 auto;
+    font-weight: 400;
+    margin-bottom: 15px;
 }
 
 #double-col-right .right-col-how-to-contribute .how-to-contrib-title {
@@ -1791,7 +1803,7 @@ main.card-page .dropdown-menu.primary-back {
 }
 
 .right-col-contributors h1 {
-    color: #00a6e3;
+    color: white;
     text-align: center;
     margin-bottom: 25px;
 }
@@ -2447,22 +2459,31 @@ main.card-page .navbar-brand {
 
 dl.pageinfo-settlein {
     display: flex;
-    align-items: center;
-    justify-content: center;
+    align-items: flex-start;
+    justify-content: flex-start;
     font-size: 15px;
-    text-align: center;
+    color: white;
+    text-align: left;
+    flex-direction: column;
+    max-width: 400px;
+    margin: 0 auto;
 }
 
 dl.pageinfo-settlein span {
-    margin: 0 25px;
+    margin: 0 0 10px 0;
+    display: flex;
 }
 
 dl.pageinfo-settlein dt {
-    text-align: center;
-    margin: 0 0 10px 0;
+    text-align: left;
+    margin: 0 0 0 0;
 }
 
 dl.pageinfo-settlein dd {
     text-align: center;
-    margin: 0;
+    margin: 0 0 0 25px;
+}
+
+dl.pageinfo-settlein dd a {
+    color: white;
 }
