@@ -1483,10 +1483,11 @@ main.card-page .dropdown-menu.primary-back {
 }
 
 #double-col-right .right-col-how-to-contribute .how-to-contrib-title {
-    font-size: 19px;
+    font-size: 25px;
     color: #555;
     font-weight: 400;
     margin: 55px 0 45px 0;
+    font-family: Oswald,Helvetica,Arial,sans-serif;
 }
 
 #double-col-right .right-col-how-to-contribute ul {
