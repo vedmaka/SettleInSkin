@@ -1397,6 +1397,9 @@ main.card-page .dropdown-menu.primary-back {
 #double-col-right .right-col-contributors {
     /*margin-top: 25px;*/
     text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 /*#double-col-right .right-col-contributors::before {
@@ -1446,16 +1449,15 @@ main.card-page .dropdown-menu.primary-back {
 }
 
 #double-col-right a.contrib-send-thankyou {
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 300;
-    width: 180px;
-    height: 180px;
+    width: 120px;
+    height: 120px;
     display: flex;
     align-items: center;
-    border-radius: 180px;
+    border-radius: 120px;
     background-color: white;
     border: 1px solid yellow;
-    margin: 50px auto 0 auto;
     text-align: center;
     color: #00a6e3;
     justify-content: center;
@@ -1806,8 +1808,9 @@ main.card-page .dropdown-menu.primary-back {
 .right-col-contributors h1 {
     color: white;
     text-align: center;
-    margin-bottom: 25px;
+    margin-bottom: 70px;
     margin-top: 20px;
+    width: 100%;
 }
 
 .step-by-step-section {
@@ -1831,7 +1834,7 @@ main.card-page .dropdown-menu.primary-back {
 
 .footerlinks-wrapper {
     max-width: 980px;
-    margin: 110px auto 0 auto;
+    margin: 10px auto 0 auto;
     text-align: center;
 }
 
@@ -1848,6 +1851,11 @@ main.card-page .dropdown-menu.primary-back {
 
 .footerlinks-wrapper a {
     color: white;
+}
+
+#page-comments-achor {
+    padding-bottom: 20px;
+    padding-top: 0;
 }
 
 .settle-related-articles-block {
@@ -2467,7 +2475,7 @@ dl.pageinfo-settlein {
     text-align: left;
     flex-direction: column;
     max-width: 400px;
-    margin: 0 auto;
+    margin-right: 50px;
 }
 
 dl.pageinfo-settlein span {
