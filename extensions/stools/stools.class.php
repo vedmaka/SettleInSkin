@@ -100,13 +100,19 @@ class stools
 	 * @param Parser $parser
 	 */
     public static function pageinfocontributors( $parser ) {
+
+    	global $wgServer, $wgStylePath;
+
 		$title = $parser->getTitle();
 	    if( !$title || !$title->exists() ) {
 		    return '';
 	    }
-	    $html = '<dl class="pageinfo-settlein">';
 
-	    $html .= '<span>';
+	    $html = '';
+
+	    //$html = '<dl class="pageinfo-settlein">';
+
+	    /*$html .= '<span>';
 	    $html .= '<dt>Created by</dt>';
 	    $html .= '<dd><a href="'.User::newFromId($title->getFirstRevision()->getUser() )->getUserPage()->getFullURL().'">'.$title->getFirstRevision()->getUserText().'</a></dd>';
 	    $html .= '</span>';
@@ -119,28 +125,50 @@ class stools
 	    $html .= '<span>';
 	    $html .= '<dt>Last updated</dt>';
 	    $html .= '<dd>'.date('j F Y', wfTimestamp( TS_UNIX, Revision::newFromId( $title->getLatestRevID() )->getTimestamp())).'</dd>';
-	    $html .= '</span>';
+	    $html .= '</span>';*/
+
+	    $html .= '<div class="contributors-link-circles">';
 
 	    $page = WikiPage::factory( $title );
 	    $tEditors = $page->getContributors();
 	    $editors = array();
 	    foreach( $tEditors as $teditor ) {
 		    if( !array_key_exists( $teditor->getId(), $editors ) ) {
-			    $editors[] = '<a href="'.$teditor->getUserPage()->getFullURL().'">'.$teditor->getName().'</a>';
+			    //$editors[] = '<a href="'.$teditor->getUserPage()->getFullURL().'">'.$teditor->getName().'</a>';
+			    $image = '';
+			    $profile = new OpauthProfile( $teditor->getId() );
+			    if( $profile ) {
+			    	$image = strlen($profile->image) ? $profile->image : $wgStylePath.'/SettleIn/img/user_placeholder.jpg';
+			    }
+			    $editors[] = '<a href="'.$teditor->getUserPage()->getFullURL().'"><img src="'.$image.'" /><span>'.$teditor->getName().'</span></a>';
 		    }
 	    }
 	    if( !array_key_exists( $page->getUser(), $editors ) ) {
-		    $editors[] = '<a href="'.User::newFromId( $page->getUser() )->getUserPage()->getFullURL().'">'.User::newFromId( $page->getUser() )->getName().'</a>';
+		    $image = '';
+		    $profile = new OpauthProfile( $page->getUser() );
+		    if( $profile ) {
+			    $image = strlen($profile->image) ? $profile->image : $wgStylePath.'/SettleIn/img/user_placeholder.jpg';
+		    }
+		    $editors[] = '<a href="'.User::newFromId( $page->getUser() )->getUserPage()->getFullURL().'"><img src="'.$image.'" /><span>'.User::newFromId( $page->getUser() )->getName().'</span></a>';
 	    }
 
-	    $html .= '<span>';
+	    $html .= implode('', $editors);
+
+	    $html .= '</div>';
+
+	    /*$html .= '<span>';
 	    $html .= '<dt>Contributors</dt>';
 	    $html .= '<dd>'.implode(', ', $editors).'</dd>';
-	    $html .= '</span>';
+	    $html .= '</span>';*/
 
-	    $html .= '</dl>';
+	    //$html .= '</dl>';
 
 	    $html .= '<a href="#" class="contrib-send-thankyou btn btn-yellow" data-toggle="modal" data-target="#thankyouModal" >send thank you</a>';
+
+	    $html .= '<div class="contributors-link-circles-bottom">';
+	        $html .= '<span>Date created: '.date('j F Y', wfTimestamp(TS_UNIX, $title->getFirstRevision()->getTimestamp())).'</span>';
+	        $html .= '<span>Last updated: '.date('j F Y', wfTimestamp( TS_UNIX, Revision::newFromId( $title->getLatestRevID() )->getTimestamp())).'</span>';
+        $html .= '</div>';
 
 	    $userid = $page->getUser();
 	    $paget = $title->getBaseText();

@@ -1397,9 +1397,9 @@ main.card-page .dropdown-menu.primary-back {
 #double-col-right .right-col-contributors {
     /*margin-top: 25px;*/
     text-align: center;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    /*display: flex;*/
+    /*flex-wrap: wrap;*/
+    /*justify-content: center;*/
 }
 
 /*#double-col-right .right-col-contributors::before {
@@ -1451,16 +1451,55 @@ main.card-page .dropdown-menu.primary-back {
 #double-col-right a.contrib-send-thankyou {
     font-size: 16px;
     font-weight: 300;
-    width: 120px;
-    height: 120px;
     display: flex;
     align-items: center;
-    border-radius: 120px;
+    /*border-radius: 120px;*/
     background-color: white;
-    border: 1px solid yellow;
+    /*border: 1px solid yellow;*/
     text-align: center;
     color: #00a6e3;
     justify-content: center;
+    padding: 5px 10px;
+    max-width: 200px;
+    margin: 0 auto;
+}
+
+#double-col-right .contributors-link-circles {
+    margin: 10px 0 40px 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#double-col-right .contributors-link-circles a {
+    text-align: center;
+    /*display: block;*/
+    margin: 10px;
+}
+
+#double-col-right .contributors-link-circles a img {
+    width: 100px;
+    height: 100px;
+    background-color: white;
+    border-radius: 100px;
+}
+
+#double-col-right .contributors-link-circles a span {
+    display: block;
+    margin: 10px 0 0 0;
+    color: white;
+}
+
+#double-col-right .contributors-link-circles-bottom {
+    margin: 60px 0 0 0;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#double-col-right .contributors-link-circles-bottom span {
+    display: block;
+    text-align: center;
+    color: white;
 }
 
 #double-col-right a.contrib-send-thankyou:hover {
@@ -1725,7 +1764,7 @@ main.card-page .dropdown-menu.primary-back {
 
 #double-col-left .mw-headline {
     color: white;
-    text-shadow: 1px 1px 1px #00000087;
+    /*text-shadow: 1px 1px 1px #00000087;*/
 }
 
 #double-col-left .card-location-list.text-muted {
