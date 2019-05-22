@@ -1553,9 +1553,9 @@ main.card-page .dropdown-menu.primary-back {
     flex-wrap: wrap;
 }
 
-@media (max-width: 468px) {
+@media (max-width: 560px) {
     #double-col-right .right-col-how-to-contribute ul {
-        justify-content: initial;
+        justify-content: center;
     }
 }
 
