@@ -1553,6 +1553,12 @@ main.card-page .dropdown-menu.primary-back {
     flex-wrap: wrap;
 }
 
+@media (max-width: 468px) {
+    #double-col-right .right-col-how-to-contribute ul {
+        justify-content: initial;
+    }
+}
+
 #double-col-right .right-col-how-to-contribute ul li {
     flex: 0 0 auto;
     width: 100px;
