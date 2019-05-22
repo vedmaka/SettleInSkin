@@ -1871,7 +1871,7 @@ main.card-page .dropdown-menu.primary-back {
 }
 
 .step-by-step-section h1 span {
-    font-weight: 300;
+    /*font-weight: 300;*/
     font-size: 25px !important;
 }
 
