@@ -1555,7 +1555,7 @@ main.card-page .dropdown-menu.primary-back {
 
 @media (max-width: 560px) {
     #double-col-right .right-col-how-to-contribute ul li {
-        margin: 25px;
+        margin: 25px !important;
         width: auto !important;
         height: auto !important;
     }
